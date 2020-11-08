@@ -160,10 +160,10 @@
         <div class="section-heading text-center hidden-lg">
             <!-- Dream Dots -->
             <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                <span>Our Services</span>
+                <span>Our Advantages</span>
             </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s">What we speciaized in</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
+            <h2 class="fadeInUp" data-wow-delay="0.3s">What Makes Us Stand out</h2>
+{{--            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>--}}
         </div>
 
 
