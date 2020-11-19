@@ -83,17 +83,17 @@ jQuery(window).on("load", function () {
 
 
 
-const ml = new PerfectScrollbar('.market-limit');
-const mn = new PerfectScrollbar('.market-nested');
-const ln = new PerfectScrollbar('.limit-nested');
-const sln = new PerfectScrollbar('.stop-limit-nested');
-const pp = new PerfectScrollbar('.price-pair');
+// const ml = new PerfectScrollbar('.market-limit');
+// const mn = new PerfectScrollbar('.market-nested');
+// const ln = new PerfectScrollbar('.limit-nested');
+// const sln = new PerfectScrollbar('.stop-limit-nested');
+// const pp = new PerfectScrollbar('.price-pair');
 const ts = new PerfectScrollbar('.trade-history');
 const ob = new PerfectScrollbar('.order-book');
-const yp = new PerfectScrollbar('.your-position');
-const bw = new PerfectScrollbar('.balance-widget');
-const mkn = new PerfectScrollbar('.market-news');
-const opt = new PerfectScrollbar('.open-position-table');
+// const yp = new PerfectScrollbar('.your-position');
+// const bw = new PerfectScrollbar('.balance-widget');
+// const mkn = new PerfectScrollbar('.market-news');
+// const opt = new PerfectScrollbar('.open-position-table');
 
 //ripple effect on button
 Waves.init();

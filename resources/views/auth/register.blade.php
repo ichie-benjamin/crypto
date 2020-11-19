@@ -44,7 +44,7 @@
 
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input type="text" class="form-control" placeholder="username" name="username">
+                                    <input type="text" required value="{{ old('username') }}" class="form-control" placeholder="" name="username">
                                     @error('username')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -52,8 +52,26 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>First Name</label>
+                                    <input required value="{{ old('first_name') }}" type="text" class="form-control" placeholder="" name="first_name">
+                                    @error('first_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" required value="{{ old('last_name') }}" class="form-control" placeholder="" name="last_name">
+                                    @error('last_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email"  class="form-control @error('email') is-invalid @enderror" placeholder="hello@example.com"
+                                    <input type="email" required value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder=""
                                            name="email">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -62,8 +80,18 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="phone" required value="{{ old('phone') }}" class="form-control @error('phone') is-invalid @enderror" placeholder=""
+                                           name="phone">
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password"
+                                    <input type="password" required class="form-control @error('password') is-invalid @enderror" placeholder="Password"
                                            name="password">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -73,7 +101,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Confirm Password</label>
-                                    <input type="password" class="form-control" placeholder="Password"
+                                    <input type="password" required class="form-control" placeholder=""
                                            name="password_confirmation">
 
                                 </div>
