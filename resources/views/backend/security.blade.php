@@ -5,7 +5,7 @@
     <div class="content-body">
         <div class="container">
             <div class="row">
-                @include('partials.menu')
+                @include('partials.setting-menu')
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">

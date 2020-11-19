@@ -14,22 +14,36 @@
                         <span>Edit Profile</span>
                     </a>
                 </li>
+
+
                 <li class="nav-item">
-                    <a href="settings-preferences.html" class="nav-link">
+                    <a href="{{ route('deposit.create') }}" class="nav-link">
+                        <i class="mdi mdi-heart"></i>
+                        <span>Deposit</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('backend.withdrawals.index') }}" class="nav-link">
+                        <i class="mdi mdi-pentagon"></i>
+                        <span>Withdrawals</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('backend.trades.index') }}" class="nav-link">
+                        <i class="mdi mdi-database"></i>
+                        <span>Trades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('backend.account.security') }}" class="nav-link">
                         <i class="mdi mdi-settings"></i>
-                        <span>Preferences</span>
+                        <span>Security Settings</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="settings-security.html" class="nav-link">
-                        <i class="mdi mdi-lock"></i>
-                        <span>Security</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="settings-account.html" class="nav-link">
-                        <i class="mdi mdi-bank"></i>
-                        <span>Linked Account</span>
+                    <a href="{{ route('backend.transactions') }}" class="nav-link">
+                        <i class="mdi mdi-history"></i>
+                        <span>Transaction History</span>
                     </a>
                 </li>
             </ul>
