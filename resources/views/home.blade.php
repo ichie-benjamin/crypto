@@ -29,6 +29,15 @@
             display:none !important;
         }
 
+        .promotions-block-main {
+            padding: 0 0 20px!important;
+        }
+
+        .section {
+            min-height: 100px!important;
+            height: 100%;
+        }
+
         .goog-te-gadget select{
             /*color: transparent !important;*/
             height: inherit;
@@ -299,6 +308,77 @@
                     </div>
                 </div>
             </section>
+
+
+            <section class="section trading-account">
+                <div class="container-fluid">
+                    <h2>How It Works</h2>
+                    <p>Get instant results by following these 3 simple steps.</p>
+                    <h3 class="only-mob">Open a trading account</h3>
+
+                    <div class="trading-account-choose tab-content">
+
+                            <div class="tab-pane fadeIn animated active" id="classic">
+                                <div class="account-type">
+                                    <h3 class="feathe"><span>SIGN UP</span></h3>
+                                    <p></p>
+                                </div>
+
+                                   <h3 class="text-center">Seamless</h3>
+{{--                                </ul>--}}
+
+                                <div class="account-info-line">
+                                    Sign up via our registration link. Provide valid details in the form fields and hit the submit button.
+                                </div>
+                                <div class="btn-acc">
+                                    <a class="btn btn-grey" href="{{ route('register') }}">View details</a>
+                                    <a class="btn btn-grey" target="_blank" href="{{ route('register') }}">Open trading account</a>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fadeIn animated active" id="classic">
+                                <div class="account-type">
+                                    <h3 class="feathe"><span>FUND ACCOUNT</span></h3>
+                                    <p></p>
+                                </div>
+
+                                   <h3 class="text-center">Automatic
+                                   </h3>
+{{--                                </ul>--}}
+
+                                <div class="account-info-line">
+                                    After verification of your details, add funds to your account. This makes you ready to invest.
+                                </div>
+                                <div class="btn-acc">
+                                    <a class="btn btn-grey" href="{{ route('deposit.create') }}">Make Deposit</a>
+                                    <a class="btn btn-grey" target="_blank" href="{{ route('deposit.create') }}">Make Deposit</a>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fadeIn animated active" id="classic">
+                                <div class="account-type">
+                                    <h3 class="feathe"><span>                                    START EARNING
+</span></h3>
+                                    <p></p>
+                                </div>
+
+                                   <h3 class="text-center">Quick and easy</h3>
+{{--                                </ul>--}}
+
+                                <div class="account-info-line">
+                                    Invest in any suitable plan on our platform and your money starts growing. Earn more via referrals.
+                                </div>
+                                <div class="btn-acc">
+                                    <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">Dashboard</a>
+                                    <a class="btn btn-grey" target="_blank" href="{{ route('backend.dashboard') }}">Dashboard</a>
+                                </div>
+                            </div>
+
+                    </div>
+
+                </div>
+            </section>
+
             <section class="section social-trading" id="five">
                 <div class="container-fluid">
                     <div class="social-info">
@@ -372,147 +452,8 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div id="carousel-social" class="carousel slide only-mob carousel-social pointer-event" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-login="6182791" data-profit="996.40" data-period="87" data-commission="10">
-                                        <div class="container">
-                                            <div class="login-img">
-                                                <img class="lazy loaded" data-src="/images/new-site/default-avatar.png" data-ll-status="loaded" src="/images/new-site/default-avatar.png">
-                                            </div>
-                                            <div class="login-info">
-                                                <span>@Saudagarfx1</span><br>
-                                                STR-6182791
-                                            </div>
-                                            <div class="investors-info">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <p>Profitability</p>
-                                                        <p><span>996.40 % / 408 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Equity</p>
-                                                        <p><span>136.29 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Lifespan</p>
-                                                        <p><span>87 days</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><div class="carousel-item" data-login="6104288" data-profit="806.65" data-period="469" data-commission="15">
-                                        <div class="container">
-                                            <div class="login-img">
-                                                <img class="lazy loaded" data-src="https://social.tifia.com/uploads/avatars/004/144/9dc078ea88021779f6dcb2638bc3756f.png" data-ll-status="loaded" src="https://social.tifia.com/uploads/avatars/004/144/9dc078ea88021779f6dcb2638bc3756f.png">
-                                            </div>
-                                            <div class="login-info">
-                                                <span>@CareTaker</span><br>
-                                                STR-6104288
-                                            </div>
-                                            <div class="investors-info">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <p>Profitability</p>
-                                                        <p><span>806.65 % / 5436 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Equity</p>
-                                                        <p><span>3535.42 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Lifespan</p>
-                                                        <p><span>469 days</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><div class="carousel-item" data-login="6202569" data-profit="724.80" data-period="28" data-commission="30">
-                                        <div class="container">
-                                            <div class="login-img">
-                                                <img class="lazy loaded" data-src="https://social.tifia.com/uploads/avatars/007/614/91c75ae026addd206eddc262372a19c6.jpg" data-ll-status="loaded" src="https://social.tifia.com/uploads/avatars/007/614/91c75ae026addd206eddc262372a19c6.jpg">
-                                            </div>
-                                            <div class="login-info">
-                                                <span>@GoTrading</span><br>
-                                                STR-6202569
-                                            </div>
-                                            <div class="investors-info">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <p>Profitability</p>
-                                                        <p><span>724.80 % / 382 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Equity</p>
-                                                        <p><span>216.32 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Lifespan</p>
-                                                        <p><span>28 days</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><div class="carousel-item" data-login="6211125" data-profit="690.18" data-period="6" data-commission="30">
-                                        <div class="container">
-                                            <div class="login-img">
-                                                <img class="lazy loaded" data-src="https://social.tifia.com/uploads/avatars/005/828/03a36a9f2d7126afc3bd03ca215c58fd.jpg" data-ll-status="loaded" src="https://social.tifia.com/uploads/avatars/005/828/03a36a9f2d7126afc3bd03ca215c58fd.jpg">
-                                            </div>
-                                            <div class="login-info">
-                                                <span>@matnije</span><br>
-                                                STR-6211125
-                                            </div>
-                                            <div class="investors-info">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <p>Profitability</p>
-                                                        <p><span>690.18 % / 728 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Equity</p>
-                                                        <p><span>200.00 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Lifespan</p>
-                                                        <p><span>6 days</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><div class="carousel-item" data-login="6182766" data-profit="672.79" data-period="101" data-commission="10">
-                                        <div class="container">
-                                            <div class="login-img">
-                                                <img class="lazy loaded" data-src="https://social.tifia.com/uploads/avatars/005/176/dea9c000aac675859d82a1655bcceb8d.jpeg" data-ll-status="loaded" src="https://social.tifia.com/uploads/avatars/005/176/dea9c000aac675859d82a1655bcceb8d.jpeg">
-                                            </div>
-                                            <div class="login-info">
-                                                <span>@AisyahFX</span><br>
-                                                CLS-6182766
-                                            </div>
-                                            <div class="investors-info">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <p>Profitability</p>
-                                                        <p><span>672.79 % / 244 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Equity</p>
-                                                        <p><span>99.95 USD</span></p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <p>Lifespan</p>
-                                                        <p><span>101 days</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div></div>
-                                <!-- Left and right controls -->
-                                <a class="carousel-control-prev" href="#carousel-social" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel-social" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                            </div>
+
+
                         </div>
 
 
@@ -580,6 +521,7 @@
                         </div>
                         @endforeach
                     </div>
+
                 </div>
             </section>
             <section class="promotions-block-main">
@@ -592,6 +534,13 @@
                         </div>
 
                     </div>
+                </div>
+            </section>
+
+            <section class="promotions-block-main">
+
+                <div  style="margin-top: 20px">
+                    <div style="height:433px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
                 </div>
             </section>
 
