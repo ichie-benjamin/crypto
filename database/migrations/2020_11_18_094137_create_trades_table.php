@@ -15,12 +15,14 @@ class CreateTradesTable extends Migration
     {
         Schema::create('trades', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('deposit_id');
             $table->bigInteger('user_id');
-            $table->string('order_type');
+            $table->string('trade_type')->default('buy');
             $table->string('currency_pair');
-            $table->decimal('buy_at', 11, 2)->nullable();
-            $table->decimal('profit', 11, 2)->nullable();
-            $table->decimal('item_price', 11, 2)->nullable();
+            $table->integer('duration')->default(1);
+            $table->integer('profit');
+            $table->boolean('is_win')->default(true);
+            $table->decimal('traded_amount', 11, 2)->nullable();
             $table->decimal('opening_price', 11, 2)->nullable();
             $table->decimal('closing_price', 11, 2)->nullable();
             $table->timestamps();

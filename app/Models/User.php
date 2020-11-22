@@ -51,6 +51,10 @@ class User extends Authenticatable
 
     }
 
+    public function invested(){
+        return '$'. Deposit::whereUserId($this->id)->sum('amount');
+    }
+
     public function getNameAttribute(){
         if(!$this->first_name && !$this->last_name){
             return $this->username;
@@ -60,6 +64,10 @@ class User extends Authenticatable
     }
 
     public function balance(){
+        return $this->balance . ' USD';
+    }
+
+    public function bonus(){
         return $this->balance . ' USD';
     }
 

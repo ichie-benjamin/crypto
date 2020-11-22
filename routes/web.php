@@ -11,7 +11,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Auth::routes();
 
-Route::get('/deposit/{id}/purchase', [DepositsController::class, 'purchase'])->name('deposit.purchase');
+Route::get('/deposit/{id}/purchase', [DepositsController::class, 'purchase'])->name('deposit.purchase')->middleware('auth');
 
 
 Route::resources([

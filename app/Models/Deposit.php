@@ -47,6 +47,14 @@ class Deposit extends Model
         return $this->belongsTo('App\Models\User','user_id');
     }
 
+
+    public function amount()
+    {
+        return $this->amount . ' '. setting('currency');
+    }
+
+
+
     public function plan()
     {
         return $this->belongsTo(Package::class,'plan_id');

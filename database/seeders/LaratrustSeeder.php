@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Identity;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -65,10 +66,11 @@ class LaratrustSeeder extends Seeder
                 // Create default user for each role
                 $user = \App\Models\User::create([
                     'username' => str_replace(' ', '_', $key),
-                    'email' => $key.'@app.com',
+                    'email' => $key.'@cryptoassest.com',
                     'password' => bcrypt('password2365')
                 ]);
                 $user->attachRole($role);
+                Identity::create(['user_id' => $user->id]);
             }
 
         }

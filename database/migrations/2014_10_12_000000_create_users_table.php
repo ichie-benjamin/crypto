@@ -27,6 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('permanent_address')->nullable();
             $table->string('postal')->nullable();
+            $table->decimal('balance', 11, 2)->default(0);
+            $table->decimal('bonus', 11, 2)->default(0);
             $table->date('dob')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

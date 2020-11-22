@@ -12,7 +12,7 @@
         </a><!-- br-menu-link -->
 
 
-        <a href="#" class="br-menu-link">
+        <a href="#" class="br-menu-link  {{ active('admin.users.index', 'active show-sub') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-user tx-18"></i>
                 <span class="menu-item-label"> Manage Users</span>
@@ -21,12 +21,12 @@
         </a><!-- br-menu-link -->
 
         <ul class="br-menu-sub nav flex-column">
-            <li class="nav-item"><a href="" class="nav-link">Users</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Banned Accounts</a></li>
+            <li class="nav-item"><a href="{{ route('admin.users.index') }}" class="nav-link {{ active('admin.users.index') }}">Users</a></li>
+{{--            <li class="nav-item"><a href="" class="nav-link">Banned Accounts</a></li>--}}
         </ul>
 
 
-        <a href="{{ route('admin.packages.index') }}" class="br-menu-link">
+        <a href="{{ route('admin.packages.index') }}" class="br-menu-link  {{ active('admin.packages.index') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-shopping-bag tx-22"></i>
                 <span class="menu-item-label"> Packages</span>
@@ -34,16 +34,16 @@
         </a><!-- br-menu-link -->
 
 
-        <a href="{{ route('admin.currencies.index') }}" class="br-menu-link">
-            <div class="br-menu-item">
-                <i class="menu-item-fa fa fa-shopping-bag tx-22"></i>
-                <span class="menu-item-label">Currencies</span>
-            </div><!-- menu-item -->
-        </a><!-- br-menu-link -->
+{{--        <a href="{{ route('admin.currencies.index') }}" class="br-menu-link  {{ active('admin.currencies.index') }}">--}}
+{{--            <div class="br-menu-item">--}}
+{{--                <i class="menu-item-fa fa fa-shopping-bag tx-22"></i>--}}
+{{--                <span class="menu-item-label">Currencies</span>--}}
+{{--            </div><!-- menu-item -->--}}
+{{--        </a><!-- br-menu-link -->--}}
 
 
 
-        <a href="#" class="br-menu-link">
+        <a href="#" class="br-menu-link {{ active('admin.deposits.index', 'active show-sub') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-credit-card tx-18"></i>
                 <span class="menu-item-label"> Manage Deposit</span>
@@ -51,11 +51,11 @@
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-            <li class="nav-item"><a href="" class="nav-link">All Deposits</a></li>
+            <li class="nav-item"><a href="{{ route('admin.deposits.index') }}" class="nav-link {{ active('admin.deposits.index') }}">All Deposits</a></li>
 {{--            <li class="nav-item"><a href="" class="nav-link"></a></li>--}}
         </ul>
 
-        <a href="#" class="br-menu-link">
+        <a href="{{ route('admin.withdrawals.index') }}" class="br-menu-link {{ active('admin.withdrawals.index', 'active show-sub') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-calculator tx-18"></i>
                 <span class="menu-item-label"> Withdrawals</span>
@@ -63,14 +63,30 @@
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
-            <li class="nav-item"><a href="" class="nav-link">Request</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Approved Withdrawal</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Refunded Withdrawal</a></li>
+            <li class="nav-item"><a href="{{ route('admin.withdrawals.index') }}" class="nav-link {{ active('admin.withdrawals.index') }}">All Withdrawals</a></li>
+{{--            <li class="nav-item"><a href="" class="nav-link">Approved Withdrawal</a></li>--}}
+{{--            <li class="nav-item"><a href="" class="nav-link">Refunded Withdrawal</a></li>--}}
 {{--            <li class="nav-item"><a href="" class="nav-link"></a></li>--}}
 
         </ul>
 
-        <a href="" class="br-menu-link">
+
+        <a href="#" class="br-menu-link {{ active(['admin.users.active.plans','admin.trades.*'], 'active show-sub') }}">
+            <div class="br-menu-item">
+                <i class="menu-item-fa fa fa-trademark tx-18"></i>
+                <span class="menu-item-label"> Trades</span>
+                <i class="menu-item-arrow fa fa fa-angle-down"></i>
+            </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+        <ul class="br-menu-sub nav flex-column">
+            <li class="nav-item"><a href="{{ route('admin.users.active.plans') }}" class="nav-link {{ active('admin.users.active.plans') }}">Active plans</a></li>
+{{--            <li class="nav-item"><a href="" class="nav-link">All Users</a></li>--}}
+{{--            <li class="nav-item"><a href="" class="nav-link">Refunded Withdrawal</a></li>--}}
+{{--            --}}{{--            <li class="nav-item"><a href="" class="nav-link"></a></li>--}}
+
+        </ul>
+
+        <a href="{{ route('admin.user.logins.logs') }}" class="br-menu-link {{ active('admin.user.logins.logs') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-list-alt tx-22"></i>
                 <span class="menu-item-label"> Login Logs</span>
@@ -81,6 +97,14 @@
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-cogs tx-22"></i>
                 <span class="menu-item-label"> General Setting</span>
+            </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
+
+        <a href="{{ route('admin.users.ids') }}" class="br-menu-link">
+            <div class="br-menu-item">
+                <i class="menu-item-fa fa fa-id-card tx-22"></i>
+                <span class="menu-item-label">National IDs</span>
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
 
