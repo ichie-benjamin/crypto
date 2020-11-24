@@ -26,7 +26,9 @@
                     <img src="{{ $user->avatar  }}" alt="">
                 </div><!-- card-profile-img -->
                 <h4 class="tx-normal tx-roboto tx-white">{{ $user->name }}</h4>
-                <p class="mg-b-25">{{ $user->email }}</p>
+                <p class="tx-white">{{ $user->email }}</p>
+                <p class=" tx-white">Balance : {{ $user->balance() }}</p>
+                <p class=" tx-white">Bonus : {{ $user->bonus }}USD</p>
 
             </div><!-- card-body -->
         </div><!-- card -->
@@ -50,6 +52,8 @@
                 <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-danger col-md-2">Send Message</a>
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
+                <a href="{{ route('admin.trades.index') }}?user={{$user->id}}" class="btn btn-success col-md-3">Trade For {{ $user->username }}</a>
+
                 {{--                               </div>--}}
 
 

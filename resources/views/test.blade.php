@@ -902,7 +902,7 @@
                 </div><!-- modal -->
             </div><!-- pd-y-50 bg-gray -->
             <div class="pd-y-30 tx-center bg-dark">
-                <a href="" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-toggle="modal" data-target="#fund">View Live Demo</a>
+                <a href="" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-toggle="modal" data-target="#modaldemo3">View Live Demo</a>
             </div><!-- pd-y-30 -->
 
             <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-t-80 mg-b-10">Modal Alert Messages</h6>

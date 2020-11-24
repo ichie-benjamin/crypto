@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
 
     Route::get('deposits/all', [PackagesController::class,'allDeposits'])->name('deposits.index');
-    Route::get('deposits/approve/{id}', [PackagesController::class,'approve'])->name('deposit.approve');
+    Route::post('deposits/approve', [PackagesController::class,'approve'])->name('deposit.approve');
     Route::get('deposits/delete/{id}', [PackagesController::class,'destroyDeposit'])->name('deposit.destroy');
 
 
