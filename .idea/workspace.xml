@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="36f02d78-9c0d-4e3e-aa45-27dd6cf2e648" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/packages/purchased.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/packages/purchased.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <workItem from="1605812491521" duration="10354000" />
       <workItem from="1605891819837" duration="25506000" />
       <workItem from="1606004630523" duration="21251000" />
-      <workItem from="1606215063725" duration="2217000" />
+      <workItem from="1606215063725" duration="2800000" />
     </task>
     <servers />
   </component>
@@ -200,6 +199,10 @@
       <screen x="0" y="24" width="1600" height="876" />
     </state>
     <state x="538" y="207" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.24.1600.876@0.24.1600.876" timestamp="1606049779218" />
+    <state x="279" y="180" key="IDE.errors.dialog" timestamp="1606218657107">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="279" y="180" key="IDE.errors.dialog/0.23.1440.829@0.23.1440.829" timestamp="1606218657107" />
     <state x="505" y="151" width="590" height="594" key="find.popup" timestamp="1605772312837">
       <screen x="0" y="24" width="1600" height="876" />
     </state>
