@@ -34,7 +34,22 @@ class TradesController extends Controller
     public function store(Request $request)
     {
         $data = $this->getData($request);
-        Trade::create($data);
+        $user = User::findOrFail($data['user_id']);
+
+        if($user->balance < $data['traded_amount']){
+            return redirect()->back()->with('failure', "You cant trade more than $user->balance");
+        }
+
+
+        $trade = Trade::create($data);
+        if($trade->is_win){
+            $user->balance = $user->balance + $trade->payout;
+            $user->save();
+        }else{
+            $user->balance = $user->balance - $trade->traded_amount;
+            $user->save();
+        }
+
         return redirect()->back()->with('success', 'Trade was successfully added.');
     }
 
@@ -69,9 +84,9 @@ class TradesController extends Controller
             'duration' => 'nullable',
             'is_win' => 'nullable',
             'traded_amount' => 'nullable',
-            'opening_price' => 'nullable',
+    
             'profit' => 'nullable',
-            'closing_price' => 'nullable',
+    
         ];
 
         $data = $request->validate($rules);

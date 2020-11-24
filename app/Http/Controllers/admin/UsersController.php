@@ -98,6 +98,8 @@ class UsersController extends Controller
             ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
+        $user->balance = $user->balance + $data['amount'];
+        $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, balance modified');
     }
@@ -108,8 +110,29 @@ class UsersController extends Controller
             ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
+        $user->bonus = $user->bonus + $data['amount'];
+        $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, Bonus modified');
+    }
+
+    public function toggleTrade($id){
+        $user = User::findOrFail($id);
+        $user->can_trade = !$user->can_trade;
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, User Data Updated');
+    }
+    public function toggleWithdraw($id){
+        $user = User::findOrFail($id);
+        $user->can_withdraw = !$user->can_withdraw;
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, User Data Updated');
+    }
+    public function toggleUpgrade($id){
+        $user = User::findOrFail($id);
+        $user->can_upgrade = !$user->can_upgrade;
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, User Data Updated');
     }
 
     public function Ids(){

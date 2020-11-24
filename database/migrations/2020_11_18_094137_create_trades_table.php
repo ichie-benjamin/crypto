@@ -15,7 +15,7 @@ class CreateTradesTable extends Migration
     {
         Schema::create('trades', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('deposit_id');
+            $table->bigInteger('deposit_id')->nullable();
             $table->bigInteger('user_id');
             $table->string('trade_type')->default('buy');
             $table->string('currency_pair');

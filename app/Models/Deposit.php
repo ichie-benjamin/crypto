@@ -15,7 +15,7 @@ class Deposit extends Model
      */
     protected $table = 'deposits';
 
-    protected $with = ['plan'];
+    protected $with = [];
 
     /**
     * The database primary key value.
@@ -31,9 +31,9 @@ class Deposit extends Model
      */
     protected $fillable = [
                   'user_id',
-                  'amount',
-                  'plan_id','proof',
+                  'amount','proof',
                   'promo_code',
+                  'message',
                   'status',
                   'payment_method'
               ];

@@ -53,6 +53,9 @@
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
                 <a href="{{ route('admin.trades.index') }}?user={{$user->id}}" class="btn btn-success col-md-3">Trade For {{ $user->username }}</a>
+                <a href="{{ route('admin.user.trade.toggle') }}" class="btn btn-primary col-md-3">Suspend Trade</a>
+                <a href="{{ route('admin.user.upgrade.toggle') }}" class="btn btn-secondary col-md-3">Activate Plan Upgrade{{ $user->username }}</a>
+                <a href="{{ route('admin.user.withdraw.toggle') }}" class="btn btn-success col-md-3">Enable Withdraw</a>
 
                 {{--                               </div>--}}
 
@@ -103,14 +106,12 @@
 
                             <h3>All Deposits</h3>
                             <div class="tabl-wrapper table-responsive">
-                                <table id="datatable1" class="table display table-bordered responsive nowrap">
+                                <table id="datatable1" class="table display table-bordered responsive ">
                                     <thead>
                                     <tr>
                                         <th class="wd-5p">S/N</th>
-                                        {{--                                <th class="wd-15p">User</th>--}}
-                                        <th class="wd-15p">Package Name</th>
-                                        <th class="wd-30p">Package Period</th>
-                                        <th class="wd-15p">Purchased Amount</th>
+                                                                        <th class="wd-15p">Date</th>
+                                        <th class="wd-15p">Deposited Amount</th>
                                         <th class="wd-10p">Proof</th>
                                         <th class="wd-10p">Status</th>
                                         {{--                                <th class="wd-10p">Action</th>--}}
@@ -125,19 +126,22 @@
                                         <tr>
                                             <td>{{ $count++ }}</td>
                                             {{--                                    <td>{{ optional($item->user)->name }}</td>--}}
-                                            <td>{{ optional($item->plan)->name }}</td>
-                                            <td>{{ optional($item->plan)->period }}</td>
+                                            <td>{{ $item->created_at->format('d-m-Y') }}</td>
                                             <td>{{ $item->amount }}</td>
                                             <td>
                                                 @if ($item->proof)
-                                                    <img height="30px" width="30px" src="{{ $item->proof }}">
-                                                    <br/>
                                                     <a target="_blank" href="{{ $item->proof }}">View Proof</a>
                                                 @else
                                                     Not Uploaded
                                                 @endif
                                             </td>
-                                            <td>{{ $item->status ? 'Approved' : 'Un Approved' }}</td>
+                                            <td>
+                                            @if($item->status)
+                                                <p class="badge badge-success">Approved</p>
+                                                @else
+                                                <p class="badge badge-danger">Pending</p>
+                                                @endif
+                                            </td>
                                             {{--                                    <td>--}}
                                             {{--                                        <a href="{{ route('admin.deposit.approve', $item->id) }}" class="{{ $item->status ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->status ? 'Un Approve': 'Approve' }}</a>--}}
                                             {{--                                        <a href="{{ route('admin.deposit.destroy', $item) }}" onclick="return confirm(&quot;Click Ok to delete Deposit.&quot;)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>--}}

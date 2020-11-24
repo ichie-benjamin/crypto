@@ -32,6 +32,10 @@ class CreateUsersTable extends Migration
             $table->date('dob')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('plan_id');
+            $table->boolean('can_trade')->default(1);
+            $table->boolean('can_upgrade')->default(0);
+            $table->boolean('can_withdraw')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

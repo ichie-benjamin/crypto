@@ -114,18 +114,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-3">
-                                    <div class="form-group mg-b-10-force">
-                                        <label class="form-control-label">Opening Price : <span class="tx-danger">*</span></label>
-                                        <input class="form-control" required type="number" step="any" name="opening_price" placeholder="opening price">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group mg-b-10-force">
-                                        <label class="form-control-label">Closing Price : </label>
-                                        <input class="form-control" required type="number" step="any" name="closing_price" placeholder="closing price">
-                                    </div>
-                                </div>
+                        
 
 
                             </div><!-- row -->
@@ -145,7 +134,7 @@
                 <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10"> {{ $title }} List</h6>
 
                 <div class="table-wrapper">
-                    <table id="datatable1" class="table table-bordered table-condensed display responsive nowrap">
+                    <table id="datatable1" class="table table-bordered table-condensed display responsive">
                         <thead>
                         <tr>
 {{--                            <th class="wd-5p">S.No</th>--}}
@@ -169,8 +158,7 @@
                             <td>{{ $trade->created_at }}</td>
                             <td>{{ $trade->currency_pair }}</td>
                             <td>{{ $trade->traded_amount }}</td>
-                            <td>{{ $trade->payout }}USD</td>
-                            <td>{{ $trade->profit }} %</td>
+                            <td>{{ $trade->payout }} USD</td>
                             <td>
 {{--                                {{ $trade->is_win ? 'Win' : 'Loss' }}--}}
                                 @if ($trade->is_win)
@@ -179,8 +167,10 @@
                                     <p class="badge badge-danger">Loss</p>
                                 @endif
                             </td>
-                            <td>{{ $trade->opening_price }}</td>
-                            <td>{{ $trade->closing_price }}</td>
+                            <td>{{ $trade->o_price }}</td>
+                            <td>{{ $trade->c_price }}</td>
+
+                            <td>{{ $trade->end_time }}</td>
 
                             <td class="text-center">
                                 <form method="POST" action="{!! route('admin.trades.destroy', $trade->id) !!}" accept-charset="UTF-8">

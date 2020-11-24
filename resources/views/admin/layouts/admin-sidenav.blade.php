@@ -80,6 +80,7 @@
         </a><!-- br-menu-link -->
         <ul class="br-menu-sub nav flex-column">
             <li class="nav-item"><a href="{{ route('admin.users.active.plans') }}" class="nav-link {{ active('admin.users.active.plans') }}">Active plans</a></li>
+            <li class="nav-item"><a href="{{ route('admin.users.index') }}" class="nav-link {{ active('admin.users.index') }}">All Users</a></li>
 {{--            <li class="nav-item"><a href="" class="nav-link">All Users</a></li>--}}
 {{--            <li class="nav-item"><a href="" class="nav-link">Refunded Withdrawal</a></li>--}}
 {{--            --}}{{--            <li class="nav-item"><a href="" class="nav-link"></a></li>--}}

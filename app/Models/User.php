@@ -27,6 +27,9 @@ class User extends Authenticatable
         'btc','phone',
         'avatar',
         'city',
+        'can_withdraw',
+        'can_upgrade',
+        'can_trade',
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name'
     ];
 

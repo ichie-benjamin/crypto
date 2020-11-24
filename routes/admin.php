@@ -18,6 +18,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::get('users/ids', [UsersController::class,'Ids'])->name('users.ids');
 
     Route::post('user/fundaccount', [UsersController::class,'fundAccount'])->name('user.fundaccount');
+    Route::get('user/toggle/trade/{id}', [UsersController::class,'toggleTrade'])->name('user.trade.toggle');
+    Route::get('user/toggle/withdraw/{id}', [UsersController::class,'toggleWithdraw'])->name('user.withdraw.toggle');
+    Route::get('user/toggle/upgrade/{id}', [UsersController::class,'toggleUpgrade'])->name('user.upgrade.toggle');
     Route::post('user/fundbonus', [UsersController::class,'fundBonus'])->name('user.fundbonus');
 
     Route::get('users/active/plans', [UsersController::class,'activePlans'])->name('users.active.plans');

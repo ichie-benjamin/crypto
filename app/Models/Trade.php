@@ -13,7 +13,7 @@ class Trade extends Model
 
     protected $with = ['user'];
 
-    protected $appends = ['payout'];
+    protected $appends = ['payout','end_time','o_price','c_price'];
 
     public function user()
     {
@@ -23,6 +23,25 @@ class Trade extends Model
     public function getPayoutAttribute()
     {
         $bonus = $this->traded_amount * ($this->profit / 100);
-        return $bonus + $this->traded_amount;
+        return $bonus;
     }
+
+    public function getEndTimeAttribute()
+    {
+    
+        return $this->created_at->addSeconds($this->duration);
+    }
+
+    public function getOPriceAttribute()
+    {
+    
+        return $this->profit / $this->traded_amount * 0.1;
+    }
+
+    public function getCPriceAttribute()
+    {
+    
+        return $this->profit / $this->traded_amount;
+    }
+
 }
