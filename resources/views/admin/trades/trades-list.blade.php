@@ -19,7 +19,7 @@
         <h4 class="tx-gray-800 mg-b-5"> {{ $title }}</h4>
     </div>
 
-    @if (Request()->has('deposit'))
+    @if (Request()->has('user'))
         <div class="br-pagebody">
             <p>
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -45,8 +45,7 @@
                         <div class="form-layout form-layout-1">
                             <div class="row mg-b-25">
 
-                                <input name="deposit_id" type="hidden" value="{{ request()->get('deposit') }}">
-                                <input name="user_id" type="hidden" value="{{ $deposit->user_id }}">
+                                <input name="user_id" type="hidden" value="{{ $user->id }}">
 
                                 <div class="col-md-4">
                                     <div class="form-group mg-b-10-force">
@@ -151,13 +150,14 @@
                         <tr>
 {{--                            <th class="wd-5p">S.No</th>--}}
                             <th class="wd-10p">User</th>
-                            <th class="wd-10p">Currency Pair</th>
-                            <th class="wd-10p">Traded Amount</th>
-                            <th class="wd-10p">Duration</th>
-                            <th class="wd-10p">Percent Profit / Loss</th>
-                            <th class="wd-10p">Predicted Trade as</th>
+                            <th class="wd-10p">Trade Time</th>
+                            <th class="wd-10p">Traded Asset</th>
+                            <th class="wd-10p">Amount</th>
+                            <th class="wd-10p">Expected Payout</th>
+                            <th class="wd-10p">Trade Status</th>
                             <th class="wd-10p">Opening Price</th>
                             <th class="wd-10p">Closing Price</th>
+                            <th class="wd-10p">End Time</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -166,11 +166,19 @@
                         <tr>
 {{--                            <td>{{ $trade->id }}</td>--}}
                             <td class="text-capitalize"><a href="{{ route('admin.users.show',$trade->user->username) }}"> {{ $trade->user->name }}</a></td>
+                            <td>{{ $trade->created_at }}</td>
                             <td>{{ $trade->currency_pair }}</td>
                             <td>{{ $trade->traded_amount }}</td>
-                            <td>{{ $trade->duration }}Sec</td>
+                            <td>{{ $trade->payout }}USD</td>
                             <td>{{ $trade->profit }} %</td>
-                            <td>{{ $trade->is_win ? 'Win' : 'Loss' }}</td>
+                            <td>
+{{--                                {{ $trade->is_win ? 'Win' : 'Loss' }}--}}
+                                @if ($trade->is_win)
+                                    <p class="badge badge-success">Win</p>
+                                @else
+                                    <p class="badge badge-danger">Loss</p>
+                                @endif
+                            </td>
                             <td>{{ $trade->opening_price }}</td>
                             <td>{{ $trade->closing_price }}</td>
 

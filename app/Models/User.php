@@ -30,7 +30,7 @@ class User extends Authenticatable
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name'
     ];
 
-    protected $appends = ['name','balance'];
+    protected $appends = ['name'];
 
     protected $hidden = [
         'password',
@@ -69,10 +69,6 @@ class User extends Authenticatable
 
     public function bonus(){
         return $this->balance . ' USD';
-    }
-
-    public function getBalanceAttribute(){
-       return 0.00;
     }
 
 

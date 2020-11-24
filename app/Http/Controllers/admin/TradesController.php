@@ -5,23 +5,24 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Trade;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TradesController extends Controller
 {
     public function index(Request $request)
     {
-        $deposit = [];
-        if($request->has('deposit')){
-            $id = $request->get('deposit');
-            $deposit = Deposit::with('user')->findOrFail($id);
-            $trades = Trade::whereDepositId($id)->get();
-            $title = ucfirst($deposit->user->name). ' '.$deposit->plan->name .' Trades';
+        $user = [];
+        if($request->has('user')){
+            $id = $request->get('user');
+            $user = User::findOrFail($id);
+            $trades = Trade::whereUserId($id)->get();
+            $title = 'Trade For '. ucfirst($user->name);
         }else{
             $title = 'All Trades';
             $trades = Trade::all();
         }
-        return view('admin.trades.trades-list', compact('trades','title','deposit'));
+        return view('admin.trades.trades-list', compact('trades','title','user'));
     }
 
     public function create()
@@ -62,7 +63,7 @@ class TradesController extends Controller
     {
         $rules = [
             'user_id' => 'required',
-            'deposit_id' => 'required',
+            'deposit_id' => 'nullable',
             'trade_type' => 'required',
             'currency_pair' => 'required',
             'duration' => 'nullable',
@@ -72,6 +73,9 @@ class TradesController extends Controller
             'profit' => 'nullable',
             'closing_price' => 'nullable',
         ];
-        return $request->validate($rules);
+
+        $data = $request->validate($rules);
+        $data['deposit_id'] = auth()->user()->id;
+        return $data;
     }
 }

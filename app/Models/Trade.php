@@ -13,14 +13,16 @@ class Trade extends Model
 
     protected $with = ['user'];
 
-//    protected $appends = ['profit'];
+    protected $appends = ['payout'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User','user_id');
     }
-//    public function getProfitAttribute()
-//    {
-//        return $this->sell_at - $this->buy_at;
-//    }
+
+    public function getPayoutAttribute()
+    {
+        $bonus = $this->traded_amount * ($this->profit / 100);
+        return $bonus + $this->traded_amount;
+    }
 }

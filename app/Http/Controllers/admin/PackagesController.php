@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Package;
+use App\Models\Transaction;
+use App\Models\User;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 
@@ -95,12 +97,23 @@ class PackagesController extends Controller
        $deposit->delete();
        return redirect()->back()->with('success', 'Successfully Deleted');
     }
-    public function approve($id)
+    public function approve(Request $request)
     {
-       $deposit = Deposit::findOrFail($id);
-       $deposit->status = !$deposit->status;
-       $deposit->save();
-       return redirect()->back()->with('success', 'Successfully Updated State');
+        $data = $request->all();
+
+        $user = User::findOrFail($data['user_id']);
+
+        $user->balance = $user->balance + $data['amount'];
+
+        $user->save();
+
+        Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => 'deposit', 'account_type' => 'balance','note' => 'deposit']);
+
+        $deposit = Deposit::findOrFail($data['id']);
+        $deposit->status = true;
+        $deposit->save();
+
+        return redirect()->back()->with('success', 'Successfully Approved Deposit');
     }
 
     protected function getData(Request $request)
