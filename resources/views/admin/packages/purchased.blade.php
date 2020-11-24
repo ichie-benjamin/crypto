@@ -31,9 +31,8 @@
                         <tr>
                             <th class="wd-5p">S/N</th>
                             <th class="wd-15p">User</th>
-                            <th class="wd-15p">Package Name</th>
                             <th class="wd-30p">Package Period</th>
-                            <th class="wd-15p">Purchased Amount</th>
+                            <th class="wd-15p">Amount</th>
                             <th class="wd-10p">Proof</th>
                             <th class="wd-10p">Status</th>
                             <th class="wd-10p">Action</th>
