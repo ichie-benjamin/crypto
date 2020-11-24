@@ -250,7 +250,11 @@
 
 
 <script src="/back/js/settings.js"></script>
+
 <script src="/back/js/quixnav-init.js"></script>
+
+
+
 {{--<script src="/back/js/styleSwitcher.js"></script>--}}
 
 

@@ -35,12 +35,12 @@ class DashboardController extends Controller
 
     public function transactions(){
         $deposits = Deposit::whereUserId(auth()->id())->get();
-        if(count($deposits) > 0){
-            $deposit = Deposit::whereUserId(auth()->id())->latest()->first();
-        }else{
-            $deposit = null;
-        }
-        return view('backend.transactions', compact('deposits','deposit'));
+//        if(count($deposits) > 0){
+////            $deposit = Deposit::whereUserId(auth()->id())->latest()->first();
+//        }else{
+//            $deposit = null;
+//        }
+        return view('backend.transactions', compact('deposits'));
     }
 
     public function viewDeposit($id){

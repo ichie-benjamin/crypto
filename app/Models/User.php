@@ -26,6 +26,7 @@ class User extends Authenticatable
         'password',
         'btc','phone',
         'avatar',
+        'is_active',
         'city',
         'can_withdraw',
         'can_upgrade',
@@ -56,6 +57,9 @@ class User extends Authenticatable
 
     public function invested(){
         return '$'. Deposit::whereUserId($this->id)->sum('amount');
+    }
+    public function withdrawals(){
+        return '$'. Withdrawal::whereUserId($this->id)->whereApproved(1)->sum('amount');
     }
 
     public function getNameAttribute(){

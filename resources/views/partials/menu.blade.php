@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('deposit.create') }}" class="nav-link">
+                    <a href="{{ route('backend.deposit.fund') }}" class="nav-link">
                         <i class="mdi mdi-heart"></i>
                         <span>Deposit</span>
                     </a>

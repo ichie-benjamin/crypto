@@ -18,6 +18,9 @@ Route::resources([
     'deposit' => DepositsController::class,
 ]);
 
+//Route::get('/deposit/create', [DepositsController::class, 'depositFund'])->name('deposit.fund');
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 include('backend.php');

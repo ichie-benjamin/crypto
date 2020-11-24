@@ -26,6 +26,23 @@ class DepositsController extends Controller
         $package = Package::findOrFail($id);
         return view('backend.deposit.purchase', compact('package'));
     }
+
+    public function depositFund()
+    {
+        return view('backend.deposit.fund.1');
+    }
+
+    public function depositProof()
+    {
+        return view('backend.deposit.fund.3');
+    }
+
+    public function depositFundUpload()
+    {
+        return view('backend.deposit.fund.2');
+    }
+
+
     public function proof($id)
     {
         $deposit = Deposit::findOrFail($id);
@@ -39,6 +56,7 @@ class DepositsController extends Controller
      */
     public function create()
     {
+        return redirect()->route('backend.deposit.fund');
         $packages = Package::all();
         $users = User::pluck('username','id')->all();
 $currencies = Currency::pluck('id','id')->all();
@@ -52,18 +70,12 @@ $currencies = Currency::pluck('id','id')->all();
         try {
 
             $data = $this->getData($request);
-            $package = Package::findOrFail($data['plan_id']);
-            if($package->minimum_purchase > $data['amount']){
-                return redirect()->back()->withInput()->with('failure', 'Minimum deposit for this package is '.$package->minimum_purchase);
-            }
-            if($package->maximum_purchase < $data['amount']){
-                return redirect()->back()->withInput()->with('failure', 'Maximum deposit for this package is '.$package->maximum_purchase);
-            }
+//            $package = Package::findOrFail($data['plan_id']);
 
             $deposit = Deposit::create($data);
 
-            return redirect()->route('backend.deposits.proof',$deposit->id)
-                ->with('success', 'Please pay using the selected method to complete transaction');
+            return redirect()->route('backend.transactions')
+                ->with('success', 'Payment proof uploaded, awaiting admin verification');
         } catch (Exception $exception) {
 
             return back()->withInput()
@@ -121,14 +133,16 @@ $accounts = Account::pluck('id','id')->all();
     {
         $rules = [
                 'user_id' => 'nullable',
-            'plan_id' => 'required',
+//            'plan_id' => 'required',
             'amount' => 'required',
+            'proof' => 'required',
             'promo_code' => 'string|nullable',
             'payment_method' => 'string|min:1|nullable',
         ];
 
         $data = $request->validate($rules);
         $data['user_id'] = auth()->id();
+        $data['payment_method'] = 'Bitcoin';
         return $data;
     }
     protected function getUData(Request $request)
