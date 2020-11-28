@@ -53,6 +53,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
 
     Route::post('/deposits/store', [DepositsController::class, 'depositStore'])->name('deposit.store');
 
+    Route::post('/deposit/save', [DepositsController::class, 'dStore'])->name('deposit.save');
+
 
     Route::resources([
         'deposits' => DepositsController::class,

@@ -114,7 +114,7 @@
                                     </ul>
                                 </div>
                                 <div class="tab-pane fade" id="tab2">
-                                    <form method="post" action="{{ route('backend.deposit.store') }}" class="py-5 col-md-6 col-sm-12">
+                                    <form method="post" action="{{ route('backend.deposit.save') }}" class="py-5 col-md-6 col-sm-12">
 
                                         {{ csrf_field() }}
 

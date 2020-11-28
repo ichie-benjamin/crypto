@@ -8,7 +8,7 @@
                 <div class="col-xl-5 col-md-6">
                     <div class="auth-form card">
                         <div class="card-body">
-                            <form method="post" action="{{ route('deposit.store') }}" class="identity-upload">
+                            <form method="post" action="{{ route('backend.deposits.store') }}" class="identity-upload">
 
                                 {{ csrf_field() }}
                                 <div class="identity-content">

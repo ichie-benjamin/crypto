@@ -73,8 +73,8 @@ $currencies = Currency::pluck('id','id')->all();
 
             $deposit = Deposit::create($data);
 
-            return redirect()->route('backend.transactions')
-                ->with('success', 'Payment proof uploaded, awaiting admin verification');
+            return redirect()->route('backend.deposit.view',$deposit->id)
+                ->with('success', 'Deposit Proof was successfully uploaded.');
         } catch (Exception $exception) {
 
             return back()->withInput()
@@ -99,13 +99,16 @@ $currencies = Currency::pluck('id','id')->all();
 
         return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
 
-//            return redirect()->route('backend.transactions')
-//                ->with('success', 'Payment proof uploaded, awaiting admin verification');
-//        } catch (Exception $exception) {
-//
-//            return back()->withInput()
-//                ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request.']);
-//        }
+    }
+
+    public function dStore(Request $request)
+    {
+            $data = $this->getData($request);
+
+            $deposit = Deposit::create($data);
+
+            return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
+
     }
 
     public function show($id)
@@ -158,6 +161,7 @@ $accounts = Account::pluck('id','id')->all();
     {
         $rules = [
                 'user_id' => 'nullable',
+            'plan_id' => 'nullable',
             'amount' => 'required',
             'proof' => 'nullable',
             'promo_code' => 'string|nullable',

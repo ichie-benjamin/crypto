@@ -30,6 +30,7 @@
                                         </th>
                                     </tr>
                                     <tr><th>Date of Transaction</th><th>{{ $deposit->created_at  }}</th></tr>
+                                    <tr><th>Payment Method</th><th>{{ $deposit->payment_method  }}</th></tr>
 
                                     <tr><th>Deposit Proof</th>
                                         <th>
