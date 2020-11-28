@@ -158,7 +158,6 @@ $accounts = Account::pluck('id','id')->all();
     {
         $rules = [
                 'user_id' => 'nullable',
-            'plan_id' => 'nullable',
             'amount' => 'required',
             'proof' => 'nullable',
             'promo_code' => 'string|nullable',
@@ -167,6 +166,7 @@ $accounts = Account::pluck('id','id')->all();
 
         $data = $request->validate($rules);
         $data['user_id'] = auth()->id();
+        $data['plan_id'] = $request['plan_id'] ?? null;
         $data['payment_method'] = $data['payment_method'] ?? 'Bitcoin';
         return $data;
     }
