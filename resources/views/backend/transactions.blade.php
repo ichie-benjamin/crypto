@@ -16,8 +16,9 @@
                             <h4 class="card-title">All Deposits</h4>
                         </div>
                         <div class="card-body">
+
                             <div class="transaction-table">
-                                @if (count($deposits) > 1)
+                                @if (count($deposits) > 0)
                                 <div class="table-responsive">
                                     <table class="table table-striped mb-0 table-responsive-sm">
                                         <tbody>
@@ -40,6 +41,13 @@
                                             </td>
 
                                             <td class="{{ $item->status ? 'text-danger' : 'text-success' }}">{{ $item->amount }} USD</td>
+                                                <td class="">
+                                                    @if(!$item->proof)
+                                                        <a class="badge badge-primary p-2" href="{{ route('backend.deposits.proof',$item->id)  }}">Upload Proof</a>
+                                                    @else
+                                                        <a class="badge badge-success p-2" target="_blank" href="{{ $item->proof }}">Payment Proof</a>
+                                                    @endif
+                                                </td>
                                             <td>{{ $item->created_at }}</td>
                                         </tr>
 

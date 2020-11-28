@@ -8,100 +8,219 @@
 
                 @include('partials.menu')
 
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Withdrawal</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row justify-content-center">
-                                <div class="col-xl-8">
-                                    <form action="#" class="py-5">
+                @if (auth()->user()->can_withdraw)
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="col-6"> <h4 class="card-title">Make withdrawal </h4></div>
+                                <div class="col-6">
+                                    <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Withdrawals</a>
+                                </div>
+                                {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
+                            </div>
+                            <div class="card-body" id="deposits">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tab1">Payment System</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab2">Bank Wire Transfer</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" style="margin-top: 20px; margin-bottom: 30px">
+                                    <div class="tab-pane fade active show" id="tab1">
+                                        <div class="row payment-methods">
 
-                                        <div class="form-group row align-items-center">
-                                            <div class="col-sm-4">
-                                                <label for="inputEmail3" class="col-form-label">DestinationAddress
-                                                    <br />
-                                                    <small>Please double check this address</small>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text  bg-primary"><i
-                                                                class="mdi mdi-currency-usd fs-18 text-white"></i></label>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Pay with Bitcoin</h4>
                                                     </div>
-                                                    <input type="text" class="form-control text-right"
-                                                           placeholder="5000 USD">
+                                                    <div class="card-body">
+                                                        <img width="100%" src="/images/gateway/4.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.btc.withdrawal') }}"> SELECT</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Fasa Pay</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" src="/images/fasapay.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h4 class="card-title text-center">SELECT</h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Western Union</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" src="/images/gateway/3.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h4 class="card-title text-center">SELECT</h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Money Gram</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" src="/images/gateway/1.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h4 class="card-title text-center">SELECT</h4>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="form-group row align-items-center">
-                                            <div class="col-sm-4">
-                                                <label for="inputEmail3" class="col-form-label">Amount BTC
-                                                    <br />
-                                                    <small>Maximum amount withdrawable: 0 BTC</small>
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <label class="input-group-text bg-primary"><i
-                                                                class="cc BTC-alt text-white"></i></label>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab2">
+                                        <form method="post" action="{{ route('backend.deposit.store') }}" class="py-5 col-md-6 col-sm-12">
+
+                                            {{ csrf_field() }}
+
+                                            <div class="form-group row align-items-center">
+                                                <div class="col-sm-4">
+                                                    <label for="inputEmail3" class="col-form-label">Payment Method
+                                                        <br>
+                                                        <small>Selected Payment Method</small>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group mb-3">
+                                                        <img src="/images/wt.png" />
                                                     </div>
-                                                    <input type="text" class="form-control text-right"
-                                                           placeholder="5000 USD">
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="form-group row align-items-center">
-                                            <div class="col-sm-6">
-                                                <label for="inputEmail3" class="col-form-label">Bitcoin Network Fee
-                                                    (BTC)
-                                                    <br />
-                                                    <small>Transactions on the Bitcoin network are priorirized by
-                                                        fees</small>
-                                                </label>
+                                            <div class="form-group row align-items-center">
+                                                <div class="col-sm-4">
+                                                    <label for="inputEmail3" class="col-form-label">Withdrawal Currency
+                                                        <br>
+                                                        {{--                                                    <small>Please double check this address</small>--}}
+                                                    </label>
+                                                </div>
+                                                <input type="hidden" name="method" value="Wire Transfer">
+                                                <div class="col-sm-8">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text  bg-primary"><i class="mdi mdi-currency-usd fs-18 text-white"></i></label>
+                                                        </div>
+                                                        <select class="form-control">
+                                                            <option>USD</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-6">
-                                                <h4 class="text-right">0.005</h4>
-                                            </div>
-                                        </div>
 
-                                        <div class="text-right">
-                                            <button class="btn btn-primary">Withdraw Now</button>
-                                        </div>
-                                    </form>
+                                            <div class="form-group row align-items-center">
+                                                <div class="col-sm-4">
+                                                    <label for="inputEmail3" class="col-form-label">Amount In USD
+                                                        <br>
+                                                        <small>Minimum amount : {{ setting('minimum_withdraw','$1000') }}</small>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="input-group mb-3">
+                                                        <div class="input-group-prepend">
+                                                            <label class="input-group-text bg-primary"><i class="mdi mdi-currency-usd fs-18 text-white"></i></label>
+                                                        </div>
+                                                        <input name="amount" required type="number" step="any" class="form-control text-right" placeholder="5000 USD">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{--                                        <div class="form-group row align-items-center">--}}
+                                            {{--                                            <div class="col-sm-6">--}}
+                                            {{--                                                <label for="inputEmail3" class="col-form-label">Bitcoin Network Fee--}}
+                                            {{--                                                    (BTC)--}}
+                                            {{--                                                    <br>--}}
+                                            {{--                                                    <small>Transactions on the Bitcoin network are priorirized by--}}
+                                            {{--                                                        fees</small>--}}
+                                            {{--                                                </label>--}}
+                                            {{--                                            </div>--}}
+                                            {{--                                            <div class="col-sm-6">--}}
+                                            {{--                                                <h4 class="text-right">0.005</h4>--}}
+                                            {{--                                            </div>--}}
+                                            {{--                                        </div>--}}
+
+                                            <div class="text-right">
+                                                <button class="btn btn-primary">Proceed </button>
+                                            </div>
+                                        </form>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Important Information</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="important-info">
-                                <ul>
-                                    <li>
-                                        <i class="mdi mdi-checkbox-blank-circle"></i>
-                                        For security reasons, Tradio process withdrawals by review once a day. For
-                                        more information in this policy. Please see our wallet security page.
-                                    </li>
-                                    <li>
-                                        <i class="mdi mdi-checkbox-blank-circle"></i>
-                                        Submit your withdrawals by 07:00 UTC +00 (about 11 hour) to be included in
-                                        the days batch
-                                    </li>
-                                </ul>
+
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Important Information</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="important-info">
+                                    <ul>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            For security reasons, Crypto Assets process withdrawals by review once a day.
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            Submit your withdrawals by 07:00 UTC +00 (about 11 hour) to be included in
+                                            the days batch
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            If you are using a public server for your transactions, please ensure you logout before leaving the browser
+                                        </li>
+
+
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                @else
+
+{{--                    <div class="row">--}}
+                        @if(auth()->user()->invested() < 500)
+                        <div class="col-12">
+                            <div class="alert alert-danger">
+                                <h3>Not Eligible</h3>
+                                Your account is not eligible for withdrawal
+                            </div>
+                            <a href="{{ route('backend.deposit.fund') }}" class="btn btn-success">Make Deposit</a>
+                        </div>
+                    @else
+                        <div class="col-12">
+                            <div class="alert alert-danger">
+                                <h3>Active Trade Session</h3>
+                                Your trading session is currently active
+                            </div>
+                        </div>
+                        @endif
+{{--                    </div>--}}
+                @endif
+
+
             </div>
         </div>
     </div>

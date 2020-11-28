@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.master-min')
 
 @section('content')
 
@@ -7,9 +7,6 @@
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-xl-5 col-md-6">
                     <div class="auth-form card">
-                        <!-- <div class="card-header">
-                            <h4 class="card-title">Link a Debit card</h4>
-                        </div> -->
                         <div class="card-body">
                             <form action="{{ route('backend.account.upload.id') }}" class="identity-upload">
                                 <div class="identity-content">

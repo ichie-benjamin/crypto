@@ -18,7 +18,7 @@ class DepositsController extends Controller
     {
         $deposits = Deposit::with('user','currency','account')->paginate(25);
 
-//        return view('deposits.index', compact('deposits'));
+        return view('deposits.index', compact('deposits'));
     }
 
     public function purchase($id)
@@ -29,6 +29,9 @@ class DepositsController extends Controller
 
     public function depositFund()
     {
+        if(auth()->user()->can_upgrade){
+            return redirect()->route('backend.deposit.fund')->with('message','Purchase a plan');
+        }
         return view('backend.deposit.fund.1');
     }
 
@@ -49,14 +52,10 @@ class DepositsController extends Controller
         return view('backend.deposit.proof', compact('deposit'));
     }
 
-    /**
-     * Show the form for creating a new deposit.
-     *
-     * @return Illuminate\View\View
-     */
+
     public function create()
     {
-        return redirect()->route('backend.deposit.fund');
+//        return redirect()->route('backend.deposit.fund');
         $packages = Package::all();
         $users = User::pluck('username','id')->all();
 $currencies = Currency::pluck('id','id')->all();
@@ -81,6 +80,32 @@ $currencies = Currency::pluck('id','id')->all();
             return back()->withInput()
                 ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request.']);
         }
+    }
+
+    public function depositStore(Request $request)
+    {
+            $data = $this->getData($request);
+
+            $deposit = Deposit::create($data);
+
+        $package = Package::findOrFail($data['plan_id']);
+        if($package->minimum_purchase > $data['amount']){
+            return redirect()->back()->withInput()->with('failure', 'Minimum deposit for this package is '.$package->minimum_purchase);
+        }
+        if($package->maximum_purchase < $data['amount']){
+            return redirect()->back()->withInput()->with('failure', 'Maximum deposit for this package is '.$package->maximum_purchase);
+        }
+
+
+        return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
+
+//            return redirect()->route('backend.transactions')
+//                ->with('success', 'Payment proof uploaded, awaiting admin verification');
+//        } catch (Exception $exception) {
+//
+//            return back()->withInput()
+//                ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request.']);
+//        }
     }
 
     public function show($id)
@@ -133,16 +158,16 @@ $accounts = Account::pluck('id','id')->all();
     {
         $rules = [
                 'user_id' => 'nullable',
-//            'plan_id' => 'required',
+            'plan_id' => 'nullable',
             'amount' => 'required',
-            'proof' => 'required',
+            'proof' => 'nullable',
             'promo_code' => 'string|nullable',
             'payment_method' => 'string|min:1|nullable',
         ];
 
         $data = $request->validate($rules);
         $data['user_id'] = auth()->id();
-        $data['payment_method'] = 'Bitcoin';
+        $data['payment_method'] = $data['payment_method'] ?? 'Bitcoin';
         return $data;
     }
     protected function getUData(Request $request)

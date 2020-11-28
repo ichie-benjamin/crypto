@@ -48,6 +48,11 @@
     <link rel="stylesheet" href="{{ asset('css/bracket.css') }}">
 
     <style>
+        .alert-danger {
+            color: #ffff!important;
+            background-color: #F44336!important;
+            border-color: #F44336!important;
+        }
         /*.br-menu-item {*/
         /*    height: 30px;*/
         /*    letter-spacing: 0.1px;*/

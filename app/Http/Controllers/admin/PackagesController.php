@@ -49,7 +49,7 @@ class PackagesController extends Controller
             }else{
                 $title = 'Pending Withdrawals';
             }
-            $withdrawals = Withdrawal::with('user')->whereStatus($status)->latest()->get();
+            $withdrawals = Withdrawal::with('user')->whereApproved($status)->latest()->get();
         }else{
             $title = "All Withdrawals";
             $withdrawals = Withdrawal::with('user')->latest()->get();
@@ -97,6 +97,26 @@ class PackagesController extends Controller
        $deposit->delete();
        return redirect()->back()->with('success', 'Successfully Deleted');
     }
+
+    public function withdrawalApprove(Request $request, $id)
+    {
+        $data = $this->getWData($request);
+        $withdrawal = Withdrawal::findOrFail($id);
+        $withdrawal->update($data);
+
+       return redirect()->back()->with('success', 'Prove Successfully Verified');
+    }
+
+    public function withdrawalsApprove($id)
+    {
+        $withdrawal = Withdrawal::findOrFail($id);
+
+        $withdrawal->approved = !$withdrawal->approved;
+        $withdrawal->save();
+
+       return redirect()->back()->with('success', 'Withdrawal Successfully Verified');
+    }
+
     public function approve(Request $request)
     {
         $data = $request->all();
@@ -126,6 +146,17 @@ class PackagesController extends Controller
             'minimum_purchase' => 'integer|min:1|required',
             'maximum_purchase' => 'integer|min:1|required',
             'status' => 'boolean|nullable',
+        ];
+        return $request->validate($rules);
+    }
+    protected function getWData(Request $request)
+    {
+        $rules = [
+            'commission' => 'nullable',
+            'tax' => 'nullable',
+            'cot' => 'nullable',
+            'promo' => 'nullable',
+            'approve' => 'nullable',
         ];
         return $request->validate($rules);
     }

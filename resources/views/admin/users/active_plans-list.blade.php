@@ -29,11 +29,7 @@
                             <th class="wd-5p">S/N</th>
                             <th class="wd-10p">User Email</th>
                             <th class="wd-10p">Photo</th>
-                            <th class="wd-15p">Plan Name</th>
-                            <th class="wd-15p">Plan Status</th>
-                            <th class="wd-15p">Amount Paid</th>
-                            <th class="wd-15p">Percentage Profit</th>
-                            <th class="wd-15p">Plan Period</th>
+                            <th class="wd-10p">Balance</th>
 
 {{--                            <th class="wd-15p">Phone</th>--}}
                             <th class="wd-10p">Trades</th>
@@ -45,19 +41,15 @@
                         @php
                             $count = 1;
                         @endphp
-                        @foreach ($deposits as $item)
+                        @foreach ($users as $item)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td><a href="{{ route('admin.users.show',$item->user->username) }}"> {{ $item->user->email }}</a></td>
-                                <td><img height="40" src="{{ $item->user->avatar }}"></td>
+                                <td><a href="{{ route('admin.users.show',$item->username) }}"> {{ $item->email }}</a></td>
+                                <td><img height="40" src="{{ $item->avatar }}"></td>
+                                <td>{{ $item->balance() }}</td>
 
-                                    <td>{{ $item->plan->name }}</td>
-                                    <td>{{ $item->plan->status }}</td>
-                                    <td>{{ $item->amount() }}</td>
-                                    <td>{{ $item->plan->percent_profit }}%</td>
-                                    <td>{{ $item->plan->period }} days</td>
                                 <td>
-                                    <a href="{{ route('admin.trades.index') }}?deposit={{$item->id}}" >0</a>
+                                    <a href="{{ route('admin.trades.index') }}?user={{$item->id}}" >{{ \App\Models\Trade::whereUserId($item->id)->count() }}</a>
 {{--                                    <a href="{{ route('admin.users.destroy', $user) }}" onclick="destroyUser(event)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>--}}
 {{--                                        <form id="delete-customer-form" action="{{ route('admin.users.destroy', $user) }}" method="POST" class="d-none">--}}
 {{--                                            @csrf--}}

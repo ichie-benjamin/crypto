@@ -124,7 +124,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td class="text-capitalize">BTC Barcode</td>
+                            <td class="text-capitalize">Wallet Barcode</td>
                             <td>
                                 @include('admin.partials.image-upload',['field' => 'wallet_barcode','image' => setting('wallet_barcode'),'id' => 'btc'])
 {{--                                <input class="form-control" width="70%" name="featured_cities_sub" required value="{{ setting('featured_cities_sub') }}">--}}

@@ -31,11 +31,11 @@
                         <tr>
                             <th class="wd-5p">S/N</th>
                             <th class="wd-15p">User</th>
-                            <th class="wd-15p">Request Amount</th>
+                            <th class="wd-15p">Requested Amount</th>
                             <th class="wd-30p">Type</th>
                             <th class="wd-30p">Wallet ID</th>
                             <th class="wd-15p">Status</th>
-                            <th class="wd-10p">Paid</th>
+                            <th class="wd-10p">Fees</th>
                             <th class="wd-10p">Action</th>
                         </tr>
                         </thead>
@@ -47,18 +47,69 @@
                         @foreach ($withdrawals as $item)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td>{{ optional($item->user)->name }}</td>
-                                <td>{{ $item->amount }}</td>
+                                <td><a href="{{ route('admin.users.show',$item->user->username) }}" >{{ optional($item->user)->name }}</a></td>
+                                <td>${{ $item->amount }}</td>
                                 <td>{{ $item->type }}</td>
-                                <td>{{ $item->status }}</td>
-                                <td>{{ $item->status ? 'Yes' : 'No' }}</td>
+                                <td>{{ $item->wallet }}</td>
+                                <td>{{ $item->status  }}</td>
                                 <td>
-                                    <a href="{{ route('admin.deposit.approve', $item->id) }}" class="{{ $item->status ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->status ? 'Un Approve': 'Approve' }}</a>
+                                    @if ($item->commission_proof)
+                                        <a target="_blank" href="{{ $item->commission_proof }}">View Commission Proof</a>
+                                    @endif
+                                        @if ($item->tax_proof)
+                                        <br/><a target="_blank" href="{{ $item->tax_proof }}">View Tax Proof</a>
+                                    @endif
+                                        @if ($item->cot_proof)
+                                            <br/><a target="_blank" href="{{ $item->cot_proof }}">View Cost of Transfer Proof</a>
+                                        @endif
+                                 <br/>   <a data-toggle="modal" data-target="#modaldemo1" href="" data-placement="top" class="btn btn-success btn-sm">Approve Proof</a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.withdrawals.approve', $item->id) }}" class="{{ $item->approved ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->approved ? 'Un Approve': 'Approve' }}</a>
 {{--                                    <a href="{{ route('admin.deposit.destroy', $item) }}" onclick="return confirm(&quot;Click Ok to delete Deposit.&quot;)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>--}}
 {{--                                    </a>--}}
                                 </td>
 
                             </tr>
+
+
+                            <div id="modaldemo1" class="modal fade">
+                                <div class="modal-dialog modal-dialog-vertical-center" role="document">
+                                    <div class="modal-content bd-0 tx-14">
+                                        <div class="modal-header pd-y-20 pd-x-25">
+                                            <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Approve Each Fee by entering the amount</h6>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <form action="{{ route('admin.withdrawal.approve', $item->id) }}" method="POST">
+                                            @csrf
+
+                                            <div class="modal-body pd-25">
+                                                <div class="form-group mg-b-10-force">
+                                                    <label class="form-control-label">Commission Fee : <span class="tx-danger">*</span></label>
+                                                    <input class="form-control" value="{{ $item->commission }}"  required type="number" step="any" name="commission" placeholder="Commission Fee">
+                                                    <input type="hidden" name="id" value="{{ $item->id }}">
+                                                </div>
+                                                <div class="form-group mg-b-10-force">
+                                                    <label class="form-control-label">Tax Fee :</label>
+                                                    <input class="form-control" value="{{ $item->tax }}"  type="number" step="any" name="tax" placeholder="Tax">
+                                                </div>
+                                                <div class="form-group mg-b-10-force">
+                                                    <label class="form-control-label">Cost of Transfer : </label>
+                                                    <input class="form-control" value="{{ $item->cost_of_transfer }}"  type="number" step="any" name="cost_of_transfer" placeholder="Cost of Transfer">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium">Submit</button>
+                                                <button type="button" class="btn btn-secondary tx-11 tx-uppercase pd-y-12 pd-x-25 tx-mont tx-medium" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div><!-- modal-dialog -->
+                            </div><!-- modal -->
+
                         @endforeach
 
                         </tbody>

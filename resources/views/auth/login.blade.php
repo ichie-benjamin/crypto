@@ -1,107 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!-- - var bodyCustom = 'bg-blue bg-lighten-2' // Use any color palette class--><!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crypto Asset </title>
-
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/favicon.png">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="/back/vendor/waves/waves.min.css">
-    <link rel="stylesheet" href="/back/css/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="author" content="CRYPTOASSETS">
+    <title>Account Login - Crypto Assets</title>
+    <link rel="apple-touch-icon" href="/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/favicon.ico">
+    <link href="/../../../fonts.googleapis.com/cssc3c1.css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/icheck.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/custom.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/app.min.css">
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-compact-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/cryptocoins/cryptocoins.css">
+    <link rel="stylesheet" type="text/css" href="/app-assets/css/pages/account-login.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/asset/css/style.css">
+    <!-- END Custom CSS-->
 </head>
+<body class="vertical-layout vertical-compact-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-compact-menu" data-col="1-column">
+<!-- ////////////////////////////////////////////////////////////////////////////-->
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body">
+            <!-- Demo options menu -->
+            <!--/ Demo options menu -->
+            <!-- Demo fullscreen-overlay -->
+            <!--/ Demo fullscreen-overlay -->
+            <section id="account-login" class="flexbox-container">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <!-- image -->
+                    <div class="col-md-4 col-sm-5 col-12 p-0 text-center d-none d-md-block">
+                        <div class="border-grey border-lighten-3 m-0 box-shadow-0 card-account-left height-400">
+{{--                            <img src="/app-assets/images/pages/account-login.png" class="card-account-img width-200" alt="card-account-img">--}}
 
-<body>
+                            <div style="height:400px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:400px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="400px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Crypto Assets</div></div>
 
-<div id="preloader">
-    <div class="sk-three-bounce">
-        <div class="sk-child sk-bounce1"></div>
-        <div class="sk-child sk-bounce2"></div>
-        <div class="sk-child sk-bounce3"></div>
-    </div>
-</div>
-
-<div id="main-wrapper">
-
-    <div class="authincation section-padding">
-        <div class="container h-100">
-            <div class="row justify-content-center h-100 align-items-center">
-                <div class="col-xl-5 col-md-6">
-                    <div class="mini-logo text-center my-5">
-                        <a href="{{ route('home') }}"><img src="/img/core-img/logo.png" alt=""></a>
-                    </div>
-                    <div class="auth-form card">
-                        <div class="card-header justify-content-center">
-                            <h4 class="card-title">Sign in</h4>
                         </div>
-                        <div class="card-body">
-                            <form method="post" action="{{ route('login') }}" class="signup_validate">
-                                @csrf
-
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email"  class="form-control @error('email') is-invalid @enderror" placeholder="hello@example.com"
-                                           name="email">
+                    </div>
+                    <!-- login form -->
+                    <div class="col-md-4 col-sm-5 col-12 p-0">
+                        <div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right height-400">
+                            <div class="card-content">
+                                <div class="card-body p-3">
+                                    <p class="text-center h5 text-capitalize">Welcome to Crypto Assets!</p>
+                                    <p class="mb-3 text-center">Please enter your login details</p>
                                     @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password"
-                                           name="password">
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                                <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                    <div class="form-group mb-0">
-                                        <label class="toggle">
-                                            <input class="toggle-checkbox" name="remember" type="checkbox">
-                                            <span class="toggle-switch"></span>
-                                            <span class="toggle-label">Remember me</span>
-                                        </label>
+                                    <div style="margin-bottom: 5px" class="invalid-feedbac " role="alert">
+                                        <strong style="color: red">{{ $message }}</strong>
                                     </div>
-                                    <div class="form-group mb-0">
-                                        <a href="{{ route('password.request') }}">Forgot Password?</a>
-                                    </div>
+                                    @enderror
+                                    <form method="POST" class="form-horizontal form-signin" action="{{ route('login') }}">
+                                        @csrf
+                                        <fieldset class="form-label-group">
+                                            <input type="email" name="email" class="form-control" id="user-name" placeholder="Your Email" required="" autofocus="">
+                                            <label for="user-name">Email </label>
+                                        </fieldset>
+                                        <fieldset class="form-label-group">
+                                            <input type="password" name="password" class="form-control" id="user-password" placeholder="Enter Password"  required="" autofocus="">
+                                            <label for="user-password">Password</label>
+                                        </fieldset>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 col-12 text-center text-sm-left">
+                                                <fieldset>
+                                                    <input type="checkbox" id="remember-me" class="chk-remember">
+                                                    <label for="remember-me"> Remember</label>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="#" class="card-link">Forgot Password?</a></div>
+                                        </div>
+                                        <button type="submit" class="btn-gradient-primary btn-block my-1">Log In</button>
+                                        <p class="text-center"><a href="#" class="card-link">Register</a></p>
+                                    </form>
                                 </div>
-
-
-                                <div class="text-center mt-4">
-                                    <button type="submit" class="btn btn-success btn-block">Login</button>
-                                </div>
-                            </form>
-                            <div class="new-account mt-3">
-                                <p>>Don't have an account?<a class="text-primary" href="{{ route('register') }}">Sign up</a>
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
         </div>
     </div>
-
 </div>
+<!-- ////////////////////////////////////////////////////////////////////////////-->
 
+<!-- BEGIN VENDOR JS-->
+<script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+<!-- BEGIN VENDOR JS-->
 
+<!-- BEGIN MODERN JS-->
+<script src="/app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
+<script src="/app-assets/js/core/app.min.js" type="text/javascript"></script>
+<script src="/app-assets/js/scripts/demo.min.js" type="text/javascript">//- For demo only</script>
+<!-- END MODERN JS-->
 
-<script src="/back/js/global.js"></script>
-
-<script src="/back/vendor/waves/waves.min.js"></script>
-
-<script src="/back/vendor/validator/jquery.validate.js"></script>
-<script src="/back/vendor/validator/validator-init.js"></script>
-<script src="/back/js/scripts.js"></script>
 </body>
-
 </html>

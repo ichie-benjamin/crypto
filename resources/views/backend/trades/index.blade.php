@@ -47,7 +47,7 @@
                                             <tbody>
 
 
-                                            @foreach($trades as $item)
+                                            @foreach($trades as $trade)
                                                 <tr>
                                                     <td>{{ $trade->currency_pair }}</td>
                                                     <td>{{ $trade->traded_amount }} USD</td>

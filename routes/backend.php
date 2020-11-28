@@ -21,6 +21,17 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/deposit/view/{id}', [DashboardController::class, 'viewDeposit'])->name('deposit.view');
 
     Route::get('/withdrawals', [WithdrawalController::class, 'myWithdrawals'])->name('withdrawals.index');
+    Route::get('/withdrawal/processing/{id}', [WithdrawalController::class, 'processing'])->name('withdrawal.processing');
+    Route::post('/withdrawal/processed/{id}', [WithdrawalController::class, 'processed'])->name('withdrawal.processed');
+    Route::post('/withdrawal/store', [WithdrawalController::class, 'store'])->name('withdrawals.store');
+
+    Route::post('/withdrawal/update/{id}', [WithdrawalController::class, 'update'])->name('withdrawal.update');
+
+    Route::get('/btc/withdrawal', [WithdrawalController::class, 'btcWithdrawal'])->name('btc.withdrawal');
+    Route::get('/pending/withdrawals', [WithdrawalController::class, 'pendingWithdrawal'])->name('pending.withdrawal');
+    Route::get('/verify/withdrawal', [WithdrawalController::class, 'verify'])->name('verify.withdrawal');
+
+
     Route::get('/trades', [DashboardController::class, 'myTrades'])->name('trades.index');
     Route::get('/account/security', [DashboardController::class, 'security'])->name('account.security');
 
@@ -37,6 +48,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/user/login/logs', [DashboardController::class, 'loginLogs'])->name('user.login.logins');
 
     Route::get('/transactions', [DashboardController::class, 'transactions'])->name('transactions');
+    Route::get('/pending/deposits', [DashboardController::class, 'pendingDeposits'])->name('pending.deposit');
+
+
+    Route::post('/deposits/store', [DepositsController::class, 'depositStore'])->name('deposit.store');
 
 
     Route::resources([

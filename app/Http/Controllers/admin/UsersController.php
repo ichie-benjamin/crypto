@@ -29,8 +29,8 @@ class UsersController extends Controller
     }
 
     public function activePlans(){
-        $deposits = Deposit::with('user')->latest()->get();
-        return view('admin.users.active_plans-list', compact('deposits'));
+        $users = User::whereRoleIs('user')->get();
+        return view('admin.users.active_plans-list', compact('users'));
     }
 
    public function employers(){

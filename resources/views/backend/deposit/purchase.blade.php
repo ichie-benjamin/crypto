@@ -34,10 +34,12 @@
                                     <p class="mb-1">Minimum Deposit</p>
                                     <h4>{{ $package->minimum_purchase }}</h4>
                                 </div>
-                                <div>
-                                    <p class="mb-1">Maximum Deposit</p>
-                                    <h4>{{ $package->maximum_purchase }}</h4>
-                                </div>
+
+                            </div>
+
+                            <div>
+                                <p class="mb-1">Maximum Deposit</p>
+                                <h4>{{ $package->maximum_purchase }}</h4>
                             </div>
 
                             <div class="d-flex justify-content-between my-3">
@@ -46,10 +48,11 @@
                                     <p class="mb-1">Daily Return</p>
                                     <h4>{{ $package->percent_profit }}%</h4>
                                 </div>
-                                <div>
-                                    <p class="mb-1">Total Return</p>
-                                    <h4>{{ $package->totalReturn() }}</h4>
-                                </div>
+
+                            </div>
+                            <div>
+                                <p class="mb-1">Total Return</p>
+                                <h4>{{ $package->totalReturn() }}</h4>
                             </div>
                             <div class="d-flex justify-content-between my-3">
                                 <div>
@@ -62,7 +65,7 @@
                     </div>
 
 
-                    <form method="POST" action="{{ route('backend.deposits.store') }}">
+                    <form method="POST" action="{{ route('backend.deposit.store') }}">
                         {{ csrf_field() }}
                         <div class="card">
                         <div class="card-header">

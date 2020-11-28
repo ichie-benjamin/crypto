@@ -52,15 +52,17 @@
                 <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-danger col-md-2">Send Message</a>
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
-                <a href="{{ route('admin.trades.index') }}?user={{$user->id}}" class="btn btn-success col-md-3">Trade For {{ $user->username }}</a>
-                <a href="{{ route('admin.user.trade.toggle') }}" class="btn btn-primary col-md-3">Suspend Trade</a>
-                <a href="{{ route('admin.user.upgrade.toggle') }}" class="btn btn-secondary col-md-3">Activate Plan Upgrade{{ $user->username }}</a>
-                <a href="{{ route('admin.user.withdraw.toggle') }}" class="btn btn-success col-md-3">Enable Withdraw</a>
+            </div>
+                <div style="margin-top: 5px" class="row btn-bloc">
 
+                <a href="{{ route('admin.trades.index') }}?user={{$user->id}}" class="btn btn-success col-md-3">Trade For {{ $user->username }}</a>
+                <a href="{{ route('admin.user.trade.toggle', $user->id) }}" class="btn  {{ $user->can_trade ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_trade ? 'Suspend' : 'Un Suspend' }} Trade</a>
+                <a href="{{ route('admin.user.upgrade.toggle', $user->id) }}" class="btn {{ $user->can_upgrade ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_upgrade ? 'Deactivate' : 'Activate' }} Plan Upgrade</a>
+                <a href="{{ route('admin.user.withdraw.toggle', $user->id) }}" class="btn {{ $user->can_withdraw ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_withdraw ? 'Disable' : 'Enable' }} Withdraw</a>
+
+                </div>
                 {{--                               </div>--}}
 
-
-            </div>
         </div><!-- card -->
 
         <div class="tab-content br-profile-body" style=" max-width: 100%!important;">

@@ -32,6 +32,7 @@
                     <th class="wd-20p">Email</th>
                     <th class="wd-15p">Phone</th>
                     <th class="wd-15p">Invested</th>
+                    <th class="wd-15p">Trades</th>
                     <th class="wd-15p">Acct Balance</th>
                     <th class="wd-15p">Acct Bonus</th>
 {{--                        <th class="wd-15p">Role</th>--}}
@@ -52,6 +53,8 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->phone }}</td>
                             <td>{{ $user->invested() }}</td>
+                            <td><a href="{{ route('admin.trades.index') }}?user={{$user->id}}" >{{ \App\Models\Trade::whereUserId($user->id)->count() }}</a>
+                            </td>
                             <td>{{ $user->balance() }}</td>
                             <td>{{ $user->bonus() }}</td>
                             <td>

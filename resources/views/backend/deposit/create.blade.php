@@ -7,7 +7,7 @@
             <div class="row">
                 @include('partials.menu')
                 @foreach($packages as $item)
-                <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="col-xl-4 col-lg-4 col-md-4">
                     <div class="card acc_balance">
                         <div class="card-header">
                             <h2 class="card-titl text-capitalize">{{ $item->name }}</h2>
@@ -21,10 +21,10 @@
                                     <p class="mb-1">Minimum Deposit</p>
                                     <h4>{{ $item->minimum_purchase }} USD</h4>
                                 </div>
-                                <div>
-                                    <p class="mb-1">Maximum Deposit</p>
-                                    <h4>{{ $item->maximum_purchase }} USD</h4>
-                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-1">Maximum Deposit</p>
+                                <h4>{{ $item->maximum_purchase }} USD</h4>
                             </div>
 
                             <div class="d-flex justify-content-between my-3">
@@ -33,10 +33,11 @@
                                     <p class="mb-1">Daily Return</p>
                                     <h4>{{ $item->percent_profit }}%</h4>
                                 </div>
-                                <div>
-                                    <p class="mb-1">Total Return</p>
-                                    <h4>{{ $item->totalReturn() }}%</h4>
-                                </div>
+
+                            </div>
+                            <div>
+                                <p class="mb-1">Total Return</p>
+                                <h4>{{ $item->totalReturn() }}%</h4>
                             </div>
                             <div class="d-flex justify-content-between my-3">
                                 <div>

@@ -18,40 +18,33 @@
                                     </div>
                                 </div>
 
-                                <ul class="card-profile__info">
-                                    <li>
-                                        <h5 class="mr-4">Package Name</h5>
-                                        <span class="text-muted">{{ optional($deposit->plan)->name }}</span>
-                                    </li>
+                                <table class="table table-responsive">
+                                    <tr><th>Amount Deposited</th><th>${{ $deposit->amount  }}</th></tr>
+                                    <tr><th>Deposit Status</th>
+                                        <th>
+                                            @if($deposit->status)
+                                                <span class="badge badge-success">Active</span>
+                                            @else
+                                                <span class="badge badge-warning">Pending</span>
+                                            @endif
+                                        </th>
+                                    </tr>
+                                    <tr><th>Date of Transaction</th><th>{{ $deposit->created_at  }}</th></tr>
 
-                                    <li>
-                                        <h5 class=" mr-4">Deposit Amount</h5>
-                                        <span class="text-muted">{{ $deposit->amount }}</span>
-                                    </li>
-                                    <li>
-                                        <h5 class=" mr-4">Package Duration</h5>
-                                        <span class="text-muted">{{ optional($deposit->plan)->period }}</span>
-                                    </li>
-                                    <li>
-                                        <h5 class=" mr-4">Status</h5>
-                                        @if($deposit->status)
-                                            <span class="badge badge-success">Active</span>
-                                        @else
-                                            <span class="badge badge-warning">Pending</span>
-                                        @endif
-                                    </li>
-                                    <li>
-                                        <h5 class=" mr-4">Date Created</h5>
-                                        <span class="text-muted">{{ $deposit->created_at->format('Y-m-d') }}</span>
-                                    </li>
-                                    <li>
-                                        <h5 class=" mr-4">Payment Proof</h5>
-                                    </li>
-                                    <li>
-                                        <img style="max-height: 200px" src="{{ $deposit->proof }}">
+                                    <tr><th>Deposit Proof</th>
+                                        <th>
+                                            @if ($deposit->proof)
+                                                <a href="{{ $deposit->proof }}">View deposit proof</a>
+                                            @else
+                                                Not Uploaded
+                                            @endif
+                                        </th></tr>
 
-                                    </li>
-                                </ul>
+                                    <tr><th>Account Name</th><th>{{ Auth()->user()->name  }}</th></tr>
+                                    <tr><th>Account Email</th><th>{{ Auth()->user()->email  }}</th></tr>
+{{--                                    <tr><th>Amount Deposited Pair</th><th>{{ $deposit->amount  }}</th></tr>--}}
+
+                                </table>
 
                             </div>
                         </div>

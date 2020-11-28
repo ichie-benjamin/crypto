@@ -13,6 +13,29 @@
     <link rel="stylesheet" href="/back/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="/back/css/style.css">
     @yield('styles')
+
+    <style>
+        .alert-danger {
+            color: #ffff!important;
+            background-color: #F44336!important;
+            border-color: #F44336!important;
+        }
+        .payment-methods .card {
+            border: 0px solid #363C4E;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
+            background: #673AB7
+        }
+        .payment-methods .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #363C4E;
+            background: #673AB7;
+            padding: 15px 20px;
+        }
+    </style>
 </head>
 
 <body id="dashboard">
@@ -152,6 +175,8 @@
     </div>
 
     {{--    @endsection--}}
+
+
 
     @yield('content')
 
