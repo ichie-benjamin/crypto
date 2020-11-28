@@ -55,13 +55,12 @@ class DepositsController extends Controller
 
     public function create()
     {
-//        return redirect()->route('backend.deposit.fund');
+        if(!auth()->user()->can_upgrade){
+            return redirect()->route('backend.deposit.fund');
+        }
         $packages = Package::all();
-        $users = User::pluck('username','id')->all();
-$currencies = Currency::pluck('id','id')->all();
-//$accounts = Account::pluck('id','id')->all();
 
-        return view('backend.deposit.create', compact('currencies','packages'));
+        return view('backend.deposit.create', compact('packages'));
     }
 
     public function store(Request $request)
