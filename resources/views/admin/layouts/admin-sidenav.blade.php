@@ -33,6 +33,13 @@
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
 
+        <a href="{{ route('admin.currencies.index') }}" class="br-menu-link  {{ active('admin.currencies.index') }}">
+            <div class="br-menu-item">
+                <i class="menu-item-fa fa fa-pager tx-22"></i>
+                <span class="menu-item-label"> Currency Pair</span>
+            </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
 
 {{--        <a href="{{ route('admin.currencies.index') }}" class="br-menu-link  {{ active('admin.currencies.index') }}">--}}
 {{--            <div class="br-menu-item">--}}

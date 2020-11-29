@@ -51,19 +51,9 @@
                                     <div class="form-group mg-b-10-force">
                                         <label class="form-control-label"> Traded Asset: <span class="tx-danger">*</span></label>
                                         <select id="asset" name="currency_pair" required class="form-control">
-                                            <option>BCH-BTC</option>
-                                            <option>BCH-EUR</option>
-                                            <option>BCH-GBP</option>
-                                            <option>BTC-EOS</option>
-                                            <option>BTC-EUR</option>
-                                            <option>BTC-GBP</option>
-                                            <option>BTC-USD</option>
-                                            <option>BTC-USDC</option>
-                                            <option>EOS-BTC</option>
-                                            <option>EOS-EUR</option>
-                                            <option>EOS-USD</option>
-                                            <option>ETC-BTC</option>
-                                            <option>ETC-EUR</option>
+                                            @foreach(\App\Models\CurrencyPair::all() as $item)
+                                            <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div><!-- col-8 -->
@@ -114,7 +104,7 @@
                                     </div>
                                 </div>
 
-                        
+
 
 
                             </div><!-- row -->

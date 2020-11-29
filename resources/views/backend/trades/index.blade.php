@@ -3,8 +3,47 @@
 @section('content')
 
     <div class="content-body">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
+
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                    </div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                        {
+                            "symbols": [
+                            {
+                                "proName": "FOREXCOM:SPXUSD",
+                                "title": "S&P 500"
+                            },
+                            {
+                                "proName": "FOREXCOM:NSXUSD",
+                                "title": "Nasdaq 100"
+                            },
+                            {
+                                "proName": "FX_IDC:EURUSD",
+                                "title": "EUR/USD"
+                            },
+                            {
+                                "proName": "BITSTAMP:BTCUSD",
+                                "title": "BTC/USD"
+                            },
+                            {
+                                "proName": "BITSTAMP:ETHUSD",
+                                "title": "ETH/USD"
+                            }
+                        ],
+                            "showSymbolLogo": false,
+                            "colorTheme": "dark",
+                            "isTransparent": true,
+                            "displayMode": "adaptive",
+                            "locale": "en"
+                        }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
 
                 @include('partials.menu')
 
@@ -15,12 +54,9 @@
 
 
 
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                    <div style="height:669px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:649px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
 
-                </div>
 
-                <div class="col-xl-9 col-lg-9 col-sm-12">
+                <div class="col-xl-12 col-lg-12 col-sm-12">
 
                     <div style="margin-top: 10px" class="card">
                         <div class="card-header">
@@ -34,11 +70,12 @@
                                             <thead>
                                             <tr>
 
+                                                <td></td>
+                                                <th>Currency</th>
                                                 <th>Currency Pair</th>
-                                                <th>Traded Amount</th>
-                                                <th>Duration</th>
-                                                <th>Percent Profit / Loss</th>
-                                                <th>Predicted Trade as</th>
+                                                <th>Trade Time</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
                                                 <th>Opening Price</th>
                                                 <th>Closing Price</th>
 
@@ -46,24 +83,34 @@
                                             </thead>
                                             <tbody>
 
-
-                                            @foreach($trades as $trade)
+                                            @foreach($trades as $item)
                                                 <tr>
-                                                    <td>{{ $trade->currency_pair }}</td>
-                                                    <td>{{ $trade->traded_amount }} USD</td>
-                                                    <td>{{ $trade->duration }}Sec</td>
-                                                    <td>{{ $trade->profit }} %</td>
-                                                    <td>{{ $trade->is_win ? 'Win' : 'Loss' }}</td>
-                                                    <td>{{ $trade->opening_price }}</td>
-                                                    <td>{{ $trade->closing_price }}</td>
-                                                    {{--<td>{{ $item-> }}</td>--}}
+                                                    @if ($item->is_win)
+                                                        <td><span class="buy-thumb"><i class="mdi mdi-arrow-up"></i></span>
+                                                        </td>
+                                                    @else
+                                                        <td><span class="sold-thumb"><i class="mdi mdi-arrow-down"></i></span>
+                                                        </td>
+                                                    @endif
 
-                                                    {{--<td>{{ $item-> }}</td>--}}
-                                                    {{--<td>{{ $item-> }}</td>--}}
-                                                    {{--<td>{{ $item->}}</td>--}}
+                                                    <td><img src="{{ optional($item->currency)->image }}" height="30" />
+                                                    </td>
+                                                    <td>{{ $item->currency_pair }}
+                                                    </td>
+                                                       <td>{{ $item->created_at }}
+                                                    </td>
+                                                        <td>${{ $item->traded_amount }}</td>
 
+
+                                                    <td class="{{ $item->is_win ? 'text-success' : 'text-danger' }}">{{ $item->is_win ? 'Win' : 'Loss' }}</td>
+
+                                                        <td>{{ $item->o_price }}</td>
+                                                        <td>{{ $item->c_price }}</td>
+{{--                                                    <td>{{ $item->created_at }}</td>--}}
                                                 </tr>
+
                                             @endforeach
+
 
                                             </tbody>
                                         </table>
@@ -88,6 +135,127 @@
 {{--                    <div class="tradingview-widget-container card">--}}
 {{--                        <div id="tradingview_e8053"></div>--}}
 {{--                    </div>--}}
+                    <!-- TradingView Widget END -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div style="height:669px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:649px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"></div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                            {
+                                "title": "Currencies",
+                                "tabs": [
+                                {
+                                    "title": "Major",
+                                    "title_raw": "Major",
+                                    "symbols": [
+                                        {
+                                            "s": "FX_IDC:EURUSD"
+                                        },
+                                        {
+                                            "s": "FX_IDC:USDJPY"
+                                        },
+                                        {
+                                            "s": "FX_IDC:GBPUSD"
+                                        },
+                                        {
+                                            "s": "FX_IDC:AUDUSD"
+                                        },
+                                        {
+                                            "s": "FX_IDC:USDCAD"
+                                        },
+                                        {
+                                            "s": "FX_IDC:USDCHF"
+                                        }
+                                    ],
+                                    "quick_link": {
+                                        "title": "More majors",
+                                        "href": "/markets/currencies/rates-major/"
+                                    }
+                                },
+                                {
+                                    "title": "Minor",
+                                    "title_raw": "Minor",
+                                    "symbols": [
+                                        {
+                                            "s": "FX_IDC:EURGBP"
+                                        },
+                                        {
+                                            "s": "FX_IDC:EURJPY"
+                                        },
+                                        {
+                                            "s": "FX_IDC:GBPJPY"
+                                        },
+                                        {
+                                            "s": "FX_IDC:CADJPY"
+                                        },
+                                        {
+                                            "s": "FX_IDC:GBPCAD"
+                                        },
+                                        {
+                                            "s": "FX_IDC:EURCAD"
+                                        }
+                                    ],
+                                    "quick_link": {
+                                        "title": "More minors",
+                                        "href": "/markets/currencies/rates-minor/"
+                                    }
+                                },
+                                {
+                                    "title": "Exotic",
+                                    "title_raw": "Exotic",
+                                    "symbols": [
+                                        {
+                                            "s": "FX_IDC:USDSEK"
+                                        },
+                                        {
+                                            "s": "FX_IDC:USDMXN"
+                                        },
+                                        {
+                                            "s": "FX_IDC:USDZAR"
+                                        },
+                                        {
+                                            "s": "FX_IDC:EURTRY"
+                                        },
+                                        {
+                                            "s": "FX_IDC:EURNOK"
+                                        },
+                                        {
+                                            "s": "FX_IDC:GBPPLN"
+                                        }
+                                    ],
+                                    "quick_link": {
+                                        "title": "More exotics",
+                                        "href": "/markets/currencies/rates-exotic/"
+                                    }
+                                }
+                            ],
+                                "title_link": "/markets/currencies/rates-major/",
+                                "width": "100%",
+                                "height": 660,
+                                "showChart": true,
+                                "displayMode": "adaptive",
+                                "locale": "en",
+                                "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                                "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                "gridLineColor": "#F0F3FA",
+                                "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                "showSymbolLogo": true,
+                                "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+                                "colorTheme": "light"
+                            }
+                        </script>
+                    </div>
                     <!-- TradingView Widget END -->
                 </div>
 

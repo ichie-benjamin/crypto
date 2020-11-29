@@ -11,13 +11,17 @@ class Trade extends Model
 
     protected $guarded = [];
 
-    protected $with = ['user'];
+    protected $with = ['user','currency'];
 
     protected $appends = ['payout','end_time','o_price','c_price'];
 
     public function user()
     {
         return $this->belongsTo('App\Models\User','user_id');
+    }
+    public function currency()
+    {
+        return $this->belongsTo(CurrencyPair::class,'currency_pair','name');
     }
 
     public function getPayoutAttribute()
@@ -28,20 +32,20 @@ class Trade extends Model
 
     public function getEndTimeAttribute()
     {
-    
+
         return $this->created_at->addSeconds($this->duration);
     }
 
     public function getOPriceAttribute()
     {
-    
-        return $this->profit / $this->traded_amount * 0.1;
+
+        return '$'.$this->profit / $this->traded_amount * 1.19630;
     }
 
     public function getCPriceAttribute()
     {
-    
-        return $this->profit / $this->traded_amount;
+
+        return  '$'.$this->traded_amount * 1.19630;
     }
 
 }

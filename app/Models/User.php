@@ -85,6 +85,6 @@ class User extends Authenticatable
             $background = $colors[$this->id%count($colors)];
             return "https://ui-avatars.com/api/?size=256&background=".$background."&color=fff&name=".urlencode($this->name);
         }
-        return $this->attributes['profile_image'];
+        return $this->attributes['avatar'];
     }
 }

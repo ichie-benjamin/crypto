@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\CurrenciesController;
+use App\Http\Controllers\admin\CurrencyPairController;
 use App\Http\Controllers\admin\PackagesController;
 use App\Http\Controllers\admin\SettingsController;
 use App\Http\Controllers\admin\TradesController;
@@ -40,7 +41,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
         'settings' => SettingsController::class,
         'users' => UsersController::class,
         'packages' => PackagesController::class,
-        'currencies' => CurrenciesController::class,
+        'currences' => CurrenciesController::class,
+        'currencies' => CurrencyPairController::class,
         'trades' => TradesController::class,
     ]);
 });
