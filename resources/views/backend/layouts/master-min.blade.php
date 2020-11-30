@@ -15,6 +15,9 @@
     @yield('styles')
 
     <style>
+        .header .navbar-brand img {
+            max-width: 185px;
+        }
         .alert-danger {
             color: #ffff!important;
             background-color: #F44336!important;
@@ -55,7 +58,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img src="/back/images/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img src="/images/logo.png" alt=""></a>
 
                         <div class="header-right d-flex my-2 align-items-center">
                             <div class="language">
