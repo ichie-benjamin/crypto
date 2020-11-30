@@ -53,6 +53,7 @@
                     <div class="col-md-4 col-sm-5 col-12 p-0">
                         <div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right height-400">
                             <div class="card-content">
+
                                 <div class="card-body p-3">
                                     <p class="text-center h5 text-capitalize">Welcome to Crypto Assets!</p>
                                     <p class="mb-3 text-center">Please enter your login details</p>
@@ -67,10 +68,12 @@
                                             <input type="email" name="email" class="form-control" id="user-name" placeholder="Your Email" required="" autofocus="">
                                             <label for="user-name">Email </label>
                                         </fieldset>
+
                                         <fieldset class="form-label-group">
                                             <input type="password" name="password" class="form-control" id="user-password" placeholder="Enter Password"  required="" autofocus="">
                                             <label for="user-password">Password</label>
                                         </fieldset>
+
                                         <div class="form-group row">
                                             <div class="col-md-6 col-12 text-center text-sm-left">
                                                 <fieldset>
@@ -81,7 +84,7 @@
                                             <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="#" class="card-link">Forgot Password?</a></div>
                                         </div>
                                         <button type="submit" class="btn-gradient-primary btn-block my-1">Log In</button>
-                                        <p class="text-center"><a href="#" class="card-link">Register</a></p>
+                                        <p class="text-center"><a href="{{ route('register') }}" class="card-link">Register</a></p>
                                     </form>
                                 </div>
                             </div>
