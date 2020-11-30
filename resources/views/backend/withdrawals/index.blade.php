@@ -10,6 +10,7 @@
 
                 @if (auth()->user()->can_withdraw)
                     <div class="col-xl-12">
+                        @include('notification')
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-6"> <h4 class="card-title">Make withdrawal </h4></div>
@@ -27,6 +28,7 @@
                                         <a class="nav-link" data-toggle="tab" href="#tab2">Bank Wire Transfer</a>
                                     </li>
                                 </ul>
+
                                 <div class="tab-content" style="margin-top: 20px; margin-bottom: 30px">
                                     <div class="tab-pane fade active show" id="tab1">
                                         <div class="row payment-methods">
@@ -34,13 +36,14 @@
                                             <div class="col-xl-3 col-lg-3 col-md-3">
                                                 <div class="card">
                                                     <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Pay with Bitcoin</h4>
+                                                        <h4 class="card-title text-center">Withdraw with Bitcoin</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <img width="100%" src="/images/gateway/4.jpg" />
+                                                        <img width="100%" height="80px" src="/images/gateway/bitpay.png" />
                                                     </div>
                                                     <div class="card-footer">
                                                         <h4 class="card-title text-center"><a href="{{ route('backend.btc.withdrawal') }}"> SELECT</a></h4>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -50,10 +53,10 @@
                                                         <h4 class="card-title text-center">Fasa Pay</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <img width="100%" src="/images/fasapay.jpg" />
+                                                        <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />
                                                     </div>
                                                     <div class="card-footer">
-                                                        <h4 class="card-title text-center">SELECT</h4>
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>
 
                                                     </div>
                                                 </div>
@@ -64,10 +67,10 @@
                                                         <h4 class="card-title text-center">Western Union</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <img width="100%" src="/images/gateway/3.jpg" />
+                                                        <img width="100%" height="80px" src="/images/gateway/3.jpg" />
                                                     </div>
                                                     <div class="card-footer">
-                                                        <h4 class="card-title text-center">SELECT</h4>
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>
 
                                                     </div>
                                                 </div>
@@ -78,14 +81,64 @@
                                                         <h4 class="card-title text-center">Money Gram</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <img width="100%" src="/images/gateway/1.jpg" />
+                                                        <img width="100%" height="80px" src="/images/gateway/1.jpg" />
                                                     </div>
                                                     <div class="card-footer">
-                                                        <h4 class="card-title text-center">SELECT</h4>
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>
+
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Visa & MasterCard</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" height="80px" src="/images/gateway/visa.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Neteller</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" height="80px" src="/images/gateway/net.jpg" />
+                                                    </div>
+                                                    <div class="card-footer">
+
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-3 col-md-3">
+                                                <div class="card">
+                                                    <div class="card-header text-center">
+                                                        <h4 class="card-title text-center">Skrill</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <img width="100%" height="80px" src="/images/gateway/skril.png" />
+                                                    </div>
+                                                    <div class="card-footer">
+
+                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
+
 
                                     </div>
                                     <div class="tab-pane fade" id="tab2">

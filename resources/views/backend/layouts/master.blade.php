@@ -15,6 +15,10 @@
     @yield('styles')
 
     <style>
+        a {
+            color: #ffff;
+            font-weight: 800;
+        }
         .alert-danger {
             color: #ffff!important;
             background-color: #F44336!important;

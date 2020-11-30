@@ -10,10 +10,25 @@ use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
-    public function dashboard(){
+    public function gateway($gateway)
+    {
+
+        return redirect()->back()->with('failure', "$gateway is not active for your account, please use bitcoin or wire transfer");
+
+    }
+        public function dashboard(){
 //        if(!auth()->user()->btc){
 //            return redirect()->route('backend.profile.edit')->with('failure','Complete your profile to continue');
 //        }
+
+        if(auth()->user()->identity){
+            if(!auth()->user()->identity->front){
+                return redirect()->route('backend.profile.upload.id')->with('failure','Upload means of identification');
+            }
+        }else{
+            Identity::create(['user_id' => auth()->id()]);
+        }
+
         $trades = Trade::whereUserId(auth()->id())->get();
         $deposits = Deposit::whereUserId(auth()->id())->get();
 

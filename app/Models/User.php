@@ -30,8 +30,8 @@ class User extends Authenticatable
         'city',
         'can_withdraw',
         'can_upgrade',
-        'can_trade',
-        'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name'
+        'can_trade','plan_id',
+        'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name','account_officer'
     ];
 
     protected $appends = ['name'];
@@ -41,7 +41,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $with = ['identity'];
+    protected $with = ['identity','plan'];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -52,6 +52,11 @@ class User extends Authenticatable
     public function identity(){
 
         return $this->hasOne(Identity::class);
+
+    }
+    public function plan(){
+
+        return $this->hasOne(Package::class,'id','plan_id');
 
     }
 

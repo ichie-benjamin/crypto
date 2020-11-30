@@ -30,7 +30,7 @@ class DepositsController extends Controller
     public function depositFund()
     {
         if(auth()->user()->can_upgrade){
-            return redirect()->route('backend.deposit.fund')->with('message','Purchase a plan');
+            return redirect()->route('backend.deposits.create')->with('message','Purchase a plan');
         }
         return view('backend.deposit.fund.1');
     }
@@ -58,7 +58,7 @@ class DepositsController extends Controller
         if(!auth()->user()->can_upgrade){
             return redirect()->route('backend.deposit.fund');
         }
-        $packages = Package::all();
+        $packages = Package::where('minimum_purchase','>',0)->get();
 
         return view('backend.deposit.create', compact('packages'));
     }

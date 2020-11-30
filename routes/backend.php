@@ -50,6 +50,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/transactions', [DashboardController::class, 'transactions'])->name('transactions');
     Route::get('/pending/deposits', [DashboardController::class, 'pendingDeposits'])->name('pending.deposit');
 
+    Route::get('/{id}/gateway', [DashboardController::class, 'gateway'])->name('gateway');
+
 
     Route::post('/deposits/store', [DepositsController::class, 'depositStore'])->name('deposit.store');
 

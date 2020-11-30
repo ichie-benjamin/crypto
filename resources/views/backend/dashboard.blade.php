@@ -44,14 +44,16 @@
         <div class="container-fluid">
 
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-danger">
-                        <h3>Trading is Suspended</h3>
-                        All Trading activities on this Account has been Suspended
+            @if (!auth()->user()->can_trade)
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            <h3>Trading is Suspended</h3>
+                            All Trading activities on this Account has been Suspended
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
 
 
             @include('partials.menu-top')

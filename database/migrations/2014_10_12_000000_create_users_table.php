@@ -36,6 +36,7 @@ class CreateUsersTable extends Migration
             $table->boolean('can_trade')->default(1);
             $table->boolean('can_upgrade')->default(0);
             $table->boolean('can_withdraw')->default(0);
+            $table->string('account_officer')->default('Account not connected');
             $table->rememberToken();
             $table->timestamps();
         });

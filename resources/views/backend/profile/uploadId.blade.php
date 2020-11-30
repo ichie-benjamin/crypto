@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.master-min')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                             <form action="{{ route('backend.account.upload.id') }}" class="identity-upload">
                                 <div class="identity-content">
                                     <span class="icon"><i class="fa fa-shield"></i></span>
-                                    <h4>Please verify your identity before to continue using this platform</h4>
+                                    <h4>Please verify your identity to continue using this platform</h4>
                                     <p>Uploading your ID helps us ensure the safety and security of your funds</p>
                                 </div>
 

@@ -3,6 +3,12 @@
         <div class="card-body">
             <ul class="d-flex">
                 <li class="nav-item">
+                    <a href="{{ route('backend.dashboard') }}" class="nav-link">
+                        <i class="mdi mdi-view-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('backend.account.overview') }}" class="nav-link">
                         <i class="mdi mdi-bullseye"></i>
                         <span>Overview</span>

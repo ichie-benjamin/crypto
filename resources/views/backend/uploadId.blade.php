@@ -1,4 +1,4 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.master-min')
 
 @section('content')
 
@@ -18,7 +18,9 @@
                                     <p>Uploading your ID helps as ensure the safety and security of your founds</p>
                                 </div>
 
-                                <div class="form-group">
+
+
+                                <div class="form-group mt-2">
                                     <label class="mr-sm-2">Upload Front ID </label>
                                     <span class="float-right">Maximum file size is 2mb</span>
                                     <div class="file-upload-wrapper lfm" data-input="thumbnail" data-preview="holder" data-text="upload front">
@@ -38,7 +40,18 @@
                                     <div id="back-holder" style="margin-top:15px; margin-bottom:20px;max-height:200px;"></div>
                                 </div>
 
-                                <div class="text-center">
+
+                                <div class="form-group">
+                                    <label class="mr-sm-2">ID Type</label>
+                                    {{--                                    <div class="">--}}
+                                    <select required name="type" class="form-control">
+                                        <option value="National ID">National Id</option>
+                                        <option value="Drivers License">Drivers License</option>
+                                    </select>
+                                    {{--                                    </div>--}}
+                                </div>
+
+                                <div class="text-center" style="margin-top: 70px">
                                     <button type="submit" class="btn btn-success pl-5 pr-5">Submit</button>
                                 </div>
                             </form>

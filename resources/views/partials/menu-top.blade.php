@@ -19,7 +19,7 @@
         <div class="card text-center pt-2">
             <div class="card-body">
                 <p class="mb-1">Account Plan</p>
-                <h4>STARTER</h4>
+                <h4>{{ optional(auth()->user()->plan)->name }}</h4>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <div class="card text-center pt-2">
             <div class="card-body">
                 <p class="mb-1">Connections</p>
-                <h6 style="color: red" class="tx-danger">Account not connected</h6>
+                <h6 style="color: red" class="tx-danger">{{ auth()->user()->account_officer }}</h6>
             </div>
         </div>
     </div>

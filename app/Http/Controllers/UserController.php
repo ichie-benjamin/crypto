@@ -41,6 +41,7 @@ class UserController extends Controller
         $rules = [
             'front' => 'required',
             'back' => 'required',
+            'type' => 'nullable',
         ];
         $data = $request->validate($rules);
         $data['user_id'] = auth()->id();

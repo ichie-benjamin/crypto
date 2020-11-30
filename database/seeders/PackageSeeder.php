@@ -15,6 +15,7 @@ class PackageSeeder extends Seeder
     public function run()
     {
         $packages = [
+        ['name' => 'Starter','percent_profit' => 0,'period' => '20','minimum_purchase' => 0,'maximum_purchase' => 0],
         ['name' => 'Bronze','percent_profit' => 10,'period' => '20','minimum_purchase' => 1000,'maximum_purchase' => 3000],
         ['name' => 'Silver','percent_profit' => 30,'period' => '20','minimum_purchase' => 3000,'maximum_purchase' => 5000],
         ['name' => 'Gold','percent_profit' => 50,'period' => '30','minimum_purchase' => 5000,'maximum_purchase' => 10000],
