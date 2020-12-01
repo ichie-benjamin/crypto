@@ -1,197 +1,6 @@
+@extends('layouts.master')
 
-<!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crypto Assets broker. Online Crypto trading</title>
-    <meta name="description" content="Official website of Crypto Assets broker. Earn online by trading on Crypto and financial markets. With Financialtrade broker, you can trade in сurrency, oil, precious metals and stock indices. Reliable ECN Crypto broker with high-quality service.">
-    <meta name="keywords">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Financialtrademarktets Crypto broker. Online Crypto trading with ECN broker">
-    <meta property="og:site_name" content="Crypto Assets">
-{{--    <meta property="og:url" content="index-2.html">--}}
-    <link rel="icon" type="image/png" href="images/new-site/logo3.png"/>
-    <meta property="og:description" content="Official website of Crypto Assets Crypto broker. Earn online by trading on Crypto and financial markets. With Crypto Assets broker, you can trade in сurrency, oil, precious metals and stock indices. Reliable ECN Crypto broker with high-quality service.">
-
-    <link href="/css/app6597.css" rel="stylesheet">
-
-    <script src="/js/jquery.min.js"></script>
-
-    <style>
-        .translated-ltr{margin-top:-30px;}
-        .translated-ltr{margin-top:-30px;}
-        .goog-te-banner-frame {display: none;margin-top:-20px;}
-
-        .goog-logo-link {
-            display:none !important;
-        }
-
-        .promotions-block-main {
-            padding: 0 0 20px!important;
-        }
-
-        .section {
-            min-height: 100px!important;
-            height: 100%;
-        }
-
-        .goog-te-gadget select{
-            /*color: transparent !important;*/
-            height: inherit;
-        }
-
-        @media (max-width: 400px) {
-            .goog-te-gadget {
-                margin-top: 30px
-            }
-        }
-        @media (max-width: 400px) {
-            .goog-te-gadget select{
-                height: inherit;
-            }
-        }
-    </style>
-    <!-- Chatra {literal} -->
-    <script>
-
-        function hasClass(elem,cls) {
-            return elem.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-        }
-
-        Tifia = {
-            cabinetUrl: 'https://social.tifia.com/en/',
-            apiUrl: 'https://api.tifia.com',
-            quotesUrl: 'https://tifia.com'
-        };
-
-        Lang = {
-            'day'               : 'day',
-            'days'              : 'days',
-            'View'              : 'View',
-            'Equity'            : 'Equity',
-            'Lifespan'          : 'Lifespan',
-            'Investors'         : 'Investors',
-            'Profitability'     : 'Profitability',
-            'InvestorsEquity'   : 'Investor&#039;s equity',
-            'TradersCommission' : 'Trader&#039;s commission',
-        };
-
-        App = {
-            loader: {
-                getObj: function(obj) {
-                    if (obj.closest('.loader-wrapper')) {
-                        return obj.closest('.loader-wrapper');
-                    } else if ( obj.closest('.dropdown-menu').length > 0 && obj.closest('.btn-group').length > 0 ) {
-                        return obj.closest('.btn-group');
-                    }
-
-                    return obj;
-                },
-                show: function (obj) {
-                    var obj = this.getObj(obj);
-
-                    if (!obj.hasClass('no-loader')) {
-                        obj.addClass('ajax-loading');
-
-                        if (obj.height() >= 50) {
-                            obj.append('<div class="loader"></div>');
-                        } else {
-                            obj.append('<div class="loader __mini"></div>');
-                        }
-
-                        obj.addClass('overlay');
-                    }
-                },
-                hide: function (obj) {
-                    var obj = this.getObj(obj);
-
-                    obj.removeClass('ajax-loading');
-                    obj.find('.loader').remove();
-                    obj.removeClass('overlay');
-                },
-            }
-        }
-    </script>
-    <!-- /Chatra {/literal} -->
-</head>
-
-<body class="lang-en">
-<!-- End Google Tag Manager (noscript) -->
-<div class="main-wrapper">
-    <header class="" style="height: 95px;">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg">
-                <div class="left-block mb-5">
-                    <div class="logo">
-                        <p>
-                            <a style="margin-top: -10px; color: white;  line-height: 1px" href="{{ url('/') }}"><img alt="Crypto Assest" style="max-height: 70px; max-width: 80px;" height="70"  src="/img/core-img/logo.png"><br/>
-{{--                                Crypto Assets--}}
-                            </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main-menu">
-                            <div id="navbarNav" class="collapse navbar-collapse">
-                                <ul class="">
-                                    <li class="mob-only no-bg open-acc"><a class="" href="{{ route('register') }}" rel="nofollow">Registration</a>                                            </li>
-                                    <li class="mob-only no-bg"><a class="" href="{{ route('login') }}" rel="nofollow">Sign in</a></li>
-                                    <li>
-                                        <a style="cursor: pointer" href="{{ route('home') }}">Home<span></span></a>
-                                        <div class="bg-menu"></div>
-                                    </li>
-
-                                    <li>
-                                        <a style="cursor: pointer" href="#{{ route('about') }}" rel="nofollow">About us</a>
-                                        <div class="bg-menu"></div>
-                                    </li>
-                                    <li>
-                                        <a style="cursor: pointer" href="#{{ route('contact') }}" rel="nofollow">Contact us</a>
-                                        <div class="bg-menu"></div>
-                                    </li>
-                                    <li>
-                                        <div class="bg-menu"></div>
-                                    </li>
-                                    <li class="mob-only">
-                                        <div style="height: 20px; margin-top: -30px; margin-left: 20px" id="google_translate_element"></div>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-block">
-                    @guest()
-                    <div class="reg-btn">
-                        <a class="" href="{{ route('register') }}" rel="nofollow">Open account</a>
-                        <a class="" href="{{ route('login') }}" rel="nofollow">Sign in</a>
-                    </div>
-                    @else
-                        <div class="reg-btn">
-                            <a class="" href="/dashboard" rel="nofollow">Dashboard</a>
-                        </div>
-                    @endguest
-                    <div class="lang-block">
-                        <span class="separator"></span>
-                        <div style="height: 20px; margin-top: 30px;"  id="google_translate_element">
-                        </div>
-                    </div>
-                </div>
-                <button class="navbar-toggler navbar-btn-menu" type="button" data-toggle="collapse"
-                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </nav>
-        </div>
-    </header>
-    <div class="menu-overlay"></div>
+@section('content')
     <div class="bg-fix">
         <div class="bg-fix-new" style="background-color: rgba(11, 35, 58, 0.44)">
 
@@ -318,61 +127,61 @@
 
                     <div class="trading-account-choose tab-content">
 
-                            <div class="tab-pane fadeIn animated active" id="classic">
-                                <div class="account-type">
-                                    <h3 class="feathe"><span>SIGN UP</span></h3>
-                                    <p></p>
-                                </div>
-
-                                   <h3 class="text-center">Seamless</h3>
-{{--                                </ul>--}}
-
-                                <div class="account-info-line">
-                                    Sign up via our registration link. Provide valid details in the form fields and hit the submit button.
-                                </div>
-                                <div class="btn-acc">
-                                    <a class="btn btn-grey" href="{{ route('register') }}">View details</a>
-                                    <a class="btn btn-grey" target="_blank" href="{{ route('register') }}">Open trading account</a>
-                                </div>
+                        <div class="tab-pane fadeIn animated active" id="classic">
+                            <div class="account-type">
+                                <h3 class="feathe"><span>SIGN UP</span></h3>
+                                <p></p>
                             </div>
 
-                            <div class="tab-pane fadeIn animated active" id="classic">
-                                <div class="account-type">
-                                    <h3 class="feathe"><span>FUND ACCOUNT</span></h3>
-                                    <p></p>
-                                </div>
+                            <h3 class="text-center">Seamless</h3>
+                            {{--                                </ul>--}}
 
-                                   <h3 class="text-center">Automatic
-                                   </h3>
-{{--                                </ul>--}}
+                            <div class="account-info-line">
+                                Sign up via our registration link. Provide valid details in the form fields and hit the submit button.
+                            </div>
+                            <div class="btn-acc">
+                                <a class="btn btn-grey" href="{{ route('register') }}">View details</a>
+                                <a class="btn btn-grey" target="_blank" href="{{ route('register') }}">Open trading account</a>
+                            </div>
+                        </div>
 
-                                <div class="account-info-line">
-                                    After verification of your details, add funds to your account. This makes you ready to invest.
-                                </div>
-                                <div class="btn-acc">
-                                    <a class="btn btn-grey" href="{{ route('deposit.create') }}">Make Deposit</a>
-                                    <a class="btn btn-grey" target="_blank" href="{{ route('deposit.create') }}">Make Deposit</a>
-                                </div>
+                        <div class="tab-pane fadeIn animated active" id="classic">
+                            <div class="account-type">
+                                <h3 class="feathe"><span>FUND ACCOUNT</span></h3>
+                                <p></p>
                             </div>
 
-                            <div class="tab-pane fadeIn animated active" id="classic">
-                                <div class="account-type">
-                                    <h3 class="feathe"><span>                                    START EARNING
+                            <h3 class="text-center">Automatic
+                            </h3>
+                            {{--                                </ul>--}}
+
+                            <div class="account-info-line">
+                                After verification of your details, add funds to your account. This makes you ready to invest.
+                            </div>
+                            <div class="btn-acc">
+                                <a class="btn btn-grey" href="{{ route('deposit.create') }}">Make Deposit</a>
+                                <a class="btn btn-grey" target="_blank" href="{{ route('deposit.create') }}">Make Deposit</a>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fadeIn animated active" id="classic">
+                            <div class="account-type">
+                                <h3 class="feathe"><span>                                    START EARNING
 </span></h3>
-                                    <p></p>
-                                </div>
-
-                                   <h3 class="text-center">Quick and easy</h3>
-{{--                                </ul>--}}
-
-                                <div class="account-info-line">
-                                    Invest in any suitable plan on our platform and your money starts growing. Earn more via referrals.
-                                </div>
-                                <div class="btn-acc">
-                                    <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">Dashboard</a>
-                                    <a class="btn btn-grey" target="_blank" href="{{ route('backend.dashboard') }}">Dashboard</a>
-                                </div>
+                                <p></p>
                             </div>
+
+                            <h3 class="text-center">Quick and easy</h3>
+                            {{--                                </ul>--}}
+
+                            <div class="account-info-line">
+                                Invest in any suitable plan on our platform and your money starts growing. Earn more via referrals.
+                            </div>
+                            <div class="btn-acc">
+                                <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">Dashboard</a>
+                                <a class="btn btn-grey" target="_blank" href="{{ route('backend.dashboard') }}">Dashboard</a>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -423,7 +232,7 @@
                                     <th width="18%">Lifespan</th>
                                     <th>Profitability</th>
                                     <th>Equity</th>
-{{--                                    <th width="20%"></th>--}}
+                                    {{--                                    <th width="20%"></th>--}}
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -432,23 +241,23 @@
     $i = 0;
                                 @endphp
                                 @foreach($traders as $item)
-                                   @php $i++;
+                                    @php $i++;
     $background = $colors[$i%count($colors)];
- @endphp
-                                <tr class="red active" data-login="6182791" data-profit="996.40" data-period="87" data-commission="10">
-                                    <td>
-                                        <div class="login-img">
-                                            <img class="lazy loaded img-rounded" data-src="https://ui-avatars.com/api/?size=256&background{{$background}}&color=fff&name={{urlencode($item['name'])}}" data-ll-status="loaded" src="https://ui-avatars.com/api/?size=256&background{{$background}}&color=fff&name={{urlencode($item['name'])}}">
-                                        </div>
-                                        <div class="login-info">
-                                            <span>{{ $item['name'] }}</span><br>
-                                            {{ $item['id'] }}
-                                        </div>
-                                    </td>
-                                    <td>{{ $item['days'] }}</td>
-                                    <td>{{ $item['pro'] }}</td>
-                                    <td>{{ $item['equity'] }}</td>
-                                </tr>
+                                    @endphp
+                                    <tr class="red active" data-login="6182791" data-profit="996.40" data-period="87" data-commission="10">
+                                        <td>
+                                            <div class="login-img">
+                                                <img class="lazy loaded img-rounded" data-src="https://ui-avatars.com/api/?size=256&background{{$background}}&color=fff&name={{urlencode($item['name'])}}" data-ll-status="loaded" src="https://ui-avatars.com/api/?size=256&background{{$background}}&color=fff&name={{urlencode($item['name'])}}">
+                                            </div>
+                                            <div class="login-info">
+                                                <span>{{ $item['name'] }}</span><br>
+                                                {{ $item['id'] }}
+                                            </div>
+                                        </td>
+                                        <td>{{ $item['days'] }}</td>
+                                        <td>{{ $item['pro'] }}</td>
+                                        <td>{{ $item['equity'] }}</td>
+                                    </tr>
                                 @endforeach
                                 </tbody>
                             </table>
@@ -484,41 +293,41 @@
                         <li><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab">ECN Pro</a></li>
                     </ul>
                     <div class="trading-account-choose tab-content">
-                        @foreach(\App\Models\Package::all() as $item)
-                        <div class="tab-pane fadeIn animated active" id="classic">
-                            <div class="account-type">
-                                <h3 class="feather"><span>{{ $item->name }}</span></h3>
-                                <p></p>
+                        @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)
+                            <div class="tab-pane fadeIn animated active" id="classic">
+                                <div class="account-type">
+                                    <h3 class="feather"><span>{{ $item->name }}</span></h3>
+                                    <p></p>
+                                </div>
+                                <ul class="account-info">
+                                    <li>
+                                        <p>Minimum Deposit</p>
+                                        <span>${{ $item->minimum_purchase }}</span>
+                                    </li>
+                                    <li>
+                                        <p>Maximum Deposit</p>
+                                        <span>${{ $item->maximum_purchase }}</span>
+                                    </li>
+                                </ul>
+                                <ul class="account-info-more">
+                                    <li>
+                                        <p>Interval</p>
+                                        <span>{{ $item->period }} Days</span>
+                                    </li>
+                                    <li>
+                                        <p>Account base currency</p>
+                                        <span>USD,GPD, EUR</span>
+                                    </li>
+                                </ul>
+                                <div class="account-info-line">
+                                    <p>Trading instruments</p>
+                                    <span>28 <i>Crypto</i>, {{ $item->id }} <i>Metals</i></span>
+                                </div>
+                                <div class="btn-acc">
+                                    <a class="btn btn-grey" href="{{ route('deposit.purchase', $item->id) }}">View details</a>
+                                    <a class="btn btn-grey" target="_blank" href="{{ route('deposit.purchase', $item->id) }}">Open trading account</a>
+                                </div>
                             </div>
-                            <ul class="account-info">
-                                <li>
-                                    <p>Minimum Deposit</p>
-                                    <span>${{ $item->minimum_purchase }}</span>
-                                </li>
-                                <li>
-                                    <p>Maximum Deposit</p>
-                                    <span>${{ $item->maximum_purchase }}</span>
-                                </li>
-                            </ul>
-                            <ul class="account-info-more">
-                                <li>
-                                    <p>Interval</p>
-                                    <span>{{ $item->period }} Days</span>
-                                </li>
-                                <li>
-                                    <p>Account base currency</p>
-                                    <span>USD,GPD, EUR</span>
-                                </li>
-                            </ul>
-                            <div class="account-info-line">
-                                <p>Trading instruments</p>
-                                <span>28 <i>Crypto</i>, {{ $item->id }} <i>Metals</i></span>
-                            </div>
-                            <div class="btn-acc">
-                                <a class="btn btn-grey" href="{{ route('deposit.purchase', $item->id) }}">View details</a>
-                                <a class="btn btn-grey" target="_blank" href="{{ route('deposit.purchase', $item->id) }}">Open trading account</a>
-                            </div>
-                        </div>
                         @endforeach
                     </div>
 
@@ -544,105 +353,10 @@
                 </div>
             </section>
 
-            <footer class="">
-                <div class="container-fluid">
-                    <ul class="payments">
-                        <li><img alt="Mastercard logo" data-src="/images/new-site/footer-payments/mastercard.svg" class="lazy"></li>
-                        <li><img alt="Visa logo" data-src="/images/new-site/footer-payments/visa.svg" class="lazy"></li>
-                        <li><img alt="Bank Wire logo" data-src="/images/new-site/footer-payments/bankwire.svg" class="lazy"></li>
-                        <li><img alt="Skrill logo" data-src="/images/new-site/footer-payments/skrill.svg" class="lazy"></li>
-                        <li><img alt="Perfect Money logo" data-src="/images/new-site/footer-payments/pm.svg" class="lazy"></li>
-                        <li><img alt="Neteller logo" data-src="/images/new-site/footer-payments/neteller.svg" class="lazy"></li>
 
-                        <li><img alt="Fasapay logo" data-src="/images/new-site/footer-payments/fasapay.svg" class="lazy"></li>
-                        <li><img alt="Bitcoin logo" data-src="/images/new-site/footer-payments/bitcoin.svg" class="lazy"></li>
-                    </ul>
-                </div>
-                <div class="container-content">
-                    <div class="container">
-                        <ul class="footer-menu">
-                            <li class="col-md-6">
-                                <ul>
-                                    <li>About us</li>
-                                    <li><a href="{{ route('about') }}">Why us?</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-md-6">
-                                <ul>
-                                    <li>Contact us</li>
-                                    <li><a href="#">Chat Us</a></li>
-                                    <li><a href="{{ route('contact') }}">Contacts</a></li>
-                                </ul>
-                            </li>
-
-
-
-
-
-
-                        </ul>
-                    </div>
-                    <ul class="copyright-text">
-                        <li>
-                            <div class="logo-footer">
-                                <p>
-                                    <a style="margin-top: -30px; color: white; line-height: 1px; font-size: 16px" href="{{ url('/') }}">
-                                        <img  alt="Crypto Assets Markets Limited" height="70" src="/img/core-img/logo.png">
-                                        <br>Crypto Assets</a>
-                                </p>
-                            </div>
-                            <p>Copyright © 2011 - 2020<br>
-                                Crypto Assets
-                                <br>
-                                Email: <a href="mailto:support@cryptoassest.com">support@cryptoassest.com/</a>
-                            </p>
-                        </li>
-                        <li class="docs-main">
-                            <ul>
-                                <li><a href="#">Terms of use</a></li>
-                                <li><a href="#">Privacy policy</a></li>>
-                                <li><a href="#">Risk Disclosure</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="switch-footer">
-                        <a href="#" class="rs-link" data-link-desktop="Switch to the desktop version"
-                           data-link-responsive="Switch to the mobile version"></a>
-                    </div>
-                </div>
-            </footer>
+            {{--//footer--}}
+            @include('layouts.partials.footer')
         </div>
     </div>
 
-</div>
-
-
-
-
-
-
-
-
-
-<script src="/js/TweenMax.min.js" async="" defer=""></script>
-<script src="/js/ScrollMagic.min.js" async="" defer=""></script>
-<script src="/js/animation.gsap.js" async="" defer=""></script>
-<script src="/js/scene-scroll.js" async="" defer=""></script>
-{{--<script src="/js/app1.js"></script>--}}
-{{--<script src="/js/vendor.js"></script>--}}
-
-<script src="/js/popper.min.js"></script>
-
-<script src="/js/bootstrap.min.js"></script>
-
-<script src="/js/lazyload.min.js"></script>
-<script src="/js/lazyload-css.1.0.5.min.js"></script>
-<script src="/js/new-main.js"></script>
-{{--<script src="/js/main-page.js"></script>--}}
-<script src="/js/select2.full.min.js"></script>
-<script src="/js/jquery.inputmask.min.js"></script>
-<script src="/js/flickity.pkgd.min.js"></script>
-<script src="/js/jquery.jscrollpane.min.js"></script>
-<script src="/js/jquery.mousewheel.js"></script>
-<script src="/js/bodyScrollLock.min.js"></script></body>
-</html>
+@endsection

@@ -48,9 +48,21 @@
                     @foreach ($users as $user)
                         <tr>
                             <td>{{ $count++ }}</td>
-                            <td><a href="{{ route('admin.users.show', $user->username) }}">{{ $user->username }}</a></td>
+                            <td><a href="{{ route('admin.users.show', $user->username) }}">{{ $user->username }}</a> <br />
+                                @if ($user->is_active)
+                                    <span class="badge badge-success">Activated</span>
+                                @else
+                                    <span class="badge badge-danger">Not Activated</span>
+                                @endif
+                            </td>
                             <td><img src="{{ $user->avatar }}" height="50px" width="50px"></td>
-                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->email }} <br />
+                                @if ($user->email_verified_at)
+                                    <span class="badge badge-success">Verified</span>
+                                @else
+                                    <span class="badge badge-danger">Not Verified</span>
+                                @endif
+                            </td>
                             <td>{{ $user->phone }}</td>
                             <td>{{ $user->invested() }}</td>
                             <td><a href="{{ route('admin.trades.index') }}?user={{$user->id}}" >{{ \App\Models\Trade::whereUserId($user->id)->count() }}</a>
@@ -59,7 +71,7 @@
                             <td>{{ $user->bonus() }}</td>
                             <td>
                                 <a href="{{ route('admin.users.show', $user->username) }}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="View User"><em class="fa fa-eye"></em></a>
-                                <a href="{{ route('admin.users.edit', $user) }}" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Edit User"><em class="fa fa-edit"></em></a>
+                                <a href="{{ route('admin.user.toggle', $user->id) }}" class="btn {{ $user->is_active ? 'btn-danger' : 'btn-success' }}" data-toggle="tooltip" ><em class="fa {{ $user->is_active ? 'fa-times ' : ' fa-check' }} "></em></a>
                                 <a href="{{ route('admin.users.destroy', $user) }}" onclick="destroyUser(event)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>
                                     <form id="delete-customer-form" action="{{ route('admin.users.destroy', $user) }}" method="POST" class="d-none">
                                         @csrf

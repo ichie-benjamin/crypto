@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cryto Assets</title>
+    <title>Crypto Assets</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/favicon.png">
+{{--    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/favicon.png">--}}
+
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ setting('favicon','/images/fav.png') }}">
+
+
     <!-- Custom Stylesheet -->
     {{--    <link rel="stylesheet" href="/back/vendor/nice-select/css/nice-select.css">--}}
     <link rel="stylesheet" href="/back/vendor/toastr/toastr.min.css">

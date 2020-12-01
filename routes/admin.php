@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('users/active/plans', [UsersController::class,'activePlans'])->name('users.active.plans');
 
+    Route::get('user/toggle/{id}', [UsersController::class,'toggleActive'])->name('user.toggle');
+
     Route::get('withdrawals/all', [PackagesController::class,'allWithdrawals'])->name('withdrawals.index');
     Route::post('withdrawal/approve/{id}', [PackagesController::class,'withdrawalApprove'])->name('withdrawal.approve');
     Route::post('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');

@@ -122,6 +122,12 @@ class UsersController extends Controller
         $user->save();
         return redirect()->back()->with('success', 'Successful, User Data Updated');
     }
+    public function toggleActive($id){
+        $user = User::findOrFail($id);
+        $user->is_active = !$user->is_active;
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, User Data Updated');
+    }
     public function toggleWithdraw($id){
         $user = User::findOrFail($id);
         $user->can_withdraw = !$user->can_withdraw;
