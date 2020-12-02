@@ -10,7 +10,7 @@
                         <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">FAQ</h1>
                         <ul class="breadcrumb bg-transparent justify-content-center animation m-0 p-0" data-animation="fadeInUp" data-animation-delay="1.3s">
                             <li><a href="{{ route('home') }}">Home</a> </li>
-                            <li><span><a href="{{ route('fag') }}">FAQ</a></span></li>
+                            <li><span><a href="{{ route('fags') }}">FAQ</a></span></li>
                         </ul>
                     </div>
                 </div>
