@@ -32,11 +32,44 @@ class HomeController extends Controller
     }
     public function about()
     {
-        return view('about');
+        return view('about1');
     }
+
+       public function fags()
+    {
+        return view('fags');
+    }
+
+       public function options()
+    {
+        return view('options');
+    }
+       public function trades()
+    {
+        return view('trades');
+    }
+    public function calender()
+    {
+        return view('calender');
+    }
+    public function bonus()
+    {
+        return view('bonus');
+    }
+
+
 
     public function contact()
     {
-        return view('home');
+        return view('contact');
+    }
+    public function privacy()
+    {
+        return view('privacy');
+    }
+
+    public function terms()
+    {
+        return view('terms');
     }
 }

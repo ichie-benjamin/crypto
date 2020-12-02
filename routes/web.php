@@ -6,8 +6,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/fags', [HomeController::class, 'fags'])->name('fags');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
+Route::get('/options', [HomeController::class, 'options'])->name('options');
+Route::get('/choosing-trades', [HomeController::class, 'trades'])->name('trades');
+Route::get('/economic-calender', [HomeController::class, 'calender'])->name('calender');
+Route::get('/trader-bonuses', [HomeController::class, 'bonus'])->name('bonus');
+
 
 Auth::routes();
 

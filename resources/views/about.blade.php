@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="people-in-tifia" >
-            <img src="/images/pro.jpeg">
+{{--            <img src="/images/pro.jpeg">--}}
             <div class="container-fluid">
                 <h4>Share experience, chat with our professional traders around the world, trade and earn together!</h4>
                 <p>Become more confident in making trading decisions and get the most out of your trading with Crypto Assets.</p>

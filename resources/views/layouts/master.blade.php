@@ -153,9 +153,14 @@
                                         <div class="bg-menu"></div>
                                     </li>
                                     <li>
+                                        <a style="cursor: pointer" href="{{ route('fags') }}" rel="nofollow">Fags</a>
+                                        <div class="bg-menu"></div>
+                                    </li>
+                                    <li>
                                         <a style="cursor: pointer" href="#{{ route('contact') }}" rel="nofollow">Contact us</a>
                                         <div class="bg-menu"></div>
                                     </li>
+
                                     <li>
                                         <div class="bg-menu"></div>
                                     </li>

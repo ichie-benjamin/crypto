@@ -23,7 +23,7 @@
                 <div class="logo-footer">
                     <p>
                         <a style="margin-top: -30px; color: white; line-height: 1px; font-size: 16px" href="{{ url('/') }}">
-                            <img  alt="Crypto Assets Markets Limited" height="70" src="/images/fav.png"">
+                            <img  alt="Crypto Assets Markets Limited" height="70" src="/images/fav.png">
                             <br>Crypto Assets</a>
                     </p>
                 </div>
@@ -35,9 +35,9 @@
             </li>
             <li class="docs-main">
                 <ul>
-                    <li><a href="#">About Us</a></li>>>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="{{ route('about') }}">About Us</a></li>>>
+                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                    <li><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
                 </ul>
             </li>
         </ul>
