@@ -39,12 +39,6 @@ class UsersController extends Controller
         return view('admin.users.employer-list', compact('users','title'));
     }
 
-   public function jobseekers(){
-        $title = 'Jobseeker';
-        $users = User::whereRoleIs('jobseeker')->get();
-        return view('admin.users.employer-list', compact('users','title'));
-    }
-
     public function create(Request $request)
     {
         $role = $request->get('r');
@@ -118,6 +112,11 @@ class UsersController extends Controller
 
     public function toggleTrade($id){
         $user = User::findOrFail($id);
+        if(!$user->can_trade){
+            if(setting('suspend_trade_mail')){
+                $this->message($user, 'Your account has been activated for withdraw, you can login to your dashboard and make your withdrawal request','Account Activated For Withdrawal');
+            }
+        }
         $user->can_trade = !$user->can_trade;
         $user->save();
         return redirect()->back()->with('success', 'Successful, User Data Updated');
@@ -130,8 +129,15 @@ class UsersController extends Controller
     }
     public function toggleWithdraw($id){
         $user = User::findOrFail($id);
+        if(!$user->can_withdraw){
+            if(setting('enable_withdraw_mail')){
+                $this->message($user, 'Your account has been activated for withdraw, you can login to your dashboard and make your withdrawal request','Account Activated For Withdrawal');
+            }
+        }
         $user->can_withdraw = !$user->can_withdraw;
+
         $user->save();
+
         return redirect()->back()->with('success', 'Successful, User Data Updated');
     }
     public function toggleUpgrade($id){

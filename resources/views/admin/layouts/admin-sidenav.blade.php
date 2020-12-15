@@ -88,10 +88,6 @@
         <ul class="br-menu-sub nav flex-column">
             <li class="nav-item"><a href="{{ route('admin.users.active.plans') }}" class="nav-link {{ active('admin.users.active.plans') }}">Active plans</a></li>
             <li class="nav-item"><a href="{{ route('admin.users.index') }}" class="nav-link {{ active('admin.users.index') }}">All Users</a></li>
-{{--            <li class="nav-item"><a href="" class="nav-link">All Users</a></li>--}}
-{{--            <li class="nav-item"><a href="" class="nav-link">Refunded Withdrawal</a></li>--}}
-{{--            --}}{{--            <li class="nav-item"><a href="" class="nav-link"></a></li>--}}
-
         </ul>
 
         <a href="{{ route('admin.user.logins.logs') }}" class="br-menu-link {{ active('admin.user.logins.logs') }}">
@@ -101,12 +97,18 @@
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
 
-        <a href="{{ route('admin.settings.index') }}" class="br-menu-link">
+
+        <a href="#" class="br-menu-link {{ active(['admin.settings.*'], 'active show-sub') }}">
             <div class="br-menu-item">
-                <i class="menu-item-fa fa fa-cogs tx-22"></i>
-                <span class="menu-item-label"> General Setting</span>
+                <i class="menu-item-fa fa fa-cogs tx-18"></i>
+                <span class="menu-item-label"> Settings</span>
+                <i class="menu-item-arrow fa fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
+        <ul class="br-menu-sub nav flex-column">
+            <li class="nav-item"><a href="{{ route('admin.settings.index') }}" class="nav-link {{ active('admin.settings.index') }}">General Settings</a></li>
+            <li class="nav-item"><a href="{{ route('admin.settings.mails') }}" class="nav-link {{ active('admin.settings.mails') }}">Mail Setting</a></li>
+        </ul>
 
 
         <a href="{{ route('admin.users.ids') }}" class="br-menu-link">

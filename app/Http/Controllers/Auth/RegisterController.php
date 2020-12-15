@@ -92,6 +92,15 @@ class RegisterController extends Controller
 
         Identity::create(['user_id' => $user->id]);
 
+        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+        $beautymail->send('mails.newuser', ['user' => $user], function($message)
+        {
+            $message
+                ->from('noreply@cryptoassets.com')
+                ->to(setting('admin_email','admin@cryptoassets.com'), 'Admin')
+                ->subject('New User Account');
+        });
+
         return $user;
     }
 }

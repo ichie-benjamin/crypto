@@ -6,6 +6,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
+
+Route::get('/test/mail', [HomeController::class, 'testMail']);
+
+
+
 Route::get('/fags', [HomeController::class, 'fags'])->name('fags');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

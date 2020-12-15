@@ -10,4 +10,20 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function message($user,$msg,$sub){
+        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+        $data = [
+            'message' => $msg,
+            'user' => $user
+        ];
+
+        $beautymail->send('mails.message', ['data' => $data], function($message) use ($user, $sub)
+        {
+            $message
+                ->from('noreply@cryptoassets.com')
+                ->to($user->email, $user->username)
+                ->subject($sub);
+        });
+    }
 }

@@ -38,6 +38,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('deposits/approve', [PackagesController::class,'approve'])->name('deposit.approve');
     Route::get('deposits/delete/{id}', [PackagesController::class,'destroyDeposit'])->name('deposit.destroy');
 
+    Route::get('/settings/mails', [SettingsController::class,'mails'])->name('settings.mails');
+
 
     Route::resources([
         'settings' => SettingsController::class,
