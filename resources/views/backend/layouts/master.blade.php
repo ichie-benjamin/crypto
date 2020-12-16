@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crypto Assets</title>
+    <title>Binary 24 Trades</title>
     <!-- Favicon icon -->
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ setting('favicon','/images/fav.png') }}">
@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img src="/images/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img style="height: 50px" src="/images/logo.png" alt=""></a>
 
                         <div class="header-right d-flex my-2 align-items-center">
                             <div class="language">
