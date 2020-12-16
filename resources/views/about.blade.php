@@ -2,273 +2,216 @@
 
 @section('content')
 
-    <section class="works-social-page">
+    <!-- HEADER TITLE BREADCRUBS SECTION -->
+    <div class="header-title-breadcrumb relative">
+        <div class="header-title-breadcrumb-overlay text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-6 col-xs-6 text-left">
+                        <h1>About us</h1>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-6">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li class="active">About us</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="no-padding content-area no-sidebar" role="main">
         <div class="container-fluid">
-            <h1>How Crypto Assets works?</h1>
+            <div class="row entry-content">
+                <!-- Section1 - Cryptic About Us -->
+                <div class="clearfix"></div>
+                <div class="cryptic_about_us padding_80 data_background text-center" data-background="assets/images/cryptic-about-us.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title-subtile-holder wow fadeIn text_center">
+                                    <h1 class="section-title dark_title">ABOUT BINARY 24 TRADE</h1>
+                                </div>
+                                <div class="spacer_50"></div>
+                                <p class="text-center">
+                                        <span>Binary 24 Trade is a company that successfully achieves its objectives and gives others the opportunity to prosper.
+                                            <br />
+                                        We are working in the investment market for several years and continue our progress</span>
+                                </p>
+                                <p class="text-center"><span>We offers our investors the unique opportunity to get passive income from investing to the most profitable
+                                        directions of the present market.</span>
+                                </p>
+                                <div class="spacer_70"></div>
 
-        </div>
-        <div class="info-social">
-            <div class="container-fluid">
-                <div class="content-block">
-                    <p>An exceptional trader that integrates an automated copy trading platform with the opportunities in open markets will be assigned to your account on your first deposit.</p>
+                            </div>
+                            <div class="spacer_80"></div>
+                            <div class="col-sm-12">
+                                <div class="cryptic_separator cryptic_separator_light fadeIn" >
+                                </div>
+                            </div>
+                            <div class="spacer_30"></div>
+                            <div class="col-sm-4 cryptic_about_us_info first-item">
+                                <img src="/assets/images/one.png" alt="one"/>
+                                <h2>Passive earnings</h2>
+                                <p class="text-left"><span>You do not need to have <br/>special knowledge and perform actions - <br>our team of professionals will do all the work.</span>
+                                </p>
+                            </div>
+                            <div class="col-sm-4 cryptic_about_us_info">
+                                <img src="/assets/images/two.png" alt="two"/>
+                                <h2>Total Profit</h2>
+                                <p class="text-left"><span>Investors, <br /> particularly novices, <br /> are often advised to adopt a particular</span></p>
+                            </div>
+                            <div class="col-sm-4 cryptic_about_us_info">
+                                <img src="/assets/images/three.png" alt="three"/>
+                                <h2>Reliability</h2>
+                                <p class="text-left"><span>Crypto Express has been working<br /> in the market for 5 years and it<br /> has a positive reputation.</span></p>
+                            </div>
 
-                    <h3>Get a professional trader linked to your account for free</h3>
-                    <p>Professional trading service from Trade Assets designed for both beginners and pros.</p>
-                    <p>Beginners traders can really totally on our experts to the trading for them.
-                        Our Professionals allows you to copy their trades and share own skills and get additional income. Level up your income with Crypto Assets platform.</p>
-                </div>
-            </div>
-        </div>
-        <div class="people-in-tifia" >
-{{--            <img src="/images/pro.jpeg">--}}
-            <div class="container-fluid">
-                <h4>Share experience, chat with our professional traders around the world, trade and earn together!</h4>
-                <p>Become more confident in making trading decisions and get the most out of your trading with Crypto Assets.</p>
-
-                @guest()
-                <div class="group-success">
-                    <div class="group">
-                        <h3>Join Crypto Assets</h3>
-                        <a class="btn-show-right" href="{{ route('login') }}" rel="nofollow" target="blank"><div class="circle"><span class="icon arrow"></span></div><p class="button-text">Login</p></a>                </div>
-                </div>
-                <div class="btn-block mob-only">
-                    <a class="btn btn-red" href="{{ route('register') }}" rel="nofollow" target="blank">Registration</a>
-                </div>
-                @else
-                    <div class="group-success">
-                        <div class="group">
-                            <h3>Make a deposit today</h3>
-                            <a class="btn-show-right" href="{{ route('backend.deposits.create') }}" rel="nofollow" target="blank"><div class="circle"><span class="icon arrow"></span></div><p class="button-text">Start Trading</p></a>                </div>
+                            <div class="col-sm-4 cryptic_about_us_info">
+                                <img src="/assets/images/four.png" alt="three"/>
+                                <h2>High return</h2>
+                                <p class="text-left"><span>We offer our investors<br /> a much higher return than the banking<br /> one and we provide reduced risks.</span></p>
+                            </div>
+                            <div class="col-sm-4 cryptic_about_us_info">
+                                <img src="/assets/images/five.png" alt="three"/>
+                                <h2>Stability</h2>
+                                <p class="text-left"><span>The project guarantees <br /> the implementation of payments in <br /> accordance with the terms of the regulation.</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-block mob-only">
-                        <a class="btn btn-red" href="{{ route('backend.deposits.create') }}" rel="nofollow" target="blank">Start Trading</a>
-                    </div>
-
-                @endguest
-
-            </div>
-        </div>
-        <div style="background-color: black" class="trader-role">
-            <div class="container-fluid">
-                <div class="content-block">
-                    <h2>Try a trader's role</h2>
-                    <h4>Are you an experienced and successful trader? Your experience can yield you more money.<br>Trade with Crypto Assets and get additional income</h4>
                 </div>
-            </div>
-            <div class="container-fluid">
-                <ul class="social-trader-step">
-                    <li>Become a trader</li>
-                    <li><div class="arrow-right"></div></li>
-                    <li>Communicate and Trade</li>
-                    <li><div class="arrow-right"></div></li>
-                    <li>Get an additional income</li>
-                </ul>
-            </div>
-            <div class="container-fluid">
-                <div class="content-block">
-                    <p><strong>Traders</strong> make trades in their accounts or simply let our professionals do it for them. Besides their own trading profits, traders also receive a commission from their investors' accounts.</p>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="steps-ul">
-                    <ul>
-                        <li class="li-1">
-                            <p><a href="{{ route('register') }}" target="_blank">Register</a> with Crypto Assets and then <a href="{{ route('backend.deposits.create') }}" target="_blank">Make A Deposit</a>  If you already have a trading account with Crypto Assets, please, <a href="{{ route('login') }}" target="_blank">Login</a> and make a deposit..</p>
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <img src="/images/screen/dash.png">
-                    </div>
-                    <ul>
-                        <li class="li-2">
-                            <p><strong>Multiple Payment System</strong></p>
-                            <p>Easy deposit and withdrawal with our multiple paymment channels.</p>
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <img src="/images/screen/1.png">
-                    </div>
-                    <ul>
-                        <li class="li-3">
-                            <p><strong>Realtime Trading Result.</strong></p>
-
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <img src="/images/screen/2.png">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="trader-role" style="background-color: black">
-
-            <div class="container-fluid">
-                <div class="steps-ul">
-
-                    @section('hide')
-                    <div class="copy-traders">
-                        <h3>Free 1 for 1 Mentoring</h3>
-                        <p>This copy type implies that the volume of a trade copied onto an investor’s account is equal to the volume of the respective trade in an trader’s account.</p>
-                        <p>For example, if the trader has opened 5 lots in his/her account, a trade of 5 lots will be copied onto the investor’s account.</p>
-                        <div class="copy-traders-graph">
-                            <div class="block-copy">
-                                <p class="min-text">Trader's account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-1.png">
+                <!-- Section2 - Cryptic Transactions -->
+                <div class="clearfix"></div>
+                <div class="cryptic_transactions padding_80 data_background" data-background="/assets/images/counter.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="stats-block statistics wow fadeIn">
+                                    <div class="stats-head">
+                                        <p class="stat-number skill"></p>
                                     </div>
-                                    <div class="info-block">
-                                        <p>volume: 100%</p>
-                                        <p><span>5</span> lots</p>
+                                    <div class="stats-content percentage text-white" data-perc="258"><span class="skill-count">258</span>
+                                        <p class="text-white">Transactions in last 24h</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="block-arrow"></div>
-                            <div class="block-copy">
-                                <p class="min-text">Investor's Account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-2.png">
+                            <div class="col-sm-3">
+                                <div class="stats-block statistics wow fadeIn">
+                                    <div class="stats-head">
+                                        <p class="stat-number skill"></p>
                                     </div>
-                                    <div class="info-block">
-                                        <p>volume: 100%</p>
-                                        <p><span>5</span> lots</p>
+                                    <div class="stats-content percentage text-white" data-perc="14"><span class="skill-count">14</span>
+                                        <p class="text-white">Transactions per hour</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="stats-block statistics wow fadeIn">
+                                    <div class="stats-head">
+                                        <p class="stat-number skill"></p>
+                                    </div>
+                                    <div class="stats-content percentage text-white" data-perc="120"><span class="skill-count text-white">120</span>
+                                        <p class="text-white">Largest Transactions</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="stats-block statistics wow fadeIn">
+                                    <div class="stats-head">
+                                        <p class="stat-number skill"></p>
+                                    </div>
+                                    <div class="stats-content percentage text-white" data-perc="5"><span class="skill-count">5</span>
+                                        <p class="text-white">Years of Experience</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="copy-traders">
-                        <h3>Copying a fixed size of each trade</h3>
-                        <p>This copy type implies that the volume of a trade copied onto the investor's account is always identical to the volume pre-set in copy settings.</p>
-                        <p>For example, if the investor sets a "copy fixed size" of 2 lots and the trader opens 5 lots, 2 lots will be opened on the investor’s account.</p>
-                        <div class="copy-traders-graph">
-                            <div class="block-copy">
-                                <p class="min-text">Trader's account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-1.png">
-                                    </div>
-                                    <div class="info-block">
-                                        <p>volume: 100%</p>
-                                        <p><span>5</span> lots</p>
+                </div>
+                <!-- Section3 - Cryptic OUR TEAM -->
+                <div class="clearfix"></div>
+                @section('hide')
+                <div class="cryptic_our_team padding_80 data_background" data-background="assets/images/bitcurrency-members.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title-subtile-holder wow  ">
+                                    <h1 class="section-title dark_title">OUR TEAM</h1>
+                                    <div class="section-subtitle dark_subtitle">
+                                        Our youth is only an indication of our drive. Here you have a team of experts, ready to offer consultancy when needed.
                                     </div>
                                 </div>
-                            </div>
-                            <div class="block-arrow"></div>
-                            <div class="block-copy">
-                                <p class="min-text">Investor's Account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-2.png">
-                                    </div>
-                                    <div class="info-block">
-                                        <p>Fixed volume: 2 lots</p>
-                                        <p><span>2</span> lots</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copy-traders">
-                        <h3>Copying a predefined % of each trade</h3>
-                        <p>This copy type implies that the volume of a trade copied onto the investor's account is identical to a % of the volume of the respective trade on the trader’s account.</p>
-                        <p>For example, if the investor sets 50% and the trader opens 5 lots, it will open 2.5 lots on the investor’s account. The investor can set from 1% to 10 000%.</p>
-                        <div class="copy-traders-graph">
-                            <div class="block-copy">
-                                <p class="min-text">Trader's account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-1.png">
-                                    </div>
-                                    <div class="info-block">
-                                        <p>volume: 100%</p>
-                                        <p><span>5</span> lots</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-arrow"></div>
-                            <div class="block-copy">
-                                <p class="min-text">Investor's Account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-2.png">
-                                    </div>
-                                    <div class="info-block">
-                                        <p>Copied volume coefficient: 50%</p>
-                                        <p><span>2,5</span> lots</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copy-traders">
-                        <h3>Copying a fixed share of investor’s equity</h3>
-                        <p>This copy type implies that the volume of a trade copied onto the investor's account is defined by the copy equity/trader’s equity ratio. The volume of the investor’s equity used for copying trades is defined in copy settings.</p>
-                        <p>In case of using "All Equity" as copy equity, it shall be equal to the current amount of funds in the investor's account at the moment of copying the trade.</p>
-                        <p><b>The volume of a trade to be copied onto the investor’s account is calculated in the following way:</b><br><i>Trade volume in the trader's account * copy equity / trader's equity = trade volume in the investor's account</i></p>
-                        <p>For example, the equity on the trader's and investor’s account is $5000 and $10000 respectively</p>
-                        <ul>
-                            <li>If the investor sets copy equity at 2,500, trades will be copied onto his/her account with coefficient of 2,500/5,000 = 0.5 (50% of the volume of the trader’s trade).</li>
-                            <li>If the investor sets copy equity at 6,000, trades will be copied onto his/her account with coefficient of 6,000/5,000 = 1.2 (120% of the volume of the trader’s trade).</li>
-                            <li>If the investor uses all equity as copy equity, trades will be copied onto his/her account with coefficient of 10,000/5,000 = 2 (200% of the volume of the trader’s trade).</li>
-                        </ul>
-                        <div class="copy-traders-graph copy-traders-graph-more">
-                            <div class="block-copy">
-                                <p class="min-text">Trader's account</p>
-                                <div class="block">
-                                    <div class="avatar-block">
-                                        <img src="https://tifia.com/images/new-site/social-trading/avatar-1.png">
-                                    </div>
-                                    <div class="info-block">
-                                        <p>volume: 100%</p>
-                                        <p><span>5</span> lots</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-copy-many">
-                                <div class="line">
-                                    <div class="block-arrow"></div>
-                                    <div class="block-copy">
-                                        <p class="min-text">Investor's Account</p>
-                                        <div class="block">
-                                            <div class="avatar-block">
-                                                <img src="https://tifia.com/images/new-site/social-trading/avatar-3.png">
-                                            </div>
-                                            <div class="info-block">
-                                                <p>Total equity: 10 000 USD<br>Part of equity used: 2 500 USD</p>
-                                                <p><span>2,5</span> lots</p>
+                                <div class="spacer_80"></div>
+                                <div class="row wow fadeIn">
+                                    <div class="col-md-4 relative">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="members_img_holder">
+                                                    <div class="memeber01-img-holder">
+                                                        <img src="assets/images/bitcurrency_member1-1.jpg" alt="John Doe" />
+                                                    </div>
+                                                    <div class="member01-content">
+                                                        <div class="member01-content-inside">
+                                                            <h3 class="member01_name">John Doe</h3>
+                                                            <h5 class="member01_position">Assistant Manager</h5>
+                                                            <div class="content-div-content">
+                                                                <p>Nemo enim ipsam voluptates consequr dolor amet quia aut fu magni dolor.</p>
+                                                            </div>
+                                                            <div class="member01_social">
+                                                                <a target="_blank" href="https://www.facebook.com/modeltheme/" class="member01_profile-facebook">
+                                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                                </a>
+                                                                <a target="_blank" href="https://twitter.com/envato" class="member01_profile-twitter">
+                                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                                </a>
+                                                                <a target="_blank" href="https://www.linkedin.com/" class="member01_profile-linkedin">
+                                                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                                </a>
+                                                                <a target="_blank" href="https://vimeo.com/" class="member01_vimeo_url">
+                                                                    <i class="fa fa-vimeo" aria-hidden="true"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="line">
-                                    <div class="block-arrow no-mob"></div>
-                                    <div class="block-copy">
-                                        <p class="min-text">Investor's Account</p>
-                                        <div class="block">
-                                            <div class="avatar-block">
-                                                <img src="https://tifia.com/images/new-site/social-trading/avatar-4.png">
-                                            </div>
-                                            <div class="info-block">
-                                                <p>Total equity: 10 000 USD<br>Part of equity used: 6 000 USD</p>
-                                                <p><span>6,25</span> lots</p>
+
+                                    <div class="col-md-4 relative">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="members_img_holder">
+                                                    <div class="memeber01-img-holder"><img src="assets/images/bitcurrency_member2-1.jpg" alt="Robert Downey" /></div>
+                                                    <div class="member01-content">
+                                                        <div class="member01-content-inside">
+                                                            <h3 class="member01_name">Robert Downey</h3>
+                                                            <h5 class="member01_position">General Director</h5>
+                                                            <div class="content-div-content"><p>Nemo enim ipsam voluptates consequr dolor amet quia aut fu magni dolor.</p></div>
+                                                            <div class="member01_social"><a target="_blank" href="https://www.facebook.com/modeltheme/" class="member01_profile-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a> <a target="_blank" href="https://twitter.com/envato" class="member01_profile-twitter"> <i class="fa fa-twitter" aria-hidden="true"></i></a> <a target="_blank" href="https://www.linkedin.com/" class="member01_profile-linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> <a target="_blank" href="https://vimeo.com/" class="member01_vimeo_url"> <i class="fa fa-vimeo" aria-hidden="true"></i> </a> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="line-last">
-                                    <div class="block-arrow no-mob"></div>
-                                    <div class="block-copy">
-                                        <p class="min-text">Investor's Account</p>
-                                        <div class="block">
-                                            <div class="avatar-block">
-                                                <img src="https://tifia.com/images/new-site/social-trading/avatar-2.png">
-                                            </div>
-                                            <div class="info-block">
-                                                <p>Total equity: 10 000 USD<br>Part of equity used: 10 000 USD</p>
-                                                <p><span>10</span> lots</p>
+
+                                    <div class="col-md-4 relative">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="members_img_holder">
+                                                    <div class="memeber01-img-holder"><img src="assets/images/bitcurrency_member3-1.jpg" alt="Thomas Moriz" /></div>
+                                                    <div class="member01-content">
+                                                        <div class="member01-content-inside">
+                                                            <h3 class="member01_name">Thomas Moriz</h3>
+                                                            <h5 class="member01_position">Regional Manager</h5>
+                                                            <div class="content-div-content"><p>Nemo enim ipsam voluptates consequr dolor amet quia aut fu magni dolor.</p></div>
+                                                            <div class="member01_social"><a target="_blank" href="https://www.facebook.com/modeltheme/" class="member01_profile-facebook"> <i class="fa fa-facebook" aria-hidden="true"></i></a> <a target="_blank" href="https://twitter.com/envato" class="member01_profile-twitter"> <i class="fa fa-twitter" aria-hidden="true"></i></a> <a target="_blank" href="https://www.linkedin.com/" class="member01_profile-linkedin"> <i class="fa fa-linkedin" aria-hidden="true"></i> </a> <a target="_blank" href="https://vimeo.com/" class="member01_vimeo_url"> <i class="fa fa-vimeo" aria-hidden="true"></i> </a> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -276,38 +219,49 @@
                             </div>
                         </div>
                     </div>
-                    @endsection
-
-
-
-                    <ul>
-                        <li class="li-4">
-                            <p>Chat with your account manager live and follow their instructions.</p>
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <!--<img src="https://tifia.com/images/new-site/social-trading/screen5.png">-->
-                    </div>
-                    <ul>
-                        <li class="li-5">
-                            <p>Learn, trade and copy successful trades.</p>
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <!--<img src="https://tifia.com/images/new-site/social-trading/screen6.png">-->
-                    </div>
-                    <ul>
-                        <li class="li-6">
-                            <p>Achieve your aims by copying experienced trades.</p>
-                        </li>
-                    </ul>
-                    <div class="img-block">
-                        <!--<img src="https://tifia.com/images/new-site/social-trading/screen7.png">-->
+                </div>
+                <!-- Section4 - Cryptic Subscribe to our Newsletter -->
+                <div class="clearfix"></div>
+                <div class="cryptic_customer padding_80">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2 class="fadeIn no-margin">Subscribe to our Newsletter</h2>
+                                <div class="fadeIn">
+                                    <p class="text-left"><span>Sign up for our weekly industry updates, insider perspectives and<br />in-depth market analysis.</span></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fadeIn">
+                                    <div class="spacer_20"></div>
+                                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-335" method="post" data-id="335" data-name="newsletter">
+                                        <div class="mc4wp-form-fields">
+                                            <div class="newsletter">
+                                                <input type="email" name="EMAIL" placeholder="Insert your email" required />
+                                                <input type="submit" value="Submit" />
+                                            </div>
+                                            <label style="display: none !important;">Leave this field empty if you're human:
+                                                <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+                                            </label>
+                                            <input type="hidden" name="_mc4wp_timestamp" value="1523438081" />
+                                            <input type="hidden" name="_mc4wp_form_id" value="335" />
+                                            <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+                                        </div>
+                                        <div class="mc4wp-response"></div>
+                                    </form>
+                                    <!-- / MailChimp -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
+
+                @endsection
+
             </div>
         </div>
-    </section>
+    </div>
 
-    @include('layouts.partials.footer')
 @endsection

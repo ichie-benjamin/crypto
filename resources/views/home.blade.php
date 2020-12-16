@@ -18,15 +18,13 @@
                                     <h3 class="fadeIn">Trade with an automated bot, reduce risks and save<br />the high level of interest rates..</h3>
                                     <div class="spacer_20"></div>
                                     <div class="float-left modeltheme_button wow fadeIn">
-                                        <a href="#" class="button-winona btn btn-medium btn_custom_whitepaper">WHITEPAPER</a>
+                                        <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
                                     </div>
-                                    <div class="float-left modeltheme_button wow fadeIn">
-                                        <a href="#" class="button-winona btn btn-medium btn_custom_buy_tokens">BUY TOKENS</a>
-                                    </div>
+
                                 </div>
                                 <div class="col-sm-6 decentralized_achieved">
                                     <h1 class="fadeIn">Take it Easy</h1>
-                                    <h3 class="fadeIn">et passive income from our automated trading bot -</h3>
+                                    <h3 class="fadeIn">Get passive income from our automated trading bot -</h3>
                                     <h1 class="fadeIn"> become successful today</h1>
                                     <div class="spacer_30"></div>
                                     <div class="buy-coin-decentralized fadeIn">
@@ -38,24 +36,20 @@
                         <!--  Cryptic Token sale stats-->
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
-                        <h1 class="fadeIn no-margin decentralized-h1">Thanks for helping us hit 15,000 ETH</h1>
+                        <h1 class="fadeIn no-margin decentralized-h1">Financial upgrade.</h1>
                         <div class="spacer_80"></div>
                         <div class="title-subtile-holder wow fadeIn text_center">
-                            <h1 class="section-title light_title no-margin">Token sale stats</h1>
+                            <h1 class="section-title light_title no-margin">STEP BY STEP</h1>
                             <div class="spacer_10"></div>
                             <div class="clearfix"></div>
                             <div class="section-border light_border no-margin"></div>
                             <div class="spacer_10"></div>
-                            <div class="section-subtitle light_subtitle">Duis aute irure dolor in reprehenderit in voluptate velit esse <br /> cillum dolore eu fugiat nulla pariatur.</div>
+                            <div class="section-subtitle light_subtitle">Note that if the currency of a savings account differs</div>
                         </div>
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
                         <div class="row decentralized-total-contribution">
-                            <div class="col-sm-4">
-                                <h2 class="decentralized-h2-total fadeIn">Total contribution:</h2>
-                                <h2 class="decentralized-h2-amount fadeIn">14,831,449 USD</h2>
-                            </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
@@ -64,10 +58,14 @@
                                         </div>
                                     </div>
                                     <p class="mt-icon-list-text text-white">
-                                        <span class="name">Dash: </span>
-                                        <span class="value ">$423.45</span>
+                                        <span class="name">FX/BO & Crypto Trading: </span><br/>
+                                        <span class="value ">50% Profit  </span>
                                     </p>
                                 </div>
+                                <div class="spacer_10"></div>
+
+                            </div>
+                            <div class="col-sm-3">
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
@@ -76,12 +74,12 @@
                                         </div>
                                     </div>
                                     <p class="mt-icon-list-text text-white">
-                                        <span class="name">Monero: </span>
-                                        <span class="value ">$219.34</span>
+                                        <span class="name">High-tech startup : </span><br/>
+                                        <span class="value ">30.5% - 30.8%</span>
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
@@ -90,24 +88,13 @@
                                         </div>
                                     </div>
                                     <p class="mt-icon-list-text text-white">
-                                        <span class="name">Ripple: </span>
-                                        <span class="value ">$0.70</span>
+                                        <span class="name">E-commerce: </span><br/>
+                                        <span class="value ">30.1% - 30.3%</span>
                                     </p>
                                 </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">Litecoin: </span>
-                                        <span class="value ">$166.19</span>
-                                    </p>
-                                </div>
+
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
@@ -116,48 +103,11 @@
                                         </div>
                                     </div>
                                     <p class="mt-icon-list-text text-white">
-                                        <span class="name">Tether: </span>
-                                        <span class="value ">$1.00</span>
+                                        <span class="name">Oil and gas production: </span><br/>
+                                        <span class="value ">29.9% - 42.1%</span>
                                     </p>
                                 </div>
                                 <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">Bitcoin: </span>
-                                        <span class="value ">$8,533</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">Qtum: </span>
-                                        <span class="value ">$17.98</span>
-                                    </p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">TRON: </span>
-                                        <span class="value ">$0.0358</span>
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <div class="row decentralized-total-contribution">
@@ -166,50 +116,44 @@
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i  class="fa fa-caret-right icon-caret-decentralized "></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Contributors</span><span class="value pull-right">7,591</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Investors</span><span class="value pull-right">127,591</span></p>
                                 </div>
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i  class="fa fa-caret-right icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Token Uses</span><span class="value pull-right">Ethereum</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Popular Coin</span><span class="value pull-right">Bitcoin</span></p>
                                 </div>
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right  icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Token Standart</span><span class="value pull-right">ERC20</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Standard</span><span class="value pull-right">ERC20</span></p>
                                 </div>
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Token Name</span><span class="value pull-right">CRYPTIC</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Tool</span><span class="value pull-right">Binary24Trader</span></p>
                                 </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Token Sumbol</span><span class="value pull-right">CRP</span></p>
-                                </div>
+
                             </div>
                             <div class="col-sm-6 padding_left_50">
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Average Contribution</span><span class="value pull-right">$1,128 / Contributor</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Average Investment</span><span class="value pull-right">$10,000 / Contributor</span></p>
                                 </div>
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Number of Transactions</span><span class="value pull-right">8,432</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Number of Transactions</span><span class="value pull-right">800,100</span></p>
                                 </div>
                                 <div class="spacer_10"></div>
                                 <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
@@ -223,15 +167,9 @@
                                     <div class="mt-icon-list-icon-holder">
                                         <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
                                     </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Tokens Issued</span><span class="value pull-right">105,422,433</span></p>
+                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Payouts</span><span class="value pull-right">{{ date('y') + 100 }},{{ date('dm') }},000</span></p>
                                 </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Token Sale Jurisdiction</span><span class="value pull-right">Gibraltar</span></p>
-                                </div>
+
                             </div>
                         </div>
                         <div class="row decentralized-total-contribution">
@@ -253,71 +191,66 @@
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
                         <div class="title-subtile-holder wow fadeIn text_center">
-                            <h1 class="section-title light_title no-margin">stay in touch</h1>
+                            <h1 class="section-title light_title no-margin">Why Choose Binary 24 Trades</h1>
                             <div class="spacer_10"></div>
                             <div class="clearfix"></div>
                             <div class="section-border light_border no-margin"></div>
                             <div class="spacer_10"></div>
-                            <div class="section-subtitle light_subtitle">Duis aute irure dolor in reprehenderit in voluptate velit esse <br /> cillum dolore eu fugiat nulla pariatur.</div>
+                            <div class="section-subtitle light_subtitle">Your No. 1 trading platform <br /> 100% client focus</div>
                         </div>
                         <div class="spacer_70"></div>
                         <div class="row">t
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-facebook text-white">
-                                        <i class="list_icon fa fa-facebook"></i>
-                                        <h3 class="list_title_text">Facebook</h3>
-                                        <a target="_blank" href=https://www.facebook.com/ class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i>
-                                        </a>
+{{--                                        <i class="list_icon fa fa-facebook"></i>--}}
+                                        <h3 class="list_title_text">Total Profit</h3>
+                                        <p>Investors, particularly novices, are often advised to adopt a particular</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-twitter text-white">
-                                        <i class="list_icon fa fa-twitter"></i>
-                                        <h3 class="list_title_text">Twitter</h3>
-                                        <a target="_blank" href=https://twitter.com/envato class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i>
-                                        </a>
+{{--                                        <i class="list_icon fa fa-twitter"></i>--}}
+                                        <h3 class="list_title_text">Reliability</h3>
+                                        <p>Binary 24 Trades has been working in the market for 5 years and it has a positive reputation.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-github text-white">
-                                        <i class="list_icon fa fa-github"></i>
-                                        <h3 class="list_title_text">Github</h3>
-                                        <a target="_blank" href=https://twitter.com/envato class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i>
-                                        </a>
+{{--                                        <i class="list_icon fa fa-github"></i>--}}
+                                        <h3 class="list_title_text">High return</h3>
+                                        <p>We offer our investors a much higher return than the banking one and we provide reduced risks.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-bitcoin text-white">
-                                        <i class="list_icon fa fa-bitcoin"></i>
-                                        <h3 class="list_title_text">BitcoinTalk</h3>
-                                        <a target="_blank" href=https://www.bitcoin.com/ class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i>
-                                        </a>
+{{--                                        <i class="list_icon fa fa-bitcoin"></i>--}}
+                                        <h3 class="list_title_text">Stability</h3>
+                                        <p>The project guarantees the implementation of payments in accordance with the terms of the regulation.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-medium text-white">
-                                        <i class="list_icon fa fa-medium"></i>
-                                        <h3 class="list_title_text">Medium</h3>
-                                        <a target="_blank" href=https://medium.com/ class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i>
-                                        </a>
+{{--                                        <i class="list_icon fa fa-medium"></i>--}}
+                                        <h3 class="list_title_text">Passive earnings</h3>
+                                        <p>You do not need to have special knowledge and perform actions - our team of professionals will do all the work.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-telegram text-white">
-                                        <i class="list_icon fa fa-telegram"></i>
-                                        <h3 class="list_title_text">Telegram</h3>
-                                        <a target="_blank" href=https://telegram.org/ class="list_button_text text-white">Join<i class="list_button_icon fa fa-long-arrow-right"></i></a>
+{{--                                        <i class="list_icon fa fa-telegram"></i>--}}
+                                        <h3 class="list_title_text">24/7 Support</h3>
+                                        <p>Great Customer Support, Get all your questions attended to within 12hrs</p>
                                     </div>
                                 </div>
                             </div>
@@ -563,7 +496,10 @@
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="members_img_holder">
-                                                    <div class="memeber02-img-holder"><img src="assets/images/member_filter-1.jpg" alt="{{ $item['name'] }}" /></div>
+                                                    <div class="memeber02-img-holder">
+
+                                                        <img src="https://ui-avatars.com/api/?size=256&color=fff&name={{urlencode($item['name'])}}" alt="{{ $item['name'] }}" />
+                                                    </div>
                                                     <div class="member02-content">
                                                         <div class="member02-content-inside">
                                                             <h3 class="member02_name text-white">{{ $item['name'] }}</h3>
@@ -593,10 +529,10 @@
                                                         <div class="testimonial02_stars col-md-6 text-white"></div>
                                                     </div>
                                                     <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>The support teams are very professional and friendly. Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier. The support teams are very professional and friendly.
-                                                            Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier.</p>
+                                                        <p>I’ve been a full member of Binary 24 Trades for just 2 months and can honestly say it has completely transformed my approach to trading.
+                                                            I’d previously relied heavily on different combinations of indicators on numerous time-frames and never seemed to get anywhere and was close to giving up..</p>
                                                     </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">Regional Manager</h4>
+                                                    <h4 class="testimonial02_position col-md-12 text-white">Top Trader</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -610,14 +546,14 @@
                                             <div class="testimonial02-content">
                                                 <div class="testimonial02_text">
                                                     <div class="testimonial02_rating_titles col-md-12">
-                                                        <h4 class="testimonial02_title col-md-6 text-white">Robert Downey</h4>
+                                                        <h4 class="testimonial02_title col-md-6 text-white">David C.</h4>
                                                         <div class="testimonial02_stars col-md-6 text-white"></div>
                                                     </div>
                                                     <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>The support teams are very professional and friendly. Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier. The support teams are very professional and friendly.
-                                                            Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier.</p>
+                                                        <p>After a year of Trial and Error, Joy, Pain and £3000 hole in my
+                                                            account fate led me to Binary24 Trades. After only 1 week being a member I feel like a real Trader for the very first time.</p>
                                                     </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">General Director</h4>
+                                                    <h4 class="testimonial02_position col-md-12 text-white">New Trader</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -631,14 +567,15 @@
                                             <div class="testimonial02-content">
                                                 <div class="testimonial02_text">
                                                     <div class="testimonial02_rating_titles col-md-12">
-                                                        <h4 class="testimonial02_title col-md-6 text-white">John Doe</h4>
+                                                        <h4 class="testimonial02_title col-md-6 text-white">Henry D.</h4>
                                                         <div class="testimonial02_stars col-md-6 text-white"></div>
                                                     </div>
                                                     <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>The support teams are very professional and friendly. Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier. The support teams are very professional and friendly.
-                                                            Although I got quite intimidate by all settings and customisation of the theme, they helps make my life much easier.</p>
+                                                        <p>I am PhD student and the first time that I
+                                                            heard about Crypto from my friend, was in May 2013.
+                                                            Since the first day, I found it very close to the ideal job that I wanted to do..</p>
                                                     </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">Assistant Manager</h4>
+                                                    <h4 class="testimonial02_position col-md-12 text-white">PHD in View</h4>
                                                 </div>
                                             </div>
                                         </div>

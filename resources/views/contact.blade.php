@@ -1,110 +1,71 @@
-@extends('layouts.pages')
+@extends('layouts.master')
 
 @section('content')
-    <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="/images/home_banner_bg.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="banner_text text-center">
-                        <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">REACH OUT TO US</h1>
-                        <ul class="breadcrumb bg-transparent justify-content-center animation m-0 p-0" data-animation="fadeInUp" data-animation-delay="1.3s">
-                            <li><a href="{{ route('home') }}">Home</a> </li>
-                            <li><span><a href="{{ route('contact') }}">REACH OUT TO US</a></span></li>
-                        </ul>
+    <!-- HEADER TITLE BREADCRUBS SECTION -->
+    <div class="header-title-breadcrumb relative">
+        <div class="header-title-breadcrumb-overlay text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-6 col-xs-6 text-left">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-6">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li class="active">Contact</li>
+                        </ol>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
-    <!-- END SECTION BANNER -->
+    </div>
 
-    <!-- START SECTION CONTACT -->
-    <section id="contact" class="contact_section small_pt">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-12 offset-lg-2">
-                    <div class="title_default_light title_border text-center">
-                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Get In Touch!</h4>
-                        <p>Our customer service representatives are always available to assist you 24/7 </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center small_space">
-                <div class="col-lg-4 col-md-6 offset-lg-2">
-                    <div class="bg_light_dark  contact_box_s2 animation" data-animation="fadeInLeft" data-animation-delay="0.1s">
-                        <div class="contact_title">
-                            <h5 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Contact With Us</h5>
-                            <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"></p>
-                        </div>
-                        <ul class="list_none contact_info mt-margin">
-                            <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                                <i class="ion-ios-location"></i>
-                                <div class="contact_detail"> <span>Address</span>
-                                    <p>Crypto Assets is a product of Investment  Solutions Limited incorporated in Seychelles</p>
+    <!-- Page content -->
+    <div class="no-padding content-area no-sidebar" role="main">
+        <div class="container-fluid">
+            <div class="row entry-content">
+                <!-- Section1 - Cryptic About Us -->
+                <div class="clearfix"></div>
+                <div class="cryptic_about_us padding_80 data_background text-center" data-background="/assets/images/bitcurrency-members.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="title-subtile-holder wow ">
+                                    <h1 class="section-title dark_title">CONTACT US</h1>
+                                    <div class="section-subtitle dark_subtitle">Have a question or inquiry to make<br /> Contact Binary 24 Trade.
+                                    </div>
                                 </div>
-                            </li>
-                            <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">
-                                <i class="ion-android-call"></i>
-                                <div class="contact_detail"> <span>Phone</span>
-                                    <p>.</p>
-                                </div>
-                            </li>
-                            <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                                <i class="ion-ios-email"></i>
-                                <div class="contact_detail"> <span>Email-id</span>
-                                    <p>info@cryptoassest.com</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="contct_follow pt-2 pt-md-4">
-                            <span class="text-uppercase animation" data-animation="fadeInUp" data-animation-delay="0.2s">Follow Us</span>
-                            <ul class="list_none social_icon">
-                                <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#"><i class=" fa fa-facebook"></i></a></li>
-                                <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s"><a href="#"><i class=" fa fa-twitter"></i></a></li>
-                                <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><a href="#"><i class=" fa fa-google-plus"></i></a></li>
-                                <li class="animation" data-animation="fadeInUp" data-animation-delay="0.7s"><a href="#"><i class=" fa fa-pinterest"></i></a></li>
-                                <li class="animation" data-animation="fadeInUp" data-animation-delay="0.8s"><a href="#"><i class=" fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <span></span>
-                <div class="col-lg-5 col-md-6">
-                    <div class="pt-4 pt-md-0 animation" data-animation="fadeInRight" data-animation-delay="0.1s">
-                        <form method="post" action="#" name="enq" class="field_form">
-                            <input type="hidden" name="_token" value="YyXmcgTKGRL6VRjuvoBEYJAEemGWzM0XwAK3MbNE">                    <div class="row">
-                                <div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                                    <input type="text" required="required" placeholder="Enter Name *" id="first-name" class="form-control" name="name">
+                                <div class="spacer_80"></div>
+                                <div class="clearfix"></div>
+                                <div role="form" lang="en-US" dir="ltr">
+                                    <div class="screen-reader-response"></div>
 
-                                </div>
-                                <div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                                    <input type="email" required="required" placeholder="Enter Email *" id="email" class="form-control" name="email">
-
-                                </div>
-                                <div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.8s">
-                                    <input type="text" required="required" placeholder="Enter Subject" id="subject" class="form-control" name="subject">
-
-                                </div>
-                                <div class="form-group col-md-12 animation" data-animation="fadeInUp" data-animation-delay="1s">
-                                    <textarea required="required" placeholder="Message *" id="description" class="form-control" name="message" data-constraints="@NotEmpty" rows="2"></textarea>
-
-                                </div>
-                                <div class="col-md-12 text-center animation" data-animation="fadeInUp" data-animation-delay="1.2s">
-                                    <button type="submit" title="Submit Your Message!" class="btn btn-default btn-radius btn-block" name="submit" value="Submit">Submit <i class="ion-ios-arrow-thin-right"></i></button>
-                                </div>
-                                <div class="col-md-12">
-                                    <div id="alert-msg" class="alert-msg text-center"></div>
+                                    <form id="contact_form"  action="#"  class="wpcf7-form" >
+                                        <div class="bitcurrency-contact">
+                                            <input type="text" name="user_name" class="" value="" size="40" aria-required="true" aria-invalid="false" placeholder="First Name" />
+                                            <br />
+                                            <input type="text" name="user_last_name" class="" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Last Name" />
+                                            <br />
+                                            <input type="email" name="user_email" class="" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Email Adress" />
+                                            <br />
+                                            <textarea name="user_message" class="" cols="40" rows="10" aria-invalid="false" placeholder="Insert message"></textarea>
+                                            <input type="submit" name="contact_me" value="Send Message" class="wpcf7-form-control wpcf7-submit" />
+                                            <p class="success_message">Thank you! We'll get back to you as soon as possible.</p>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
+                </div>
+                <!-- Section2 - Cryptic Subscribe to our Newsletter -->
+                <div class="clearfix"></div>
+
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.9353394185005!2d13.37962631596193!3d52.51650924424007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c428a92a43%3A0x784cfd724198fb47!2sBrandenburger+Tor!5e0!3m2!1sen!2sro!4v1524741844542" style="width:100%;height:400px" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- END SECTION CONTACT -->
-
+    </div>
 
 @endsection

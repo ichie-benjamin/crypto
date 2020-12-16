@@ -71,7 +71,7 @@ class HomeController extends Controller
     }
     public function about()
     {
-        return view('about1');
+        return view('about');
     }
 
        public function fags()
