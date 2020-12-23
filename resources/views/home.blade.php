@@ -36,7 +36,7 @@
                         <!--  Cryptic Token sale stats-->
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
-                        <h1 class="fadeIn no-margin decentralized-h1">Financial upgrade.</h1>
+                        <h1 class="fadeIn no-margin decentralized-h1">Financial uplift</h1>
                         <div class="spacer_80"></div>
                         <div class="title-subtile-holder wow fadeIn text_center">
                             <h1 class="section-title light_title no-margin">STEP BY STEP</h1>
@@ -199,7 +199,7 @@
                             <div class="section-subtitle light_subtitle">Your No. 1 trading platform <br /> 100% client focus</div>
                         </div>
                         <div class="spacer_70"></div>
-                        <div class="row">t
+                        <div class="row">
                             <div class="col-sm-2">
                                 <div class="social-icon-box vc_row wow fadeIn">
                                     <div class="social-icon-box-holder social-icon-facebook text-white">
@@ -400,6 +400,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
                         <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text wpb_fadeIn fadeIn">
@@ -479,6 +481,36 @@
                         </div>
                         <div class="spacer_80"></div>
                         <div class="clearfix"></div>
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="title-subtile-holder wow fadeIn text_left">
+                                    <h1 class="section-title light_title no-margin">Enjoy the ultimate platform</h1>
+                                    <div class="spacer_10"></div>
+                                    <div class="clearfix"></div>
+                                    <div class="section-border light_border no-margin"></div>
+                                    <div class="spacer_10"></div>
+                                    <div class="section-subtitle light_subtitle">A multichart layout, technical analysis, historical quotes and beyond. Everything you’re looking for in a platform — on the device of your choice.
+                                        .</div>
+                                </div>
+                                <div class="spacer_40"></div>
+                                <div class="clearfix"></div>
+                                <div class="float-left modeltheme_button wow fadeIn">
+                                    <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 vc_col-has-fill">
+                                <figure class="wpb_wrapper vc_figure">
+                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                        <img width="" height="590" src="/images/dash.webp" class="vc_single_image-img attachment-full" alt="smartfilter" />
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="spacer_80"></div>
+                        <div class="clearfix"></div>
+
+
                         <!-- Section3.4 - Team Board -->
                         <div class="row">
                             <div class="title-subtile-holder wow fadeIn text_center">
@@ -621,7 +653,15 @@
     </div>
 
     <div class="video-presentation-sect">
-
+<div class="card site-warning">
+    <h3>RISK WARNING</h3>
+    <p class="text-justify">The Financial Products offered by the company include Contracts for
+        Difference ('CFDs') and other complex financial products. Trading CFDs carries a high level of risk since leverage can
+        work both to your advantage and disadvantage. As a result, CFDs may not be suitable for all investors because it is possible
+        to lose all of your invested capital. You should never invest money that you cannot afford to lose. Before trading in the complex
+        financial products offered, please ensure to understand the risks involved. It's best to use the help of a professional trader for a
+        guaranteed result.</p>
+</div>
     </div>
 
 @endsection
