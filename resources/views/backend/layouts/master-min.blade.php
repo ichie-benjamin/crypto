@@ -43,7 +43,8 @@
             padding: 15px 20px;
         }
         #dashboard {
-            background-image: url(/assets/images/cryptic-decentralized-bg11-3.jpg);
+            background-image: url(/assets/images/cryptic-slider2.jpg);
+            /*background-image: url(/assets/images/cryptic-decentralized-bg11-3.jpg);*/
         }
     </style>
 </head>
