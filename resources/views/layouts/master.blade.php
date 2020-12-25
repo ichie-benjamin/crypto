@@ -35,6 +35,14 @@
             background: url(https://www.crypto-express.online/images/bg-video-banner.jpg) no-repeat 50% 0 fixed;
             background-size: cover;
         }
+        .site-warning{
+            background-color: white;
+            padding: 20px;
+            color: #0a0c12;
+            margin: 200px;
+            border: 1px solid #0A72E8;
+        }
+
         .list_title_text {
             font-size: 1.3em!important;
         }
@@ -503,7 +511,7 @@
             <div class="container-fluid footer">
                 <div class="col-md-12">
                     <p class="copyright text-center">
-                        <a href="{{ route('home') }}">Binary24Trades </a> {{ date('Y') }} All Rights Reserved.
+                        <a href="{{ route('home') }}">Binary24Trades </a>2015 - {{ date('Y') }} All Rights Reserved.
                     </p>
                 </div>
             </div>
