@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('withdrawals/all', [PackagesController::class,'allWithdrawals'])->name('withdrawals.index');
     Route::post('withdrawal/approve/{id}', [PackagesController::class,'withdrawalApprove'])->name('withdrawal.approve');
-    Route::post('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');
+    Route::get('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');
 
 
     Route::get('deposits/all', [PackagesController::class,'allDeposits'])->name('deposits.index');

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="author" content="CRYPTOASSETS">
-    <title>Account Login - Crypto Assets</title>
+    <title>Account Login - Binary 24 Trades</title>
     <link rel="apple-touch-icon" href="/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/favicon.ico">
     <link href="/../../../fonts.googleapis.com/cssc3c1.css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
@@ -56,7 +56,7 @@
                             <div class="card-content">
                                 <div class="card-body p-3">
 
-                                    <p class="text-center h5 text-capitalize">Welcome to Crypto Assets!</p>
+                                    <p class="text-center h5 text-capitalize">Welcome to Binary 24 Trades!</p>
                                     <p class="mb-3 text-center">Sign up your account</p>
                                     @if ($errors->any())
                                         <ul class="alert alert-danger">

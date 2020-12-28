@@ -24,15 +24,15 @@ class Withdrawal extends Model
         return $this->belongsTo('App\Models\User','user_id');
     }
     public function getCommissionFeeAttribute(){
-        $amount = $this->amount * setting('withdrawal_commission', 20);
+        $amount = ($this->amount * setting('withdrawal_commission', 20)) / 100;
         return '$'.$amount;
     }
     public function getTaxFeeAttribute(){
-        $amount = $this->amount * setting('withdrawal_tax', 18);
+        $amount = ($this->amount * setting('withdrawal_tax', 18)) / 100;
         return '$'.$amount;
     }
     public function getCotFeeAttribute(){
-        $amount = $this->amount * setting('withdrawal_cot', 20);
+        $amount = ($this->amount * setting('withdrawal_cot', 20)) / 100;
         return '$'.$amount;
     }
 }

@@ -154,7 +154,7 @@ class PackagesController extends Controller
         $rules = [
             'commission' => 'nullable',
             'tax' => 'nullable',
-            'cot' => 'nullable',
+            'cost_of_transfer' => 'nullable',
             'promo' => 'nullable',
             'approve' => 'nullable',
         ];

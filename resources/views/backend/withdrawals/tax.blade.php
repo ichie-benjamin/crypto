@@ -30,10 +30,8 @@
                                             {{ csrf_field() }}
 
                                     <p class="text-center">
-                                        Trade Commission fees of <span style="color: white; font-weight: bold"> {{ setting('withdrawal_commission',20) }}%</span> of requested withdrawal amount  <span style="color: white; font-weight: bold">${{ $withdrawal->amount }}</span>
-                                        is needed to be paid in order for your transfer request to be completed.
-                                        Kindly send {{ $withdrawal->commission_fee }} to the address below,
-                                        or scan the barcode to make the payments for the Trade Commission fees
+                                        Tax fee of <span style="color: white; font-weight: bold"> {{ setting('withdrawal_tax',20) }}%</span> of requested withdrawal amount  <span style="color: white; font-weight: bold">${{ $withdrawal->amount }}</span> is needed to be paid in order for your transfer request to be completed.
+                                        Kindly send {{ $withdrawal->tax_fee }} to the address below, or scan the barcode to make the payments for the Tax fees
                                     </p>
                                     <div class="qrcode">
                                         <img src="{{ setting('wallet_barcode') }}" alt="" height="200">
@@ -55,7 +53,7 @@
        <i class="fa fa-picture-o"></i> Choose File
      </a>
    </span>
-                                        <input id="thumbnail" required class="form-control" type="hidden" name="commission_proof">
+                                        <input id="thumbnail" required class="form-control" type="hidden" name="tax_proof">
 
                                         <div id="holder" style="margin-top:15px; margin-bottom:20px;max-height:200px;"></div>
 
