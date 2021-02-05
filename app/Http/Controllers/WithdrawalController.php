@@ -90,9 +90,7 @@ class WithdrawalController extends Controller
                 return redirect()->back()->with('failure', 'You cant withdraw more than your current balance');
             }
 
-
             $withdrawal = Withdrawal::create($data);
-
           Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'balance','note' => 'Account balance withdrawal']);
         Auth::user()->balance = Auth::user()->balance - $data['amount'];
         Auth::user()->save();

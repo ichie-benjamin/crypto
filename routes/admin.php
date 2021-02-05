@@ -18,6 +18,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('users/ids', [UsersController::class,'Ids'])->name('users.ids');
 
+    Route::get('id/activate/{id}', [UsersController::class,'IdActivate'])->name('approve.id');
+
     Route::post('user/fundaccount', [UsersController::class,'fundAccount'])->name('user.fundaccount');
 
     Route::get('user/toggle/trade/{id}', [UsersController::class,'toggleTrade'])->name('user.trade.toggle');

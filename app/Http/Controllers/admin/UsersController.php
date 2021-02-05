@@ -147,6 +147,13 @@ class UsersController extends Controller
         return redirect()->back()->with('success', 'Successful, User Data Updated');
     }
 
+    public function IdActivate($id){
+        $id = Identity::findOrFail($id);
+        $id->status =  1;
+        $id->save();
+        return redirect()->back()->with('success', 'Successful, Id activated');
+    }
+
     public function Ids(){
         $ids = Identity::with('user')->latest()->get();
         return view('admin.ids', compact('ids'));
