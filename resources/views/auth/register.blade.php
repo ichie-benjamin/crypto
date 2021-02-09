@@ -38,7 +38,7 @@
             <!--/ Demo options menu -->
             <!-- Demo fullscreen-overlay -->
             <!--/ Demo fullscreen-overlay -->
-            <section id="account-login" class="flexbox-container">
+            <section id="account-login" class="flexbox-container" style="margin-top: 30px">
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <!-- image -->
 {{--                    <div class="col-md-4 col-sm-5 col-12 p-0 text-center d-none d-md-block">--}}

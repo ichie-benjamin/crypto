@@ -101,6 +101,10 @@ class RegisterController extends Controller
                 ->subject('New User Account');
         });
 
+        $user->code = rand(100,999).$user->id;
+
+        $user->save();
+
         return $user;
     }
 }
