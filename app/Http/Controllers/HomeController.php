@@ -32,6 +32,12 @@ class HomeController extends Controller
         return 'Done';
     }
 
+    public function mail(){
+        Mail::send('welcome', [], function($message) {
+            $message->to('benjaminchukwudi0@gmail.com')->subject('Testing mails');
+        });
+    }
+
     public function testMail(){
         $user = User::latest()->first();
 //        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
