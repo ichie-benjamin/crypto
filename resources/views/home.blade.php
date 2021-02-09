@@ -125,27 +125,27 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-lg-4 text-center">
                     <div class="about-item">
-                        <h2>Fair</h2>
+                        <h2>Reliability</h2>
                         <img src="/front/images/about-1.png" alt="">
-                        <p>Fair service charges, </p>
+                        <p>Access Options Trading Fx has been working in the market for 5 years and it has a positive reputation.</p>
                         <a href="{{ route('backend.dashboard') }}" class="btn-2">Read More</a>
 
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 text-center">
                     <div class="about-item">
-                        <h2>Fast</h2>
+                        <h2>High return</h2>
                         <img src="/front/images/about-2.png" alt="">
-                        <p>Access Options Trading Fx is the fasted trading platform, we process all your transactions instantly, no service timeout</p>
+                        <p>We offer our investors a much higher return than the banking one and we provide reduced risks.</p>
                         <a href="{{ route('backend.dashboard') }}" class="btn-2">Get Started</a>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 text-center">
                     <div class="about-item mb-0">
-                        <h2>24/7 Customer Service</h2>
+                        <h2>24/7 Support</h2>
                         <img src="/front/images/about-3.png" alt="">
-                        <p>Our dedicated customer care are available any time any day, contact us for any challenges and get an appropriate feedback within an hour</p>
-                        <a href="{{ route('about') }}" class="btn-2">Read More</a>
+                        <p>Great Customer Support, Get all your questions attended to within 12hrs</p>
+                        <a href="#service-part" class="btn-2">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -161,24 +161,17 @@
             <div class="row d-md-flex align-items-md-center">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <div class="service-left">
-                        <h2 class="mb-2">Get <span>Connect</span> with us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit in sed tempore, ea exercitationem natus.</p>
+                        <h2 class="mb-2">Contact <span>Us </span> </h2>
                         <form class="form-group mt-3 mt-sm-4 mb-0">
                             <div class="row">
-                                <div class="col-6">
-                                    <input class="form-control form-item" type="text" placeholder="Name">
-                                </div>
-                                <div class="col-6">
-                                    <input class="form-control form-item" type="text" placeholder="Phone">
-                                </div>
-                                <div class="col-6">
-                                    <input class="form-control form-item" type="text" placeholder="Email">
-                                </div>
-                                <div class="col-6">
-                                    <input class="form-control form-item" type="text" placeholder="Time">
+                                <div class="col-12">
+                                    <input class="form-control form-item" name="first_name" type="text" placeholder="First Name">
                                 </div>
                                 <div class="col-12">
-                                    <input class="form-control form-item" type="text" placeholder="Class">
+                                    <input class="form-control form-item" name="last_name" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control form-item" type="text" placeholder="Email">
                                 </div>
                                 <div class="col-12">
                                     <textarea class="form-control form-item" placeholder="Message"></textarea>
@@ -191,457 +184,12 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="whyus">
-                        <div class="section-head">
-                            <h4>What We Do</h4>
-                            <h2>Why <span>Choose</span> Us</h2>
-                        </div>
-                        <div class="why-item">
-                            <div class="why-item-img">
-                                <img src="images/why-1.jpg" alt="">
-                            </div>
-                            <div class="why-item-des">
-                                <h3>Connect With Us</h3>
-                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit. Assumenda ex magni modi</p>
-                                <a href="#" class="font-size-15">More Details</a>
-                            </div>
-                        </div>
-                        <div class="why-item">
-                            <div class="why-item-img">
-                                <img src="images/why-2.jpg" alt="">
-                            </div>
-                            <div class="why-item-des">
-                                <h3>Bitcoin is open</h3>
-                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit. Assumenda ex magni modi</p>
-                                <a href="#" class="font-size-15">More Details</a>
-                            </div>
-                        </div>
-                        <div class="why-item mb-0">
-                            <div class="why-item-img">
-                                <img src="images/why-3.jpg" alt="">
-                            </div>
-                            <div class="why-item-des">
-                                <h3>Bitcoin uses</h3>
-                                <p>Lorem ipsum dolor sit amet, consecte adipisicing elit. Assumenda ex magni modi</p>
-                                <a href="#" class="font-size-15">More Details</a>
-                            </div>
-                        </div>
-                    </div>
+                    <img style="width: 100%" src="/front/images/affiliates.png" />
                 </div>
             </div>
         </div>
     </section>
     <!-- Service Part End -->
-
-    <!-- Token Part End -->
-    <section id="token-part" class="section-p">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-5 offset-lg-0">
-                    <div class="token-left">
-                        <div class="token-left-bg">
-                            <div class="offer">
-                                <img src="images/token-left-sub.png" alt="">
-                                <h2>TOKEN <span class="brand-color">SALES !</span></h2>
-
-                                <div class="buy-btn">
-                                    <a href="#">Buy CPTO Token</a>
-                                </div>
-
-                                <div class="count-down">
-                                    <div data-countdown="2018/03/11"></div>
-                                </div>
-
-                                <div class="payment">
-                                    <p>We accept BTC, ETC, LTC and Other</p>
-                                    <div class="method d-flex align-items-center justify-content-center">
-                                        <a href="#"><img src="images/card-icon-1.jpg" alt=""></a>
-                                        <a href="#"><img src="images/card-icon-2.jpg" alt=""></a>
-                                        <a href="#"><img src="images/card-icon-3.jpg" alt=""></a>
-                                        <a href="#" class="box-mth">Wire Transfer</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sold">
-                                <h2 class="brand-color">$<span class="counter">222222222</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-7 mt-4 mt-sm-5 mt-lg-0">
-                    <div class="token-right">
-                        <div class="country-short text-center">
-                            <ul id="tabs" class="flat-list">
-                                <li data-tab="eng">ENG</li>
-                                <li data-tab="chi" class="active">CHI</li>
-                                <li data-tab="jpn">JPN</li>
-                                <li data-tab="kor">KOR</li>
-                                <li data-tab="rus">RUS</li>
-                                <li data-tab="spn">SPN</li>
-                                <li data-tab="ger">GER</li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <div class="tab-content">
-                            <div class="tab-item eng">
-                                <h2 class="mt-4 mb-2">Welcome to <span class="brand-color">Bitcoin</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">81,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-lg-4 col-md-5">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> limited and Commisions</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Without physical Card,</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-lg-8 col-md-7 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Price controls Crypto Bitcoin</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Commisions Crypto bitcoin open</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Crypto is Unique</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My Chart</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item chi active">
-                                <h2 class="mt-4 mb-2">Welcome to <span class="brand-color">CryptoBank</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">84,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Without physical Card,</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> limited and Commisions</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Price Analysis: Eve and Adam Could Be Turning</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Physical Card, limited and Commisions</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Crypto is Unique</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My Earnings</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item jpn">
-                                <h2 class="mt-4 mb-2">Bitcoin In <span class="brand-color">JPN</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">72,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Adam Could Be Turning</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i>limited and Commisions</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Price Analysis: Without physical Card,</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Physical Card, limited and Commisions</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Bitcoin is Unique</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My Bitcoin</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item kor">
-                                <h2 class="mt-4 mb-2">CryptoBank in <span class="brand-color">KOR</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">11,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Without physical Card,</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> limited and Commisions</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Eve and Adam Could Be Turning Analysis</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Limited and Commisions, physical Card </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Crypto is Best</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My CryptoCoin</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item rus">
-                                <h2 class="mt-4 mb-2">Rus Large <span class="brand-color">CryptoBank</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">34,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Without physical Card,</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> limited and Commisions</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Price Analysis: Eve and Adam Could Be Turning</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Physical Card, limited and Commisions</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Crypto is Unique</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My Earnings</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item spn">
-                                <h2 class="mt-4 mb-2">Spn In <span class="brand-color">CryptoBank</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">48,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Without Could Be Turning</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i>limited Commisions and</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i>Physical Card Price Analysis: Eve Adam </li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Physical limited and Commisions Card,</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>This is Unique Crypto</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>Earning of Coin</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-item ger">
-                                <h2 class="mt-4 mb-2">Best Ger <span class="brand-color">CryptoBank</span></h2>
-                                <h3 class="semi-bold">Pay with Crypto currency in <span class="brand-color">22,0000,000</span> stories Worldwide.</h3>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-md-4">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> best Choice of Coin</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> limited and Price</li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-12 col-md-8 pl-lg-1">
-                                        <ul class="points points01">
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Without physical Card Could Be Turning</li>
-                                            <li class="h5"><i class="fa fa-angle-right"></i> Physical Card, limited and Price</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="d-sm-flex align-items-sm-center text-center">
-                                    <ul class="flat-list buttons-group">
-                                        <li><a href="#" class="btn-4">WhitePaper</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-play"></i>See Our MVP</a></li>
-                                        <li><a href="#" class="btn-4"><i class="fa fa-send"></i> Chat</a></li>
-                                    </ul>
-                                    <ul class="flat-list social-icon">
-                                        <li><a href="#"><i class="fa fa-btc"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-1.png" alt="">
-                                            </div>
-                                            <h4>Why Crypto is Unique</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <div class="points-1">
-                                            <div class="img">
-                                                <img src="images/token-icon-2.png" alt="">
-                                            </div>
-                                            <h4>My Earnings</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Token Part End -->
 
     <!-- Currency Calculator Part start -->
     <section id="calculator-part" class="section-p">
@@ -702,78 +250,26 @@
     <!-- Counter Part End -->
 
     <!-- Price Part Start -->
+
     <section id="price-part" class="section-p">
         <div class="container">
             <div class="row">
+                @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)
                 <div class="col-sm-6 col-md-4">
                     <div class="price-item">
                         <div class="coin-type">
-                            <h5>BTC-ETH</h5>
+                            <h5>{{ $item->name }}</h5>
                         </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
+                        <h3>{{ $item->period }} Days</h3>
+                        <p>From</p>
+                        <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>
+                        <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>BTC-ETH</h5>
-                        </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>BTC-ETH</h5>
-                        </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>BTC-ETH</h5>
-                        </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>BTC-ETH</h5>
-                        </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>BTC-ETH</h5>
-                        </div>
-                        <h3>1 Bitcoin</h3>
-                        <p>for</p>
-                        <h2>$ <span class="counter">16600.32</span></h2>
-                        <a href="#" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
+                @endforeach
 
                 <div class="col-12 text-center mt-5">
-                    <a href="#" class="btn-4">Load More Bitcoin</a>
+                    <a href="{{ route('backend.dashboard') }}" class="btn-4">Your Dashboard</a>
                 </div>
             </div>
         </div>
@@ -860,29 +356,6 @@
         </div>
     </section>
     <!-- Why Digital currency Part End -->
-
-    <!-- Newsletter Part Start -->
-    <div id="newsletter">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-6 text-center text-md-left">
-                    <div class="subscribe-text">
-                        <h2 class="mb-1">Subscribe to Our Newsletter</h2>
-                        <p>Sign up for our weekly indusry Update, insider perspectives and analysis.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-md-right mt-3 mt-md-0">
-                    <div class="subscribe-form">
-                        <form>
-                            <input type="email" class="form-control" placeholder="Insert your email">
-                            <button class="btn-4">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Newsletter Part End -->
 
 
 @endsection

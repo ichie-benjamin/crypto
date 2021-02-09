@@ -12,7 +12,7 @@
     <!-- favicon icon -->
     <link rel="icon" href="#">
 
-    <title>Crypto Trade</title>
+    <title>Access Options Trading FX</title>
 
     <!-- Main style css -->
     <link rel="stylesheet" href="/front/css/style.css">
@@ -41,10 +41,9 @@
                 <div class="col-12 col-md-4  text-center text-md-left">
                     <div class="header-top-left mb-2 mb-md-0">
                         <ul class="flat-list social-icon">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><img src="/front/images/card-icon-1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +96,7 @@
 
     <nav id="navigation" class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="main-logo" href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+            <a class="main-logo" href="{{ url('/') }}"><img src="/front/images/logo.png" alt="LOGO"></a>
 
             <div class="out-link ml-auto d-none d-sm-inline d-lg-none"><a href="#" class="btn-1">Free Consultation</a></div>
 
@@ -107,38 +106,19 @@
 
             <div id="nav-list" class="navbar-collapse collapse">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown-box">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <ul class="custom-dropdown-menu">
-                            <li><a href="index-2.html">Home-2</a></li>
-                            <li><a href="index-3.html">Home-3</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#banner-part">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">about</a>
-                    </li>
-                    <li class="nav-item dropdown-box">
-                        <a class="nav-link" href="#">Pages</a>
-                        <ul class="custom-dropdown-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="service.html">service</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <!-- <li><a href="sign-up.html">Sign-Up</a></li>
-                            <li><a href="login.html">LogIn</a></li>
-                            <li><a href="404.html">404</a></li> -->
-                        </ul>
+                        <a class="nav-link" href="#price-chart-part">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="service.html">Service</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contacts</a>
+                        <a class="nav-link" href="#service-part">Contact Us</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="out-link d-none d-lg-inline"><a href="#" class="btn-1">Free Consultation</a></div>
+            <div class="out-link d-none d-lg-inline"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
 
         </div>
     </nav>
@@ -152,26 +132,17 @@
             </div>
             <ul class="mobile-list">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="#banner-part">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index-2.html">Home-2</a>
+                    <a class="nav-link" href="#price-chart-part">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index-3.html">Home-3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">about</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="service.html">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contacts</a>
+                    <a class="nav-link" href="#service-part">Contact Us</a>
                 </li>
             </ul>
 
-            <div class="out-link pl-0 mt-3"><a href="#" class="btn-1">Free Consultation</a></div>
+            <div class="out-link pl-0 mt-3"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
         </div>
 
     </div>
@@ -185,7 +156,7 @@
     <div id="footer-widget" class="section-p">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget-item">
                         <h4>Contact</h4>
                         <div class="contact">
@@ -206,49 +177,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-4">
                     <div class="footer-widget-item  mt-4 mt-sm-0">
-                        <h4>Festival Deals</h4>
+                        <h4>Links</h4>
                         <ul class="regular-list">
-                            <li><a href="#">Bitcoin Investments</a></li>
-                            <li><a href="#">Exchange Bitcoin</a></li>
-                            <li><a href="#">Bitcoin analytics</a></li>
-                            <li><a href="#">Insingts Bitcoin</a></li>
-                            <li><a href="#">Bitcoin Shopping</a></li>
-                            <li><a href="#">Escrow Services</a></li>
+                            <li><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
+                            <li><a href="#price-chart-part">About</a></li>
+                            <li><a href="#service-part">Contact Us</a></li>
+
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-sm-4 col-lg-2">
-                    <div class="footer-widget-item mt-4 mt-lg-0">
-                        <h4>Need Help ?</h4>
-                        <ul class="regular-list">
-                            <li><a href="#">Getting Started</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">FAQ's</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Product Feed</a></li>
-                            <li><a href="#">Feature product</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-8 col-lg-4">
+                <div class="col-12 col-sm-12 col-lg-4">
                     <div class="footer-about mt-4 mt-lg-0">
                         <div class="footer-logo">
-                            <a href="#"><img src="images/logo-footer.png" alt=""></a>
-                            <p class="mt-3 mb-">Dolor sit amet, consectetur adipisicing elit. Dolorem veniam repellendus ad aut obcaecati totam magnam, ea nostrum sit reprehenderit.</p>
+                            <a href="#"><img src="/front/images/logo-footer.png" alt=""></a>
+                            <p class="mt-3 mb-">Access Options Trading FX is a company that successfully achieves its objectives and gives others the opportunity to prosper.</p>
                             <a href="#"><i class="fa fa-caret-right"></i> About us</a>
                         </div>
                         <div class="footer-widget-item">
                             <ul class="flat-list">
-                                <li><a href="#"><img src="images/card-icon-1.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-1.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>
                             </ul>
                         </div>
                     </div>
@@ -260,7 +216,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>Copyright © 2017 <a href="https://themeforest.net/user/themebuzs">ThemeBuz</a></p>
+                    <p>Copyright © {{ date('Y') }} <a href="#">Access Options Trading FX</a></p>
                 </div>
             </div>
         </div>
