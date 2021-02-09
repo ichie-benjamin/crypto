@@ -53,8 +53,8 @@
                                     @endif
                                 </td>
                                 <td>
-                                    @if ($item->front)
-                                    <img height="50px" width="50px" src="{{ $item->front }}" />
+                                    @if ($item->back)
+                                    <img height="50px" width="50px" src="{{ $item->back }}" />
                                     @else
                                     Not Uploaded
                                         @endif

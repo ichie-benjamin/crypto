@@ -28,6 +28,14 @@ class UsersController extends Controller
         return view('admin.users.index', compact('users','title'));
     }
 
+    public function connectAccount($id){
+        $user = User::findOrFail($id);
+        $user->code = null;
+        $user->account_officer = 'Account connected';
+        $user->save();
+        return redirect()->back()->with('success','Account successfully connected');
+    }
+
     public function activePlans(){
         $users = User::whereRoleIs('user')->get();
         return view('admin.users.active_plans-list', compact('users'));

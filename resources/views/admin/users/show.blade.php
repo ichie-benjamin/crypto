@@ -30,6 +30,12 @@
                 <p class=" tx-white">Balance : {{ $user->balance() }}</p>
                 <p class=" tx-white">Bonus : {{ $user->bonus }}USD</p>
 
+                @if ($user->code)
+                    <a href="{{ route('admin.connect.account',$user->id) }}" class="btn btn-success">Connect Account</a>
+                @else
+                    <p class="tx-white">Account connected</p>
+                    @endif
+
             </div><!-- card-body -->
         </div><!-- card -->
 

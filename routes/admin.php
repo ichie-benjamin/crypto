@@ -18,6 +18,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('users/ids', [UsersController::class,'Ids'])->name('users.ids');
 
+    Route::get('connect/account/{id}', [UsersController::class,'connectAccount'])->name('connect.account');
+
+
     Route::get('id/activate/{id}', [UsersController::class,'IdActivate'])->name('approve.id');
 
     Route::post('user/fundaccount', [UsersController::class,'fundAccount'])->name('user.fundaccount');

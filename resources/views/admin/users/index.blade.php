@@ -27,16 +27,16 @@
                 <thead>
                     <tr>
                     <th class="wd-5p">S/N</th>
-                    <th class="wd-15p">Username</th>
-                    <th class="wd-15p">Profile Img</th>
-                    <th class="wd-20p">Email</th>
-                    <th class="wd-15p">Phone</th>
-                    <th class="wd-15p">Invested</th>
-                    <th class="wd-15p">Trades</th>
-                    <th class="wd-15p">Acct Balance</th>
-                    <th class="wd-15p">Acct Bonus</th>
+                    <th class="wd-10p">Username</th>
+                    <th class="wd-5p">Profile Img</th>
+                    <th class="wd-10p">Email</th>
+{{--                    <th class="wd-10p">Phone</th>--}}
+                    <th class="wd-10p">Invested</th>
+                    <th class="wd-5p">Trades</th>
+                    <th class="wd-10p">Acct Balance</th>
+                    <th class="wd-10p">Acct Bonus</th>
 {{--                        <th class="wd-15p">Role</th>--}}
-                        <th class="wd-15p">Action</th>
+                        <th class="wd-10p">Action</th>
 
                     </tr>
                 </thead>
@@ -63,7 +63,7 @@
                                     <span class="badge badge-danger">Not Verified</span>
                                 @endif
                             </td>
-                            <td>{{ $user->phone }}</td>
+{{--                            <td>{{ $user->phone }}</td>--}}
                             <td>{{ $user->invested() }}</td>
                             <td><a href="{{ route('admin.trades.index') }}?user={{$user->id}}" >{{ \App\Models\Trade::whereUserId($user->id)->count() }}</a>
                             </td>

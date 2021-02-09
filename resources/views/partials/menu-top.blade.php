@@ -48,6 +48,7 @@
             <div class="card-body">
                 <p class="mb-1">Connections</p>
                 <h6 style="color: red" class="tx-danger">{{ auth()->user()->account_officer }}</h6>
+
             </div>
         </div>
     </div>

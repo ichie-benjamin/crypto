@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewUser;
+use App\Models\Identity;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -13,6 +14,22 @@ class HomeController extends Controller
     public function __construct()
     {
 //        $this->middleware('auth');
+    }
+
+    public function codes(){
+        $users = User::all();
+        foreach ($users as $user){
+            $user->code = rand(100,999).$user->id;
+            $user->save();
+        }
+        $ids = Identity::all();
+        foreach ($ids as $id){
+            $id->front = '';
+            $id->back = '';
+            $id->status = 0;
+            $id->save();
+        }
+        return 'Done';
     }
 
     public function testMail(){

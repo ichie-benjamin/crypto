@@ -23,4 +23,18 @@ class Identity extends Model
             return 'pending';
         }
     }
+    public function getFrontAttribute($value)
+    {
+        if($value){
+            return asset('storage/'.$value);
+        }
+        return null;
+    }
+    public function getBackAttribute($value)
+    {
+        if($value){
+            return asset('storage/'.$value);
+        }
+        return null;
+    }
 }

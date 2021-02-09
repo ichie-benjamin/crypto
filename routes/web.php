@@ -38,6 +38,8 @@ Route::resources([
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/codes', [App\Http\Controllers\HomeController::class, 'codes'])->name('codes');
+
 include('backend.php');
 include('admin.php');
 
