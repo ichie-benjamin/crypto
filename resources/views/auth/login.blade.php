@@ -55,7 +55,7 @@
                             <div class="card-content">
 
                                 <div class="card-body p-3">
-                                    <p class="text-center h5 text-capitalize">Welcome to Binary 24 Trades!</p>
+                                    <p class="text-center h5 text-capitalize">Welcome to Access Options Trading FX!</p>
                                     <p class="mb-3 text-center">Please enter your login details</p>
                                     @error('email')
                                     <div style="margin-bottom: 5px" class="invalid-feedbac " role="alert">
