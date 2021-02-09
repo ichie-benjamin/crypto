@@ -1,411 +1,284 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name='robots' content='noindex,follow' />
-    <link rel="shortcut icon" href="/assets/images/favicon.png">
-    <title>Binary 24 Trades </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
 
-    <!-- CSS -->
-    <link rel='stylesheet' type='text/css' media='all' href="/assets/css/simple-line-icons.css"/>
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/cryptocoins.css'/>
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/style-inline.css'/>
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/media-screens.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/owl.carousel.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/animate.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/responsive.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/css/style.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/plugins/font-awesome/css/font-awesome.min.css' />
-    <link rel='stylesheet' type='text/css' media='all' href='/assets/plugins/select2/css/select2.min.html' />
+    <!-- favicon icon -->
+    <link rel="icon" href="#">
 
-    <!-- CHARTS -->
-    <link href="/assets/plugins/amcharts/export.css" rel="stylesheet">
-    <link href="/assets/plugins/amcharts/pie-chart.css" rel="stylesheet">
+    <title>Crypto Trade</title>
 
-    <!-- Fonts -->
-    <link rel='stylesheet' type='text/css' media='all' href='../../fonts.googleapis.com/cssdd33.css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800%7CRaleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CDroid+Serif%3A400%2C700%7CMontserrat%7CMontserrat%3Aregular%2C700%2Clatin'/>
+    <!-- Main style css -->
+    <link rel="stylesheet" href="/front/css/style.css">
 
-    <style>
-        .video-presentation-sect {
-            height: 420px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            background: url(https://www.crypto-express.online/images/bg-video-banner.jpg) no-repeat 50% 0 fixed;
-            background-size: cover;
-        }
-        .site-warning{
-            background-color: white;
-            padding: 20px;
-            color: #0a0c12;
-            margin: 200px;
-            border: 1px solid #0A72E8;
-        }
-
-        .list_title_text {
-            font-size: 1.3em!important;
-        }
-        .bitcurrency-contact {
-            background-color: #607D8B!important;
-            padding: 50px;
-        }
-    </style>
 </head>
 
-<body class="page-template-default page page-child footer_row1_off is_header_semitransparent home-ico-consultant">
-<div class="cryptic_preloader_holder cryptic_preloader_holder_ico v2_ball_pulse">
-    <div class="cryptic_preloader v2_ball_pulse">
-        <div class="loaders">
-            <div class="loader">
-                <div class="loader-inner ball-pulse">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+<body>
+
+<!-- Preloader Part Start -->
+<div id="prelaoder">
+    <div class="cssload-loader">
+        <div class="cssload-flipper">
+            <div class="cssload-front"></div>
+            <div class="cssload-back"></div>
         </div>
     </div>
 </div>
+<!-- Preloader Part End -->
 
-<div class="modeltheme-modal" id="modal-log-in">
-    <div class="modeltheme-content" id="login-modal-content">
-        <h3 class="relative"> Login to Your Account </h3>
-        <div class="modal-content row">
-            <div class="col-md-12">
-                @error('email')
+<!-- Header Part Start -->
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="row d-flex align-items-center">
 
-                <div class="alert alert-success alert-dismissible cryptic-demo-login">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong style="color: red">{{ $message }}</strong>
-                </div>
-
-                @enderror
-
-
-                <form name="loginform" action="{{ route('login') }}" id="loginform" method="post">
-                    @csrf
-
-                    <p class="login-username">
-                        <label for="user_login">Username or Email Address</label>
-                        <input type="email" name="email" id="user_login" class="input" value="" size="20" />
-                    </p>
-                    <p class="login-password">
-                        <label for="user_pass">Password</label>
-                        <input type="password" name="password" id="user_pass" class="input" value="" size="20" />
-                    </p>
-                    <p class="login-remember">
-                        <label><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember Me</label>
-                    </p>
-                    <p class="login-submit">
-                        <input type="submit" name="submit" id="submit" class="button button-primary" value="Log In" />
-                        <input type="hidden" name="redirect_to" value="{{ route('home') }}" />
-                    </p>
-                </form>
-                <p class="um-notice err text-center">Registration is currently disabled</p>
-            </div>
-        </div>
-    </div>
-    <div class="modeltheme-content" id="signup-modal-content">
-        <h3 class="relative"> Personal Details </h3>
-        <div class="modal-content row">
-            <div class="col-md-12"> [ultimatemember form_id=16587] </div>
-        </div>
-    </div>
-</div>
-
-<div class="modeltheme-overlay"></div>
-<!-- Fixed Search Form -->
-
-
-<!-- HEADER -->
-<div class="hfeed site">
-    <header class="header4">
-        <!-- BOTTOM BAR -->
-        <nav class="navbar navbar-default {{ active(['home'],'transparent-nav') }}" id="modeltheme-main-head">
-            <div class="container">
-                <div class="row">
-                    <!-- LOGO -->
-                    <div class="navbar-header col-md-2">
-                        <!-- NAVIGATION BURGER MENU -->
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <h1 class="logo">
-                            <a href="{{ route('home') }}">
-                                <img style="height: 50px" src="/images/logo1.png" alt="Binary24Trades" />
-                            </a>
-                        </h1>
-                    </div>
-
-                    <!-- NAV MENU -->
-                    <div id="navbar" class="navbar-collapse collapse col-md-7">
-                        <ul class="menu nav navbar-nav pull-left nav-effect nav-menu">
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('home') }}">Home</a></li>
-
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('about') }}">About Us</a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('contact') }}">Contact</a></li>
-                         @auth()
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
-                            @else
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('login') }}">Login</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{{ route('register') }}">Register</a></li>
-
-                            @endauth
+                <div class="col-12 col-md-4  text-center text-md-left">
+                    <div class="header-top-left mb-2 mb-md-0">
+                        <ul class="flat-list social-icon">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
-
-                    <!-- RIGHT SIDE SOCIAL / ACTIONS BUTTONS -->
-                    <div class="col-md-3 right-side-social-actions visibile_group">
-
-                        <!-- ACTIONS BUTTONS GROUP -->
-                        <div class="pull-right actions-group">
-                            <!-- MT BURGER -->
-                            <div id="mt-nav-burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-
-                            <!-- SEARCH ICON -->
-
-                            <a class="profile modeltheme-trigger  mt-login-icon" href="#" data-modal="modal-log-in">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <!-- SOCIAL LINKS -->
-{{--                        <ul class="social-links">--}}
-{{--                            <li><a href="https://telegram.org/"><i class="fa fa-telegram"></i></a></li>--}}
-{{--                            <li><a href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>--}}
-{{--                            <li><a href="https://twitter.com/envato"><i class="fa fa-twitter"></i></a></li>--}}
-{{--                            <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>--}}
-{{--                        </ul>--}}
-                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- HEADER TITLE BREADCRUBS SECTION -->
-
-    <!-- Page content -->
-
-    @yield('content')
-
-    <div class="btn-sticky-left">
-        <a href="{{ route('backend.dashboard') }}" target="_blank" title="Dashboard"><i class="icon-home icons"></i></a>
-        <a href="{{ route('backend.trades.index') }}" title="Trades"><i class="icon-book-open icons"></i></a>
-        <a href="{{ route('contact') }}" title="Contact Support"><i class="icon-support icons"></i></a>
-        <!-- WP Variant -->
-        <a href="{{ route('backend.account.overview') }}" title="Account Overview">
-            <i class="fa fa-universal-access" aria-hidden="true"></i>
-        </a>
-    </div>
-
-
-    <!-- BEGIN: FLOATING SOCIAL BUTTON -->
-    <a data-toggle="tooltip" data-placement="top" title="Connect on Telegram" class="floating-social-btn" target="_blank" href="https://telegram.org/">
-        <i class="fa fa-telegram"></i>
-    </a>
-    <!-- END: FLOATING SOCIAL BUTTON -->
-
-
-    <!-- BACK TO TOP BUTTON -->
-    <a class="back-to-top modeltheme-is-visible modeltheme-fade-out" href="#0">
-        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-    </a>
-
-    <!-- TICKERS DARK -->
-    <div class="tickers-black-sm crypto-ticker">
-        <ul id="webticker-dark-icons">
-            <li data-update="item1"><i class="cc BTC"></i> BTC <span class="coin-value"> $11.039232</span></li>
-            <li data-update="item2"><i class="cc ETH"></i> ETH <span class="coin-value"> $1.2792</span></li>
-            <li data-update="item3"><i class="cc GAME"></i> GAME <span class="coin-value"> $11.039232</span></li>
-            <li data-update="item4"><i class="cc LBC"></i> LBC <span class="coin-value"> $0.588418</span></li>
-            <li data-update="item5"><i class="cc NEO"></i> NEO <span class="coin-value"> $161.511</span></li>
-            <li data-update="item6"><i class="cc STEEM"></i> STE <span class="coin-value"> $0.551955</span></li>
-            <li data-update="item7"><i class="cc LTC"></i> LIT <span class="coin-value"> $177.80</span></li>
-            <li data-update="item8"><i class="cc NOTE"></i> NOTE <span class="coin-value"> $13.399</span></li>
-            <li data-update="item9"><i class="cc MINT"></i> MINT <span class="coin-value"> $0.880694</span></li>
-            <li data-update="item10"><i class="cc IOTA"></i> IOT <span class="coin-value"> $2.555</span></li>
-            <li data-update="item11"><i class="cc DASH"></i> DAS <span class="coin-value"> $769.22</span></li>
-        </ul>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <!-- FOOTER TOP -->
-        @section('hide')
-            <div class="footer-top footer-ico-listing">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 footer-row-1">
-                            <div class="row">
-                                <div class="col-md-3 sidebar-1">
-                                    <aside id="nav_menu-6" class="widget vc_column_vc_container widget_nav_menu">
-                                        <h1 class="widget-title">RESOURCES</h1>
-                                        <div class="menu-footer1-container">
-                                            <ul id="menu-footer1" class="menu">
-                                                <li id="menu-item-341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341"><a href="#">How to Buy Coin</a></li>
-                                                <li id="menu-item-342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342"><a href="#">Coin Overview</a></li>
-                                                <li id="menu-item-15589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15589"><a href="blog.html">Blog News</a></li>
-                                                <li id="menu-item-344" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-344"><a href="#">How to Sell Coin</a></li>
-                                                <li id="menu-item-4441" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4441"><a href="#">Purchase Template</a></li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div>
-                                <div class="col-md-3 sidebar-2">
-                                    <aside id="nav_menu-3" class="widget vc_column_vc_container widget_nav_menu">
-                                        <h1 class="widget-title">NETWORK</h1>
-                                        <div class="menu-footer2-container">
-                                            <ul id="menu-footer2" class="menu">
-                                                <li id="menu-item-345" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345"><a href="#">Network Stats</a></li>
-                                                <li id="menu-item-346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-346"><a href="#">Block Explorers</a></li>
-                                                <li id="menu-item-347" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-347"><a href="#">Governance</a></li>
-                                                <li id="menu-item-348" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-348"><a href="#">Exchange  Markets</a></li>
-                                                <li id="menu-item-4442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4442"><a href="#">Get Template</a></li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div>
-                                <div class="col-md-3 sidebar-3">
-                                    <aside id="nav_menu-4" class="widget vc_column_vc_container widget_nav_menu">
-                                        <h1 class="widget-title">SUPPORT</h1>
-                                        <div class="menu-footer3-container">
-                                            <ul id="menu-footer3" class="menu">
-                                                <li id="menu-item-349" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-349"><a href="#">Contact Us</a></li>
-                                                <li id="menu-item-350" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-350"><a href="#">Developer Center</a></li>
-                                                <li id="menu-item-351" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-351"><a href="#">Helpes</a></li>
-                                                <li id="menu-item-352" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-352"><a href="#">Terms &#038; Conditions</a></li>
-                                                <li id="menu-item-4443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4443"><a href="#">Purchase Template</a></li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div>
-                                <div class="col-md-3 sidebar-4">
-                                    <aside id="nav_menu-5" class="widget vc_column_vc_container widget_nav_menu">
-                                        <h1 class="widget-title">ABOUT US</h1>
-                                        <div class="menu-footer4-container">
-                                            <ul id="menu-footer4" class="menu">
-                                                <li id="menu-item-353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-353"><a href="#">Our Coin</a></li>
-                                                <li id="menu-item-354" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-354"><a href="#">Carrers</a></li>
-                                                <li id="menu-item-355" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-355"><a href="#">Our Team</a></li>
-                                                <li id="menu-item-356" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-356"><a href="#">Our Project</a></li>
-                                                <li id="menu-item-4444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4444"><a href="#">Purchase</a></li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-12 col-md-8  text-center text-md-right">
+                    <div class="header-top-right">
+                        <ul class="flat-list">
+                            <li>
+                                <h5>+0.11+</h5>
+                                <h5>+0.13+</h5>
+                            </li>
+                            <li>
+                                <h5><i class="fa fa-caret-up"></i> Day Hight 88.77</h5>
+                                <h5><i class="fa fa-caret-down"></i> Day Hight 88.77</h5>
+                            </li>
+                            <li>
+                                <a href=".html" class="popup-chart"><img src="images/header-top-icon.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 footer-row-2">
-                            <div class="row"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 footer-row-3">
-                            <div class="row"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-    @stop
-
-        <!-- FOOTER BOTTOM -->
-        <div class="footer-div-parent">
-            <div class="container-fluid footer">
-                <div class="col-md-12">
-                    <p class="copyright text-center">
-                        <a href="{{ route('home') }}">Binary24Trades </a>2015 - {{ date('Y') }} All Rights Reserved.
-                    </p>
                 </div>
             </div>
         </div>
-    </footer>
-    <div class="spacer_40"></div>
-</div><!-- end HEADER -->
-<!-- JS SCRIPTS -->
-<script src='assets/js/jquery.js'></script>
-<script src='assets/js/cryptic-plugins.js'></script>
-<script src='assets/js/cryptic-custom.js'></script>
-<script src='assets/js/donut-chart.js'></script>
-<!-- WEBTICKER -->
-<script src="assets/plugins/webticker/jquery.webticker.min.js"></script>
-<!-- PLUGINS -->
-<script src="assets/plugins/flipclock/flipclock.js"></script>
-<script src='assets/plugins/select2/select2.min.js'></script>
-<script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
-<script src='assets/plugins/magnific-popup/jquery.magnific-popup.js'></script>
-<!-- CHARTS -->
-<script src="../../cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    </div>
 
-<script>
-    jQuery(document).ready( function() {
-        jQuery(".mt_slider_members_team1").owlCarousel({
-            navigation      : false, // Show next and prev buttons
-            pagination      : false,
-            autoPlay        : false,
-            slideSpeed      : 700,
-            paginationSpeed : 700,
-            autoWidth: true,
-            itemsCustom : [
-                [0,     1],
-                [450,   1],
-                [600,   4],
-                [700,   2],
-                [1000,  2],
-                [1200,  4],
-                [1400,  4],
-                [1600,  4]
-            ]
-        });
+    <!-- Price Chart Part Start -->
+    <div class="section-p chart-popup-content mfp-hide" style="background:#fff">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                    <div class="treading">
+                        <h2>Treding <span class="brand-color">Fee 0%</span></h2>
+                        <h5 class="brand-color semi-bold">On the UK's no.1 Bitcoin exchange</h5>
+                        <p>Bitcoin Hit $15000 in Magor Milestone for #1 CryptoCurrency.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
+                        <a href="sign-up.html" class="btn-5 mt-3 mt-lg-4">Join Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center mt-3 mt-md-0">
+                    <div class="price-chart">
+                        <div class="btcwdgt-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Price Chart Part End -->
 
-        jQuery(".mt_slider_members_team1 .owl-wrapper .owl-item:nth-child(2)").addClass("hover_class");
-        jQuery(".mt_slider_members_team1 .owl-wrapper .owl-item").hover(
-            function () {
-                jQuery(".mt_slider_members_team1 .owl-wrapper .owl-item").removeClass("hover_class");
-                jQuery(this).addClass("hover_class");
-            }
-        );
+    <!-- Navigation -->
 
-        jQuery(".mt_slider_members_team2").owlCarousel({
-            navigation      : false, // Show next and prev buttons
-            pagination      : false,
-            autoPlay        : false,
-            slideSpeed      : 700,
-            paginationSpeed : 700,
-            autoWidth: true,
-            itemsCustom : [
-                [0,     1],
-                [450,   1],
-                [600,   4],
-                [700,   2],
-                [1000,  2],
-                [1200,  4],
-                [1400,  4],
-                [1600,  4]
-            ]
-        });
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="main-logo" href="index.html"><img src="images/logo.png" alt="LOGO"></a>
 
-        jQuery(".mt_slider_members_team2 .owl-wrapper .owl-item:nth-child(2)").addClass("hover_class");
-        jQuery(".mt_slider_members_team2 .owl-wrapper .owl-item").hover(
-            function () {
-                jQuery(".mt_slider_members_team2 .owl-wrapper .owl-item").removeClass("hover_class");
-                jQuery(this).addClass("hover_class");
-            }
-        );
-    });
-</script>
+            <div class="out-link ml-auto d-none d-sm-inline d-lg-none"><a href="#" class="btn-1">Free Consultation</a></div>
+
+            <button class="navbar-toggler mobile-toggle ml-auto ml-sm-0" type="button" data-toggle="collapse" data-target="#nav-list">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div id="nav-list" class="navbar-collapse collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown-box">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <ul class="custom-dropdown-menu">
+                            <li><a href="index-2.html">Home-2</a></li>
+                            <li><a href="index-3.html">Home-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">about</a>
+                    </li>
+                    <li class="nav-item dropdown-box">
+                        <a class="nav-link" href="#">Pages</a>
+                        <ul class="custom-dropdown-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="service.html">service</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <!-- <li><a href="sign-up.html">Sign-Up</a></li>
+                            <li><a href="login.html">LogIn</a></li>
+                            <li><a href="404.html">404</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="out-link d-none d-lg-inline"><a href="#" class="btn-1">Free Consultation</a></div>
+
+        </div>
+    </nav>
+
+    <!-- mobile manu -->
+    <div id="mobile-manu">
+        <div class="mobile-manu-box">
+            <div class="mobile-manu-top d-flex align-items-center">
+                <a href="index.html"><img src="images/logo-footer.png" alt=""></a>
+                <button class="close-mobile-manu ml-auto"><i class="fa fa-close"></i></button>
+            </div>
+            <ul class="mobile-list">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index-2.html">Home-2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index-3.html">Home-3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacts</a>
+                </li>
+            </ul>
+
+            <div class="out-link pl-0 mt-3"><a href="#" class="btn-1">Free Consultation</a></div>
+        </div>
+
+    </div>
+</header>
+<!-- Header Part End -->
+
+@yield('content')
+
+<!-- Footer Part Start -->
+<footer id="footer-part">
+    <div id="footer-widget" class="section-p">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget-item">
+                        <h4>Contact</h4>
+                        <div class="contact">
+                            <ul>
+                                <li><i class="fa fa-map-marker"></i>Block-C, Niketon, Gulshan, Dhaka 1212, Bangladesh</li>
+                                <li><a href="mailto::sales@wditsolution.com"><i class="fa fa-envelope"></i> sales@wditsolution.com</a></li>
+                                <li><a href="callto::+880167007994"><i class="fa fa-phone"></i>+880 167007994</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-item">
+                            <h4 class="mb-1">Connect with us:</h4>
+                            <ul class="flat-list social-icon">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="footer-widget-item  mt-4 mt-sm-0">
+                        <h4>Festival Deals</h4>
+                        <ul class="regular-list">
+                            <li><a href="#">Bitcoin Investments</a></li>
+                            <li><a href="#">Exchange Bitcoin</a></li>
+                            <li><a href="#">Bitcoin analytics</a></li>
+                            <li><a href="#">Insingts Bitcoin</a></li>
+                            <li><a href="#">Bitcoin Shopping</a></li>
+                            <li><a href="#">Escrow Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 col-lg-2">
+                    <div class="footer-widget-item mt-4 mt-lg-0">
+                        <h4>Need Help ?</h4>
+                        <ul class="regular-list">
+                            <li><a href="#">Getting Started</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Product Feed</a></li>
+                            <li><a href="#">Feature product</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-8 col-lg-4">
+                    <div class="footer-about mt-4 mt-lg-0">
+                        <div class="footer-logo">
+                            <a href="#"><img src="images/logo-footer.png" alt=""></a>
+                            <p class="mt-3 mb-">Dolor sit amet, consectetur adipisicing elit. Dolorem veniam repellendus ad aut obcaecati totam magnam, ea nostrum sit reprehenderit.</p>
+                            <a href="#"><i class="fa fa-caret-right"></i> About us</a>
+                        </div>
+                        <div class="footer-widget-item">
+                            <ul class="flat-list">
+                                <li><a href="#"><img src="images/card-icon-1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/card-icon-3.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright © 2017 <a href="https://themeforest.net/user/themebuzs">ThemeBuz</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Part End -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/front/js/jquery.min.js"></script>
+<script src="/front/js/popper.min.js"></script>
+<script src="/front/js/bootstrap.min.js"></script>
+
+<!-- Plug In Js -->
+<script src="/front/js/plugins.js"></script>
+
+<!-- Custom js -->
+<script src="/front/js/custom.js"></script>
+
 </body>
 
 </html>
