@@ -10,6 +10,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 
 Route::get('/test/mail', [HomeController::class, 'testMail']);
+
 Route::get('/mail', [HomeController::class, 'mail']);
 
 

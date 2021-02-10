@@ -36,6 +36,8 @@ class HomeController extends Controller
         Mail::send('welcome', [], function($message) {
             $message->to('benjaminchukwudi0@gmail.com')->subject('Testing mails');
         });
+
+        return 'done sending';
     }
 
     public function testMail(){
