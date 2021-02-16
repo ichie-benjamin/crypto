@@ -8,12 +8,14 @@ use App\Models\Currency;
 use App\Models\Deposit;
 use App\Models\Package;
 use App\Models\User;
+use App\traits\UploadTrait;
 use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Support\Str;
 
 class DepositsController extends Controller
 {
-
+    use UploadTrait;
     public function index()
     {
         $deposits = Deposit::with('user','currency','account')->paginate(25);
@@ -65,20 +67,30 @@ class DepositsController extends Controller
 
     public function store(Request $request)
     {
-        try {
 
             $data = $this->getData($request);
 //            $package = Package::findOrFail($data['plan_id']);
+
+        $proof = $request->file('proof');
+
+        // Make a image name based on user name and current timestamp
+        $name = Str::slug(auth()->user()->username.'_proof_'.time());
+
+        // Define folder path
+        $folder = '/uploads/proofs/';
+        // Make a file path where image will be stored [ folder path + file name + file extension]
+        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
+
+        // Upload image
+        $this->uploadOne($proof, $folder, 'public', $name);
+
+        $data['proof'] = $f_filePath;
 
             $deposit = Deposit::create($data);
 
             return redirect()->route('backend.deposit.view',$deposit->id)
                 ->with('success', 'Deposit Proof was successfully uploaded.');
-        } catch (Exception $exception) {
 
-            return back()->withInput()
-                ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request.']);
-        }
     }
 
     public function depositStore(Request $request)
@@ -162,7 +174,7 @@ $accounts = Account::pluck('id','id')->all();
                 'user_id' => 'nullable',
             'plan_id' => 'nullable',
             'amount' => 'required',
-            'proof' => 'nullable',
+            'proof' => 'required',
             'promo_code' => 'string|nullable',
             'payment_method' => 'string|min:1|nullable',
         ];

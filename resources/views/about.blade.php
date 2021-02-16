@@ -66,7 +66,7 @@
                             <div class="col-sm-4 cryptic_about_us_info">
                                 <img src="/assets/images/three.png" alt="three"/>
                                 <h2>Reliability</h2>
-                                <p class="text-left"><span>Crypto Express has been working<br /> in the market for 5 years and it<br /> has a positive reputation.</span></p>
+                                <p class="text-left"><span>Binary 24 Trades has been working<br /> in the market for 5 years and it<br /> has a positive reputation.</span></p>
                             </div>
 
                             <div class="col-sm-4 cryptic_about_us_info">

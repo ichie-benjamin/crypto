@@ -17,7 +17,7 @@
 
                                     <div class="input-group mt-2">
                                         <input type="text" class="form-control"
-                                               value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
+                                               value="{{ setting('wallet_id') }}">
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-primary text-white">Copy</span>
                                         </div>

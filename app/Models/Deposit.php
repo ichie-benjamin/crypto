@@ -65,4 +65,12 @@ class Deposit extends Model
         return $this->belongsTo('App\Models\Account','account_id');
     }
 
+    public function getProofAttribute($value)
+    {
+        if($value){
+            return asset('storage/'.$value);
+        }
+        return null;
+    }
+
 }
