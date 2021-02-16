@@ -216,13 +216,17 @@
     </section>
     <!-- Currency Calculator Part End -->
 
+    @php
+  $count = (int)date('y') + (int)date('m')+(int)date('d')+(int)date('i');+(int)date('s')
+@endphp
     <!-- Counter Part Start -->
     <section id="counter-part" class="section-p">
         <div class="container">
             <div class="row">
+                {{ $count }}
                 <div class="col-lg-3 col-sm-6 col-12 mb-3 mb-sm-4 mb-lg-0">
                     <div class="counter-item text-center">
-                        <h2 class="counter">599</h2>
+{{--                        <h2 class="counter">{{ $count }}</h2>--}}
                         <h5>Transactions in last 24h</h5>
                     </div>
                 </div>
