@@ -11,14 +11,18 @@
                         <div class="row d-flex align-items-center">
                             <div class="col-12 col-sm-7 col-md-7">
                                 <div class="banner-caption">
-                                    <h1>Trade  <span class="brand-color">Crypto Coin</span></h1>
-                                    <p class="h3">Crypto Trade is most popular trading platform</p>
+                                    <h1>Access  <span class="brand-color">Options Trading FX</span></h1>
+                                    <p class="h3">Is the most popular trading platform</p>
                                     <ul class="regular-list d-none d-md-inline">
                                         <li><i class="fa fa-angle-right"></i> Free Crypto Wallet</li>
                                         <li><i class="fa fa-angle-right"></i> Many deposit options</li>
                                         <li><i class="fa fa-angle-right"></i> Withdraw instantly anytime</li>
                                     </ul>
-                                    <a href="{{ route('backend.dashboard') }}" class="btn-2 bold">GET START</a>
+                                    @guest()
+                                        <a href="{{ route('register') }}" class="btn-2 bold">CREATE ACCOUNT</a>
+                                    @else
+                                        <a href="{{ route('backend.dashboard') }}" class="btn-2 bold">Dashboard</a>
+                                    @endguest
                                 </div>
                             </div>
                             <div class="col-8 offset-2 offset-sm-0 col-sm-5 col-md-5 d-none d-sm-inline-block">
@@ -217,23 +221,24 @@
     <!-- Currency Calculator Part End -->
 
     @php
-  $count = (int)date('y') + (int)date('m')+(int)date('d')+(int)date('i');+(int)date('s')
+  $count = (int)date('y') + (int)date('m')+(int)date('d');
+  $count1 = (int)date('h') + (int)date('i');
 @endphp
     <!-- Counter Part Start -->
     <section id="counter-part" class="section-p">
         <div class="container">
             <div class="row">
-                {{ $count }}
+{{--                {{ $count1 }}--}}
                 <div class="col-lg-3 col-sm-6 col-12 mb-3 mb-sm-4 mb-lg-0">
                     <div class="counter-item text-center">
-{{--                        <h2 class="counter">{{ $count }}</h2>--}}
+                        <h2 class="counter">{{ $count1 * 3}}</h2>
                         <h5>Transactions in last 24h</h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12 mb-3 mb-sm-4 mb-lg-0">
                     <div class="counter-item text-center">
-                        <h2 class="counter">15</h2>
-                        <h5>Transactions Per Hour</h5>
+                        <h2 class="counter">{{ $count * 55 + $count1 }}</h2>
+                        <h5>Total Transactions </h5>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12 mb-3 mb-sm-4 mb-sm-0">
@@ -244,7 +249,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12">
                     <div class="counter-item text-center">
-                        <h2 class="counter">10</h2>
+                        <h2 class="counter">{{ date('Y') - 2011 }}</h2>
                         <h5>Year of Experiences</h5>
                     </div>
                 </div>
@@ -255,29 +260,32 @@
 
     <!-- Price Part Start -->
 
-    <section id="price-part" class="section-p">
-        <div class="container">
-            <div class="row">
-                @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)
-                <div class="col-sm-6 col-md-4">
-                    <div class="price-item">
-                        <div class="coin-type">
-                            <h5>{{ $item->name }}</h5>
-                        </div>
-                        <h3>{{ $item->period }} Days</h3>
-                        <p>From</p>
-                        <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>
-                        <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>
-                    </div>
-                </div>
-                @endforeach
+{{--    --}}
+{{--    <section id="price-part" class="section-p">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)--}}
+{{--                <div class="col-sm-6 col-md-4">--}}
+{{--                    <div class="price-item">--}}
+{{--                        <div class="coin-type">--}}
+{{--                            <h5>{{ $item->name }}</h5>--}}
+{{--                        </div>--}}
+{{--                        <h3>{{ $item->period }} Days</h3>--}}
+{{--                        <p>From</p>--}}
+{{--                        <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>--}}
+{{--                        <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
 
-                <div class="col-12 text-center mt-5">
-                    <a href="{{ route('backend.dashboard') }}" class="btn-4">Your Dashboard</a>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--                <div class="col-12 text-center mt-5">--}}
+{{--                    <a href="{{ route('backend.dashboard') }}" class="btn-4">Your Dashboard</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+{{--    --}}
+
     <!-- Price Part End -->
 
     <!-- Price Chart Part Start -->

@@ -34,41 +34,41 @@
 
 <!-- Header Part Start -->
 <header>
-    <div class="header-top">
-        <div class="container">
-            <div class="row d-flex align-items-center">
+{{--    <div class="header-top">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row d-flex align-items-center">--}}
 
-                <div class="col-12 col-md-4  text-center text-md-left">
-                    <div class="header-top-left mb-2 mb-md-0">
-                        <ul class="flat-list social-icon">
-                            <li><a href="#"><img src="/front/images/card-icon-1.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
+{{--                <div class="col-12 col-md-4  text-center text-md-left">--}}
+{{--                    <div class="header-top-left mb-2 mb-md-0">--}}
+{{--                        <ul class="flat-list social-icon">--}}
+{{--                            <li><a href="#"><img src="/front/images/card-icon-1.jpg" alt=""></a></li>--}}
+{{--                            <li><a href="#"><img src="/front/images/card-icon-2.jpg" alt=""></a></li>--}}
+{{--                            <li><a href="#"><img src="/front/images/card-icon-3.jpg" alt=""></a></li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-12 col-md-8  text-center text-md-right">
-                    <div class="header-top-right">
-                        <ul class="flat-list">
-                            <li>
-                                <h5>+0.11+</h5>
-                                <h5>+0.13+</h5>
-                            </li>
-                            <li>
-                                <h5><i class="fa fa-caret-up"></i> Day Hight 88.77</h5>
-                                <h5><i class="fa fa-caret-down"></i> Day Hight 88.77</h5>
-                            </li>
-                            <li>
-                                <a href=".html" class="popup-chart"><img src="images/header-top-icon.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--                <div class="col-12 col-md-8  text-center text-md-right">--}}
+{{--                    <div class="header-top-right">--}}
+{{--                        <ul class="flat-list">--}}
+{{--                            <li>--}}
+{{--                                <h5>+0.11+</h5>--}}
+{{--                                <h5>+0.13+</h5>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <h5><i class="fa fa-caret-up"></i> Day Hight 88.77</h5>--}}
+{{--                                <h5><i class="fa fa-caret-down"></i> Day Hight 88.77</h5>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href=".html" class="popup-chart"><img src="images/header-top-icon.png" alt="">--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <!-- Price Chart Part Start -->
     <div class="section-p chart-popup-content mfp-hide" style="background:#fff">
@@ -79,7 +79,7 @@
                         <h2>Treding <span class="brand-color">Fee 0%</span></h2>
                         <h5 class="brand-color semi-bold">On the UK's no.1 Bitcoin exchange</h5>
                         <p>Bitcoin Hit $15000 in Magor Milestone for #1 CryptoCurrency.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
-                        <a href="sign-up.html" class="btn-5 mt-3 mt-lg-4">Join Us</a>
+                        <a href="{{ route('register') }}" class="btn-5 mt-3 mt-lg-4">Join Us</a>
                     </div>
                 </div>
                 <div class="col-md-6 text-center mt-3 mt-md-0">
@@ -118,7 +118,11 @@
                 </ul>
             </div>
 
-            <div class="out-link d-none d-lg-inline"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
+            @guest()
+                <div class="out-link d-none d-lg-inline"><a href="{{ route('register') }}" class="btn-1">Create Account</a></div>
+            @else
+                <div class="out-link d-none d-lg-inline"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
+            @endguest
 
         </div>
     </nav>
@@ -127,7 +131,7 @@
     <div id="mobile-manu">
         <div class="mobile-manu-box">
             <div class="mobile-manu-top d-flex align-items-center">
-                <a href="index.html"><img src="images/logo-footer.png" alt=""></a>
+                <a href="{{ url('/') }}"><img src="/front/images/logo.png" alt=""></a>
                 <button class="close-mobile-manu ml-auto"><i class="fa fa-close"></i></button>
             </div>
             <ul class="mobile-list">
@@ -142,7 +146,11 @@
                 </li>
             </ul>
 
-            <div class="out-link pl-0 mt-3"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
+            @guest()
+                <div class="out-link pl-0 mt-3"><a href="{{ route('register') }}" class="btn-1">Create Account</a></div>
+            @else
+                <div class="out-link pl-0 mt-3"><a href="{{ route('backend.dashboard') }}" class="btn-1">Dashboard</a></div>
+            @endguest
         </div>
 
     </div>
@@ -161,9 +169,10 @@
                         <h4>Contact</h4>
                         <div class="contact">
                             <ul>
-                                <li><i class="fa fa-map-marker"></i>Block-C, Niketon, Gulshan, Dhaka 1212, Bangladesh</li>
-                                <li><a href="mailto::sales@wditsolution.com"><i class="fa fa-envelope"></i> sales@wditsolution.com</a></li>
-                                <li><a href="callto::+880167007994"><i class="fa fa-phone"></i>+880 167007994</a></li>
+                                <li><i class="fa fa-map-marker"></i>{{ setting('address') }}</li>
+                                <li><a href="mailto:: {{ setting('email','support@accessoptionstrading.com') }}"><i class="fa fa-envelope"></i>
+                                    {{ setting('email','support@accessoptionstrading.com') }}</a></li>
+                                <li><a href="callto::{{ setting('phone') }}"><i class="fa fa-phone"></i>{{ setting('phone','+1(209)245‑8464') }}</a></li>
                             </ul>
                         </div>
                         <div class="footer-widget-item">

@@ -13,11 +13,6 @@ class NewCredit extends Notification
 
     public $transaction;
 
-    /**
-     * Create a new notification instance.
-     *
-     * @return void
-     */
     public function __construct($transaction)
     {
         $this->transaction = $transaction;
