@@ -115,6 +115,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#service-part">Contact Us</a>
                     </li>
+                    @guest()
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                        @endguest
                 </ul>
             </div>
 
@@ -144,6 +149,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#service-part">Contact Us</a>
                 </li>
+                @guest()
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                </li>
+                    @endguest
             </ul>
 
             @guest()

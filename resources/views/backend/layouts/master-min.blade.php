@@ -67,14 +67,14 @@
             <div class="row">
                 <div class="col-xl-12">
                     <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img style="height: 50px" src="/images/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img style="height: 50px" src="/images/logo_small.png" alt=""></a>
 
                         <div class="header-right d-flex my-2 align-items-center">
                             <div class="language">
                                 <div class="dropdown">
                                     <div class="icon">
 
-                                        <span>{{ auth()->user()->name }}</span>
+                                        <span>{{ \Illuminate\Support\Str::limit(auth()->user()->name, 10,'..') }}</span>
                                     </div>
                                 </div>
                             </div>

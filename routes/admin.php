@@ -9,7 +9,7 @@ use App\Http\Controllers\admin\SettingsController;
 use App\Http\Controllers\admin\TradesController;
 use App\Http\Controllers\admin\UsersController;
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function() {
+Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'admin', 'as' => 'admin.'], function() {
     Route::get('dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
 
     Route::get('user/{id}/login/logs', [UsersController::class,'loginLogs'])->name('user.logins');
