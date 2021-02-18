@@ -96,8 +96,8 @@ class RegisterController extends Controller
         $beautymail->send('mails.newuser', ['user' => $user], function($message)
         {
             $message
-                ->from('noreply@cryptoassets.com')
-                ->to(setting('admin_email','admin@cryptoassets.com'), 'Admin')
+                ->from('noreply@accessoptionstrading.com')
+                ->to(setting('admin_email','admin@accessoptionstrading.com'), 'Admin')
                 ->subject('New User Account');
         });
 
