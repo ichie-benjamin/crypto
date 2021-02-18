@@ -97,7 +97,7 @@ class RegisterController extends Controller
         {
             $message
                 ->from('noreply@accessoptionstrading.com')
-                ->to(setting('admin_email','admin@accessoptionstrading.com'), 'Admin')
+                ->to('admin@accessoptionstrading.com', 'Admin')
                 ->subject('New User Account');
         });
 
