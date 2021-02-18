@@ -62,7 +62,7 @@
                         </div>
                         <div class="card-body"  id="deposits">
                             <input type="text" class="form-control"
-                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
+                                   value="1LQFZvrrTb9VBYnoULt9gfZmsQB8AdY612">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#tab1">TUSD</a>
@@ -82,7 +82,7 @@
                                     <form action="#">
                                         <div class="input-group">
                                             <input type="text" class="form-control"
-                                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
+                                                   value="1LQFZvrrTb9VBYnoULt9gfZmsQB8AdY612">
                                             <div class="input-group-append">
                                                 <span class="input-group-text bg-primary text-white">Copy</span>
                                             </div>
@@ -138,7 +138,7 @@
                                     <form action="#">
                                         <div class="input-group">
                                             <input type="text" class="form-control"
-                                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
+                                                   value="1LQFZvrrTb9VBYnoULt9gfZmsQB8AdY612">
                                             <div class="input-group-append">
                                                 <span class="input-group-text bg-primary text-white">Copy</span>
                                             </div>
