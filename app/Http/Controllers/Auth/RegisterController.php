@@ -91,15 +91,15 @@ class RegisterController extends Controller
         $user->attachRole($role);
 
         Identity::create(['user_id' => $user->id]);
-
-        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-        $beautymail->send('mails.newuser', ['user' => $user], function($message)
-        {
-            $message
-                ->from('noreply@accessoptionstrading.com')
-                ->to('admin@accessoptionstrading.com', 'Admin')
-                ->subject('New User Account');
-        });
+//
+//        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+//        $beautymail->send('mails.newuser', ['user' => $user], function($message)
+//        {
+//            $message
+//                ->from('noreply@accessoptionstrading.com')
+//                ->to('admin@accessoptionstrading.com', 'Admin')
+//                ->subject('New User Account');
+//        });
 
         $user->code = rand(100,999).$user->id;
 
