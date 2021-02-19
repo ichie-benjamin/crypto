@@ -21,7 +21,7 @@
                                            class="table table-hover table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                            <th  width="30%" class="text-center">Ip Address</th>
+{{--                                            <th  width="30%" class="text-center">Ip Address</th>--}}
                                             <th width="30%" class="text-center">Device Details</th>
                                             <th>Login DateTime </th>
                                             <th>Logout DateTime&nbsp; </th>
@@ -34,7 +34,7 @@
 
                                         @foreach($details as $item)
                                             <tr>
-                                                <td>{{ $item->ip_address }}</td>
+{{--                                                <td>{{ $item->ip_address }}</td>--}}
                                                 <td>{{ $item->user_agent }}</td>
                                                 <td>{{ $item->login_at }}</td>
                                                 <td>{{ $item->logout_at }}</td>
