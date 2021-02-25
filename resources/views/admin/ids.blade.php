@@ -17,9 +17,13 @@
             <h4 class="tx-gray-800 mg-b-5"> Uploaded Identity</h4>
         </div>
 
+
+
         <div class="br-pagebody">
 
             <div class="br-section-wrapper">
+
+                @include('notification')
 
                 <div class="table-wrapper">
                     <table id="datatable1" class="table display table-bordered responsive nowrap">
@@ -49,13 +53,17 @@
                                     @endif
                                 </td>
                                 <td>
-                                    @if ($item->front)
-                                    <img height="50px" width="50px" src="{{ $item->front }}" />
+                                    @if ($item->back)
+                                    <img height="50px" width="50px" src="{{ $item->back }}" />
                                     @else
                                     Not Uploaded
                                         @endif
                                 </td>
-                                <td>{{ $item->status }}</td>
+                                <td>{{ $item->status }}
+                                @if ($item->status != 'approved') <br />
+                                    <a href="{{ route('admin.approve.id', $item->id) }}">Approve</a>
+                                @endif
+                                </td>
                             </tr>
                         @endforeach
 
