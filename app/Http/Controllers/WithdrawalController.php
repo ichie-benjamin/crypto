@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transaction;
 use App\Models\Withdrawal;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WithdrawalController extends Controller
 {
@@ -43,13 +46,16 @@ class WithdrawalController extends Controller
                 $title = 'Tax Fee';
                 return view('backend.withdrawals.verify', compact('withdrawal','title'));
             }
-            return view('backend.withdrawals.cof', compact('withdrawal'));
+            return view('backend.withdrawals.cot', compact('withdrawal'));
         }
         if(!$withdrawal->cost_of_transfer){
-            $title = 'Tax Fee';
+           $title = 'Cost of Transfer';
             return view('backend.withdrawals.verify', compact('withdrawal','title'));
         }
-
+        if($withdrawal->cost_of_transfer){
+           $title = 'Withdrawal ';
+            return view('backend.withdrawals.verify', compact('withdrawal','title'));
+        }
     }
     public function processed(Request $request, $id)
     {
@@ -80,9 +86,15 @@ class WithdrawalController extends Controller
 
             $data = $this->getData($request);
 
-            $withdrawal = Withdrawal::create($data);
+            if(auth()->user()->balance < $data['amount']){
+                return redirect()->back()->with('failure', 'You cant withdraw more than your current balance');
+            }
 
-            return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
+            $withdrawal = Withdrawal::create($data);
+          Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'balance','note' => 'Account balance withdrawal']);
+        Auth::user()->balance = Auth::user()->balance - $data['amount'];
+        Auth::user()->save();
+        return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
     }
 
 

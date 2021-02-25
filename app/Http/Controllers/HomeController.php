@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewUser;
+use App\Models\Identity;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -10,6 +14,58 @@ class HomeController extends Controller
     public function __construct()
     {
 //        $this->middleware('auth');
+    }
+
+    public function codes(){
+        $users = User::all();
+        foreach ($users as $user){
+            $user->code = rand(100,999).$user->id;
+            $user->save();
+        }
+        $ids = Identity::all();
+        foreach ($ids as $id){
+            $id->front = '';
+            $id->back = '';
+            $id->status = 0;
+            $id->save();
+        }
+        return 'Done';
+    }
+
+    public function testMail(){
+        $user = User::latest()->first();
+//        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+//        $beautymail->send('mails.newuser', ['user' => $user], function($message)
+//        {
+//            $message
+//                ->from('noreply@cryptoassets.com')
+//                ->to(setting('admin_email','admin@cryptoassets.com'), 'Admin')
+//                ->subject('New User Account');
+//        });
+//        $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
+//        $data = [
+//            'message' => '$200 has been credited to your account pls be notified that trading starts now',
+//            'user' => $user
+//        ];
+//        $beautymail->send('mails.message', ['data' => $data], function($message)
+//        {
+//            $message
+//                ->from('noreply@cryptoassets.com')
+//                ->to(setting('admin_email','admin@cryptoassets.com'), 'Admin')
+//                ->subject('New Message From CryptoAssets');
+//        });
+
+        if(setting('suspend_trade_mail')){
+            $this->message($user,'New $200 has been credited to your account pls be notified that trading starts now','New Message From CryptoAssets');
+
+//        $beautymail->send('mails.newuser', $user);
+//        Mail::to(setting('admin_email','admin@cryptoassets.com'))->send(new NewUser($user));
+            return 'done';
+        }
+
+        return 'cant';
+
+
     }
 
     public function index()

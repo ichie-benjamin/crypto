@@ -6,9 +6,10 @@
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-xl-5 col-md-6">
+                    @include('notification')
                     <div class="auth-form card">
                         <div class="card-body">
-                            <form method="post" action="{{ route('backend.deposits.store') }}" class="identity-upload">
+                            <form method="post" action="{{ route('backend.deposits.store') }}" enctype="multipart/form-data" class="identity-upload">
 
                                 {{ csrf_field() }}
                                 <div class="identity-content">
@@ -27,12 +28,19 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="mr-sm-2">Upload Payment Proof</label>
-                                    <span class="float-right">Maximum file size is 2mb</span>
-                                    <div data-input="back" data-preview="back-holder" class="file-upload-wrapper lfm" data-text="Upload proof">
-                                        <input required id="back" name="proof" type="text" class="file-upload-field">
+{{--                                    <label class="mr-sm-2">Upload Payment Proof</label>--}}
+{{--                                    <span class="float-right">Maximum file size is 2mb</span>--}}
+{{--                                    <div data-input="back" data-preview="back-holder" class="file-upload-wrapper lfm" data-text="Upload proof">--}}
+{{--                                        <input required id="back" name="proof" type="text" class="file-upload-field">--}}
+{{--                                    </div>--}}
+{{--                                    <div id="back-holder" style="margin-top:15px; margin-bottom:20px;max-height:200px;"></div>--}}
+
+                                    <div class="" >
+                                        <p><input type="file"  accept="image/*" name="proof" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                                        <label class="btn btn-primary"  for="file" style="cursor: pointer;">Upload Payment Proof</label>
+                                        <span class="float-right">Maximum file size is 2mb</span>
+                                        <p><img id="output" width="100" /></p>
                                     </div>
-                                    <div id="back-holder" style="margin-top:15px; margin-bottom:20px;max-height:200px;"></div>
                                 </div>
 
                                 <div class="text-center">
@@ -55,6 +63,13 @@
     <script>
         $('.lfm').filemanager('image');
         $('#lfd').filemanager('image');
+    </script>
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
     </script>
 
 @endsection
