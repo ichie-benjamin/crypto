@@ -45,15 +45,15 @@
                             <div class="d-flex justify-content-between my-3">
 
                                 <div>
-                                    <p class="mb-1">Daily Return</p>
+                                    <p class="mb-1">Percentage Bonus</p>
                                     <h4>{{ $package->percent_profit }}%</h4>
                                 </div>
 
                             </div>
-                            <div>
-                                <p class="mb-1">Total Return</p>
-                                <h4>{{ $package->totalReturn() }}</h4>
-                            </div>
+{{--                            <div>--}}
+{{--                                <p class="mb-1">Total Return</p>--}}
+{{--                                <h4>{{ $package->totalReturn() }}</h4>--}}
+{{--                            </div>--}}
                             <div class="d-flex justify-content-between my-3">
                                 <div>
                                     <p class="mb-1">Plan Period</p>
@@ -77,7 +77,7 @@
                                     <input type="hidden" name="plan_id" value="{{ $package->id }}">
                                     <input type="hidden" name="payment_method" value="btc">
                                     <input required name="amount" type="number" class="form-control"
-                                           value="{{ old('amount') }}" placeholder="Enter Amount">
+                                           value="{{ old('amount', $package->minimum_purchase) }}" placeholder="Enter Amount">
                                 </div>
                             </div>
                         </div>

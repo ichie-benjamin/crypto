@@ -30,15 +30,15 @@
                             <div class="d-flex justify-content-between my-3">
 
                                 <div>
-                                    <p class="mb-1">Daily Return</p>
+                                    <p class="mb-1">Percentage Profit</p>
                                     <h4>{{ $item->percent_profit }}%</h4>
                                 </div>
 
                             </div>
-                            <div>
-                                <p class="mb-1">Total Return</p>
-                                <h4>{{ $item->totalReturn() }}%</h4>
-                            </div>
+{{--                            <div>--}}
+{{--                                <p class="mb-1">Total Return</p>--}}
+{{--                                <h4>{{ $item->totalReturn() }}%</h4>--}}
+{{--                            </div>--}}
                             <div class="d-flex justify-content-between my-3">
                                 <div>
                                     <p class="mb-1">Plan Period</p>

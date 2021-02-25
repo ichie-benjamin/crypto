@@ -53,7 +53,7 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Trading Histories</h4>
+                            <h4 class="card-title">Deposit Histories</h4>
                         </div>
                         <div class="card-body">
                             <div class="transaction-table">
@@ -63,7 +63,7 @@
                                             <thead>
                                             <tr>
                                                 <th>Amount</th>
-                                                <th>Plan</th>
+{{--                                                <th>Plan</th>--}}
                                                 <th> Status</th>
                                                 <th>Date </th>
                                                 <th>View </th>
@@ -77,7 +77,7 @@
                                             @foreach($deposits as $item)
                                                 <tr>
                                                     <td>{{ $item->amount }} USD</td>
-                                                    <td>{{ optional($item->plan)->name }}</td>
+{{--                                                    <td>{{ optional($item->plan)->name }}</td>--}}
                                                     <td>
                                                         @if($item->status)
                                                             <p class="badge badge-success">Active</p>
