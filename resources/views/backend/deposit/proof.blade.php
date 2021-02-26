@@ -20,7 +20,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6">
 
                     @include('notification')
-                        <form method="POST" action="{{ route('backend.deposits.update',$deposit->id) }}">
+                        <form method="POST" action="{{ route('backend.deposits.update',$deposit->id) }}" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <input name="_method" type="hidden" value="PUT">
                             <div class="card">
@@ -29,13 +29,11 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between my-3">
-                                        <div class="input-group">
-   <span class="input-group-btn">
-     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-       <i class="fa fa-picture-o"></i> Choose File
-     </a>
-   </span>
-                                            <input id="thumbnail" required class="form-control" type="hidden" name="proof">
+                                        <div class="" >
+                                            <p><input type="file"  accept="image/*" name="proof" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                                            <label class="btn btn-primary"  for="file" style="cursor: pointer;">Upload Payment Proof</label>
+                                            <span class="">Maximum file size is 2mb</span>
+                                            <p><img id="output" width="100" /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -55,11 +53,11 @@
 @endsection
 
 @section('js')
-    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 
     <script>
-        $('#lfm').filemanager('image');
-        // $('#lfm').filemanager('image');
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
     </script>
-
 @endsection

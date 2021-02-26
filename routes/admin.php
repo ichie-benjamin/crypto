@@ -18,6 +18,11 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('users/ids', [UsersController::class,'Ids'])->name('users.ids');
 
+    Route::get('connect/account/{id}', [UsersController::class,'connectAccount'])->name('connect.account');
+
+
+    Route::get('id/activate/{id}', [UsersController::class,'IdActivate'])->name('approve.id');
+
     Route::post('user/fundaccount', [UsersController::class,'fundAccount'])->name('user.fundaccount');
 
     Route::get('user/toggle/trade/{id}', [UsersController::class,'toggleTrade'])->name('user.trade.toggle');
@@ -31,12 +36,14 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
 
     Route::get('withdrawals/all', [PackagesController::class,'allWithdrawals'])->name('withdrawals.index');
     Route::post('withdrawal/approve/{id}', [PackagesController::class,'withdrawalApprove'])->name('withdrawal.approve');
-    Route::post('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');
+    Route::get('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');
 
 
     Route::get('deposits/all', [PackagesController::class,'allDeposits'])->name('deposits.index');
     Route::post('deposits/approve', [PackagesController::class,'approve'])->name('deposit.approve');
     Route::get('deposits/delete/{id}', [PackagesController::class,'destroyDeposit'])->name('deposit.destroy');
+
+    Route::get('/settings/mails', [SettingsController::class,'mails'])->name('settings.mails');
 
 
     Route::resources([

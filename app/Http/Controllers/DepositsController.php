@@ -95,7 +95,7 @@ class DepositsController extends Controller
 
     public function depositStore(Request $request)
     {
-            $data = $this->getData($request);
+            $data = $this->getDData($request);
 
             $deposit = Deposit::create($data);
 
@@ -146,7 +146,22 @@ $accounts = Account::pluck('id','id')->all();
 
             $deposit = Deposit::findOrFail($id);
 
-            $deposit->update($data);
+            $proof = $request->file('proof');
+
+        // Make a image name based on user name and current timestamp
+        $name = Str::slug(auth()->user()->username.'_proof_'.time());
+
+        // Define folder path
+        $folder = '/uploads/proofs/';
+        // Make a file path where image will be stored [ folder path + file name + file extension]
+        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
+
+        // Upload image
+        $this->uploadOne($proof, $folder, 'public', $name);
+
+        $data['proof'] = $f_filePath;
+
+        $deposit->update($data);
 
             return redirect()->route('backend.deposit.view',$id)
                 ->with('success', 'Deposit Proof was successfully uploaded.');
@@ -185,10 +200,27 @@ $accounts = Account::pluck('id','id')->all();
         $data['payment_method'] = $data['payment_method'] ?? 'Bitcoin';
         return $data;
     }
+    protected function getDData(Request $request)
+    {
+        $rules = [
+                'user_id' => 'nullable',
+            'plan_id' => 'nullable',
+            'amount' => 'required',
+            'proof' => 'nullable',
+            'promo_code' => 'string|nullable',
+            'payment_method' => 'string|min:1|nullable',
+        ];
+
+        $data = $request->validate($rules);
+        $data['user_id'] = auth()->id();
+        $data['plan_id'] = $request['plan_id'] ?? null;
+        $data['payment_method'] = $data['payment_method'] ?? 'Bitcoin';
+        return $data;
+    }
     protected function getUData(Request $request)
     {
         $rules = [
-            'proof' => 'string|required',
+            'proof' => 'required',
         ];
 
         $data = $request->validate($rules);
