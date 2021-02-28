@@ -53,7 +53,10 @@ class WithdrawalController extends Controller
             return view('backend.withdrawals.verify', compact('withdrawal','title'));
         }
         if($withdrawal->cost_of_transfer){
-           $title = 'Withdrawal ';
+            if($withdrawal->approved){
+                return redirect()->route('backend.pending.withdrawal');
+            }
+            $title = 'Withdrawal ';
             return view('backend.withdrawals.verify', compact('withdrawal','title'));
         }
     }

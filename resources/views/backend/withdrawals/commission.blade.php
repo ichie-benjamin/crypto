@@ -26,13 +26,14 @@
 
 
                                     <div class="col-md-7">
+                                        @include('notification')
                                         <form method="POST" action="{{ route('backend.withdrawal.update', $withdrawal->id) }}">
                                             {{ csrf_field() }}
 
                                     <p class="text-center">
                                         Trade Commission fees of <span style="color: white; font-weight: bold"> {{ setting('withdrawal_commission',20) }}%</span> of requested withdrawal amount  <span style="color: white; font-weight: bold">${{ $withdrawal->amount }}</span>
                                         is needed to be paid in order for your transfer request to be completed.
-                                        Kindly send {{ $withdrawal->commission_fee }} to the address below,
+                                        Kindly send <span style="color: white; font-weight: bold">  {{ $withdrawal->commission_fee }}</span> to the address below,
                                         or scan the barcode to make the payments for the Trade Commission fees
                                     </p>
                                     <div class="qrcode">
