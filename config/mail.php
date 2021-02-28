@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'support@accessoptionstrading.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@accessoptionstrading.com'),
         'name' => env('MAIL_FROM_NAME', 'Access Trading'),
     ],
 
