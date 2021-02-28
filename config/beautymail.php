@@ -26,8 +26,8 @@ return [
         'address'     => null,
 
         'logo'        => [
-            'path'   => '%PUBLIC%/images/fav.png',
-            'width'  => '50',
+            'path'   => '%PUBLIC%/images/logo_big.png',
+            'width'  => '220',
             'height' => '50',
         ],
 

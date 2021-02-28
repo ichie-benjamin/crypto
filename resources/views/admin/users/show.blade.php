@@ -55,7 +55,7 @@
                 {{--                               <div class="col-md-6">--}}
                 <a href="" class="btn btn-primary mr- col-md-2">Edit Profile</a>
                 <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-warning col-md-2">Login Logins</a>
-                <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-danger col-md-2">Send Message</a>
+                <a href="{{ route('admin.user.sendmail',$user->id) }}" class="btn btn-danger col-md-2">Send Message</a>
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
             </div>

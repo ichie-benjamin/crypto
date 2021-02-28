@@ -57,11 +57,11 @@
                             </td>
                             <td><img src="{{ $user->avatar }}" height="50px" width="50px"></td>
                             <td>{{ $user->email }} <br />
-                                @if ($user->email_verified_at)
-                                    <span class="badge badge-success">Verified</span>
-                                @else
-                                    <span class="badge badge-danger">Not Verified</span>
-                                @endif
+{{--                                @if ($user->email_verified_at)--}}
+{{--                                    <span class="badge badge-success">Verified</span>--}}
+{{--                                @else--}}
+{{--                                    <span class="badge badge-danger">Not Verified</span>--}}
+{{--                                @endif--}}
                             </td>
 {{--                            <td>{{ $user->phone }}</td>--}}
                             <td>{{ $user->invested() }}</td>
