@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="banner_text text-center">
-                        <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">FAQ</h1>
+                        <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.1s">FAQ / Verifications</h1>
                         <ul class="breadcrumb bg-transparent justify-content-center animation m-0 p-0" data-animation="fadeInUp" data-animation-delay="1.3s">
                             <li><a href="{{ route('home') }}">Home</a> </li>
-                            <li><span><a href="{{ route('fags') }}">FAQ</a></span></li>
+                            <li><span><a href="{{ route('fags') }}">Other FAQ</a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 offset-lg-2">
                     <div class="title_default_dark title_border text-center">
-                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Frequently Asked Questions</h4>
+                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Verifications Frequently Asked Questions</h4>
                         <!-- <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Frequently asked questions (FAQ) or Questions and Answers (Q&A), are listed questions and answers, all supposed to be commonly asked in some context</p> -->
                     </div>
                 </div>
@@ -38,78 +38,93 @@
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne1">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
-                                        How long does withdrawals take?
+                                        How do I become a verified client?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne1" class="collapse  show " aria-labelledby="headingOne1" data-parent="#accordion">
                                 <div class="card-body">
-                                    Withdrawals are paid in a space of 0 - 24 hours, considering the functioning of the blockchain network when there are many transactions to be added to a block.
+                                    In order to become a verified client, you need to provide the following documents:<br/>
+                                    A valid passport/national ID or a driving license – the front and back sides.
+                                    If the deposit is made via credit card - the credit card used, both front and back sides. Please cover the first 12 digits on the front side and the CVV code (3 digits) on the back side.
+                                    If the deposit is made via e-Wallet or bank transfer – a screenshot of your e-Wallet account profile page (showing your full name, email and e-Wallet ID) or confirmation of the bank transfer deposit.
+                                    Simply send digital images of these verification documents to docs@cryptoassest.com and you will receive an email notification once the documents are processed (it usually takes up to 3 business days).
                                 </div>
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne2">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
-                                        Is DEPOSIT Automatic?
+                                        How do I upload documents?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne2" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
                                 <div class="card-body">
-                                    All deposits are automatically credited to your balance, as you send BTC to the unique wallet address generated during funding request.
+
+                                    First log in to your account, then click on the <strong>Security Settings</strong>.
+                                    After that on Upload Documents tab choose the type of the document you wish to upload and choose the document by clicking either upload front id or upload back id button.
                                 </div>
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne3">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
-                                        Can I invest in multiple plans?
+                                        What is a proof of identity?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne3" class="collapse " aria-labelledby="headingOne3" data-parent="#accordion">
                                 <div class="card-body">
-                                    Yes, you can invest in multiple plans. All investments run concurrently.
+
+                                    A proof of identity (POI) is one of the documents required for account verification. As per regulation rules, we can accept a passport, national ID or driving license as a proof of identity.
                                 </div>
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne4">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne">
-                                        What does Binary Option Solutions trade?
+                                        Why do I need to provide the documents?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne4" class="collapse " aria-labelledby="headingOne4" data-parent="#accordion">
                                 <div class="card-body">
-                                    Binary Option Solutions earns on cryptocurrency mining as well as on cloud mining and trading of cryptocurrencies.
+                                    The verification process, as mentioned in our terms and conditions, is an integral part of our regulatory security requirements and is entirely mandatory, as it allows preventing cases of fraudulent activities.
                                 </div>
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne5">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne">
-                                        Is the company legally registered?
+                                        Once I have submitted a proof of identity, will I need to repeat that process for each transaction?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne5" class="collapse " aria-labelledby="headingOne5" data-parent="#accordion">
                                 <div class="card-body">
-                                    Crypto Assets is a subsidiary of FINANCIAL SERVICES BUREAU LIMITED incorporated in United Kingdom
+
+                                    No, once you have submitted the appropriate documents to complete withdrawals or deposits you will not need to repeat the process.
+
+                                    The documents needed for proof of identification are:
+                                    Official ID with picture – Passport/ Driving License/Official Government ID document (not expired).
+                                    If a credit card was used to deposit funds: Front and back sides of the credit card, showing only the last 4 digits.
+                                    *Please note that if a trader uses multiple credit cards to deposit funds, the documents listed above will be required for each credit card.
+                                    Clients will be notified by email regarding specific documentation required.
                                 </div>
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne6">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne">
-                                        Is there a registration fee?
+                                        How do I start trading after my account has been verified?
                                     </a>
                                 </h6>
                             </div>
                             <div id="collapseOne6" class="collapse " aria-labelledby="headingOne6" data-parent="#accordion">
                                 <div class="card-body">
-                                    Registration on Binary Option Solutions is free.
+
+                                    You're free to try all the trading features of our platform on your own or ask your personal Account Manager for assistance.
                                 </div>
                             </div>
                         </div>
@@ -161,89 +176,6 @@
             <div class="card-body">When a user loses his wallet, it has the effect of removing money out of circulation. Lost bitcoins still remain in the block chain just like any other bitcoins. However, lost bitcoins remain dormant forever because there is no way for anybody to find the private key(s) that would allow them to be spent again. Because of the law of supply and demand, when fewer bitcoins are available, the ones that are left will be in higher demand and increase in value to compensate.</div>
           </div>
         </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-12 offset-lg-2">
-                    <div id="accordion" class="accordion-style">
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne7">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne7" aria-expanded="true" aria-controls="collapseOne">
-                                        When can I withdraw money?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne7" class="collapse " aria-labelledby="headingOne7" data-parent="#accordion">
-                                <div class="card-body">
-                                    You can make a request at anytime, including weekends.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne8">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne8" aria-expanded="true" aria-controls="collapseOne">
-                                        What is withdrawal limit?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne8" class="collapse " aria-labelledby="headingOne8" data-parent="#accordion">
-                                <div class="card-body">
-                                    There is no limit for withdrawals.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne9">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne9" aria-expanded="true" aria-controls="collapseOne">
-                                        How long does it take to credit my deposit?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne9" class="collapse " aria-labelledby="headingOne9" data-parent="#accordion">
-                                <div class="card-body">
-                                    It needs 2-3 network confirmations and may take up to 30 minutes.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne10">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne10" aria-expanded="true" aria-controls="collapseOne">
-                                        Can I lose my money?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne10" class="collapse " aria-labelledby="headingOne10" data-parent="#accordion">
-                                <div class="card-body">
-                                    It is always the possibility in the sphere of investment. However, in our case, the probability is relatively low.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne11">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne11" aria-expanded="true" aria-controls="collapseOne">
-                                        Can't find an answer to your question
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne11" class="collapse " aria-labelledby="headingOne11" data-parent="#accordion">
-                                <div class="card-body">
-                                    feel free to contact us on live chat or via email : info@cryptoassest.com.com
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne12">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne12" aria-expanded="true" aria-controls="collapseOne">
-                                        How can I close my account?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne12" class="collapse " aria-labelledby="headingOne12" data-parent="#accordion">
-                                <div class="card-body">
-                                    Please email at info@cryptoassest.com to request closing of your account. You will receive an email confirmation when this request will be completed.
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>

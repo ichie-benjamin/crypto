@@ -152,6 +152,17 @@
                                         <a style="cursor: pointer" href="{{ route('about') }}" rel="nofollow">About us</a>
                                         <div class="bg-menu"></div>
                                     </li>
+
+                                    <li><a>Trading<span></span></a>
+                                        <div class="dropdawn-menu-block">
+                                            <div class="row d-flex align-items-start">
+                                                <div class="col-12 d-flex align-items-start">
+                                                    <ul class="dropdawn-menu"><li><a href="{{ route('withdrawal') }}"><span>Withdrawal Info</span></a></li>
+                                                        <li><a href="{{ route('verification') }}"><span>FAQ Verifications</span></a></li></ul>                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-menu" style="display: none; height: 0px;"></div>
+                                    </li>
                                     <li>
                                         <a style="cursor: pointer" href="{{ route('fags') }}" rel="nofollow">Fags</a>
                                         <div class="bg-menu"></div>

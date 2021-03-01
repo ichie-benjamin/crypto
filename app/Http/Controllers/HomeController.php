@@ -86,14 +86,28 @@ class HomeController extends Controller
        $traders = array_slice($all_traders, 0, 5);
         return view('home', compact('traders'));
     }
+
     public function about()
     {
         return view('about1');
+    }
+    public function withdrawal()
+    {
+        return view('withdrawal');
+    }
+
+    public function deposit()
+    {
+        return view('deposit');
     }
 
        public function fags()
     {
         return view('fags');
+    }
+       public function verification()
+    {
+        return view('verification');
     }
 
        public function options()

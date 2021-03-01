@@ -65,6 +65,17 @@
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="{{ route('fags') }}">FAQ</a></li>
+
+                    <li class="">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trading
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('withdrawal') }}">Withdrawal Info</a>
+{{--                            <a class="dropdown-item" href="{{ route('deposits') }}">Deposit </a>--}}
+                            <a class="dropdown-item" href="{{ route('verification') }}">Verifications</a>
+                        </div>
+                    </li>
                     <li><a href="{{ route('contact') }}">Support</a></li>
                     @guest()
                     <li><a href="{{ route('register') }}">Register</a></li>
