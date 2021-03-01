@@ -114,7 +114,11 @@ class UsersController extends Controller
             ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
-        $user->bonus = $user->bonus + $data['amount'];
+        if($data['type'] == 'credit'){
+            $user->balance = (int)$user->bonus + (int)$data['amount'];
+        }else{
+            $user->balance = (int)$user->bonus - (int)$data['amount'];
+        }
         $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, Bonus modified');
