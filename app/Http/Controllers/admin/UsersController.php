@@ -104,18 +104,37 @@ class UsersController extends Controller
         return redirect()->back()->with('success', "A verification email has been sent to the $email");
     }
 
+//    public function fundAccount(Request $request){
+//        $this->validate($request, [
+//            'user_id' => ['required', 'integer'],
+//            'amount' => ['required'],
+//            ]);
+//        $data = $request->all();
+//        $user = User::findOrFail($data['user_id']);
+//        $user->balance = $user->balance + $data['amount'];
+//        $user->save();
+//        Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
+//        return redirect()->back()->with('success', 'Successful, balance modified');
+//    }
+
     public function fundAccount(Request $request){
         $this->validate($request, [
             'user_id' => ['required', 'integer'],
             'amount' => ['required'],
-            ]);
+        ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
-        $user->balance = $user->balance + $data['amount'];
+        if($data['type'] == 'credit'){
+            $user->balance = (int)$user->balance + (int)$data['amount'];
+        }else{
+            $user->balance = (int)$user->balance - (int)$data['amount'];
+        }
         $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, balance modified');
     }
+
+
     public function fundBonus(Request $request){
         $this->validate($request, [
             'user_id' => ['required', 'integer'],
