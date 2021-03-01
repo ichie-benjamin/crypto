@@ -27,8 +27,8 @@ return [
 
         'logo'        => [
             'path'   => '%PUBLIC%/images/logo_big.png',
-            'width'  => '220',
-            'height' => '50',
+            'width'  => '280',
+            'height' => '65',
         ],
 
         'twitter'  => null,
