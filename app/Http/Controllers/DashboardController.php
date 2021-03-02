@@ -66,8 +66,8 @@ class DashboardController extends Controller
 
     public function viewDeposit($id){
         $deposit = Deposit::findOrFail($id);
-
-        return view('backend.deposit.view', compact('deposit'));
+        $deposits = Deposit::whereUserId(auth()->id())->get();
+        return view('backend.deposit.view', compact('deposit','deposits'));
     }
 
     public function editProfile(){

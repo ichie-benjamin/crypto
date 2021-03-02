@@ -6,165 +6,97 @@
         <div class="container">
             <div class="row">
                 @include('partials.menu')
+
                 @foreach($packages as $item)
-                <div class="col-xl-4 col-lg-4 col-md-4">
-                    <div class="card acc_balance">
-                        <div class="card-header">
-                            <h2 class="card-titl text-capitalize">{{ $item->name }}</h2>
-                        </div>
-                        <div class="card-body">
-{{--                            <span>{{ $item->name }}</span>--}}
-                            <h3>{{ $item->price }}</h3>
+                    <div class="col-sm-12">
+                        <div class="acc-block clearfix">
 
-                            <div class="d-flex justify-content-between my-3">
-                                <div>
-                                    <p class="mb-1">Minimum Deposit</p>
-                                    <h4>{{ $item->minimum_purchase }} USD</h4>
+
+                            <div class="acc-price-block">
+                                <div class="acc-type-wrap">
+                                    <h2><span class="masha_index masha_index2" rel="2"></span>{{ $item->name }}<span><span class="masha_index masha_index3" rel="3"></span>account</span></h2>
+                                    <img src="/images/act_type.png">
                                 </div>
-                            </div>
-                            <div>
-                                <p class="mb-1">Maximum Deposit</p>
-                                <h4>{{ $item->maximum_purchase }} USD</h4>
-                            </div>
+                                <div class="acc-btn-wrap">
+                                    <span><span class="masha_index masha_index5" rel="5"></span>{{ $item->price }}</span>
 
-                            <div class="d-flex justify-content-between my-3">
+                                    <a href="{{ route('deposit.purchase', $item->id) }}" class="btn btn-success btn-lg " rel="nofollow">
+                                        <img src="/images/user.png" />
+                                        Open
+                                    </a>
 
-                                <div>
-                                    <p class="mb-1">Daily Return</p>
-                                    <h4>{{ $item->percent_profit }}%</h4>
-                                </div>
 
-                            </div>
-                            <div>
-                                <p class="mb-1">Total Return</p>
-                                <h4>{{ $item->totalReturn() }}%</h4>
-                            </div>
-                            <div class="d-flex justify-content-between my-3">
-                                <div>
-                                    <p class="mb-1">Plan Period</p>
-                                    <h4>{{ $item->period }} days</h4>
                                 </div>
                             </div>
 
-                            <div class="btn-group mb-3">
-                                <a href="{{ route('deposit.purchase', $item->id) }}" class="btn btn-success">Choose Plan</a>
-                            </div>
+                            <ul class="acc-list">
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index7" rel="7"></span> Full access to all features</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index8" rel="8"></span> More than {{ $item->minimum_purchase / 5 }} assets</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index9" rel="9"></span> Up to {{ $item->percent_profit }} % bonus</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index10" rel="10"></span> Education courses available</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index11" rel="11"></span> Account manager</li>
+                            </ul>
+                            <ul class="acc-list">
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index12" rel="12"></span> Economic calendar</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index13" rel="13"></span> Withdrawal- Your first withdrawal is free</li>
+                            </ul>
+                            <ul class="acc-list">
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index41" rel="41"></span> Economic calendar</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index42" rel="42"></span> Daily analytics</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index43" rel="43"></span> Market reviews</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index44" rel="44"></span> Fundamental and technical analysis</li>
+                                <li><i class="fa fa-check"></i><span class="masha_index masha_index45" rel="45"></span> Withdrawal- One free withdrawal per month</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
-                @section('hide')
-                <div class="col-xl-12">
+
+                <div class="col-xl-12" style="margin-top: 10px">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Enter Amount</h4>
+                            <h4 class="card-title">Important Information</h4>
                         </div>
-                        <div class="card-body"  id="deposits">
-                            <input type="text" class="form-control"
-                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tab1">TUSD</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab2">USDC</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tab3">FIAT</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab1">
-                                    <div class="qrcode">
-                                        <img src="images/qr.svg" alt="" width="150">
-                                    </div>
-                                    <form action="#">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text bg-primary text-white">Copy</span>
-                                            </div>
-                                        </div>
-                                    </form>
+                        <div class="card-body">
+                            <div class="important-info">
+                                <ul>
+                                    <li>
+                                        <h4>Payment process</h4>
+                                        For faster processing we recommend that all account holders deposit funds via Bitcoin cryptocurrency option from inside their Secure Client Area. From your Secure Client Area you will be able to fund your account in real time using cryptocurrency option (Bitcoin) which is the fastest funding option
+                                    </li>
+                                    <li>
 
-                                    <ul>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            TUSD network transfers will be credited to your Tradio account after
-                                            25 network confirmations.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            TUSD deposits to this address are unlimited. Note that you may not
-                                            be able to withdraw all of your funds at once if you deposit more
-                                            than your daily withdrawal limit.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab2">
-                                    <div class="qrcode">
-                                        <img src="images/qr.svg" alt="" width="150">
-                                    </div>
-                                    <form action="#">
-                                        <div class="input-group">
+                                        <h4>Security of Funds</h4>
+                                        When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.
+                                    </li>
+                                    <li>
+
+                                        <h4>Bank Fees</h4>
+                                        <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you
+                                            may incur fees on payments to and from some international banking institutions crypto exchanger such as
+                                            coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto
+                                            exchanger fees.</p>
 
 
-                                            <div class="input-group-append">
-                                                <span class="input-group-text bg-primary text-white">Copy</span>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    </li>
+                                    <li>
+                                        <h4>Third Party Payments</h4>
+                                        <p>Crypto Asset Trade does not accept payments from third parties.
+                                        Please ensure that all deposits into your trading account come from a bank account in your name.
+                                        Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one
+                                            of the parties on the Bank Account / Credit Card.</p>
 
-                                    <ul>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            USDC network transfers will be credited to your Tradio account after
-                                            25 network confirmations.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            USDC deposits to this address are unlimited. Note that you may not
-                                            be able to withdraw all of your funds at once if you deposit more
-                                            than your daily withdrawal limit.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="tab3">
-                                    <div class="qrcode">
-                                        <img src="images/qr.svg" alt="" width="150">
-                                    </div>
-                                    <form action="#">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                   value="0xceb1b174085b0058201be4f2cd0da6a21bff85d4">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text bg-primary text-white">Copy</span>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    </li>
 
-                                    <ul>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            USDC network transfers will be credited to your Tradio account after
-                                            25 network confirmations.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            USDC deposits to this address are unlimited. Note that you may not
-                                            be able to withdraw all of your funds at once if you deposit more
-                                            than your daily withdrawal limit.
-                                        </li>
-                                    </ul>
-                                </div>
+
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                    @endsection
+
             </div>
+
         </div>
     </div>
 

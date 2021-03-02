@@ -119,6 +119,9 @@
         }
     </script>
     <!-- /Chatra {/literal} -->
+
+    <link rel="stylesheet" href="/css/general.css">
+
 </head>
 
 <body class="lang-en">

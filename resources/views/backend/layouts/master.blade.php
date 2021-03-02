@@ -14,6 +14,9 @@
     {{--    <link rel="stylesheet" href="/back/vendor/nice-select/css/nice-select.css">--}}
     <link rel="stylesheet" href="/back/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="/back/css/style.css">
+    <link rel="stylesheet" href="/css/gen.css">
+
+
     @yield('styles')
 
     <style>
@@ -71,7 +74,7 @@
                                 <div class="dropdown">
                                     <div class="icon">
 
-                                        <span>{{ auth()->user()->name }}</span>
+                                        <span>{{ \Illuminate\Support\Str::limit(auth()->user()->name, 10,'..') }}</span>
                                     </div>
                                 </div>
                             </div>

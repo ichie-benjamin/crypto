@@ -18,32 +18,7 @@
                 You should not risk more than you are prepared to lose. Before deciding to trade, you need to ensure that you understand the risks involved taking into account your investment objectives and level of experience. </p>
             <p>But not to worry Crypto Assets Assigns an expert to you, who do all your trading.</p>
         </div>
-        <ul class="copyright-text">
-            <li>
-                <div class="logo-footer">
-                    <p>
-                        <a style="margin-top: -30px; color: white; line-height: 1px; font-size: 16px" href="{{ url('/') }}">
-                            <img  alt="Crypto Assets Markets Limited" height="70" src="/images/fav.png">
-                            <br>Crypto Assets</a>
-                    </p>
-                </div>
-                <p>Copyright © 2017 - {{ date('Y') }}<br>
-                    Crypto Assets
-                    <br>
-                    Email: <a href="mailto:support@cryptoassest.com">support@cryptoassest.com/</a>
-                </p>
-            </li>
-            <li class="docs-main">
-                <ul>
-                    <li><a href="{{ route('about') }}">About Us</a></li>>>
-                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                    <li><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="switch-footer">
-            <a href="#" class="rs-link" data-link-desktop="Switch to the desktop version"
-               data-link-responsive="Switch to the mobile version"></a>
-        </div>
+        @include('partials.foot')
+
     </div>
 </footer>

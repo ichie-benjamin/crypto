@@ -134,13 +134,14 @@
                 <div class="col-lg-3 col-md-6 col-sm-4 res_md_mt_30 res_sm_mt_20">
                     <h4 class="footer_title border_title animation" data-animation="fadeInUp" data-animation-delay="0.2s">Contact Us</h4>
                     <ul class="footer_social list_none">
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.3s"><a href="#">Phone: .</a></li>
+{{--                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.3s"><a href="#">Phone: .</a></li>--}}
                         <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#">Email: info@cryptoassest.com/</a></li>
                         <li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><a href="#">Address: Crypto Assets is a product of Investment  Solutions Limited incorporated in Seychelles</a></li>
                     </ul>
                 </div>
 
             </div>
+            @include('partials.foot')
         </div>
     </div>
     <div class="bottom_footer">

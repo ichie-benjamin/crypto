@@ -69,7 +69,7 @@
                                 <div class="dropdown">
                                     <div class="icon">
 
-                                        <span>{{ auth()->user()->name }}</span>
+                                        <span>{{ \Illuminate\Support\Str::limit(auth()->user()->name, 10,'..') }}</span>
                                     </div>
                                 </div>
                             </div>
