@@ -24,11 +24,16 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="col-6"> <h4 class="card-title">Make Deposit </h4></div>
+                            <div class="col-6"> <h4 class="card-title">Our Deposit Options </h4></div>
                             <div class="col-6">
                               <a href="{{ route('backend.pending.deposit') }}" style="color: red" class="float-right tx-danger">Pending Deposits</a>
                             </div>
 {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
+                        </div>
+                        <div class="card-body" id="deposits">
+                            Adding funds to your cryptoassest.com Live Account is extremely easy, fast and secure!
+                            Take a look at all our deposit options below and please do not hesitate to contact us,
+                            should you require any assistance or more information. Our Support Team is always ready to help you!
                         </div>
                         <div class="card-body" id="deposits">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">

@@ -13,11 +13,29 @@
                         @include('notification')
                         <div class="card">
                             <div class="card-header">
-                                <div class="col-6"> <h4 class="card-title">Make withdrawal </h4></div>
+                                <div class="col-6"> <h4 class="card-title">WITHDRAW FUNDS</h4></div>
                                 <div class="col-6">
                                     <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Withdrawals</a>
                                 </div>
                                 {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
+                            </div>
+                            <div class="card-body" >
+                                <div class="important-info">
+                                    <ul>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            Withdrawal request cut off time 12:00 AEST/AEDT. Withdrawal submitted before this time will be processed same day, requests made after will be processed next business day.
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            IC Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
+                                        </li>
+                                        <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            Credit card withdrawals are to be processed according to the same card that was used to deposit with.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="card-body" id="deposits">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">

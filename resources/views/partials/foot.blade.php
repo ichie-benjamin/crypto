@@ -1,5 +1,5 @@
 <div class="row" style="margin-top: 50px">
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-5 col-md-5 mt-3">
         <div class="f-head">
             <p>AWARDS</p>
         </div>
@@ -8,7 +8,7 @@
             <img style="width: 49%" src="/images/award2.png" >
         </div>
     </div>
-    <div class="col-lg-4 col-md-4 res_md_mt_30 res_sm_mt_20">
+    <div class="col-lg-3 col-md-3 res_md_mt_30 res_sm_mt_20 mt-3">
         <div class="f-head">
             <p>REVIEWS</p>
         </div>
@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-4 res_md_mt_30 res_sm_mt_20">
+    <div class="col-lg-4 col-md-4 res_md_mt_30 res_sm_mt_20 mt-3">
         <div class="f-head">
             <p>QUICK LINKS</p>
         </div>

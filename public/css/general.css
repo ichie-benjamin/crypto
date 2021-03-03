@@ -31,3 +31,7 @@
     width: 70%;
     float: left;
 }
+
+footer {
+    padding: 5px 0 0!important;
+}
