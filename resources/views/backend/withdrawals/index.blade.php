@@ -243,24 +243,34 @@
                     <div class="col-xl-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Important Information</h4>
+                                <h4 class="card-title">Status definitions</h4>
                             </div>
                             <div class="card-body">
                                 <div class="important-info">
                                     <ul>
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            For security reasons, Crypto Assets process withdrawals by review once a day.
+                                            <span class="badge badge-info">Processing</span>
+                                            We have received confirmation of your withdrawal request, and will be processing your request shortly.
                                         </li>
-                                        <li>
+                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Submit your withdrawals by 07:00 UTC +00 (about 11 hour) to be included in
-                                            the days batch
+                                            <span class="badge badge-success">Completed</span>
+                                             Your withdrawal request has been successfully processed and your funds are on the way to your designated account.
                                         </li>
-                                        <li>
+                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            If you are using a public server for your transactions, please ensure you logout before leaving the browser
+                                            <span class="badge badge-warning">Cancelled</span>
+                                             Your withdrawal has been canceled as per your request.
                                         </li>
+
+   <li>
+                                            <i class="mdi mdi-checkbox-blank-circle"></i>
+                                            <span class="badge badge-danger">Declined</span>
+       Your withdrawal request was not able to be processed. An email has been sent to you with more details.
+       If you require any further clarifications please contact {{ setting('support_email') }}
+   </li>
+
 
 
                                     </ul>
