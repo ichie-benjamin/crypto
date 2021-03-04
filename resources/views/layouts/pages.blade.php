@@ -43,6 +43,11 @@
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ setting('favicon','/images/fav.png') }}">
 
+    <style>
+        .faq_question h5 {
+            margin-top: 20px;
+        }
+    </style>
 
 </head>
 

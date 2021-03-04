@@ -33,8 +33,384 @@
                 </div>
             </div>
             <div class="row small_space">
-                <div class="col-lg-8 col-md-12 offset-lg-2">
+                <div class="col-lg-6 col-md-12">
                     <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Account Verification Process</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1V" aria-expanded="true" aria-controls="collapseOne">
+                                        How to update my account details?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1V" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    To change any of the registered personal details in your trading account (displayed on the “Funds Management” / "Personal Information" screen), please contact us to explain the reason for this change and provide us with the relevant information, e.g. name change due to marriage, or change of residential address. We will then review and action your request in accordance with our
+                                    regulatory requirements and obligations. To contact us, click on the <a href="{{ route('contact') }}">Contact Us</a> link.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2V" aria-expanded="true" aria-controls="collapseOne">
+                                        How to update my account details?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2V" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    To change any of the registered personal details in your trading account (displayed on the “Funds Management” / "Personal Information" screen), please contact us to explain the reason for this change and provide us with the relevant information, e.g. name change due to marriage, or change of residential address.
+                                    We will then review and action your request in accordance with our regulatory requirements and obligations.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne3">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
+                                        How do I verify my payment method?
+                                    </a>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Fees & Charges</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1D" aria-expanded="true" aria-controls="collapseOne">
+                                        Are there any hidden fees?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1D" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    There are no hidden fees at {{env('APP_NAME')}}. {{env('APP_NAME')}} is mainly compensated for its services through the spread.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2D" aria-expanded="true" aria-controls="collapseOne">
+                                        Does {{ env('APP_NAME') }} cover my payment processing fees?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2D" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            <p>As part of our commitment to offer the best trading conditions available,
+                                                we cover most payment processing fees.<br>
+                                                On rare occasions, you may incur fees when transferring money to and
+                                                from your {{ env('APP_NAME') }} account. These are determined and levied by your payment issuer or bank, and not by  {{ env('APP_NAME') }} .</p>
+
+                                            <p>Fees may be added to your account by third parties for:</p><ul><li>
+                                                    <strong>International credit cards</strong> - When transactions are processed through foreign (non-local) acquirers.</li>
+                                                <li><strong>Incoming/Outgoing bank transfers</strong> - When transferring money from your bank account to {{ env('APP_NAME') }}, and vice versa.</li>
+                                                <li><strong>Forex conversions</strong> - When depositing with a currency that is not supported by the selected payment method.</li>
+                                            </ul><p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3D" aria-expanded="true" aria-controls="collapseOne">
+                                        Does {{ env('APP_NAME') }} charge any trading fees?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3D" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            <p>
+                                                {{ env('APP_NAME') }} is mainly compensated for its services through the "market spread". For example, when trading EUR/USD, if the buy rate is 1.12078 then the sell rate would be 1.12072 respectively (which means a market spread of 0.6 pips, in this example). Unlike other service providers who also charge commissions on each trade, {{ env('APP_NAME') }} does not charge dealing commissions.
+                                            </p>
+
+                                            <p>However, the following additional fees may be applied:</p><p>
+                                                <strong>Overnight Funding</strong> - The overnight funding amount is either added to or subtracted from your account when holding a position after a certain time (the “Overnight Funding Time”). <br>
+                                                The overnight funding time and the daily overnight funding percentage can be found in the <kbd>“Details” link next to the instrument’s name on the main screen of the platform.</kbd>
+                                            </p>
+                                            <p>
+                                                <strong>Currency Conversion Fee</strong> - {{ env('APP_NAME') }} will charge a Currency Conversion Fee for all trades on instruments denominated in a currency different to the currency of your account.<br>
+                                                The Currency Conversion Fee will currently be up to 0.7% of the trade’s realised net profit and loss and reflected in real time into the unrealised net profit and loss of an open position.
+                                            </p>
+
+                                            <p>
+                                                <strong>Inactivity Fee</strong> - A fee of up to USD 10 per month will be levied, should you not log in to your trading account for a period of at least three months. This fee will be charged once a month from that moment onwards, as long as no login is made to the account. The inactivity fee will be equal to the lesser of the remaining available balance in your account or USD 10 (or equivalent depending on your currency). This is to offset the cost incurred in making the service available, even though it has not been used. However, please note that the fee is only collected from the Real Money account and only when there are sufficient available funds in the account. In order to avoid this fee, simply log into your trading account from time to time, as this is deemed sufficient activity to prevent a fee from being charged.<br>
+                                            </p>
+
+                                            <p>
+                                                <strong>Guaranteed Stop Order</strong> - if you choose this feature, please note that as it guarantees that your position (trade) closes at a specific requested rate (price), the trade is subject to a wider spread. For more information, please refer to FAQ topic “<a href="/FAQ/Trading">Trading</a>” → “<a href="/FAQ/Trading/WhatIsGuaranteedStopOrder">What is a Guaranteed Stop Order?</a>”
+                                            </p>
+
+                                            <p>* For further information on fees please refer to the .</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Deposits</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1De" aria-expanded="true" aria-controls="collapseOne">
+                                        Are my funds at risk in case of Insolvency/Bankruptcy?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1De" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    All client funds are held in segregated client bank accounts, to ensure maximum protection of the funds.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2De" aria-expanded="true" aria-controls="collapseOne">
+                                        Can I deposit from a joint bank account?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2De" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            Usually yes, however you may be required to provide supporting documentation to confirm that you are
+                                            one of the named parties on the account.
+                                            Nevertheless, in certain countries and under certain circumstances this may not be possible due to regulatory obligations.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3De" aria-expanded="true" aria-controls="collapseOne">
+                                        Can I deposit using a corporate credit/debit card/account?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3De" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    No. All funds must originate from a payment method registered in your own name.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Financial Instruments</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1F" aria-expanded="true" aria-controls="collapseOne">
+                                        Do you add dividends?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1F" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    Dividends are the portion of corporate profits that are allocated to shareholders,
+                                    and the cut-off date for share ownership in order to qualify for a dividend is known as ex-dividend date.
+                                    At {{ env('APP_NAME') }} you trade CFDs on equities, therefore, you do not actually own the share itself.
+                                    If you have an equity or ETF CFD position open on the ex-dividend date, an adjustment will be made to your account in respect of the dividend paid on the underlying market. If you hold a buy position you will receive the dividend as a positive adjustment to your account. However,
+                                    if you hold a sell position there will be a negative adjustment. Please note that voting rights are not acquired with equity CFDs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2F" aria-expanded="true" aria-controls="collapseOne">
+                                        Do you offer a free Rollover Service?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2F" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            Most of the instruments we offer that are based on a futures contracts, have a rollover date.
+                                            <br>You can find this information by clicking on the "Details" link on the main trading platform screen next to each instrument.
+                                            Whenever a futures contract reaches its automatic rollover date as defined for the instrument, all open positions and orders are automatically rolled over to the next futures contract by {{ env('APP_NAME') }}, free of charge.
+                                            In order to nullify the impact on the valuation of the open position, given the change in the underlying instrument’s rate (price) for the new contract period, a compensating adjustment is made to allow you to keep your positions open without affecting your Equity level. Stop Orders and Limit Orders are also adjusted proportionally to reflect the rate of the new contract. The value of your position continues to reflect the impact of market movement based on your original opening level.
+                                            <br>For more information about how rollover adjustments are calculated, please read: ”What is a Rollover Adjustment?"
+
+                                           <br><br> If the futures contract is not subjected to rollover, the position will close upon the expiry date set for the instrument, also available via the “Details” link. For more information about expiry of positions, please read: “What is an expiry date of an instrument?”
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3F" aria-expanded="true" aria-controls="collapseOne">
+                                        Can I deposit using a corporate credit/debit card/account?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3F" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    No. All funds must originate from a payment method registered in your own name.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3F" aria-expanded="true" aria-controls="collapseOne">
+                                        How are {{ env('APP_NAME') }} prices calculated?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3F" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    {{ env('APP_NAME') }} quotes prices with reference to the price of the relevant underlying financial instrument and its spread.
+                                    <br>Our prices are obtained from a range of independent third-party market data providers who source their price feeds from relevant exchanges. An adjustment (i.e. the spread) is then applied automatically, to arrive at the {{ env('APP_NAME') }} price.This spread is paid by you, but is incorporated into the quoted rates and is not an additional charge or fee payable by you above those quoted rates.
+                                    <br>The spread can be calculated by subtracting the sell price from the buy price of the instrument. Information regarding the spread for a given instrument can be found on our website or trading platforms in the “Details” link next to the instrument’s name.
+                                    <br>The pricing generated for our cryptocurrency CFDs is derived from specific cryptocurrency exchanges. Please bear in mind that Cryptocurrency prices may vary widely between cryptocurrency exchanges.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Opening an Account</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1O" aria-expanded="true" aria-controls="collapseOne">
+                                        Can I have more than one trading account?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1O" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    We recommend clients focus on one trading account, and we reserve the right to close subsequent accounts.
+                                    <br>However, each case will be assessed on an individual basis.
+                                   <br> If an additional trading account is permitted,
+                                    <br>it must be operated independently and it is not possible to transfer funds between the two accounts.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2O" aria-expanded="true" aria-controls="collapseOne">
+                                        Do I risk any real money while using the Demo account?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2O" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            No, using the demo account is completely risk-free as you can’t lose real money.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3O" aria-expanded="true" aria-controls="collapseOne">
+                                        Does {{ env('APP_NAME') }} offer corporate/company accounts?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3O" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    No, only individual trading accounts are allowed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{{--                //Regulators--}}
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Regulators</h5>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne1">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1O" aria-expanded="true" aria-controls="collapseOne">
+                                        Is {{ env('APP_NAME') }} licenced/authorised and regulated?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne1O" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    {{ env('APP_NAME') }}’s subsidiaries are authorised and regulated in different jurisdictions around the world.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2R" aria-expanded="true" aria-controls="collapseOne">
+                                        Through which subsidiaries does {{ env('APP_NAME') }} Operate?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne2R" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="small-12 columns">
+                                        <div class="topic answer-item">
+                                            <div class="topic answer-item">
+                                                <p>{{ env('APP_NAME') }} Ltd operates through the following subsidiaries:</p>
+                                                <ul>
+
+
+                                                    <li>{{ env('APP_NAME') }}UK Ltd is authorised and regulated by the Financial Conduct Authority (FRN&nbsp;509909).</li>
+
+
+                                                    <li>{{ env('APP_NAME') }}CY Ltd is authorised and regulated by the Cyprus Securities and Exchange Commission (CySEC Licence No.&nbsp;250/14).</li>
+
+
+                                                    <li>{{ env('APP_NAME') }}AU Pty Ltd holds AFSL&nbsp;#417727 issued by ASIC, FSP No.&nbsp;486026 issued by the FMA in New Zealand and Authorised Financial Services Provider&nbsp;#47546 issued by the FSCA in South Africa.</li>
+                                                    <li>{{ env('APP_NAME') }}SG Pte Ltd (UEN 201422211Z) holds a capital markets services license from the Monetary Authority of Singapore for dealing in capital markets products (License No. CMS100648-1).</li>
+
+
+                                                    <li>{{ env('APP_NAME') }}IL Ltd is registered in Israel and licenced to operate a trading platform.
+
+                                                    </li>
+
+
+                                                    <li>{{ env('APP_NAME') }}SEY Ltd is authorised and regulated by the Seychelles Financial Services Authority (Licence&nbsp;No.&nbsp;SD039).</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                            <div class="card-header" id="headingOne2">
+                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3R" aria-expanded="true" aria-controls="collapseOne">
+                                        What are the benefits of trading with a regulated company?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div id="collapseOne3R" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
+                                <div class="card-body">
+                                    One of the benefits of trading with a regulated firm is that you know you are trading on a reliable and reputable platform in a regulated environment,
+                                    which has stringent rules and regulations designed, in particular, to protect the interests of retail clients
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-12">
+                    <div id="accordion" class="faq_question">
+                        <h5 style="color: #ffffff">Account Verification Process</h5>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne1">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
@@ -163,8 +539,10 @@
         </div> -->
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-12 offset-lg-2">
-                    <div id="accordion" class="accordion-style">
+
+                <div class="col-lg-6 col-md-12">
+                    <h5 style="color: #ffffff">Recent FAQs</h5>
+                    <div id="accordion" class="faq_question">
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne7">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne7" aria-expanded="true" aria-controls="collapseOne">
