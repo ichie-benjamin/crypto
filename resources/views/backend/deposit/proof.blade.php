@@ -28,7 +28,15 @@
                                     <h4 class="card-title">Payment Proof</h4>
                                 </div>
                                 <div class="card-body">
+                                    <div class="input-group mt-2">
+                                        <input type="text" class="form-control"
+                                               value="{{ setting('wallet_id') }}">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-primary text-white">Copy</span>
+                                        </div>
+                                    </div>
                                     <div class="d-flex justify-content-between my-3">
+
                                         <div class="" >
                                             <p><input type="file"  accept="image/*" name="proof" id="file"  onchange="loadFile(event)" style="display: none;"></p>
                                             <label class="btn btn-primary"  for="file" style="cursor: pointer;">Upload Payment Proof</label>

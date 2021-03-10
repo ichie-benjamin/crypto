@@ -16,7 +16,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
 
     Route::get('/deposit/fund', [DepositsController::class, 'depositFund'])->name('deposit.fund');
     Route::get('/deposit/fund/upload', [DepositsController::class, 'depositFundUpload'])->name('deposit.fund.upload');
-    Route::get('/deposit/fund/proof', [DepositsController::class, 'depositProof'])->name('deposit.proof');
+    Route::get('/deposit/fund/proof', [DepositsController::class, 'deposiuploadtProof'])->name('deposit.proof');
 
     Route::get('/deposit/view/{id}', [DashboardController::class, 'viewDeposit'])->name('deposit.view');
 
