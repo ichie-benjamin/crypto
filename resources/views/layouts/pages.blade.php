@@ -47,6 +47,13 @@
         .faq_question h5 {
             margin-top: 20px;
         }
+        .bg-fix {
+            background: url(/images/new-site/banner1.jpg) no-repeat fixed 50% 0;
+            background-size: cover;
+            position: relative;
+            transition: all 2s linear;
+        }
+
     </style>
 
 </head>
@@ -95,12 +102,14 @@
     </div>
 </header>
 <!-- END HEADER -->
+<div class="bg-fix">
+    @yield('content')
+</div>
 
-@yield('content')
 <!-- START FOOTER SECTION -->
 
 <footer>
-    <div class="top_footer bg_light_dark" data-z-index="1" data-parallax="scroll" data-image-src="/images/footer_bg.png">
+    <div class="top_footer bg_light_dark" data-z-index="1" data-parallax="scroll" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12">

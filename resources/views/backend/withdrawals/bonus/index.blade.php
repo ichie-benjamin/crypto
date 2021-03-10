@@ -13,7 +13,7 @@
                         @include('notification')
                         <div class="card">
                             <div class="card-header">
-                                <div class="col-6"> <h4 class="card-title">WITHDRAW FUNDS</h4></div>
+                                <div class="col-6"> <h4 class="card-title">WITHDRAW BONUS</h4></div>
                                 <div class="col-6">
                                     <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Withdrawals</a>
                                 </div>
@@ -22,10 +22,6 @@
                             <div class="card-body" >
                                 <div class="important-info">
                                     <ul>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            For bonus withdrawal click <a style="color: #0A72E8" href="{{ route('backend.bonus.withdrawals.index') }}">HERE</a>
-                                        </li>
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
                                             Withdrawal request cut off time 12:00 AEST/AEDT. Withdrawal submitted before this time will be processed same day, requests made after will be processed next business day.

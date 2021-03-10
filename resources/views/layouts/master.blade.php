@@ -215,7 +215,9 @@
     </header>
     <div class="menu-overlay"></div>
 
-    @yield('content')
+    <div class="bg-fix">
+        @yield('content')
+    </div>
 
 </div>
 

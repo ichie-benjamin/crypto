@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="/images/home_banner_bg.png">
+    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -77,19 +77,6 @@
                 <div class="col-lg-6 col-md-12">
                     <div id="accordion" class="faq_question">
                         <h5 style="color: #ffffff">Fees & Charges</h5>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne1">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1D" aria-expanded="true" aria-controls="collapseOne">
-                                        Are there any hidden fees?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne1D" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
-                                <div class="card-body">
-                                    There are no hidden fees at {{env('APP_NAME')}}. {{env('APP_NAME')}} is mainly compensated for its services through the spread.
-                                </div>
-                            </div>
-                        </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne2">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2D" aria-expanded="true" aria-controls="collapseOne">

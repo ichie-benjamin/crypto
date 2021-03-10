@@ -119,6 +119,12 @@ class WithdrawalController extends Controller
 
         return view('backend.withdrawals.index', compact('withdrawals'));
     }
+    public function myBonusWithdrawals()
+    {
+        $withdrawals = Withdrawal::whereUserId(auth()->id())->get();
+
+        return view('backend.withdrawals.bonus.index', compact('withdrawals'));
+    }
     public function btcWithdrawal()
     {
         return view('backend.withdrawals.btc');

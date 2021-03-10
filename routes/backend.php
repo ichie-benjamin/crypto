@@ -21,6 +21,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/deposit/view/{id}', [DashboardController::class, 'viewDeposit'])->name('deposit.view');
 
     Route::get('/withdrawals', [WithdrawalController::class, 'myWithdrawals'])->name('withdrawals.index');
+    Route::get('/bonus/withdrawals', [WithdrawalController::class, 'myBonusWithdrawals'])->name('bonus.withdrawals.index');
     Route::get('/withdrawal/processing/{id}', [WithdrawalController::class, 'processing'])->name('withdrawal.processing');
     Route::post('/withdrawal/processed/{id}', [WithdrawalController::class, 'processed'])->name('withdrawal.processed');
     Route::post('/withdrawal/store', [WithdrawalController::class, 'store'])->name('withdrawals.store');

@@ -35,3 +35,10 @@
 footer {
     padding: 5px 0 0!important;
 }
+
+.bg-fix {
+    background: url(../images/new-site/banner1.jpg) no-repeat fixed 50% 0;
+    background-size: cover;
+    position: relative;
+    transition: all 2s linear;
+}

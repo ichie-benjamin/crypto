@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="/images/home_banner_bg.png">
+    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">

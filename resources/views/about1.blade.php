@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="https://binaryoptionsfx.online/asset/assets/images/home_banner_bg.png">
+    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -87,7 +87,7 @@
     <!-- START SECTION SERVICES -->
 
                 <!-- START SECTION SERVICES -->
-    <section id="token" class="section_token token_sale bg_light_dark" data-z-index="1" data-parallax="scroll" data-image-src="assets/images/token_bg.png">
+    <section id="token" class="section_token token_sale bg_light_dark" data-z-index="1" data-parallax="scroll">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
