@@ -56,10 +56,10 @@
                                     <div class="phone_verified">
                                         <h5> <span><i class="fa fa-phone"></i></span> {{ auth()->user()->phone }}</h5>
                                         <div class="verify">
-                                            <div class="verified">
-                                                <span><i class="la la-check"></i></span>
-                                                <a href="#">UnVerified</a>
-                                            </div>
+{{--                                            <div class="verified">--}}
+{{--                                                <span><i class="la la-check"></i></span>--}}
+{{--                                                <a href="#">UnVerified</a>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>
