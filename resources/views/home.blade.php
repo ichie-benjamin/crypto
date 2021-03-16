@@ -261,29 +261,29 @@
     <!-- Price Part Start -->
 
 {{--    --}}
-{{--    <section id="price-part" class="section-p">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)--}}
-{{--                <div class="col-sm-6 col-md-4">--}}
-{{--                    <div class="price-item">--}}
-{{--                        <div class="coin-type">--}}
-{{--                            <h5>{{ $item->name }}</h5>--}}
-{{--                        </div>--}}
-{{--                        <h3>{{ $item->period }} Days</h3>--}}
-{{--                        <p>From</p>--}}
-{{--                        <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>--}}
-{{--                        <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                @endforeach--}}
+    <section id="price-part" class="section-p">
+        <div class="container">
+            <div class="row">
+                @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)
+                <div class="col-sm-6 col-md-4">
+                    <div class="price-item">
+                        <div class="coin-type">
+                            <h5>{{ $item->name }}</h5>
+                        </div>
+                        <h3>{{ $item->period }} Days</h3>
+                        <p>From</p>
+                        <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>
+                        <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>
+                    </div>
+                </div>
+                @endforeach
 
-{{--                <div class="col-12 text-center mt-5">--}}
-{{--                    <a href="{{ route('backend.dashboard') }}" class="btn-4">Your Dashboard</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+                <div class="col-12 text-center mt-5">
+                    <a href="{{ route('backend.dashboard') }}" class="btn-4">Your Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {{--    --}}
 
     <!-- Price Part End -->
