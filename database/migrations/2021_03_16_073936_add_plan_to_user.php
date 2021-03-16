@@ -14,7 +14,7 @@ class AddPlanToUser extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('plan')->after('last_name')->default('starter');
+            $table->string('plan')->after('last_name')->default('Bronze');
         });
     }
 
