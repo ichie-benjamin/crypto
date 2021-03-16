@@ -85,8 +85,6 @@ class DepositsController extends Controller
     {
             $data = $this->getData($request);
 
-            $deposit = Deposit::create($data);
-
         $package = Package::findOrFail($data['plan_id']);
         if($package->minimum_purchase > $data['amount']){
             return redirect()->back()->withInput()->with('failure', 'Minimum deposit for this package is '.$package->minimum_purchase);
@@ -94,6 +92,11 @@ class DepositsController extends Controller
         if($package->maximum_purchase < $data['amount']){
             return redirect()->back()->withInput()->with('failure', 'Maximum deposit for this package is '.$package->maximum_purchase);
         }
+
+        $deposit = Deposit::create($data);
+
+        auth()->user()->can_upgrade = false;
+        auth()->user()->save();
 
 
         return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');

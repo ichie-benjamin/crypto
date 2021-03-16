@@ -56,7 +56,8 @@
                                 @endif
                             </td>
                             <td><img src="{{ $user->avatar }}" height="50px" width="50px"></td>
-                            <td>{{ $user->email }} <br />
+                            <td class="text-capitalize">{{ $user->email }} <br />
+                                {{ $user->plan }}
 {{--                                @if ($user->email_verified_at)--}}
 {{--                                    <span class="badge badge-success">Verified</span>--}}
 {{--                                @else--}}

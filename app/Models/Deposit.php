@@ -35,6 +35,7 @@ class Deposit extends Model
                   'promo_code',
                   'message',
                   'status',
+                  'plan_id',
                   'payment_method'
               ];
 

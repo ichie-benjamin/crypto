@@ -41,7 +41,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $with = ['identity','plan'];
+    protected $with = ['identity'];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -54,11 +54,12 @@ class User extends Authenticatable
         return $this->hasOne(Identity::class);
 
     }
-    public function plan(){
-
-        return $this->hasOne(Package::class,'id','plan_id');
-
-    }
+//    public function plan(){
+//
+//        $deposit = Deposit::select('plan_d')
+//        return $this->hasOne(Package::class,'id','plan_id');
+//
+//    }
 
     public function invested(){
         return '$'. Deposit::whereUserId($this->id)->sum('amount');

@@ -19,7 +19,7 @@
         <div class="card text-center pt-2">
             <div class="card-body">
                 <p class="mb-1">Account Plan</p>
-                <h4>{{ optional(auth()->user()->plan)->name }}</h4>
+                <h4>{{ auth()->user()->plan }}</h4>
             </div>
         </div>
     </div>
