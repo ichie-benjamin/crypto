@@ -146,7 +146,12 @@
                     <a href="{{ route('backend.account.overview') }}" data-toggle="tooltip" data-placement="right" title="Overview">
                         <span><i class="mdi mdi-bullseye"></i></span>
                     </a>
+                </li>      <li>
+                    <a href="{{ route('backend.upgrade') }}" data-toggle="tooltip" data-placement="right" title="Upgrade">
+                        <span><i class="mdi mdi-arrow-up"></i></span>
+                    </a>
                 </li>
+
                 <li>
                     <a href="{{ route('deposit.create') }}" data-toggle="tooltip" data-placement="right" title="Deposit">
                         <span><i class="mdi mdi-tumblr-reblog"></i></span>

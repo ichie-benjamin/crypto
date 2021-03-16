@@ -23,6 +23,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('backend.upgrade') }}" class="nav-link">
+                        <i class="mdi mdi-arrow-up"></i>
+                        <span>Upgrade</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('backend.withdrawals.index') }}" class="nav-link">
                         <i class="mdi mdi-pentagon"></i>
                         <span>Withdrawals</span>

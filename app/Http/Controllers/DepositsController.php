@@ -36,6 +36,15 @@ class DepositsController extends Controller
         }
         return view('backend.deposit.fund.1');
     }
+    public function upgrade()
+    {
+//        if(!auth()->user()->can_upgrade){
+//            return redirect()->route('backend.deposit.fund');
+//        }
+        $packages = Package::where('minimum_purchase','>',0)->get();
+
+        return view('backend.deposit.create', compact('packages'));
+    }
 
     public function depositProof()
     {

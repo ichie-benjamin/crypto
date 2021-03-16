@@ -62,5 +62,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::resources([
         'deposits' => DepositsController::class,
     ]);
+
+    Route::get('/upgrade', [DepositsController::class, 'upgrade'])->name('upgrade');
+
 });
 

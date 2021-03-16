@@ -155,18 +155,36 @@
 
                                     <ul>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            All Payment method on Cryto Assets is secured and realiable
+                                            <h4>Payment process</h4>
+                                            For faster processing we recommend that all account holders deposit funds via Bitcoin cryptocurrency option from inside their Secure Client Area. From your Secure Client Area you will be able to fund your account in real time using cryptocurrency option (Bitcoin) which is the fastest funding option
                                         </li>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            If you are using a public server for your transactions, please ensure you logout before leaving the browser
+
+                                            <h4>Security of Funds</h4>
+                                            When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.
                                         </li>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Deposit approvals usually takes less than 24hrs during working days
+
+                                            <h4>Bank Fees</h4>
+                                            <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you
+                                                may incur fees on payments to and from some international banking institutions crypto exchanger such as
+                                                coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto
+                                                exchanger fees.</p>
+
+
                                         </li>
+                                        <li>
+                                            <h4>Third Party Payments</h4>
+                                            <p>Crypto Asset Trade does not accept payments from third parties.
+                                                Please ensure that all deposits into your trading account come from a bank account in your name.
+                                                Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one
+                                                of the parties on the Bank Account / Credit Card.</p>
+
+                                        </li>
+
+
                                     </ul>
+
                                 </div>
                                 <div class="tab-pane fade" id="tab2">
                                     <form method="post" action="{{ route('backend.deposit.save') }}" class="py-5 col-md-6 col-sm-12">
