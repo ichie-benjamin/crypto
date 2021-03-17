@@ -293,26 +293,26 @@
                         <li><a href="#pro" aria-controls="pro" role="tab" data-toggle="tab">ECN Pro</a></li>
                     </ul>
                     <div class="trading-account-choose tab-content">
-                        @foreach(\App\Models\Package::where('minimum_purchase','>',0)->get() as $item)
+                        @foreach($all_plans as $item)
                             <div class="tab-pane fadeIn animated active" id="classic">
                                 <div class="account-type">
-                                    <h3 class="feather"><span>{{ $item->name }}</span></h3>
+                                    <h3 class="feather"><span>{{ $item['name'] }}</span></h3>
                                     <p></p>
                                 </div>
                                 <ul class="account-info">
                                     <li>
                                         <p>Minimum Deposit</p>
-                                        <span>${{ $item->minimum_purchase }}</span>
+                                        <span>${{ $item['min'] }}</span>
                                     </li>
                                     <li>
                                         <p>Maximum Deposit</p>
-                                        <span>${{ $item->maximum_purchase }}</span>
+                                        <span>${{ $item['max'] }}</span>
                                     </li>
                                 </ul>
                                 <ul class="account-info-more">
                                     <li>
                                         <p>Interval</p>
-                                        <span>{{ $item->period }} Days</span>
+                                        <span>{{ $item['days'] }} Days</span>
                                     </li>
                                     <li>
                                         <p>Account base currency</p>
@@ -321,11 +321,11 @@
                                 </ul>
                                 <div class="account-info-line">
                                     <p>Trading instruments</p>
-                                    <span>28 <i>Crypto</i>, {{ $item->id }} <i>Metals</i></span>
+                                    <span>28 <i>Crypto</i>, {{ $item['c'] }} <i>Metals</i></span>
                                 </div>
                                 <div class="btn-acc">
-                                    <a class="btn btn-grey" href="{{ route('deposit.purchase', $item->id) }}">View details</a>
-                                    <a class="btn btn-grey" target="_blank" href="{{ route('deposit.purchase', $item->id) }}">Open trading account</a>
+                                    <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">View details</a>
+                                    <a class="btn btn-grey" target="_blank" href="{{ route('backend.dashboard') }}">Dashboard</a>
                                 </div>
                             </div>
                         @endforeach
