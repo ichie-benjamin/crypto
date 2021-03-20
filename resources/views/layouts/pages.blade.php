@@ -54,6 +54,10 @@
             transition: all 2s linear;
         }
 
+        .card-body {
+            text-align: justify;
+        }
+
     </style>
 
 </head>

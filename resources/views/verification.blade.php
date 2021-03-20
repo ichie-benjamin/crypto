@@ -63,7 +63,7 @@
                                 <div class="card-body">
 
                                     First log in to your account, then click on the <strong>Security Settings</strong>.
-                                    After that on Upload Documents tab choose the type of the document you wish to upload and choose the document by clicking either upload front id or upload back id button.
+                                    After that on Upload Documents tab choose the type of the document you wish to upload and choose the document by clicking either upload <strong>Front ID</strong> or upload <strong>Back ID</strong> button.
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll">
+    <section class="section_breadcrumb dark_light_bg" id="w-fag" data-z-index="1" data-parallax="scroll">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -96,10 +96,8 @@
                             </div>
                             <div id="collapseOne2" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
                                 <div class="card-body">
-
-                                    It is extremely simple. Depending on your location we can direct you to a leading web wallet that can connect with your bank account. You can transact seamlessly between your Crypto Asset account and your web wallet. When you want to see funds in your bank account you can simply withdraw them from your web wallet.
-
-                                    All web wallets we work with are leading and highly reputable financial institutions, electronic money issuers, or payment services providers. Therefore, you can rest assured that your money are kept safe by a licensed third-party.
+                                    It's very easy. Depending on your location, we will  re-direct you to a leading web wallet that will connect to your bank account. You can transact seamlessly between your Crypto Asset live trading account and your web wallet. If you want to move funds into your bank account, you can easily withdraw it from your web wallet. All of the web wallets we work with are leading and respected financial institutions, e-money issuers or payment service providers.
+                                    Hence, you can rest assured that your money is being held by a licensed third party.
                                 </div>
                             </div>
                         </div>
@@ -204,7 +202,7 @@
                             </div>
                             <div id="collapseOne10" class="collapse " aria-labelledby="headingOne10" data-parent="#accordion">
                                 <div class="card-body">
-                                    It is always the possibility in the sphere of investment. However, in our case, the probability is relatively low.
+                                    It is always the possibility in the sphere of investment. However, in our case, the probability is relatively low and There is always an opportunity in the area of ​​investment.  In our case, however, the probability is relatively low and, with the help of a fund manager, it almost risk-free when you invest through our platform
                                 </div>
                             </div>
                         </div>

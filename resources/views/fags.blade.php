@@ -45,8 +45,9 @@
                             </div>
                             <div id="collapseOne1V" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
                                 <div class="card-body">
-                                    To change any of the registered personal details in your trading account (displayed on the “Funds Management” / "Personal Information" screen), please contact us to explain the reason for this change and provide us with the relevant information, e.g. name change due to marriage, or change of residential address. We will then review and action your request in accordance with our
-                                    regulatory requirements and obligations. To contact us, click on the <a href="{{ route('contact') }}">Contact Us</a> link.
+                                    To change any of the personal details in your trading account please <a href="{{ route('contact') }}">contact us</a>  to explain the reason for this change and provide us
+                                    with the relevant information, e.g. name change due to marriage, or change of residential address.
+                                    We will then review and action your request in accordance with our regulatory requirements and obligations.
                                 </div>
                             </div>
                         </div>
@@ -103,45 +104,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne2">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3D" aria-expanded="true" aria-controls="collapseOne">
-                                        Does {{ env('APP_NAME') }} charge any trading fees?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne3D" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="small-12 columns">
-                                        <div class="topic answer-item">
-                                            <p>
-                                                {{ env('APP_NAME') }} is mainly compensated for its services through the "market spread". For example, when trading EUR/USD, if the buy rate is 1.12078 then the sell rate would be 1.12072 respectively (which means a market spread of 0.6 pips, in this example). Unlike other service providers who also charge commissions on each trade, {{ env('APP_NAME') }} does not charge dealing commissions.
-                                            </p>
-
-                                            <p>However, the following additional fees may be applied:</p><p>
-                                                <strong>Overnight Funding</strong> - The overnight funding amount is either added to or subtracted from your account when holding a position after a certain time (the “Overnight Funding Time”). <br>
-                                                The overnight funding time and the daily overnight funding percentage can be found in the <kbd>“Details” link next to the instrument’s name on the main screen of the platform.</kbd>
-                                            </p>
-                                            <p>
-                                                <strong>Currency Conversion Fee</strong> - {{ env('APP_NAME') }} will charge a Currency Conversion Fee for all trades on instruments denominated in a currency different to the currency of your account.<br>
-                                                The Currency Conversion Fee will currently be up to 0.7% of the trade’s realised net profit and loss and reflected in real time into the unrealised net profit and loss of an open position.
-                                            </p>
-
-                                            <p>
-                                                <strong>Inactivity Fee</strong> - A fee of up to USD 10 per month will be levied, should you not log in to your trading account for a period of at least three months. This fee will be charged once a month from that moment onwards, as long as no login is made to the account. The inactivity fee will be equal to the lesser of the remaining available balance in your account or USD 10 (or equivalent depending on your currency). This is to offset the cost incurred in making the service available, even though it has not been used. However, please note that the fee is only collected from the Real Money account and only when there are sufficient available funds in the account. In order to avoid this fee, simply log into your trading account from time to time, as this is deemed sufficient activity to prevent a fee from being charged.<br>
-                                            </p>
-
-                                            <p>
-                                                <strong>Guaranteed Stop Order</strong> - if you choose this feature, please note that as it guarantees that your position (trade) closes at a specific requested rate (price), the trade is subject to a wider spread. For more information, please refer to FAQ topic “<a href="/FAQ/Trading">Trading</a>” → “<a href="/FAQ/Trading/WhatIsGuaranteedStopOrder">What is a Guaranteed Stop Order?</a>”
-                                            </p>
-
-                                            <p>* For further information on fees please refer to the .</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
