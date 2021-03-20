@@ -42,7 +42,7 @@
                             <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                                 <i class="ion-ios-location"></i>
                                 <div class="contact_detail"> <span>Address</span>
-                                    <p>Crypto Assets is a product of Investment  Solutions Limited incorporated in Seychelles</p>
+                                    <p>Crypto Assets is a product of Investment  Solutions Limited incorporated in Mauritius</p>
                                 </div>
                             </li>
                             <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">

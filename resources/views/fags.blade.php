@@ -369,7 +369,7 @@
                                                     </li>
 
 
-                                                    <li>{{ env('APP_NAME') }}SEY Ltd is authorised and regulated by the Seychelles Financial Services Authority (Licence&nbsp;No.&nbsp;SD039).</li>
+                                                    <li>{{ env('APP_NAME') }}SEY Ltd is authorised and regulated by the Mauritius Financial Services Authority (Licence&nbsp;No.&nbsp;SD039).</li>
                                                 </ul>
                                             </div>
                                         </div>

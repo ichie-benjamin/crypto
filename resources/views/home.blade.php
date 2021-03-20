@@ -133,11 +133,11 @@
                                 <p></p>
                             </div>
 
-                            <h3 class="text-center">Seamless</h3>
+{{--                            <h3 class="text-center">Seamless</h3>--}}
                             {{--                                </ul>--}}
 
                             <div class="account-info-line">
-                                Sign up via our registration link. Provide valid details in the form fields and hit the submit button.
+                                Register using our registration link. Enter valid details in the form fields and click the "Submit" button.
                             </div>
                             <div class="btn-acc">
                                 <a class="btn btn-grey" href="{{ route('register') }}">View details</a>
@@ -151,12 +151,12 @@
                                 <p></p>
                             </div>
 
-                            <h3 class="text-center">Automatic
-                            </h3>
+{{--                            <h3 class="text-center">Automatic--}}
+{{--                            </h3>--}}
                             {{--                                </ul>--}}
 
                             <div class="account-info-line">
-                                After verification of your details, add funds to your account. This makes you ready to invest.
+                                After verifying your account information,  deposit funds into your account. This will enable your account for trading
                             </div>
                             <div class="btn-acc">
                                 <a class="btn btn-grey" href="{{ route('deposit.create') }}">Make Deposit</a>
@@ -171,11 +171,12 @@
                                 <p></p>
                             </div>
 
-                            <h3 class="text-center">Quick and easy</h3>
+{{--                            <h3 class="text-center">Fast and Easy to Earn</h3>--}}
                             {{--                                </ul>--}}
 
                             <div class="account-info-line">
-                                Invest in any suitable plan on our platform and your money starts growing. Earn more via referrals.
+                                Its  Fast and Easy to Earn more investing in a suitable plan on our platform,
+                                you can also earn extra cash through referrals.
                             </div>
                             <div class="btn-acc">
                                 <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">Dashboard</a>
@@ -337,7 +338,8 @@
                 <div class="container-fluid">
                     <div class="container-block">
                         <h2>Crypto contests and deposit bonuses from Crypto Assets</h2>
-                        <p>Crypto Assets provides Crypto bonuses on deposits and contests for traders and partners. We would like to make your work on Crypto incredibly interesting.</p>
+                        <p>Crypto Assets offers crypto bonuses for deposits and contests for traders and partners.
+                            We want to make your Crypto Assets trading experience incredibly interesting.</p>
                         <div class="btn-block">
                             <a class="btn btn-red" href="{{ route('login') }}">Learn more</a>
                         </div>

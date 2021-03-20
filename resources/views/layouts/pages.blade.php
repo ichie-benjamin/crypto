@@ -120,7 +120,7 @@
                     </div>
                     <div class="footer_desc">
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            Crypto Assets is one of the leading investment platforms incorporated in Seychelles offering an array of regulated investment programs from real trading processes.
+                            Crypto Assets is one of the leading investment platforms incorporated in Mauritius offering an array of regulated investment programs from real trading processes.
                         </p>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                     <ul class="footer_social list_none">
 {{--                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.3s"><a href="#">Phone: .</a></li>--}}
                         <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#">Email: info@cryptoassest.com/</a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><a href="#">Address: Crypto Assets is a product of Investment  Solutions Limited incorporated in Seychelles</a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><a href="#">Address: Crypto Assets is a product of Investment  Solutions Limited incorporated in Mauritius</a></li>
                     </ul>
                 </div>
 
@@ -162,7 +162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-{{--                    <p class="_fot_seg" style="font-size:small">Company Information: This website (Binary Option Solutions) is operated by INVESTMENT ANALYTICS SOLUTIONS LTD, a London investment firm, authorised and regulated by the International Financial Services Commission of London with company number 10417255. INVESTMENT ANALYTICS SOLUTIONS LTD is located at Binary Solution is a product of Investment  Solutions Limited incorporated in Seychelles.</p>--}}
+{{--                    <p class="_fot_seg" style="font-size:small">Company Information: This website (Binary Option Solutions) is operated by INVESTMENT ANALYTICS SOLUTIONS LTD, a London investment firm, authorised and regulated by the International Financial Services Commission of London with company number 10417255. INVESTMENT ANALYTICS SOLUTIONS LTD is located at Binary Solution is a product of Investment  Solutions Limited incorporated in Mauritius.</p>--}}
 
                     <!--<p class="_fot_seg">According to the payment agent agreement between INVESTMENT ANALYTICS SOLUTIONS LTD and Wonderbridge Services Limited, Wonderbridge Services Limited is acting as a payment agent providing payment services to INVESTMENT ANALYTICS SOLUTIONS LTD.</p>-->
 
