@@ -29,12 +29,42 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 res_md_mt_30 res_sm_mt_20">
                     <div class="title_default_light title_border">
-                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">About Crypto Assets</h4>
+                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">About Crypto Asset Trades™️</h4>
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Crypto Assets is one of the most transformative technologies since the era of cryptocurrency trading and investments. We stands firmly in support of financial freedom
                             and the liberty that Bitcoin and other Digital assets provides globally for anyone to voluntarily participate in a permissionless and decentralized network. </p>
-                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.8s">which empowers people to not be marginalized by governments and financial institutions. </p>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">which empowers
+                            people to not be marginalized by governments and financial institutions. </p>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Crypto Asset Trade is a leading provider
+                        of Contracts for Difference (CFDs), delivering trading facilities on Binary Options, forex, commodities, cryptocurrencies,
+                            ETFs, and indices, alongside innovative trading technology.</p>
                     </div>
                     <a href="{{ route('login') }}" class="btn btn-default btn-radius video animation" data-animation="fadeInUp" data-animation-delay="1s">Let's Get Started <i class="ion-ios-arrow-thin-right"></i></a>
+                </div>
+                <div class=" col-md-12 col-sm-12 res_md_mt_30 res_sm_mt_20">
+
+                    <div class="title_default_light title_border" style="margin-top: 40px">
+                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">Who We Are</h4>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
+                            The Crypto Asset trading platform is offered by FOREX PLUS LTD, which holds a UK financial services license with Mauritius-based Incorporated. The company is Authorised and regulated by the Financial Conduct Authority to offer Contracts For Difference (CFD). Crypto Asset is a rapidly growing CFD provider and currently offers its portfolio of over 2000 instruments. Crypto Asset trade is a subsidiary of FOREX PLUS LTD
+                        </p>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.7s">
+                            Crypto Assets  is Authorized and regulated by the Mauritius Securities and Exchange Commission with Company registration number C092215 with registered office at Unit 2 Air Mauritius Bldg, Lebrun St, Port Louis,Mauritius 
+                        </p>
+
+                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.8s">Client Money</h4>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.9s">
+                        When you open an account, Crypto Asset Ltd we hold your funds on a segregated basis, in accordance with the Financial Conduct Authority's client money rules.
+                            Client Money Protection </p>
+
+                        <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.10s"> Highly Rated CFD Provider</h4>
+                        <p class="animation" data-animation="fadeInUp" data-animation-delay="0.10s">
+                            Crypto Asset Ltd is one of the highest rated CFD trading platform</p>
+                    </div>
+
+
+
+
+{{--                    <a href="{{ route('login') }}" class="btn btn-default btn-radius video animation" data-animation="fadeInUp" data-animation-delay="1s">Let's Get Started <i class="ion-ios-arrow-thin-right"></i></a>--}}
                 </div>
             </div>
         </div>

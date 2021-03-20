@@ -167,13 +167,15 @@
                     <!--<p class="_fot_seg">According to the payment agent agreement between INVESTMENT ANALYTICS SOLUTIONS LTD and Wonderbridge Services Limited, Wonderbridge Services Limited is acting as a payment agent providing payment services to INVESTMENT ANALYTICS SOLUTIONS LTD.</p>-->
 
 
-                    <p class="_fot_seg _bacx1" style="font-size:small">Risk Warning. Trading on financial markets carries risks. Contracts for Difference (‘CFDs’) are complex financial products that are traded on margin. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, CFDs may not be suitable for all investors because you may lose all your invested capital.
-                        You should not risk more than you are prepared to lose. Before deciding to trade, you need to ensure that you understand the risks involved taking into account your investment objectives and level of experience. </p>
-                    <p>But not to worry Crypto Assets Assigns an expert to you, who do all your trading.</p>
 
-                    <!--<p class="_fot_seg" style="font-size:x-small">Regional Restrictions: INVESTMENT ANALYTICS SOLUTIONS LTD do offer services within and outside the European Economic Area and Switzerland as well as in certain other jurisdictions such as the USA, British Columbia, Canada and some other regions.</p>-->
+    <p class="_fot_seg _bacx1" style="font-size:small">Risk Warning. Trading on financial markets carries risks. Contracts for Difference (‘CFDs’) are complex financial products that are traded on margin.
+        Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, CFDs may not be suitable for all investors because you may lose all your
+        invested capital. you shouldn't take any chances to invest unless you have a professional trader who can oversee the trade and help manage the trading risk before you decide to invest. you need to
+        make sure that you understand the risks associated with trading if you have very low level trading experience we advise that you shouldn't take any chances to invest individually </p>
 
-{{--                    <p class="_fot_seg" style="font-size:small">INVESTMENT ANALYTICS SOLUTIONS LTD does not issue advice, recommendations or opinions in relation to acquiring, holding or disposing of any financial product. INVESTMENT ANALYTICS SOLUTIONS LTD is not a financial adviser.</p>--}}
+    <p>Crypto Assets has the best trading experts we can assign to you. our trade experts will help you manage the risk of losing
+        and handle all your trades.</p>
+
 
                 </div>
 
