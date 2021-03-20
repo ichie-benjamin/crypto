@@ -162,7 +162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-{{--                    <p class="_fot_seg" style="font-size:small">Company Information: This website (Binary Option Solutions) is operated by INVESTMENT ANALYTICS SOLUTIONS LTD, a London investment firm, authorised and regulated by the International Financial Services Commission of London with company number 10417255. INVESTMENT ANALYTICS SOLUTIONS LTD is located at Binary Solution is a product of Investment  Solutions Limited incorporated in Mauritius.</p>--}}
+{{--                    <p class="_fot_seg" style="font-size:small">Company Information: This website (Binary Option Solutions) is operated by INVESTMENT ANALYTICS SOLUTIONS LTD, a London investment firm, authorised and regulated by the International Financial Services Commission of London with company number C092215. INVESTMENT ANALYTICS SOLUTIONS LTD is located at Binary Solution is a product of Investment  Solutions Limited incorporated in Mauritius.</p>--}}
 
                     <!--<p class="_fot_seg">According to the payment agent agreement between INVESTMENT ANALYTICS SOLUTIONS LTD and Wonderbridge Services Limited, Wonderbridge Services Limited is acting as a payment agent providing payment services to INVESTMENT ANALYTICS SOLUTIONS LTD.</p>-->
 
