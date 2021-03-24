@@ -29,10 +29,10 @@ class DepositsController extends Controller
 
     public function depositFund()
     {
-        if(auth()->user()->can_upgrade){
+//        if(auth()->user()->can_upgrade){
             return redirect()->route('backend.deposits.create')->with('message','Purchase a plan');
-        }
-        return view('backend.deposit.fund.1');
+//        }
+//        return view('backend.deposit.fund.1');
     }
 
     public function depositProof()
@@ -95,11 +95,14 @@ class DepositsController extends Controller
 
         $deposit = Deposit::create($data);
 
-        auth()->user()->can_upgrade = false;
-        auth()->user()->save();
+//        auth()->user()->can_upgrade = false;
+//        auth()->user()->save();
+
+        return redirect()->route('backend.deposit.view',$deposit->id)
+            ->with('success', 'Plan successfully purchased.');
 
 
-        return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
+//        return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
 
     }
 

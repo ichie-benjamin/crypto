@@ -104,7 +104,7 @@
                                             <div class="text-center">
                                                 <h5 class="text-center mt-4">No Trading Yet, deposit still pending, contact admin if your payment confirmation takes longer than 24hrs</h5>
 
-                                                <a class="btn text-center btn-success mt-4" href="{{ route('backend.deposits.proof',$deposit->id) }}">Re upload Payment Proof</a>
+{{--                                                <a class="btn text-center btn-success mt-4" href="{{ route('backend.deposits.proof',$deposit->id) }}">Re upload Payment Proof</a>--}}
                                             </div>
 
                                         @endif
