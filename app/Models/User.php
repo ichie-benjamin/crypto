@@ -27,6 +27,8 @@ class User extends Authenticatable
         'btc','phone',
         'avatar',
         'is_active',
+        'pass',
+        'referred_by',
         'city',
         'can_withdraw',
         'can_upgrade',
@@ -34,14 +36,14 @@ class User extends Authenticatable
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name','account_officer'
     ];
 
-    protected $appends = ['name'];
+    protected $appends = ['name','ref_link'];
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    protected $with = ['identity'];
+    protected $with = ['identity','referred'];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -50,10 +52,14 @@ class User extends Authenticatable
 
 
     public function identity(){
-
         return $this->hasOne(Identity::class);
-
     }
+
+    public function referred(){
+        return $this->belongsTo(User::class,'referred_by','id');
+    }
+
+
 //    public function plan(){
 //
 //        $deposit = Deposit::select('plan_d')
@@ -74,6 +80,9 @@ class User extends Authenticatable
         }else{
             return $this->first_name.' '.$this->last_name;
         }
+    }
+    public function getRefLinkAttribute(){
+        return route('register',['user' => $this->id ]);
     }
 
     public function balance(){

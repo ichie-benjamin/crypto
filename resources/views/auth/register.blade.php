@@ -72,35 +72,36 @@
 {{--                                    @enderror--}}
                                     <form method="POST" class="form-horizontal form-signin" action="{{ route('register') }}">
                                         @csrf
+                                        <input type="hidden" name="referred_by" value="{{ request()->get('user') }}">
                                         <fieldset class="form-label-group">
-                                            <input type="email" name="email" class="form-control" id="user-name" placeholder="Your Email" required="" autofocus="">
+                                            <input value="{{ old('email') }}" type="email" name="email" class="form-control" id="user-name" placeholder="Your Email" required="">
                                             <label for="user-name">Email </label>
                                         </fieldset>
                                         <fieldset class="form-label-group">
-                                            <input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required autofocus="">
+                                            <input value="{{ old('username') }}" type="text" name="username" class="form-control" id="username" placeholder="Your Username" required>
                                             <label for="username">Username </label>
                                         </fieldset>
                                          <fieldset class="form-label-group">
-                                            <input type="text" name="first_name" class="form-control" id="first-name" placeholder="Your First Name" required autofocus="">
-                                            <label for="user-name">First Name </label>
+                                            <input value="{{ old('first_name') }}" type="text" name="first_name" class="form-control" id="first_name" placeholder="Your First Name" required>
+                                            <label for="first_name">First Name </label>
                                         </fieldset>
 
                                         <fieldset class="form-label-group">
-                                            <input type="text" name="last_name" class="form-control" id="last-name" placeholder="Your First Name" required autofocus="">
+                                            <input value="{{ old('last_name') }}" type="text" name="last_name" class="form-control" id="last-name" placeholder="Your First Name" required>
                                             <label for="last-name">last Name </label>
                                         </fieldset>
 
                                         <fieldset class="form-label-group">
-                                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Your First Name" required autofocus="">
+                                            <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" id="phone" placeholder="Your First Name" required>
                                             <label for="phone">Phone</label>
                                         </fieldset>
 
                                         <fieldset class="form-label-group">
-                                            <input type="password" name="password" class="form-control" id="user-password" placeholder="Enter Password"  required autofocus="">
+                                            <input type="password" name="password" class="form-control" id="user-password" placeholder="Enter Password"  required >
                                             <label for="user-password">Password</label>
                                         </fieldset>
                                         <fieldset class="form-label-group">
-                                            <input type="password" name="password_confirmation" class="form-control" id="user-c-password" placeholder="Enter Password"  required autofocus="">
+                                            <input type="password" name="password_confirmation" class="form-control" id="user-c-password" placeholder="Enter Password"  required >
                                             <label for="user-c-password">Confirm Password</label>
                                         </fieldset>
                                         <button type="submit" class="btn-gradient-primary btn-block my-1">Submit</button>

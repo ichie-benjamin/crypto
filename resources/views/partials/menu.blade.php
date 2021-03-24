@@ -1,6 +1,7 @@
 
 
 <div class="col-xl-12">
+{{--    {{ auth()->user()->ref_link }}--}}
     <div class="card sub-menu">
         <div class="card-body">
             <ul class="d-flex">

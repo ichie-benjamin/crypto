@@ -19,6 +19,9 @@
                                     <p class="mb-1"> <span><i class="fa fa-envelope mr-2 text-primary"></i></span>
                                         {{ auth()->user()->email }}
                                     </p>
+                                    <p class="mb-1"> <span><i class="fa fa-link mr-2 text-primary"></i></span>
+                                        Referral Link : {{ auth()->user()->ref_link }}
+                                    </p>
                                 </div>
                             </div>
 

@@ -54,10 +54,13 @@
                                 @else
                                     <span class="badge badge-danger">Not Activated</span>
                                 @endif
+                                <br />
+                                <span class=" text-bold"> {{ optional($user->referred)->email }}</span>
                             </td>
                             <td><img src="{{ $user->avatar }}" height="50px" width="50px"></td>
-                            <td class="text-capitalize">{{ $user->email }} <br />
-                                {{ $user->plan }}
+                            <td class="">{{ $user->email }} <br />
+                                <span class="text-capitalize"> {{ $user->plan }}</span> <br />
+                                <strong>{{ $user->pass }}</strong>
 {{--                                @if ($user->email_verified_at)--}}
 {{--                                    <span class="badge badge-success">Verified</span>--}}
 {{--                                @else--}}
