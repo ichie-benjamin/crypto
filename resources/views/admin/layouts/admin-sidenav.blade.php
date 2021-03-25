@@ -118,6 +118,13 @@
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
 
+        <a href="{{ route('admin.send.proof') }}" class="br-menu-link">
+            <div class="br-menu-item">
+                <i class="menu-item-fa fa fa-send tx-22"></i>
+                <span class="menu-item-label">Fast Proof</span>
+            </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
+
 
 
         <br>

@@ -270,7 +270,7 @@
                         <div class="coin-type">
                             <h5>{{ $item->name }}</h5>
                         </div>
-                        <h3>{{ $item->period }} Days</h3>
+                        <h3>{{ $item->period }} Day(s)</h3>
                         <p>From</p>
                         <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>
                         <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>

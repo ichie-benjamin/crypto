@@ -42,7 +42,7 @@
                             <div class="d-flex justify-content-between my-3">
                                 <div>
                                     <p class="mb-1">Plan Period</p>
-                                    <h4>{{ $item->period }} days</h4>
+                                    <h4>{{ $item->period }} day(s)</h4>
                                 </div>
                             </div>
 

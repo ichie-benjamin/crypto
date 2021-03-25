@@ -14,6 +14,9 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
 
     Route::get('user/{id}/login/logs', [UsersController::class,'loginLogs'])->name('user.logins');
 
+    Route::get('send/proof', [AdminDashboardController::class,'sendProof'])->name('send.proof');
+    Route::post('mail/proof', [AdminDashboardController::class,'mailProof'])->name('mail.proof');
+
     Route::get('user/login/logs', [UsersController::class,'myLoginLogs'])->name('user.logins.logs');
 
     Route::get('users/ids', [UsersController::class,'Ids'])->name('users.ids');

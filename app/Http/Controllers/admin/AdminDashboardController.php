@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Deposit;
 use App\Models\Package;
 use App\Models\User;
+use App\Notifications\SendProof;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Str;
 
 class AdminDashboardController extends Controller
 {
@@ -31,5 +34,15 @@ class AdminDashboardController extends Controller
         return view('admin.index',$data);
     }
 
+    public function sendProof(){
+        return view('admin.users.send_proof');
+    }
+
+    public function mailProof(Request $request){
+        $data = $request->all();
+        $data['batch'] = Str::random(60);;
+        Notification::route('mail', $data['email'])->notify(new SendProof($data));
+        return redirect()->back()->with('success', 'Fast payment proof successfully sent, pls check your inbox or spam folder');
+    }
 
 }
