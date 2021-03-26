@@ -21,7 +21,7 @@ class Controller extends BaseController
         $beautymail->send('mails.message', ['data' => $data], function($message) use ($user, $sub)
         {
             $message
-                ->from(env('MAIL_FROM_ADDRESS'))
+                ->from('noreply@cryptoassest.com')
                 ->to($user->email, $user->username)
                 ->subject($sub);
         });
