@@ -31,6 +31,7 @@ class Deposit extends Model
      */
     protected $fillable = [
                   'user_id',
+                  'plan_id',
                   'amount','proof',
                   'promo_code',
                   'message',
