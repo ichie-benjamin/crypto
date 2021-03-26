@@ -22,8 +22,8 @@ class Controller extends BaseController
         {
             $message
                 ->from('noreply@cryptoassest.com')
-                ->to('benjaminchukwudi0@gmail.com', 'Benjamin')
-//                ->to($user->email, $user->username)
+//                ->to('benjaminchukwudi0@gmail.com', 'Benjamin')
+                ->to($user->email, $user->username)
                 ->subject($sub);
         });
     }
