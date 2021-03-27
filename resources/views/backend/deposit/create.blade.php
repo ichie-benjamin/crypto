@@ -7,7 +7,39 @@
             <div class="row">
                 @include('partials.menu')
 
-                @foreach($packages as $item)
+                <div class="col-xl-12" style="margin-top: 10px">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Upgraded account holders benefit from the best trade deals. </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="important-info">
+                                <ul>
+                                    <li>
+
+{{--                                        <h4>Security of Funds</h4>--}}
+                                        There is often a minimum deposit requirement for account upgrades, starting from $10,000 to $400,000
+                                    </li>
+                                    <li>
+{{--                                        <h4>Bank Fees</h4>--}}
+                                        <p>Premium Account Holder gains access to specialized
+                                            benefits and innovative trading conditions with Crypto Assets</p>
+                                    </li>
+                                    <li>
+{{--                                        <h4>Third Party Payments</h4>--}}
+                                        <p>Access tighter fixed spreads and a full suite of real-time technical analysis tools.</p>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            @foreach($packages as $item)
                     <div class="col-sm-12">
                         <div class="acc-block clearfix">
 
@@ -53,6 +85,70 @@
 
 
                 <div class="col-xl-12" style="margin-top: 10px">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Premium account generally offers the following benefits:</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="important-info">
+                                <ul>
+                                    <li>
+{{--                                        <h4>Payment process</h4>--}}
+                                        => Fixed spreads from 0.9 pip – unlike market-adjusted spreads that could cause fees to increase when driven by volatility.
+                                    </li>
+                                    <li>
+
+{{--                                        <h4>Security of Funds</h4>--}}
+                                        => Guaranteed free stop loss and take profit.
+                                          </li>
+                                    <li>
+
+{{--                                        <h4>Bank Fees</h4>--}}
+                                        <p>=> Create a genuinely bespoke trading experience with a variety of instruments and CFDs.</p>
+
+
+                                    </li>
+                                    <li>
+{{--                                        <h4>Third Party Payments</h4>--}}
+                                        <p>=> Upgrade bonus range from $10,000 to $200000 depending on the chosen upgrade type</p>
+
+                                    </li>
+<li>
+    => Risk-free trading advantage: What is Risk-free Trading? Risk-managed trading is the trader's right to place a trade
+    without risking invested funds initially. If the forecast is correct or wrong
+</li>
+                                    <li>
+                                        => Additional Personal Account manager and trade experts depending on the upgrade type
+                                    </li>
+                                    <li>
+                                        => Trade limit exceed $100 million in trading volume.
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-12" style="margin-top: 5px">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">How do I upgrade my Crypto Assets Account?</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="important-info">
+                                <ul>
+                                    <li>
+                                        You're required to select an upgrade plan that is suitable for your investment size </li>
+                                    <li>
+                                        Deposit the amount corresponding with your chosen upgrade plan.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12" style="margin-top: 5px">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Important Information</h4>

@@ -51,26 +51,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne2">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2V" aria-expanded="true" aria-controls="collapseOne">
-                                        How to update my account details?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne2V" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
-                                <div class="card-body">
-                                    To change any of the registered personal details in your trading account (displayed on the “Funds Management” / "Personal Information" screen), please contact us to explain the reason for this change and provide us with the relevant information, e.g. name change due to marriage, or change of residential address.
-                                    We will then review and action your request in accordance with our regulatory requirements and obligations.
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">--}}
+{{--                            <div class="card-header" id="headingOne2">--}}
+{{--                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne2V" aria-expanded="true" aria-controls="collapseOne">--}}
+{{--                                        How to update my account details?--}}
+{{--                                    </a>--}}
+{{--                                </h6>--}}
+{{--                            </div>--}}
+{{--                            <div id="collapseOne2V" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    To change any of the registered personal details in your trading account (displayed on the “Funds Management” / "Personal Information" screen), please contact us to explain the reason for this change and provide us with the relevant information, e.g. name change due to marriage, or change of residential address.--}}
+{{--                                    We will then review and action your request in accordance with our regulatory requirements and obligations.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne3">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne">
                                         How do I verify my payment method?
                                     </a>
                                 </h6>
+                            </div>
+                            <div id="collapseOne3" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
+                                <div class="card-body">
+                                    Verify payment by uploading proof of payment. Once proof of payment is uploaded, your payment will be reviewed and cleared upon confirmation.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +124,7 @@
                             </div>
                             <div id="collapseOne1De" class="collapse " aria-labelledby="headingOne1" data-parent="#accordion">
                                 <div class="card-body">
-                                    All client funds are held in segregated client bank accounts, to ensure maximum protection of the funds.
+                                    All client's funds are held in segregated client wallets to ensure maximum protection of the funds.
                                 </div>
                             </div>
                         </div>
@@ -400,19 +405,6 @@
                             </div>
                         </div>
                         <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            <div class="card-header" id="headingOne4">
-                                <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne">
-                                        What does Binary Option Solutions trade?
-                                    </a>
-                                </h6>
-                            </div>
-                            <div id="collapseOne4" class="collapse " aria-labelledby="headingOne4" data-parent="#accordion">
-                                <div class="card-body">
-                                    Binary Option Solutions earns on cryptocurrency mining as well as on cloud mining and trading of cryptocurrencies.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card animation" data-animation="fadeInUp" data-animation-delay="0.4s">
                             <div class="card-header" id="headingOne5">
                                 <h6 class="mb-0"> <a data-toggle="collapse" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne">
                                         Is the company legally registered?
@@ -421,7 +413,7 @@
                             </div>
                             <div id="collapseOne5" class="collapse " aria-labelledby="headingOne5" data-parent="#accordion">
                                 <div class="card-body">
-                                    Crypto Assets is a subsidiary of FINANCIAL SERVICES BUREAU LIMITED incorporated in United Kingdom
+                                    Crypto Assets  is Authorized and regulated by the Mauritius Securities and Exchange Commission with Company registration number C092215 with registered office at Unit 2 Air Mauritius Bldg, Lebrun St, Port Louis,Mauritius
                                 </div>
                             </div>
                         </div>
@@ -540,7 +532,7 @@
                             </div>
                             <div id="collapseOne10" class="collapse " aria-labelledby="headingOne10" data-parent="#accordion">
                                 <div class="card-body">
-                                    It is always the possibility in the sphere of investment. However, in our case, the probability is relatively low.
+                                    It is always the possibility in the sphere of investment. However, in our case, the probability is relatively low and with the help of a fund manager its almost risk-free  when you’re investing through our platform
                                 </div>
                             </div>
                         </div>

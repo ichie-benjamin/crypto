@@ -133,6 +133,17 @@ class UsersController extends Controller
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, balance modified');
     }
+    public function updateWithdrawable(Request $request){
+        $this->validate($request, [
+            'user_id' => ['required', 'integer'],
+            'withdrawable' => ['required'],
+            ]);
+        $data = $request->all();
+        $user = User::findOrFail($data['user_id']);
+        $user->withdrawable = $data['withdrawable'];
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, Withdrawable balance modified');
+    }
     public function fundBonus(Request $request){
         $this->validate($request, [
             'user_id' => ['required', 'integer'],

@@ -22,17 +22,17 @@
                             <div class="card-body" >
                                 <div class="important-info">
                                     <ul>
+{{--                                        <li>--}}
+{{--                                            <i class="mdi mdi-checkbox-blank-circle"></i>--}}
+{{--                                            For bonus withdrawal click <a style="color: #0A72E8" href="{{ route('backend.bonus.withdrawals.index') }}">HERE</a>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <i class="mdi mdi-checkbox-blank-circle"></i>--}}
+{{--                                            Withdrawal request cut off time 12:00 AEST/AEDT. Withdrawal submitted before this time will be processed same day, requests made after will be processed next business day.--}}
+{{--                                        </li>--}}
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            For bonus withdrawal click <a style="color: #0A72E8" href="{{ route('backend.bonus.withdrawals.index') }}">HERE</a>
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Withdrawal request cut off time 12:00 AEST/AEDT. Withdrawal submitted before this time will be processed same day, requests made after will be processed next business day.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            IC Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
+                                            Crypto Assets Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
                                         </li>
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
