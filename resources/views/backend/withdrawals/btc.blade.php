@@ -10,7 +10,11 @@
 
                 <div class="col-md-12">
                     <div style="width: 100%" class="alert alert-success">
-                        Current Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong>
+                        @if(request()->get('t') == 'available_balance')
+                        Current Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong>
+                        @else
+                            Current Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong>
+                        @endif
                     </div>
                 </div>
 
@@ -19,6 +23,10 @@
                         <div class="card-header">
                             <h4 class="card-title">BTC Withdrawal</h4>
                             {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
+
+{{--                            <div class="col-6">--}}
+                                <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Withdrawals</a>
+{{--                            </div>--}}
                         </div>
                         <div class="card-body" id="deposits">
                             <div class="row">
@@ -27,6 +35,7 @@
                                     {{ csrf_field() }}
 
                                     <div class="form-group row align-items-center">
+                                        <input type="hidden" name="type" value="{{ request()->get('t') }}" />
                                         <div class="col-sm-4">
                                             <label for="inputEmail3" class="col-form-label">Payment Method
                                                 <br>

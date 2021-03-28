@@ -80,6 +80,9 @@ class User extends Authenticatable
     public function balance(){
         return $this->balance . ' USD';
     }
+    public function aBalance(){
+        return $this->withdrawable . ' USD';
+    }
 
     public function bonus(){
         return $this->balance . ' USD';

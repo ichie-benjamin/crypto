@@ -31,34 +31,40 @@ class WithdrawalController extends Controller
         if(!$withdrawal->processed){
             return view('backend.withdrawals.processing', compact('withdrawal'));
         }
-        if(!$withdrawal->commission_proof){
-            return view('backend.withdrawals.commission', compact('withdrawal'));
+//        if(!$withdrawal->commission_proof){
+//            return view('backend.withdrawals.commission', compact('withdrawal'));
+//        }
+//        if(!$withdrawal->tax_proof){
+//            if(!$withdrawal->commission){
+//                $title = 'Commission Fee';
+//                return view('backend.withdrawals.verify', compact('withdrawal','title'));
+//            }
+//            return view('backend.withdrawals.tax', compact('withdrawal'));
+//        }
+//        if(!$withdrawal->cot_proof){
+//            if(!$withdrawal->tax){
+//                $title = 'Tax Fee';
+//                return view('backend.withdrawals.verify', compact('withdrawal','title'));
+//            }
+//            return view('backend.withdrawals.cot', compact('withdrawal'));
+//        }
+//        if(!$withdrawal->cost_of_transfer){
+//           $title = 'Cost of Transfer';
+//            return view('backend.withdrawals.verify', compact('withdrawal','title'));
+//        }
+//        if($withdrawal->cost_of_transfer){
+//            if($withdrawal->approved){
+//                return redirect()->route('backend.pending.withdrawal');
+//            }
+//            $title = 'Withdrawal ';
+//            return view('backend.withdrawals.verify', compact('withdrawal','title'));
+//        }
+
+        if($withdrawal->approved){
+            return redirect()->route('backend.pending.withdrawal');
         }
-        if(!$withdrawal->tax_proof){
-            if(!$withdrawal->commission){
-                $title = 'Commission Fee';
-                return view('backend.withdrawals.verify', compact('withdrawal','title'));
-            }
-            return view('backend.withdrawals.tax', compact('withdrawal'));
-        }
-        if(!$withdrawal->cot_proof){
-            if(!$withdrawal->tax){
-                $title = 'Tax Fee';
-                return view('backend.withdrawals.verify', compact('withdrawal','title'));
-            }
-            return view('backend.withdrawals.cot', compact('withdrawal'));
-        }
-        if(!$withdrawal->cost_of_transfer){
-           $title = 'Cost of Transfer';
-            return view('backend.withdrawals.verify', compact('withdrawal','title'));
-        }
-        if($withdrawal->cost_of_transfer){
-            if($withdrawal->approved){
-                return redirect()->route('backend.pending.withdrawal');
-            }
-            $title = 'Withdrawal ';
-            return view('backend.withdrawals.verify', compact('withdrawal','title'));
-        }
+        $title = 'Withdrawal ';
+        return view('backend.withdrawals.verify', compact('withdrawal','title'));
     }
     public function processed(Request $request, $id)
     {
@@ -89,13 +95,24 @@ class WithdrawalController extends Controller
 
             $data = $this->getData($request);
 
-            if(auth()->user()->balance < $data['amount']){
-                return redirect()->back()->with('failure', 'You cant withdraw more than your current balance');
+        if($data['type'] == 'available_balance') {
+            if (auth()->user()->withdrawable < $data['amount']) {
+                return redirect()->back()->with('failure', 'You cant withdraw more than your available balance');
             }
-
+        }else{
+            if (auth()->user()->balance < $data['amount']) {
+                return redirect()->back()->with('failure', 'You cant withdraw more than your account balance');
+            }
+        }
             $withdrawal = Withdrawal::create($data);
-          Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'balance','note' => 'Account balance withdrawal']);
-        Auth::user()->balance = Auth::user()->balance - $data['amount'];
+
+            if($data['type'] == 'available_balance'){
+                Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'available balance','note' => 'Available balance withdrawal']);
+                Auth::user()->withdrawable = Auth::user()->withdrawable - $data['amount'];
+            }else{
+                Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'account balance','note' => 'Account balance withdrawal']);
+                Auth::user()->balance = Auth::user()->balance - $data['amount'];
+            }
         Auth::user()->save();
         return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
     }
@@ -138,6 +155,7 @@ class WithdrawalController extends Controller
             'amount' => 'required',
             'wallet' => 'required',
             'proof' => 'nullable',
+            'type' => 'nullable',
             'promo_code' => 'string|nullable',
             'method' => 'string|required',
         ];

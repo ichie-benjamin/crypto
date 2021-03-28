@@ -31,11 +31,19 @@
                     </li>
                 @endif
                 <li class="nav-item">
-                    <a href="{{ route('backend.withdrawals.index') }}" class="nav-link">
+                    <a href="{{ route('backend.btc.withdrawal') }}?t=available_balance" class="nav-link">
                         <i class="mdi mdi-pentagon"></i>
                         <span>Withdrawals</span>
                     </a>
                 </li>
+                @if (auth()->user()->can_withdraw)
+                <li class="nav-item">
+                    <a href="{{ route('backend.btc.withdrawal') }}?t=account_balance" class="nav-link">
+                        <i class="mdi mdi-pentagon"></i>
+                        <span>Account Withdrawal</span>
+                    </a>
+                </li>
+                @endif
                 <li class="nav-item">
                     <a href="{{ route('backend.trades.index') }}" class="nav-link">
                         <i class="mdi mdi-database"></i>
