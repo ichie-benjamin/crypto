@@ -76,7 +76,7 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Total Withdrawal</p>
-                                    <h4>0.000 USD</h4>
+                                    <h4>{{ Auth()->user()->withdrawals()  }}</h4>
                                 </div>
                             </div>
                         </div>
