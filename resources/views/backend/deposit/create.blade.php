@@ -9,9 +9,9 @@
 
                 <div class="col-xl-12" style="margin-top: 10px">
                     <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Upgraded account holders benefit from the best trade deals. </h4>
-                        </div>
+{{--                        <div class="card-header">--}}
+{{--                            <h4 class="card-title">Upgraded account holders benefit from the best trade deals. </h4>--}}
+{{--                        </div>--}}
                         <div class="card-body">
                             <div class="important-info">
                                 <ul>
@@ -77,7 +77,7 @@
                                 <li><i class="fa fa-check"></i><span class="masha_index masha_index42" rel="42"></span> Daily analytics</li>
                                 <li><i class="fa fa-check"></i><span class="masha_index masha_index43" rel="43"></span> Market reviews</li>
                                 <li><i class="fa fa-check"></i><span class="masha_index masha_index44" rel="44"></span> Fundamental and technical analysis</li>
-                                <li><i class="fa fa-check"></i><span class="masha_index masha_index45" rel="45"></span> Withdrawal- One free withdrawal per month</li>
+{{--                                <li><i class="fa fa-check"></i><span class="masha_index masha_index45" rel="45"></span> Withdrawal- One free withdrawal per month</li>--}}
                             </ul>
                         </div>
                     </div>
@@ -148,48 +148,48 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-12" style="margin-top: 5px">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Important Information</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="important-info">
-                                <ul>
-                                    <li>
-                                        <h4>Payment process</h4>
-                                        For faster processing we recommend that all account holders deposit funds via Bitcoin cryptocurrency option from inside their Secure Client Area. From your Secure Client Area you will be able to fund your account in real time using cryptocurrency option (Bitcoin) which is the fastest funding option
-                                    </li>
-                                    <li>
+{{--                <div class="col-xl-12" style="margin-top: 5px">--}}
+{{--                    <div class="card">--}}
+{{--                        <div class="card-header">--}}
+{{--                            <h4 class="card-title">Important Information</h4>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div class="important-info">--}}
+{{--                                <ul>--}}
+{{--                                    <li>--}}
+{{--                                        <h4>Payment process</h4>--}}
+{{--                                        For faster processing we recommend that all account holders deposit funds via Bitcoin cryptocurrency option from inside their Secure Client Area. From your Secure Client Area you will be able to fund your account in real time using cryptocurrency option (Bitcoin) which is the fastest funding option--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
 
-                                        <h4>Security of Funds</h4>
-                                        When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.
-                                    </li>
-                                    <li>
+{{--                                        <h4>Security of Funds</h4>--}}
+{{--                                        When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
 
-                                        <h4>Bank Fees</h4>
-                                        <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you
-                                            may incur fees on payments to and from some international banking institutions crypto exchanger such as
-                                            coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto
-                                            exchanger fees.</p>
-
-
-                                    </li>
-                                    <li>
-                                        <h4>Third Party Payments</h4>
-                                        <p>Crypto Asset Trade does not accept payments from third parties.
-                                        Please ensure that all deposits into your trading account come from a bank account in your name.
-                                        Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one
-                                            of the parties on the Bank Account / Credit Card.</p>
-
-                                    </li>
+{{--                                        <h4>Bank Fees</h4>--}}
+{{--                                        <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you--}}
+{{--                                            may incur fees on payments to and from some international banking institutions crypto exchanger such as--}}
+{{--                                            coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto--}}
+{{--                                            exchanger fees.</p>--}}
 
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <h4>Third Party Payments</h4>--}}
+{{--                                        <p>Crypto Asset Trade does not accept payments from third parties.--}}
+{{--                                        Please ensure that all deposits into your trading account come from a bank account in your name.--}}
+{{--                                        Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one--}}
+{{--                                            of the parties on the Bank Account / Credit Card.</p>--}}
+
+{{--                                    </li>--}}
+
+
+{{--                                </ul>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
 
