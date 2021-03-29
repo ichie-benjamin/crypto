@@ -32,6 +32,7 @@ class User extends Authenticatable
         'withdrawable',
         'can_withdraw',
         'can_upgrade',
+        'bonus',
         'can_trade','plan_id',
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name','account_officer'
     ];
@@ -82,6 +83,10 @@ class User extends Authenticatable
     }
     public function aBalance(){
         return $this->withdrawable . ' USD';
+    }
+
+    public function total(){
+        return $this->withdrawable + $this->balance . ' USD';
     }
 
     public function bonus(){

@@ -99,11 +99,11 @@
                                         <div class="user-balance">
                                             <div class="available">
                                                 <p>Balance</p>
-                                                <span>{{ auth()->user()->balance() }}</span>
+                                                <span>{{ auth()->user()->total() }}</span>
                                             </div>
                                             <div class="total">
-                                                <p>Deposit</p>
-                                                <span>0.00 USD</span>
+                                                <p>Bonus</p>
+                                                <span>${{ auth()->user()->bonus }}</span>
                                             </div>
                                         </div>
                                         <a href="{{ route('backend.account.overview') }}" class="dropdown-item">
