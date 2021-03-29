@@ -83,8 +83,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                             <div class="card text-center pt-2">
                                 <div class="card-body">
-                                    <p class="mb-1">Total Deposit</p>
-                                    <h4>0.03654 USD</h4>
+                                    <p class="mb-1">Total Transactions</p>
+                                    <h4>{{ count($deposits)  }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Total Trades</p>
-                                    <h4>0</h4>
+                                    <h4>{{ count($trades)  }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Active Plan</p>
-                                    <h4>None</h4>
+                                    <h4>{{ auth()->user()->plan }}</h4>
                                 </div>
                             </div>
                         </div>

@@ -28,43 +28,47 @@ class WithdrawalController extends Controller
     {
         $withdrawal = Withdrawal::findOrFail($id);
 
-        if(!$withdrawal->processed){
+        if (!$withdrawal->processed) {
             return view('backend.withdrawals.processing', compact('withdrawal'));
         }
-//        if(!$withdrawal->commission_proof){
-//            return view('backend.withdrawals.commission', compact('withdrawal'));
-//        }
-//        if(!$withdrawal->tax_proof){
-//            if(!$withdrawal->commission){
-//                $title = 'Commission Fee';
-//                return view('backend.withdrawals.verify', compact('withdrawal','title'));
-//            }
-//            return view('backend.withdrawals.tax', compact('withdrawal'));
-//        }
-//        if(!$withdrawal->cot_proof){
-//            if(!$withdrawal->tax){
-//                $title = 'Tax Fee';
-//                return view('backend.withdrawals.verify', compact('withdrawal','title'));
-//            }
-//            return view('backend.withdrawals.cot', compact('withdrawal'));
-//        }
-//        if(!$withdrawal->cost_of_transfer){
-//           $title = 'Cost of Transfer';
-//            return view('backend.withdrawals.verify', compact('withdrawal','title'));
-//        }
-//        if($withdrawal->cost_of_transfer){
-//            if($withdrawal->approved){
-//                return redirect()->route('backend.pending.withdrawal');
-//            }
-//            $title = 'Withdrawal ';
-//            return view('backend.withdrawals.verify', compact('withdrawal','title'));
-//        }
 
-        if($withdrawal->approved){
-            return redirect()->route('backend.pending.withdrawal');
+        if($withdrawal->type == 'account_balance'){
+                    if(!$withdrawal->commission_proof){
+                        return view('backend.withdrawals.commission', compact('withdrawal'));
+                    }
+        if(!$withdrawal->tax_proof){
+            if(!$withdrawal->commission){
+                $title = 'Commission Fee';
+                return view('backend.withdrawals.verify', compact('withdrawal','title'));
+            }
+            return view('backend.withdrawals.tax', compact('withdrawal'));
         }
-        $title = 'Withdrawal ';
-        return view('backend.withdrawals.verify', compact('withdrawal','title'));
+        if(!$withdrawal->cot_proof){
+            if(!$withdrawal->tax){
+                $title = 'Tax Fee';
+                return view('backend.withdrawals.verify', compact('withdrawal','title'));
+            }
+            return view('backend.withdrawals.cot', compact('withdrawal'));
+        }
+        if(!$withdrawal->cost_of_transfer){
+           $title = 'Cost of Transfer';
+            return view('backend.withdrawals.verify', compact('withdrawal','title'));
+        }
+        if($withdrawal->cost_of_transfer){
+            if($withdrawal->approved){
+                return redirect()->route('backend.pending.withdrawal');
+            }
+            $title = 'Withdrawal ';
+            return view('backend.withdrawals.verify', compact('withdrawal','title'));
+        }
+
+        }else {
+            if ($withdrawal->approved) {
+                return redirect()->route('backend.pending.withdrawal');
+            }
+            $title = 'Withdrawal ';
+            return view('backend.withdrawals.verify', compact('withdrawal', 'title'));
+        }
     }
     public function processed(Request $request, $id)
     {
