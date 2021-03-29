@@ -2,8 +2,16 @@
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
         <div class="card text-center pt-2">
             <div class="card-body">
+                <p class="mb-1">Account Balance</p>
+                <h4>$ {{ Auth()->user()->balance }} </h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
+        <div class="card text-center pt-2">
+            <div class="card-body">
                 <p class="mb-1">Available Balance</p>
-                <h4>$ {{ Auth()->user()->withdrawable }} </h4>
+                <h4>$ {{ Auth()->user()->withdrawal }} </h4>
             </div>
         </div>
     </div>
@@ -35,14 +43,14 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
-        <div class="card text-center pt-2">
-            <div class="card-body">
-                <p class="mb-1">Total Withdraw</p>
-                <h4>{{ Auth()->user()->withdrawals() }}</h4>
-            </div>
-        </div>
-    </div>
+{{--    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">--}}
+{{--        <div class="card text-center pt-2">--}}
+{{--            <div class="card-body">--}}
+{{--                <p class="mb-1">Total Withdraw</p>--}}
+{{--                <h4>{{ Auth()->user()->withdrawals() }}</h4>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6">
         <div class="card text-center pt-2">
             <div class="card-body">

@@ -50,8 +50,14 @@
 
                             <div class="d-flex justify-content-between my-3">
                                 <div>
-                                    <h3 class="mb-1">Available Balance</h3>
-                                    <h4>0.000 USD</h4>
+                                    <h5 class="mb-1">Available Balance</h5>
+                                    <h4>{{ auth()->user()->aBalance() }}</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between my-3">
+                                <div>
+                                    <h5 class="mb-1">Account Balance</h5>
+                                    <h4>{{ auth()->user()->balance() }}</h4>
                                 </div>
                             </div>
 
