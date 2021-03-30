@@ -29,6 +29,7 @@ class User extends Authenticatable
         'is_active',
         'city',
         'plan',
+        'pass',
         'withdrawable',
         'can_withdraw',
         'can_upgrade',
