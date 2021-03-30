@@ -45,9 +45,10 @@
                             $count = 1;
                         @endphp
                         @foreach ($withdrawals as $item)
+                            @if($item->user)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td><a href="{{ route('admin.users.show',$item->user->username) }}" >{{ optional($item->user)->name }}</a></td>
+                                <td><a href="{{ route('admin.users.show',$item->user ? $item->user->username : 1) }}" >{{ optional($item->user)->name }}</a></td>
                                 <td>${{ $item->amount }}</td>
                                 <td>{{ $item->type }}</td>
                                 <td>{{ $item->wallet }}</td>
@@ -109,7 +110,7 @@
                                     </div>
                                 </div><!-- modal-dialog -->
                             </div><!-- modal -->
-
+@endif
                         @endforeach
 
                         </tbody>
