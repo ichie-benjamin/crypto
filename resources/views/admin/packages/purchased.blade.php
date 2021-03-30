@@ -46,7 +46,7 @@
                         @foreach ($deposits as $item)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td><a href="{{ route('admin.users.show',optional($item->user)->username) ?? 1 }}">{{ optional($item->user)->name }}</a></td>
+                                <td><a href="{{ route('admin.users.show', $item->user ? $item->user->username : 1) }}">{{ optional($item->user)->name }}</a></td>
                                 <td>{{ $item->amount }} USD</td>
                                 <td>
                                     @if ($item->proof)
