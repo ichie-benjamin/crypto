@@ -11,11 +11,11 @@
                 <div class="col-md-12">
                     <div style="width: 100%" class="alert alert-success">
                         @if(request()->get('t') == 'available_balance')
-                            <p>Current Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
-                            <p> Current Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
+                            <p>Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
+                            <p> Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
                         @else
-                            <p>Current Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
-                            <p>Current Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
+                            <p> Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
+                            <p>Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
                         @endif
                     </div>
                 </div>

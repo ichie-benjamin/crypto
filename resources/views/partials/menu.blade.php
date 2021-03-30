@@ -33,16 +33,16 @@
                 <li class="nav-item">
                     <a href="{{ route('backend.btc.withdrawal') }}?t=available_balance" class="nav-link">
                         <i class="mdi mdi-pentagon"></i>
-                        <span>Withdrawals</span>
+                        <span>Withdraw</span>
                     </a>
                 </li>
 {{--                @if (auth()->user()->can_withdraw)--}}
-                <li class="nav-item">
-                    <a href="{{ route('backend.btc.withdrawal') }}?t=account_balance" class="nav-link">
-                        <i class="mdi mdi-pentagon"></i>
-                        <span>Account Withdrawal</span>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{ route('backend.btc.withdrawal') }}?t=account_balance" class="nav-link">--}}
+{{--                        <i class="mdi mdi-pentagon"></i>--}}
+{{--                        <span>Account Withdrawal</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 {{--                @endif--}}
                 <li class="nav-item">
                     <a href="{{ route('backend.trades.index') }}" class="nav-link">
