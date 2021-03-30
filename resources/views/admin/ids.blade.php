@@ -42,29 +42,32 @@
                             $count = 1;
                         @endphp
                         @foreach ($ids as $item)
-                            <tr>
-                                <td>{{ $count++ }}</td>
-                                <td><a href="{{ route('admin.users.show',$item->user->username) }}">{{ $item->user->name }}</a> </td>
-                                <td>
-                                    @if ($item->front)
-                                        <img height="50px" width="50px" src="{{ $item->front }}" />
-                                    @else
-                                        Not uploaded
-                                    @endif
-                                </td>
-                                <td>
-                                    @if ($item->back)
-                                    <img height="50px" width="50px" src="{{ $item->back }}" />
-                                    @else
-                                    Not Uploaded
+                            @if ($item->user)
+                                <tr>
+                                    <td>{{ $count++ }}</td>
+                                    <td><a href="{{ route('admin.users.show',$item->user->username) }}">{{ $item->user->name }}</a> </td>
+                                    <td>
+                                        @if ($item->front)
+                                            <img height="50px" width="50px" src="{{ $item->front }}" />
+                                        @else
+                                            Not uploaded
                                         @endif
-                                </td>
-                                <td>{{ $item->status }}
-                                @if ($item->status != 'approved') <br />
-                                    <a href="{{ route('admin.approve.id', $item->id) }}">Approve</a>
-                                @endif
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        @if ($item->back)
+                                            <img height="50px" width="50px" src="{{ $item->back }}" />
+                                        @else
+                                            Not Uploaded
+                                        @endif
+                                    </td>
+                                    <td>{{ $item->status }}
+                                        @if ($item->status != 'approved') <br />
+                                        <a href="{{ route('admin.approve.id', $item->id) }}">Approve</a>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endif
+
                         @endforeach
 
                         </tbody>
