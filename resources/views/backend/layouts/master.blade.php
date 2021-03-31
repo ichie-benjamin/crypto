@@ -19,6 +19,7 @@
 
     @yield('styles')
 
+    <script src="//code.jivosite.com/widget/vhb4amL596" async></script>
     <style>
         a {
             color: #ffff;
