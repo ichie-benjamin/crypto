@@ -23,7 +23,8 @@
                                     <label class="mr-sm-2">ID Type</label>
                                     {{--                                    <div class="">--}}
                                     <select required name="type" class="form-control">
-                                        <option value="National ID">National Id</option>
+                                        <option value="International Passport">International Passport</option>
+                                        <option value="National ID">National ID</option>
                                         <option value="Drivers License">Drivers License</option>
                                     </select>
                                     {{--                                    </div>--}}
