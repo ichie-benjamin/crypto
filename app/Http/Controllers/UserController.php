@@ -17,6 +17,7 @@ class UserController extends Controller
     }
 
     public function uploadId(){
+        return redirect()->route('backend.account.upload.id');
         return view('backend.profile.uploadId');
     }
 
