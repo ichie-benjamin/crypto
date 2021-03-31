@@ -273,6 +273,7 @@
                         <h3>{{ $item->period }} Day(s)</h3>
                         <p>From</p>
                         <h2>$ <span class="counter">{{ $item->minimum_purchase }}</span> to $ <span class="counter">{{ $item->maximum_purchase }}</span></h2>
+                        <h2 style="color: black">{{ $item->percent_profit }}%</h2>
                         <a href="{{ route('deposit.purchase', $item->id) }}" class="btn-4">BUY NOW</a>
                     </div>
                 </div>

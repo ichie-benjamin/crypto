@@ -47,11 +47,11 @@
         <div class="card text-center pt-2">
             <div class="card-body">
                 <p class="mb-1">Connections</p>
-                @if (auth()->user()->code)
-                <h6 style="color: red" class="tx-danger">Account not connected</h6>
-                @else
+{{--                @if (auth()->user()->code)--}}
+{{--                <h6 style="color: red" class="tx-danger">Account not connected</h6>--}}
+{{--                @else--}}
                     <h6 style="color: #0ec469" class="tx-success">Account connected</h6>
-                @endif
+{{--                @endif--}}
             </div>
         </div>
     </div>
