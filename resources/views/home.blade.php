@@ -137,7 +137,7 @@
                             {{--                                </ul>--}}
 
                             <div class="account-info-line">
-                                Register using our registration link. Enter valid details in the form fields and click the "Submit" button.
+                                Tell us a bit more about yourself. We're here to help with the best strategy that fits your goals.
                             </div>
                             <div class="btn-acc">
                                 <a class="btn btn-grey" href="{{ route('register') }}">View details</a>
@@ -322,7 +322,7 @@
                                 </ul>
                                 <div class="account-info-line">
                                     <p>Trading instruments</p>
-                                    <span>28 <i>Crypto</i>, {{ $item['c'] }} <i>Metals</i></span>
+                                    <span><i>Crypto  </i> & <i>Derivatives</i></span>
                                 </div>
                                 <div class="btn-acc">
                                     <a class="btn btn-grey" href="{{ route('backend.dashboard') }}">View details</a>

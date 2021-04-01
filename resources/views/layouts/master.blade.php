@@ -23,7 +23,7 @@
 
     <script src="/js/jquery.min.js"></script>
 
-    <script src="//code.jivosite.com/widget/vhb4amL596" async></script>
+{{--    <script src="//code.jivosite.com/widget/vhb4amL596" async></script>--}}
 
     <style>
         .translated-ltr{margin-top:-30px;}
@@ -173,7 +173,7 @@
                                         <div class="bg-menu"></div>
                                     </li>
                                     <li>
-                                        <a style="cursor: pointer" href="#{{ route('contact') }}" rel="nofollow">Contact us</a>
+                                        <a style="cursor: pointer" href="{{ route('contact') }}" rel="nofollow">Contact us</a>
                                         <div class="bg-menu"></div>
                                     </li>
 
@@ -252,5 +252,19 @@
 <script src="/js/jquery.jscrollpane.min.js"></script>
 <script src="/js/jquery.mousewheel.js"></script>
 <script src="/js/bodyScrollLock.min.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6065c68c067c2605c0be6bed/1f26ov6ja';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>

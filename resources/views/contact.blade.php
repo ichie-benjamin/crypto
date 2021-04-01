@@ -48,7 +48,7 @@
                             <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">
                                 <i class="ion-android-call"></i>
                                 <div class="contact_detail"> <span>Phone</span>
-                                    <p>.</p>
+                                    <p>{{ env('PHONE') }}</p>
                                 </div>
                             </li>
                             <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
