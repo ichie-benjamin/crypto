@@ -82,7 +82,7 @@
                                         </fieldset>
                                          <fieldset class="form-label-group">
                                             <input type="text" name="first_name" class="form-control" id="first-name" placeholder="Your First Name" required autofocus="">
-                                            <label for="user-name">First Name </label>
+                                            <label for="first-name">First Name </label>
                                         </fieldset>
 
                                         <fieldset class="form-label-group">
