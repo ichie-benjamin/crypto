@@ -9,7 +9,8 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Security</h4>
+                            <h4 class="card-title">Security  </h4>
+                                <a style="float: right" class="float-right" href="{{ route('backend.update_password') }}">Update Password</a>
                         </div>
                         <div class="card-body">
                             <div class="row align-items-center">

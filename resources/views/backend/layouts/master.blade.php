@@ -116,6 +116,9 @@
                                         <a href="{{ route('backend.profile.edit') }}" class="dropdown-item">
                                             <i class="mdi mdi-settings"></i> Setting
                                         </a>
+                                        <a href="{{ route('backend.update_pass') }}" class="dropdown-item">
+                                            <i class="mdi mdi-security"></i> Update Password
+                                        </a>
                                         <a  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" href="{{ route('logout') }}" class="dropdown-item logout">
                                             <i class="mdi mdi-logout"></i> Logout

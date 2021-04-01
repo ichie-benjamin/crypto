@@ -10,6 +10,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
 //Route::group(['prefix' => 'dashboard', 'as' => 'backend.'], function() {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
 
+    Route::get('update/password',  [UserController::class, 'updatePassword'])->name('update_password');
+    Route::post('update/password',  [UserController::class, 'updatePass'])->name('update_pass');
+
     Route::get('/account/overview', [DashboardController::class, 'overview'])->name('account.overview');
 
     Route::get('/deposit/{id}/proof/upload', [DepositsController::class, 'proof'])->name('deposits.proof');
