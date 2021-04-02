@@ -1,132 +1,173 @@
-
-<!-- - var bodyCustom = 'bg-blue bg-lighten-2' // Use any color palette class--><!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="author" content="CRYPTOASSETS">
-    <title>Account Login - Crypto Assets</title>
-    <link rel="apple-touch-icon" href="/app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/app-assets/images/ico/favicon.ico">
-    <link href="/../../../fonts.googleapis.com/cssc3c1.css?family=Muli:300,300i,400,400i,600,600i,700,700i|Comfortaa:300,400,500,700" rel="stylesheet">
-    <!-- BEGIN VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/icheck.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/custom.css">
-    <!-- END VENDOR CSS-->
-    <!-- BEGIN MODERN CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/app.min.css">
-    <!-- END MODERN CSS-->
-    <!-- BEGIN Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-compact-menu.min.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/cryptocoins/cryptocoins.css">
-    <link rel="stylesheet" type="text/css" href="/app-assets/css/pages/account-login.css">
-    <!-- END Page Level CSS-->
-    <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/asset/css/style.css">
-    <!-- END Custom CSS-->
+    <title>Crypto Asset | Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/auth/css/style.css">
+    <link rel="stylesheet" href="/auth/css/extra.css">
+    <style>
+        .home-bg {
+            background: url(/app-assets/images/backgrounds/bg-2.jpg) center center no-repeat fixed;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        .text-wrap:after {
+            background-color: #121833;
+            opacity: .99;
+        }
+        .vertical-stepper h3 {
+            color: #f8f9fa;
+        }
+    </style>
 </head>
-<body class="vertical-layout vertical-compact-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-compact-menu" data-col="1-column">
-<!-- ////////////////////////////////////////////////////////////////////////////-->
-<div class="app-content content">
-    <div class="content-wrapper">
-        <div class="content-header row">
-        </div>
-        <div class="content-body">
-            <!-- Demo options menu -->
-            <!--/ Demo options menu -->
-            <!-- Demo fullscreen-overlay -->
-            <!--/ Demo fullscreen-overlay -->
-            <section id="account-login" class="flexbox-container">
-                <div class="col-12 d-flex align-items-center justify-content-center">
-                    <!-- image -->
-{{--                    <div class="col-md-4 col-sm-5 col-12 p-0 text-center d-none d-md-block">--}}
-{{--                        <div class="border-grey border-lighten-3 m-0 box-shadow-0 card-account-left height-400">--}}
-{{--                            --}}{{--                            <img src="/app-assets/images/pages/account-login.png" class="card-account-img width-200" alt="card-account-img">--}}
+<body class="home-bg">
+<section class="ftco-section">
+    <div class="container">
+{{--        <div class="row justify-content-center">--}}
+{{--            <div class="col-md-6 text-center mb-5">--}}
+{{--                <h2 class="heading-section">Account Registration</h2>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="wrap d-md-flex">
 
-{{--                            <div style="height:400px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:400px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="800px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Crypto Assets</div></div>--}}
+                    <div class="text-wrap p-4 p-lg-5 d-flex img d-flex align-items-ends" style="background-image: url(/auth/images/bg.jpg);">
 
-{{--                        </div>--}}
-{{--                    </div>--}}
-                    <!-- login form -->
-                    <div class="col-md-4 col-sm-5 col-12 p-0 col-md-offset-2">
-
-                        <div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right height-800">
-                            <div class="card-content">
-                                <div class="card-body p-3">
-
-                                    <p class="text-center h5 text-capitalize">Welcome to Crypto Assets!</p>
-                                    <p class="mb-3 text-center">Sign up your account</p>
-                                    @if ($errors->any())
-                                        <ul class="alert alert-danger">
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    @endif
-{{--                                    @error('email')--}}
-{{--                                    <div style="margin-bottom: 5px" class="invalid-feedbac " role="alert">--}}
-{{--                                        <strong style="color: red">{{ $message }}</strong>--}}
-{{--                                    </div>--}}
-{{--                                    @enderror--}}
-                                    <form method="POST" class="form-horizontal form-signin" action="{{ route('register') }}">
-                                        @csrf
-                                        <fieldset class="form-label-group">
-                                            <input type="email" name="email" class="form-control" id="user-name" placeholder="Your Email" required="" autofocus="">
-                                            <label for="user-name">Email </label>
-                                        </fieldset>
-                                        <fieldset class="form-label-group">
-                                            <input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required autofocus="">
-                                            <label for="username">Username </label>
-                                        </fieldset>
-                                         <fieldset class="form-label-group">
-                                            <input type="text" name="first_name" class="form-control" id="first-name" placeholder="Your First Name" required autofocus="">
-                                            <label for="first-name">First Name </label>
-                                        </fieldset>
-
-                                        <fieldset class="form-label-group">
-                                            <input type="text" name="last_name" class="form-control" id="last-name" placeholder="Your First Name" required autofocus="">
-                                            <label for="last-name">last Name </label>
-                                        </fieldset>
-
-                                        <fieldset class="form-label-group">
-                                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Your First Name" required autofocus="">
-                                            <label for="phone">Phone</label>
-                                        </fieldset>
-
-                                        <fieldset class="form-label-group">
-                                            <input type="password" name="password" class="form-control" id="user-password" placeholder="Enter Password"  required autofocus="">
-                                            <label for="user-password">Password</label>
-                                        </fieldset>
-                                        <fieldset class="form-label-group">
-                                            <input type="password" name="password_confirmation" class="form-control" id="user-c-password" placeholder="Enter Password"  required autofocus="">
-                                            <label for="user-c-password">Confirm Password</label>
-                                        </fieldset>
-                                        <button type="submit" class="btn-gradient-primary btn-block my-1">Submit</button>
-                                        <p class="text-center">Already have an account ? <a href="{{ route('login') }}" class="card-link">Login</a></p>
-                                    </form>
+                        <div class="vertical-stepper">
+                            <div class="justify-content-center text-center mt-4 mb-4">
+                                <h3>Account Registration</h3>
+                                You are just 4 simple steps away from placing your first trade
+                            </div>
+                            <div class="vertical-stepper__step">
+                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet vertical-stepper__step-bullet--selected">1</div></div>
+                                <div class="vertical-stepper__step-content">
+                                    <h3>Create your login</h3>
+                                    <span>Enter your email and choose a password to get started</span>
+                                </div>
+                            </div>
+                            <div class="vertical-stepper__step">
+                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">2</div></div>
+                                <div class="vertical-stepper__step-content">
+                                    <h3>Complete your application</h3>
+                                    <span>Complete our fast and secure application form</span>
+                                </div>
+                            </div>
+                            <div class="vertical-stepper__step">
+                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">3</div></div>
+                                <div class="vertical-stepper__step-content">
+                                    <h3>Confirm your ID</h3>
+                                    <span>Verify your identity online or upload your ID documents if required</span>
+                                </div>
+                            </div>
+                            <div class="vertical-stepper__step">
+                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">4</div></div>
+                                <div class="vertical-stepper__step-content vertical-stepper__step-content--last">
+                                    <h3>Fund and trade</h3>
+                                    <span>Once approved, fund your account using our flexible, low-cost funding methods and start trading</span>
                                 </div>
                             </div>
                         </div>
+
+{{--                        <div class="text w-100">--}}
+{{--                            <h2 class="mb-4">Account Registration</h2>--}}
+{{--                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
+{{--                        </div>--}}
+                    </div>
+                    <div class="login-wrap p-4 p-md-5">
+{{--                        <h3 class="mb-3">Create an account</h3>--}}
+                        @if ($errors->any())
+                            <ul class="alert alert-danger">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        @endif
+                        <form method="POST" action="{{ route('register') }}" class="signup-form">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="first_name">First Name</label>
+                                        <input name="first_name" id="first_name" type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="first_name">Last Name</label>
+                                        <input name="last_name" id="last_name" type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="email">Email Address</label>
+                                        <input name="email" id="email" type="email" class="form-control" placeholder="johndoe@email.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="username">Username</label>
+                                        <input name="username" id="username" type="text" class="form-control" placeholder="johndoe">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="phone">Phone no.</label>
+                                        <input id="phone" name="phone" type="text" class="form-control" placeholder="+01">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="password">Password</label>
+                                        <input id="password" name="password" type="password" class="form-control" placeholder="Password">
+                                    </div>
+                                </div>
+                             <div class="col-md-12">
+                                    <div class="form-group d-flex align-items-center">
+                                        <label class="label" for="password_confirmation">Confirm Password</label>
+                                        <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 my-4">
+                                    <div class="form-group">
+                                        <div class="w-100">
+                                            <label class="checkbox-wrap checkbox-primary">I agree all statements in terms of service
+                                                <input required type="checkbox" checked>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-secondary submit p-3">Create an account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="social-wrap">
+                            <p class="or">
+                                <span>or</span>
+                            </p>
+                            <p class="mb-3 text-center">Already have an account ? <a href="{{ route('login') }}" class="card-link">Login</a></p>
+
+                            <p class="social-media d-flex justify-content-center">
+
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>
-
+            </div>
         </div>
     </div>
-</div>
-<!-- ////////////////////////////////////////////////////////////////////////////-->
-
-<!-- BEGIN VENDOR JS-->
-<script src="/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
-<!-- BEGIN VENDOR JS-->
-
-<!-- BEGIN MODERN JS-->
-<script src="/app-assets/js/core/app-menu.min.js" type="text/javascript"></script>
-<script src="/app-assets/js/core/app.min.js" type="text/javascript"></script>
-<script src="/app-assets/js/scripts/demo.min.js" type="text/javascript">//- For demo only</script>
-<!-- END MODERN JS-->
-
+</section>
+<script src="/auth/js/jquery.min.js"></script>
+<script src=/auth/"js/popper.js"></script>
+<script src="/auth/js/bootstrap.min.js"></script>
+<script src="/auth/js/main.js"></script>
 </body>
 </html>
