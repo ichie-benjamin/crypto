@@ -57,16 +57,16 @@
             @endif
 
 
-                @if (auth()->user()->code)
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="alert alert-danger">
-                                <h3>Connection Code :</h3>
-                                Send <strong>{{ auth()->user()->code }}</strong> to admin for account connection
-                            </div>
-                        </div>
-                    </div>
-                @endif
+{{--                @if (auth()->user()->code)--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-12">--}}
+{{--                            <div class="alert alert-danger">--}}
+{{--                                <h3>Connection Code :</h3>--}}
+{{--                                Send <strong>{{ auth()->user()->code }}</strong> to admin for account connection--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endif--}}
 
             @include('partials.menu-top')
 
