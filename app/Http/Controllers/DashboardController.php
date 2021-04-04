@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function gateway($gateway)
     {
 
-        return redirect()->back()->with('failure', "$gateway is not active for your account, please use bitcoin or wire transfer");
+        return redirect()->back()->with('failure', "$gateway is not active for your account, contact admin to use this payment method");
 
     }
         public function dashboard(){
