@@ -184,23 +184,41 @@
                                     <table class="table table-striped mb-0 table-responsive-sm">
                                         <thead>
                                         <tr>
-                                            <th>Transaction ID</th>
-                                            <th>Time</th>
-                                            <th>Type</th>
+                                            <td></td>
+                                            <th>Currency</th>
+                                            <th>Currency Pair</th>
+                                            <th>Trade Time</th>
                                             <th>Amount</th>
                                             <th>Status</th>
-                                            <th>Balance</th>
+                                            <th>Opening Price</th>
+                                            <th>Closing Price</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach ($trades as $item)
                                             <tr>
-                                                <td>#565845522</td>
-                                                <td>January 10, 2020</td>
-                                                <td>Realized P&L</td>
-                                                <td>0.254782 BTC</td>
-                                                <td>Completed</td>
-                                                <td>0.125476 BTC</td>
+                                                @if ($item->is_win)
+                                                    <td><span class="buy-thumb"><i class="mdi mdi-arrow-up"></i></span>
+                                                    </td>
+                                                @else
+                                                    <td><span class="sold-thumb"><i class="mdi mdi-arrow-down"></i></span>
+                                                    </td>
+                                                @endif
+
+                                                <td><img src="{{ optional($item->currency)->image }}" height="30" />
+                                                </td>
+                                                <td>{{ $item->currency_pair }}
+                                                </td>
+                                                <td>{{ $item->created_at }}
+                                                </td>
+                                                <td>${{ $item->traded_amount }}</td>
+
+
+                                                <td class="{{ $item->is_win ? 'text-success' : 'text-danger' }}">{{ $item->is_win ? 'Win' : 'Loss' }}</td>
+
+                                                <td>{{ $item->o_price }}</td>
+                                                <td>{{ $item->c_price }}</td>
+                                                {{--                                                    <td>{{ $item->created_at }}</td>--}}
                                             </tr>
                                         @endforeach
                                         </tbody>
