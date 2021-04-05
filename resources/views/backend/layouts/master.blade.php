@@ -38,7 +38,7 @@
             margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
-            background: #673AB7
+            background: #f8f1f1
         }
         .payment-methods .card-header {
             display: flex;
@@ -172,7 +172,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('backend.withdrawals.index') }}" data-toggle="tooltip" data-placement="right" title="Withdrawals">
+                    <a href="{{ route('backend.withdraw.index') }}" data-toggle="tooltip" data-placement="right" title="Withdrawals">
                         <span><i class="mdi mdi-pentagon"></i></span>
                     </a>
                 </li>

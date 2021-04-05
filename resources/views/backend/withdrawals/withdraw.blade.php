@@ -8,152 +8,58 @@
 
                 @include('partials.menu')
 
-                @if (auth()->user()->can_withdraw)
+                <div class="col-md-12">
+                    <div style="width: 100%" class="alert alert-success">
+
+                            <p>Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
+                            <p> Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
+                            <p> Bonus Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->bonus() }}</strong></p>
+
+                    </div>
+                </div>
+
                     <div class="col-xl-12">
                         @include('notification')
                         <div class="card">
                             <div class="card-header">
-                                <div class="col-6"> <h4 class="card-title">WITHDRAW BONUS</h4></div>
+                                <div class="col-6"> <h4 class="card-title">SELECT ACCOUNT TO WITHDRAW FROM</h4></div>
                                 <div class="col-6">
                                     <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">All Withdrawals</a>
                                 </div>
                                 {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
                             </div>
-                            <div class="card-body" >
-                                <div class="important-info">
-                                    <ul>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Withdrawal request cut off time 12:00 AEST/AEDT. Withdrawal submitted before this time will be processed same day, requests made after will be processed next business day.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            IC Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
-                                        </li>
-                                        <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Credit card withdrawals are to be processed according to the same card that was used to deposit with.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="card-body" id="deposits">
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#tab1">Payment System</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#tab2">Bank Wire Transfer</a>
-                                    </li>
-                                </ul>
-
                                 <div class="tab-content" style="margin-top: 20px; margin-bottom: 30px">
                                     <div class="tab-pane fade active show" id="tab1">
                                         <div class="row payment-methods">
 
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Withdraw with Bitcoin</h4>
-                                                    </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <div class="card text-center p-1">
                                                     <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/bitpay.png" />
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.btc.withdrawal') }}"> SELECT</a></h4>
-
+                                                        <p class="mb-1">Account Balance</p>
+                                                        <h4>$ {{ Auth()->user()->total() }} </h4>
+                                                        <a href="{{ route('backend.btc.withdrawal') }}?t=account_balance" class="nav-link">Select</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Fasa Pay</h4>
-                                                    </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <div class="card text-center p-1">
                                                     <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>
-
+                                                        <p class="mb-1">Available Balance</p>
+                                                        <h4>$ {{ Auth()->user()->withdrawable }} </h4>
+                                                        <a href="{{ route('backend.btc.withdrawal') }}?t=available_balance" class="nav-link">Select</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Western Union</h4>
-                                                    </div>
+                                            <div class="col-md-4 col-sm-6">
+                                                <div class="card text-center p-1">
                                                     <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/3.jpg" />
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>
-
+                                                        <p class="mb-1">Bonus Balance</p>
+                                                        <h4>$ {{ Auth()->user()->bonus }}</h4>
+                                                        <a href="{{ route('backend.withdraw.bonus') }}" class="nav-link">Select</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Money Gram</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/1.jpg" />
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Visa & MasterCard</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/visa.jpg" />
-                                                    </div>
-                                                    <div class="card-footer">
-
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Neteller</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/net.jpg" />
-                                                    </div>
-                                                    <div class="card-footer">
-
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-xl-3 col-lg-3 col-md-3">
-                                                <div class="card">
-                                                    <div class="card-header text-center">
-                                                        <h4 class="card-title text-center">Skrill</h4>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <img width="100%" height="80px" src="/images/gateway/skril.png" />
-                                                    </div>
-                                                    <div class="card-footer">
-
-                                                        <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
 
                                         </div>
 
@@ -279,27 +185,11 @@
                         </div>
                     </div>
 
-                @else
 
 {{--                    <div class="row">--}}
-                        @if(auth()->user()->invested() < 500)
-                        <div class="col-12">
-                            <div class="alert alert-danger">
-                                <h3>Not Eligible</h3>
-                                Your account is not eligible for withdrawal
-                            </div>
-                            <a href="{{ route('backend.deposit.fund') }}" class="btn btn-success">Make Deposit</a>
-                        </div>
-                    @else
-                        <div class="col-12">
-                            <div class="alert alert-danger">
-                                <h3>Active Trade Session</h3>
-                                Your trading session is currently active
-                            </div>
-                        </div>
-                        @endif
+
 {{--                    </div>--}}
-                @endif
+
 
 
             </div>

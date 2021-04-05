@@ -121,6 +121,26 @@ class WithdrawalController extends Controller
         return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
     }
 
+    public function bonusWithdraw(Request $request)
+    {
+
+            $data = $this->getData($request);
+
+            if (auth()->user()->bonus < $data['amount']) {
+                return redirect()->back()->with('failure', 'You cant withdraw more than your bonus balance');
+            }
+
+            $withdrawal = Withdrawal::create($data);
+
+                Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Withdrawal', 'account_type' => 'bonus balance','note' => 'Bonus balance withdrawal']);
+
+                Auth::user()->bonus = Auth::user()->bonus - $data['amount'];
+
+                Auth::user()->save();
+
+                return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
+    }
+
 
     public function update(Request $request, $id)
     {
@@ -140,6 +160,14 @@ class WithdrawalController extends Controller
 
         return view('backend.withdrawals.index', compact('withdrawals'));
     }
+
+    public function withdraw()
+    {
+        $withdrawals = Withdrawal::whereUserId(auth()->id())->get();
+
+        return view('backend.withdrawals.withdraw', compact('withdrawals'));
+    }
+
     public function myBonusWithdrawals()
     {
         $withdrawals = Withdrawal::whereUserId(auth()->id())->get();
@@ -149,6 +177,10 @@ class WithdrawalController extends Controller
     public function btcWithdrawal()
     {
         return view('backend.withdrawals.btc');
+    }
+    public function withdrawBonus()
+    {
+        return view('backend.withdrawals.bonus');
     }
 
     protected function getData(Request $request)

@@ -91,7 +91,7 @@ class User extends Authenticatable
     }
 
     public function bonus(){
-        return $this->balance . ' USD';
+        return $this->bonus . ' USD';
     }
 
 

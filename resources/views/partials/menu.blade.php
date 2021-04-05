@@ -31,7 +31,8 @@
                     </li>
                 @endif
                 <li class="nav-item">
-                    <a href="{{ route('backend.btc.withdrawal') }}?t=available_balance" class="nav-link">
+{{--                    <a href="{{ route('backend.btc.withdrawal') }}?t=available_balance" class="nav-link">--}}
+                    <a href="{{ route('backend.withdraw.index') }}" class="nav-link">
                         <i class="mdi mdi-pentagon"></i>
                         <span>Withdraw</span>
                     </a>
