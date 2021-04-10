@@ -1,13 +1,27 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
 <head>
-    <title>Crypto Asset | Sign Up</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/auth/css/style.css">
-    <link rel="stylesheet" href="/auth/css/extra.css">
+    <meta charset="UTF-8">
+    <!-- Responsive Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon & bookmark -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"  href="images/bookmark.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+    <!-- Website Title -->
+    <title>Register - Binary 24 Trades</title>
+    <!-- Stylesheets Start -->
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/auth1/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css"/>
     <style>
         .home-bg {
             background: url(/app-assets/images/backgrounds/bg-2.jpg) center center no-repeat fixed;
@@ -22,152 +36,75 @@
             color: #f8f9fa;
         }
     </style>
+
+
 </head>
 <body class="home-bg">
-<section class="ftco-section">
-    <div class="container">
-{{--        <div class="row justify-content-center">--}}
-{{--            <div class="col-md-6 text-center mb-5">--}}
-{{--                <h2 class="heading-section">Account Registration</h2>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="wrap d-md-flex">
+<!--Main Wrapper Start-->
+<div class="wrapper login-page style-2" id="top">
+    <div class="cp-container">
 
-                    <div class="text-wrap p-4 p-lg-5 d-flex img d-flex align-items-ends" style="background-image: url(/auth/images/bg.jpg);">
-
-                        <div class="vertical-stepper">
-                            <div class="justify-content-center text-center mt-4 mb-4">
-                                <h3>Account Registration</h3>
-                                You are just 4 simple steps away from placing your first trade
-                            </div>
-                            <div class="vertical-stepper__step">
-                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet vertical-stepper__step-bullet--selected">1</div></div>
-                                <div class="vertical-stepper__step-content">
-                                    <h3>Create your login</h3>
-                                    <span>Enter your email and choose a password to get started</span>
-                                </div>
-                            </div>
-                            <div class="vertical-stepper__step">
-                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">2</div></div>
-                                <div class="vertical-stepper__step-content">
-                                    <h3>Complete your application</h3>
-                                    <span>Complete our fast and secure application form</span>
-                                </div>
-                            </div>
-                            <div class="vertical-stepper__step">
-                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">3</div></div>
-                                <div class="vertical-stepper__step-content">
-                                    <h3>Confirm your ID</h3>
-                                    <span>Verify your identity online or upload your ID documents if required</span>
-                                </div>
-                            </div>
-                            <div class="vertical-stepper__step">
-                                <div class="vertical-stepper__step-bullet-wrapper"><div class="vertical-stepper__step-bullet">4</div></div>
-                                <div class="vertical-stepper__step-content vertical-stepper__step-content--last">
-                                    <h3>Fund and trade</h3>
-                                    <span>Once approved, fund your account using our flexible, low-cost funding methods and start trading</span>
-                                </div>
-                            </div>
-                        </div>
-
-{{--                        <div class="text w-100">--}}
-{{--                            <h2 class="mb-4">Account Registration</h2>--}}
-{{--                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>--}}
-{{--                        </div>--}}
-                    </div>
-                    <div class="login-wrap p-4 p-md-5">
-{{--                        <h3 class="mb-3">Create an account</h3>--}}
-                        @if ($errors->any())
-                            <ul class="alert alert-danger">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        @endif
-                        <form method="POST" action="{{ route('register') }}" class="signup-form">
-                            @csrf
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="first_name">First Name</label>
-                                        <input name="first_name" id="first_name" type="text" class="form-control" placeholder="First Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="first_name">Last Name</label>
-                                        <input name="last_name" id="last_name" type="text" class="form-control" placeholder="Last Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="email">Email Address</label>
-                                        <input name="email" id="email" type="email" class="form-control" placeholder="johndoe@email.com">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="username">Username</label>
-                                        <input name="username" id="username" type="text" class="form-control" placeholder="johndoe">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="phone">Phone no.</label>
-                                        <input id="phone" name="phone" type="text" class="form-control" placeholder="+01">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="password">Password</label>
-                                        <input id="password" name="password" type="password" class="form-control" placeholder="Password">
-                                    </div>
-                                </div>
-                             <div class="col-md-12">
-                                    <div class="form-group d-flex align-items-center">
-                                        <label class="label" for="password_confirmation">Confirm Password</label>
-                                        <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-12 my-4">
-                                    <div class="form-group">
-                                        <div class="w-100">
-                                            <label class="checkbox-wrap checkbox-primary">I agree all statements in terms of service
-                                                <input required type="checkbox" checked>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-secondary submit p-3">Create an account</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="social-wrap">
-                            <p class="or">
-                                <span>or</span>
-                            </p>
-                            <p class="mb-3 text-center">Already have an account ? <a href="{{ route('login') }}" class="card-link">Login</a></p>
-
-                            <p class="social-media d-flex justify-content-center">
-
-                            </p>
-                        </div>
-                    </div>
+        <div class="image-part">
+            <img src="/auth1/images/about-img.png" alt="">
+        </div>
+        <div class="form-part">
+            <div class="cp-header">
+                <div class="logo">
+                    <a href="#"><img class="light" src="/images/logo_1.png" alt="Binary24Trades"></a>
                 </div>
             </div>
+            <div class="cp-heading">
+                <h5>Welcome to Binary 24 Trades</h5>
+                <p>To keep connected with us please Sign up with your personal information.</p>
+            </div>
+            <div class="cp-body">
+                @if ($errors->any())
+                    <ul class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+                <form method="POST" action="{{ route('register') }}" >
+                    @csrf
+                    <div class="form-group">
+                        <input value="{{ old('first_name') }}" class="form-control" type="text" name="first_name" placeholder="First name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input value="{{ old('last_name') }}" class="form-control" type="text" name="last_name" placeholder="Last name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input value="{{ old('username') }}" name="username" class="form-control" type="text" placeholder="Username" required="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" value="{{ old('email') }}" name="email" type="email" placeholder="Email Address" required="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" value="{{ old('phone') }}" name="phone" type="text" placeholder="Phone" required="">
+                    </div>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <input class="form-control" name="password" type="password" placeholder="Password" required="">
+                        </div>
+                        <div class="col form-group">
+                            <input class="form-control" name="password_confirmation" type="password" placeholder="Confirm Password" required="">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <p class="text-left remember-me-checkbox"><label><input required type="checkbox" name="remember" value="0">I agree with the website's <a href="#">Terms and conditions</a></label></p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Register Now</button>
+                    </div>
+                    <div class="form-group">
+                        <p>Already a member? <a href="{{ route('login') }}">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
-</section>
-<script src="/auth/js/jquery.min.js"></script>
-<script src=/auth/"js/popper.js"></script>
-<script src="/auth/js/bootstrap.min.js"></script>
-<script src="/auth/js/main.js"></script>
+</div>
 </body>
 </html>
