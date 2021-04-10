@@ -35,8 +35,8 @@
                             <th class="wd-30p">Type</th>
                             <th class="wd-30p">Wallet ID</th>
                             <th class="wd-15p">Status</th>
-                            <th class="wd-10p">Fees</th>
                             <th class="wd-10p">Action</th>
+{{--                            <th class="wd-10p">Fees</th>--}}
                         </tr>
                         </thead>
                         <tbody>
@@ -45,25 +45,26 @@
                             $count = 1;
                         @endphp
                         @foreach ($withdrawals as $item)
+                            @if($item->user)
                             <tr>
                                 <td>{{ $count++ }}</td>
-                                <td><a href="{{ route('admin.users.show',$item->user->username) }}" >{{ optional($item->user)->name }}</a></td>
+                                <td><a href="{{ route('admin.users.show',$item->user ? $item->user->username : 1) }}" >{{ optional($item->user)->name }}</a></td>
                                 <td>${{ $item->amount }}</td>
                                 <td>{{ $item->type }}</td>
                                 <td>{{ $item->wallet }}</td>
                                 <td>{{ $item->status  }}</td>
-                                <td>
-                                    @if ($item->commission_proof)
-                                        <a target="_blank" href="{{ $item->commission_proof }}">View Commission Proof</a>
-                                    @endif
-                                        @if ($item->tax_proof)
-                                        <br/><a target="_blank" href="{{ $item->tax_proof }}">View Tax Proof</a>
-                                    @endif
-                                        @if ($item->cot_proof)
-                                            <br/><a target="_blank" href="{{ $item->cot_proof }}">View Cost of Transfer Proof</a>
-                                        @endif
-                                 <br/>   <a data-toggle="modal" data-target="#modaldemo1" href="" data-placement="top" class="btn btn-success btn-sm">Approve Proof</a>
-                                </td>
+{{--                                <td>--}}
+{{--                                    @if ($item->commission_proof)--}}
+{{--                                        <a target="_blank" href="{{ $item->commission_proof }}">View Commission Proof</a>--}}
+{{--                                    @endif--}}
+{{--                                        @if ($item->tax_proof)--}}
+{{--                                        <br/><a target="_blank" href="{{ $item->tax_proof }}">View Tax Proof</a>--}}
+{{--                                    @endif--}}
+{{--                                        @if ($item->cot_proof)--}}
+{{--                                            <br/><a target="_blank" href="{{ $item->cot_proof }}">View Cost of Transfer Proof</a>--}}
+{{--                                        @endif--}}
+{{--                                 <br/>   <a data-toggle="modal" data-target="#modaldemo1" href="" data-placement="top" class="btn btn-success btn-sm">Approve Proof</a>--}}
+{{--                                </td>--}}
                                 <td>
                                     <a href="{{ route('admin.withdrawals.approve', $item->id) }}" class="{{ $item->approved ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->approved ? 'Un Approve': 'Approve' }}</a>
 {{--                                    <a href="{{ route('admin.deposit.destroy', $item) }}" onclick="return confirm(&quot;Click Ok to delete Deposit.&quot;)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>--}}
@@ -109,7 +110,7 @@
                                     </div>
                                 </div><!-- modal-dialog -->
                             </div><!-- modal -->
-
+@endif
                         @endforeach
 
                         </tbody>

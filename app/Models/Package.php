@@ -51,7 +51,7 @@ class Package extends Model
 
 
     public function getPriceAttribute(){
-        return  $this->minimum_purchase.' - '.$this->maximum_purchase .' USD';
+        return  '$'.$this->minimum_purchase.' - '.$this->maximum_purchase;
     }
 
     public function totalReturn(){

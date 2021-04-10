@@ -62,9 +62,10 @@
                 <div style="margin-top: 5px" class="row btn-bloc">
 
                 <a href="{{ route('admin.trades.index') }}?user={{$user->id}}" class="btn btn-success col-md-3">Trade For {{ $user->username }}</a>
-                <a href="{{ route('admin.user.trade.toggle', $user->id) }}" class="btn  {{ $user->can_trade ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_trade ? 'Suspend' : 'Un Suspend' }} Trade</a>
+                <a href="{{ route('admin.user.trade.toggle', $user->id) }}" class="btn  {{ $user->can_trade ? 'btn-danger' : 'btn-success' }} col-md-2">{{ $user->can_trade ? 'Suspend' : 'Un Suspend' }} Trade</a>
                 <a href="{{ route('admin.user.upgrade.toggle', $user->id) }}" class="btn {{ $user->can_upgrade ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_upgrade ? 'Deactivate' : 'Activate' }} Plan Upgrade</a>
-                <a href="{{ route('admin.user.withdraw.toggle', $user->id) }}" class="btn {{ $user->can_withdraw ? 'btn-danger' : 'btn-success' }} col-md-3">{{ $user->can_withdraw ? 'Disable' : 'Enable' }} Withdraw</a>
+                <a href="{{ route('admin.user.withdraw.toggle', $user->id) }}" class="btn {{ $user->can_withdraw ? 'btn-danger' : 'btn-success' }} col-md-2">{{ $user->can_withdraw ? 'Disable' : 'Enable' }} Withdraw</a>
+                <a href="" data-toggle="modal" data-target="#fundWithdrawable" class="btn btn-info col-md-2">Add Withdraw</a>
 
                 </div>
                 {{--                               </div>--}}
@@ -341,6 +342,44 @@
     </div><!-- br-mainpanel -->
 
 
+    <div id="fundWithdrawable" class="modal fade">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content tx-size-sm">
+                <div class="modal-header pd-x-20">
+                    <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Update  {{ $user->name }} Withdrawable</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('admin.user.updatewithdrawable') }}" method="POST">
+
+                <div class="modal-body pd-20">
+
+                     @csrf
+                        <div class="form-layout form-layout-1">
+                            <div class="row mg-b-25">
+
+                                <input name="user_id" type="hidden" value="{{ $user->id }}">
+
+                                <div class="col-md-12">
+                                    <div class="form-group mg-b-10-force">
+                                        <label class="form-control-label"> Withdrawable Amount: <span class="tx-danger">*</span></label>
+                                        <input value="{{ $user->withdrawable }}" class="form-control" required type="number" step="any" name="withdrawable" placeholder="Amount">
+                                    </div>
+                                </div><!-- col-8 -->
+                            </div>
+                        </div>
+
+                 </div><!-- modal-body -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary tx-size-xs">Submit</button>
+                    <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>
+                </div>
+                </form>
+
+            </div>
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
     <div id="fundBalance" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content tx-size-sm">

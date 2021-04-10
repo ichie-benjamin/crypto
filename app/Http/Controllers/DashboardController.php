@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function gateway($gateway)
     {
 
-        return redirect()->back()->with('failure', "$gateway is not active for your account, please use bitcoin or wire transfer");
+        return redirect()->back()->with('failure', "$gateway is not active for your account, contact admin to use this payment method");
 
     }
         public function dashboard(){
@@ -66,8 +66,8 @@ class DashboardController extends Controller
 
     public function viewDeposit($id){
         $deposit = Deposit::findOrFail($id);
-
-        return view('backend.deposit.view', compact('deposit'));
+        $deposits = Deposit::whereUserId(auth()->id())->get();
+        return view('backend.deposit.view', compact('deposit','deposits'));
     }
 
     public function editProfile(){

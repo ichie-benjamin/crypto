@@ -16,7 +16,7 @@ class Withdrawal extends Model
 'wallet',
 'status',
 'method',
-'approved',
+'approved','type'
     ];
 
     public function user()

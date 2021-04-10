@@ -33,7 +33,18 @@ class UsersController extends Controller
         $user->code = null;
         $user->account_officer = 'Account connected';
         $user->save();
+        $this->message($user, 'Congratulations, Your account has been successfully connected, you can login to your dashboard and make your first deposit if you have not done that already','Account Connected');
         return redirect()->back()->with('success','Account successfully connected');
+    }
+
+    public function sendMessage($id){
+        $user = User::findOrFail($id);
+        return view('admin.users.send_message', compact('user'));
+    }
+    public function sendMsg(Request $request){
+        $user = User::findOrFail($request['user_id']);
+        $this->message($user, $request['message'],$request['subject']);
+        return redirect()->back()->with('success', "Message successfully sent to ". $user->name);
     }
 
     public function activePlans(){
@@ -93,6 +104,19 @@ class UsersController extends Controller
         return redirect()->back()->with('success', "A verification email has been sent to the $email");
     }
 
+//    public function fundAccount(Request $request){
+//        $this->validate($request, [
+//            'user_id' => ['required', 'integer'],
+//            'amount' => ['required'],
+//            ]);
+//        $data = $request->all();
+//        $user = User::findOrFail($data['user_id']);
+//        $user->balance = $user->balance + $data['amount'];
+//        $user->save();
+//        Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
+//        return redirect()->back()->with('success', 'Successful, balance modified');
+//    }
+
     public function fundAccount(Request $request){
         $this->validate($request, [
             'user_id' => ['required', 'integer'],
@@ -100,10 +124,25 @@ class UsersController extends Controller
             ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
-        $user->balance = $user->balance + $data['amount'];
+        if($data['type'] == 'credit'){
+            $user->balance = (int)$user->balance + (int)$data['amount'];
+        }else{
+            $user->balance = (int)$user->balance - (int)$data['amount'];
+        }
         $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, balance modified');
+    }
+    public function updateWithdrawable(Request $request){
+        $this->validate($request, [
+            'user_id' => ['required', 'integer'],
+            'withdrawable' => ['required'],
+            ]);
+        $data = $request->all();
+        $user = User::findOrFail($data['user_id']);
+        $user->withdrawable = $data['withdrawable'];
+        $user->save();
+        return redirect()->back()->with('success', 'Successful, Withdrawable balance modified');
     }
     public function fundBonus(Request $request){
         $this->validate($request, [
@@ -112,7 +151,11 @@ class UsersController extends Controller
             ]);
         $data = $request->all();
         $user = User::findOrFail($data['user_id']);
-        $user->bonus = $user->bonus + $data['amount'];
+        if($data['type'] == 'credit'){
+            $user->bonus = (int)$user->bonus + (int)$data['amount'];
+        }else{
+            $user->bonus = (int)$user->bonus - (int)$data['amount'];
+        }
         $user->save();
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, Bonus modified');
@@ -131,6 +174,11 @@ class UsersController extends Controller
     }
     public function toggleActive($id){
         $user = User::findOrFail($id);
+        if(!$user->is_active){
+            if(setting('user_activated_mail')){
+                $this->message($user, 'Congratulations, Your account has been activated, you can login to your dashboard and make your first deposit, if you have not done that yet request','Account Activated');
+            }
+        }
         $user->is_active = !$user->is_active;
         $user->save();
         return redirect()->back()->with('success', 'Successful, User Data Updated');
@@ -143,13 +191,16 @@ class UsersController extends Controller
             }
         }
         $user->can_withdraw = !$user->can_withdraw;
-
         $user->save();
-
         return redirect()->back()->with('success', 'Successful, User Data Updated');
     }
     public function toggleUpgrade($id){
         $user = User::findOrFail($id);
+        if(!$user->can_upgrade){
+            if(setting('plan_upgrade_mail')){
+                $this->message($user, 'Your account has been activated for upgrade, you can login to your dashboard to upgrade your account','Account Activated For Upgrade');
+            }
+        }
         $user->can_upgrade = !$user->can_upgrade;
         $user->save();
         return redirect()->back()->with('success', 'Successful, User Data Updated');

@@ -10,6 +10,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
 //Route::group(['prefix' => 'dashboard', 'as' => 'backend.'], function() {
     Route::get('/', [DashboardController::class, 'dashboard'])->name('dashboard');
 
+    Route::get('update/password',  [UserController::class, 'updatePassword'])->name('update_password');
+    Route::post('update/password',  [UserController::class, 'updatePass'])->name('update_pass');
+
     Route::get('/account/overview', [DashboardController::class, 'overview'])->name('account.overview');
 
     Route::get('/deposit/{id}/proof/upload', [DepositsController::class, 'proof'])->name('deposits.proof');
@@ -21,9 +24,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/deposit/view/{id}', [DashboardController::class, 'viewDeposit'])->name('deposit.view');
 
     Route::get('/withdrawals', [WithdrawalController::class, 'myWithdrawals'])->name('withdrawals.index');
+    Route::get('/withdraw', [WithdrawalController::class, 'withdraw'])->name('withdraw.index');
+    Route::get('/withdraw/bonus', [WithdrawalController::class, 'withdrawBonus'])->name('withdraw.bonus');
+    Route::get('/bonus/withdrawals', [WithdrawalController::class, 'myBonusWithdrawals'])->name('bonus.withdrawals.index');
     Route::get('/withdrawal/processing/{id}', [WithdrawalController::class, 'processing'])->name('withdrawal.processing');
     Route::post('/withdrawal/processed/{id}', [WithdrawalController::class, 'processed'])->name('withdrawal.processed');
     Route::post('/withdrawal/store', [WithdrawalController::class, 'store'])->name('withdrawals.store');
+    Route::post('/bonus/withdrawal/store', [WithdrawalController::class, 'bonusWithdraw'])->name('bonus.withdrawal.store');
 
     Route::post('/withdrawal/update/{id}', [WithdrawalController::class, 'update'])->name('withdrawal.update');
 
@@ -61,5 +68,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::resources([
         'deposits' => DepositsController::class,
     ]);
+
+    Route::get('/upgrade', [DepositsController::class, 'upgrade'])->name('upgrade');
+
 });
 

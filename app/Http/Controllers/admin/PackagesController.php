@@ -130,7 +130,17 @@ class PackagesController extends Controller
         Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => 'deposit', 'account_type' => 'balance','note' => 'deposit']);
 
         $deposit = Deposit::findOrFail($data['id']);
+        if($deposit->plan_id){
+            $package = Package::whereId($deposit->plan_id)->first();
+            if($package){
+                $user->plan = $package->name;
+                $user->can_upgrade = false;
+            }
+        }
         $deposit->status = true;
+
+        $user->save();
+
         $deposit->save();
 
         return redirect()->back()->with('success', 'Successfully Approved Deposit');

@@ -36,6 +36,15 @@ class DepositsController extends Controller
         }
         return view('backend.deposit.fund.1');
     }
+    public function upgrade()
+    {
+//        if(!auth()->user()->can_upgrade){
+//            return redirect()->route('backend.deposit.fund');
+//        }
+        $packages = Package::where('minimum_purchase','>',0)->get();
+
+        return view('backend.deposit.create', compact('packages'));
+    }
 
     public function depositProof()
     {
@@ -97,7 +106,6 @@ class DepositsController extends Controller
     {
             $data = $this->getDData($request);
 
-            $deposit = Deposit::create($data);
 
         $package = Package::findOrFail($data['plan_id']);
         if($package->minimum_purchase > $data['amount']){
@@ -106,6 +114,8 @@ class DepositsController extends Controller
         if($package->maximum_purchase < $data['amount']){
             return redirect()->back()->withInput()->with('failure', 'Maximum deposit for this package is '.$package->maximum_purchase);
         }
+
+        $deposit = Deposit::create($data);
 
 
         return redirect()->route('backend.deposits.proof',$deposit->id)->with('success', 'Upload payment proof');
