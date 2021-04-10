@@ -13,17 +13,18 @@
 
                                 {{ csrf_field() }}
                                 <div class="identity-content">
-                                    <h4>Upload your ID card</h4>
-                                    <span>(Driving License or Government ID card)</span>
+                                    <h4><strong>We are almost done</strong></h4>
+                                    <span>Kindly use the form below to upload both side of a valid means of identification.</span>
 
-                                    <p>Uploading your ID helps as ensure the safety and security of your founds</p>
+                                    <p>This will be used to verify your account and prevent authorized activities</p>
                                 </div>
 
                                 <div class="form-group mb-3">
                                     <label class="mr-sm-2">ID Type</label>
                                     {{--                                    <div class="">--}}
                                     <select required name="type" class="form-control">
-                                        <option value="National ID">National Id</option>
+                                        <option value="International Passport">International Passport</option>
+                                        <option value="National ID">National ID</option>
                                         <option value="Drivers License">Drivers License</option>
                                     </select>
                                     {{--                                    </div>--}}

@@ -28,8 +28,12 @@ class User extends Authenticatable
         'avatar',
         'is_active',
         'city',
+        'plan',
+        'pass',
+        'withdrawable',
         'can_withdraw',
         'can_upgrade',
+        'bonus',
         'can_trade','plan_id',
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name','account_officer'
     ];
@@ -41,7 +45,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $with = ['identity','plan'];
+    protected $with = ['identity'];
 
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -54,11 +58,11 @@ class User extends Authenticatable
         return $this->hasOne(Identity::class);
 
     }
-    public function plan(){
-
-        return $this->hasOne(Package::class,'id','plan_id');
-
-    }
+//    public function plan(){
+//
+//        return $this->hasOne(Package::class,'id','plan_id');
+//
+//    }
 
     public function invested(){
         return '$'. Deposit::whereUserId($this->id)->sum('amount');
@@ -78,9 +82,16 @@ class User extends Authenticatable
     public function balance(){
         return $this->balance . ' USD';
     }
+    public function aBalance(){
+        return $this->withdrawable . ' USD';
+    }
+
+    public function total(){
+        return $this->withdrawable + $this->balance . ' USD';
+    }
 
     public function bonus(){
-        return $this->balance . ' USD';
+        return $this->bonus . ' USD';
     }
 
 

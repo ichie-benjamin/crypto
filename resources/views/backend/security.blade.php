@@ -9,7 +9,8 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Security</h4>
+                            <h4 class="card-title">Security  </h4>
+                                <a style="float: right" class="float-right" href="{{ route('backend.update_password') }}">Update Password</a>
                         </div>
                         <div class="card-body">
                             <div class="row align-items-center">
@@ -56,10 +57,10 @@
                                     <div class="phone_verified">
                                         <h5> <span><i class="fa fa-phone"></i></span> {{ auth()->user()->phone }}</h5>
                                         <div class="verify">
-                                            <div class="verified">
-                                                <span><i class="la la-check"></i></span>
-                                                <a href="#">UnVerified</a>
-                                            </div>
+{{--                                            <div class="verified">--}}
+{{--                                                <span><i class="la la-check"></i></span>--}}
+{{--                                                <a href="#">UnVerified</a>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>

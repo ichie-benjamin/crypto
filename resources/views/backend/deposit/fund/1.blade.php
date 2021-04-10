@@ -24,11 +24,16 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="col-6"> <h4 class="card-title">Make Deposit </h4></div>
+                            <div class="col-6"> <h4 class="card-title">Our Deposit Options </h4></div>
                             <div class="col-6">
                               <a href="{{ route('backend.pending.deposit') }}" style="color: red" class="float-right tx-danger">Pending Deposits</a>
                             </div>
 {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
+                        </div>
+                        <div class="card-body" id="deposits">
+                            Adding funds to your cryptoassest.com Live Account is extremely easy, fast and secure!
+                            Take a look at all our deposit options below and please do not hesitate to contact us,
+                            should you require any assistance or more information. Our Support Team is always ready to help you!
                         </div>
                         <div class="card-body" id="deposits">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -150,18 +155,36 @@
 
                                     <ul>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            All Payment method on Cryto Assets is secured and realiable
+                                            <h4>Payment process</h4>
+                                            For faster processing we recommend that all account holders deposit funds via Bitcoin cryptocurrency option from inside their Secure Client Area. From your Secure Client Area you will be able to fund your account in real time using cryptocurrency option (Bitcoin) which is the fastest funding option
                                         </li>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            If you are using a public server for your transactions, please ensure you logout before leaving the browser
+
+                                            <h4>Security of Funds</h4>
+                                            When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.
                                         </li>
                                         <li>
-                                            <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Deposit approvals usually takes less than 24hrs during working days
+
+                                            <h4>Bank Fees</h4>
+                                            <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you
+                                                may incur fees on payments to and from some international banking institutions crypto exchanger such as
+                                                coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto
+                                                exchanger fees.</p>
+
+
                                         </li>
+                                        <li>
+                                            <h4>Third Party Payments</h4>
+                                            <p>Crypto Asset Trade does not accept payments from third parties.
+                                                Please ensure that all deposits into your trading account come from a bank account in your name.
+                                                Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one
+                                                of the parties on the Bank Account / Credit Card.</p>
+
+                                        </li>
+
+
                                     </ul>
+
                                 </div>
                                 <div class="tab-pane fade" id="tab2">
                                     <form method="post" action="{{ route('backend.deposit.save') }}" class="py-5 col-md-6 col-sm-12">

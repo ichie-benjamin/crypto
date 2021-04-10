@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="/images/home_banner_bg.png">
+    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -41,7 +41,7 @@
                     It is important that you read this privacy policy together with any other privacy policy we may provide on specific occasions when we are collecting or processing your data about you so that you are fully aware of how and why we are using your data.
                     <br><br>
                     1. WHO WE ARE
-                    Crypto Assets, is a company registered in  London, United Kingdom and having its registered address at Binary Solution is a product of Investment  Solutions Limited incorporated in Seychelles (hereinafter Crypto Assets). Crypto Assets is the controller and responsible for the data of its Client disclosed to it in order to register for a Trading Account, Demo Account and/or to make use of any other services offered by the Crypto Assets Group (as defined in Appendix A) through the website (hereinafter “Website”) (this term shall at all times include Website’s desktop and mobile versions). Crypto Assets exercises control over the processing of data in undertakings affiliated to it and which belong to the Crypto Assets Group of companies.
+                    Crypto Assets, is a company registered in  London, United Kingdom and having its registered address at Binary Solution is a product of Investment  Solutions Limited incorporated in Mauritius (hereinafter Crypto Assets). Crypto Assets is the controller and responsible for the data of its Client disclosed to it in order to register for a Trading Account, Demo Account and/or to make use of any other services offered by the Crypto Assets Group (as defined in Appendix A) through the website (hereinafter “Website”) (this term shall at all times include Website’s desktop and mobile versions). Crypto Assets exercises control over the processing of data in undertakings affiliated to it and which belong to the Crypto Assets Group of companies.
                     <br><br>
                     This Privacy Policy addresses the privacy issues of the Crypto Assets Group so when we mention “Crypto Assets”, “Company”, “we”, “us” or “our” in this Privacy Policy, we are referring to the relevant company in the Crypto Assets group responsible for collecting and/or processing your data when you use the Trading Platform through the Website, either for a Trading Account or a Demo Account (or their mobile/desktop versions) (hereinafter the Service(s)). In Crypto Assets we respect your privacy and therefore all companies within the Crypto Assets group are committed to protect your data, which it collects, uses and/or has access to.
                     <br><br>

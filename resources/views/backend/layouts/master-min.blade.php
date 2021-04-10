@@ -47,6 +47,7 @@
             /*background-image: url(/assets/images/cryptic-decentralized-bg11-3.jpg);*/
         }
     </style>
+{{--    <script src="//code.jivosite.com/widget/vhb4amL596" async></script>--}}
 </head>
 
 
@@ -74,7 +75,7 @@
                                 <div class="dropdown">
                                     <div class="icon">
 
-                                        <span>{{ auth()->user()->name }}</span>
+                                        <span>{{ \Illuminate\Support\Str::limit(auth()->user()->name, 10,'..') }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -99,11 +100,11 @@
                                         <div class="user-balance">
                                             <div class="available">
                                                 <p>Balance</p>
-                                                <span>{{ auth()->user()->balance() }}</span>
+                                                <span>{{ auth()->user()->total() }}</span>
                                             </div>
                                             <div class="total">
-                                                <p>Deposit</p>
-                                                <span>0.00 USD</span>
+                                                <p>Bonus</p>
+                                                <span>${{ auth()->user()->bonus }}</span>
                                             </div>
                                         </div>
                                         <a href="{{ route('backend.account.overview') }}" class="dropdown-item">
@@ -245,7 +246,19 @@
 
 @yield('js')
 
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6065c68c067c2605c0be6bed/1f26ov6ja';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 
 
 </body>

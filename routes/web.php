@@ -14,6 +14,11 @@ Route::get('/test/mail', [HomeController::class, 'testMail']);
 
 
 Route::get('/fags', [HomeController::class, 'fags'])->name('fags');
+Route::get('/withdrawal', [HomeController::class, 'withdrawal'])->name('withdrawal');
+Route::get('/deposits', [HomeController::class, 'deposit'])->name('deposits');
+Route::get('/fag/verification', [HomeController::class, 'verification'])->name('verification');
+
+
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/terms', [HomeController::class, 'terms'])->name('terms');

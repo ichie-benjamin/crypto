@@ -12,10 +12,8 @@ return [
 
     'colors' => [
 
-        'highlight' => '#607D8B',
-//        'highlight' => '#004ca3',
-        'button'    => '#607D8B',
-//        'button'    => '#004cad',
+        'highlight' => '#004ca3',
+        'button'    => '#004cad',
 
     ],
 
@@ -27,8 +25,8 @@ return [
 
         'logo'        => [
             'path'   => '%PUBLIC%/images/fav.png',
-            'width'  => '50',
-            'height' => '50',
+            'width'  => '70px',
+            'height' => '70px',
         ],
 
         'twitter'  => null,

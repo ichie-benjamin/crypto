@@ -39,6 +39,9 @@
                                             <td>
                                                 <i class="cc BTC"></i> {{ $item->method }}
                                             </td>
+                                                <td>
+                                                <i class="cc BTC"></i> {{ $item->type }}
+                                            </td>
 
                                             <td class="{{ $item->status ? 'text-danger' : 'text-success' }}">{{ $item->amount }} USD</td>
                                                 <td class="">

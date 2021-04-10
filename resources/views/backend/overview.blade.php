@@ -50,8 +50,14 @@
 
                             <div class="d-flex justify-content-between my-3">
                                 <div>
-                                    <h3 class="mb-1">Available Balance</h3>
-                                    <h4>0.000 USD</h4>
+                                    <h5 class="mb-1">Available Balance</h5>
+                                    <h4>{{ auth()->user()->aBalance() }}</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between my-3">
+                                <div>
+                                    <h5 class="mb-1">Account Balance</h5>
+                                    <h4>{{ auth()->user()->balance() }}</h4>
                                 </div>
                             </div>
 
@@ -70,15 +76,15 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Total Withdrawal</p>
-                                    <h4>0.000 USD</h4>
+                                    <h4>{{ Auth()->user()->withdrawals()  }}</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
                             <div class="card text-center pt-2">
                                 <div class="card-body">
-                                    <p class="mb-1">Total Deposit</p>
-                                    <h4>0.03654 USD</h4>
+                                    <p class="mb-1">Total Transactions</p>
+                                    <h4>{{ count($deposits)  }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +92,7 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Total Trades</p>
-                                    <h4>0</h4>
+                                    <h4>{{ count($trades)  }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +100,7 @@
                             <div class="card text-center pt-2">
                                 <div class="card-body">
                                     <p class="mb-1">Active Plan</p>
-                                    <h4>None</h4>
+                                    <h4>{{ auth()->user()->plan }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -178,23 +184,41 @@
                                     <table class="table table-striped mb-0 table-responsive-sm">
                                         <thead>
                                         <tr>
-                                            <th>Transaction ID</th>
-                                            <th>Time</th>
-                                            <th>Type</th>
+                                            <td></td>
+                                            <th>Currency</th>
+                                            <th>Currency Pair</th>
+                                            <th>Trade Time</th>
                                             <th>Amount</th>
                                             <th>Status</th>
-                                            <th>Balance</th>
+                                            <th>Opening Price</th>
+                                            <th>Closing Price</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach ($trades as $item)
                                             <tr>
-                                                <td>#565845522</td>
-                                                <td>January 10, 2020</td>
-                                                <td>Realized P&L</td>
-                                                <td>0.254782 BTC</td>
-                                                <td>Completed</td>
-                                                <td>0.125476 BTC</td>
+                                                @if ($item->is_win)
+                                                    <td><span class="buy-thumb"><i class="mdi mdi-arrow-up"></i></span>
+                                                    </td>
+                                                @else
+                                                    <td><span class="sold-thumb"><i class="mdi mdi-arrow-down"></i></span>
+                                                    </td>
+                                                @endif
+
+                                                <td><img src="{{ optional($item->currency)->image }}" height="30" />
+                                                </td>
+                                                <td>{{ $item->currency_pair }}
+                                                </td>
+                                                <td>{{ $item->created_at }}
+                                                </td>
+                                                <td>${{ $item->traded_amount }}</td>
+
+
+                                                <td class="{{ $item->is_win ? 'text-success' : 'text-danger' }}">{{ $item->is_win ? 'Win' : 'Loss' }}</td>
+
+                                                <td>{{ $item->o_price }}</td>
+                                                <td>{{ $item->c_price }}</td>
+                                                {{--                                                    <td>{{ $item->created_at }}</td>--}}
                                             </tr>
                                         @endforeach
                                         </tbody>

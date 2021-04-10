@@ -14,8 +14,12 @@
     {{--    <link rel="stylesheet" href="/back/vendor/nice-select/css/nice-select.css">--}}
     <link rel="stylesheet" href="/back/vendor/toastr/toastr.min.css">
     <link rel="stylesheet" href="/back/css/style.css">
+    <link rel="stylesheet" href="/css/gen.css">
+
+
     @yield('styles')
 
+{{--    <script src="//code.jivosite.com/widget/vhb4amL596" async></script>--}}
     <style>
         a {
             color: #ffff;
@@ -34,7 +38,7 @@
             margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
-            background: #673AB7
+            background: #f8f1f1
         }
         .payment-methods .card-header {
             display: flex;
@@ -74,7 +78,7 @@
                                 <div class="dropdown">
                                     <div class="icon">
 
-                                        <span>{{ auth()->user()->name }}</span>
+                                        <span>{{ \Illuminate\Support\Str::limit(auth()->user()->name, 10,'..') }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -99,11 +103,11 @@
                                         <div class="user-balance">
                                             <div class="available">
                                                 <p>Balance</p>
-                                                <span>{{ auth()->user()->balance() }}</span>
+                                                <span>{{ auth()->user()->total() }}</span>
                                             </div>
                                             <div class="total">
-                                                <p>Deposit</p>
-                                                <span>0.00 USD</span>
+                                                <p>Bonus</p>
+                                                <span>${{ auth()->user()->bonus }}</span>
                                             </div>
                                         </div>
                                         <a href="{{ route('backend.account.overview') }}" class="dropdown-item">
@@ -114,6 +118,9 @@
                                         </a>
                                         <a href="{{ route('backend.profile.edit') }}" class="dropdown-item">
                                             <i class="mdi mdi-settings"></i> Setting
+                                        </a>
+                                        <a href="{{ route('backend.update_pass') }}" class="dropdown-item">
+                                            <i class="mdi mdi-security"></i> Update Password
                                         </a>
                                         <a  onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" href="{{ route('logout') }}" class="dropdown-item logout">
@@ -146,7 +153,12 @@
                     <a href="{{ route('backend.account.overview') }}" data-toggle="tooltip" data-placement="right" title="Overview">
                         <span><i class="mdi mdi-bullseye"></i></span>
                     </a>
+                </li>      <li>
+                    <a href="{{ route('backend.upgrade') }}" data-toggle="tooltip" data-placement="right" title="Upgrade">
+                        <span><i class="mdi mdi-arrow-up"></i></span>
+                    </a>
                 </li>
+
                 <li>
                     <a href="{{ route('deposit.create') }}" data-toggle="tooltip" data-placement="right" title="Deposit">
                         <span><i class="mdi mdi-tumblr-reblog"></i></span>
@@ -163,7 +175,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('backend.withdrawals.index') }}" data-toggle="tooltip" data-placement="right" title="Withdrawals">
+                    <a href="{{ route('backend.withdraw.index') }}" data-toggle="tooltip" data-placement="right" title="Withdrawals">
                         <span><i class="mdi mdi-pentagon"></i></span>
                     </a>
                 </li>
@@ -301,7 +313,19 @@
 @yield('js')
 
 
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6065c68c067c2605c0be6bed/1f26ov6ja';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- START SECTION BANNER -->
-    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" data-image-src="/images/home_banner_bg.png">
+    <section class="section_breadcrumb dark_light_bg" data-z-index="1" data-parallax="scroll" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -35,7 +35,7 @@
             <div class="row small_space">
                 <div class="col-lg-10 col-md-12 offset-lg-1">
 
-                    This Agreement is entered into by and these Terms &amp; Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between <b>Crypto Assets</b>, with Company No. 10417255, and registered at: Crypto Assets is a product of Investment  Solutions Limited incorporated in Seychelles (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://cryptoassest.com (hereinafter referred as the “Website”).
+                    This Agreement is entered into by and these Terms &amp; Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between <b>Crypto Assets</b>, with Company No. C092215, and registered at: Crypto Assets is a product of Investment  Solutions Limited incorporated in Mauritius (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://cryptoassest.com (hereinafter referred as the “Website”).
 
                     <br><br>
 
