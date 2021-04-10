@@ -28,7 +28,7 @@ class Withdrawal extends Model
         return '$'.$amount;
     }
     public function getTaxFeeAttribute(){
-        $amount = ($this->amount * setting('withdrawal_tax', 18)) / 100;
+        $amount = ($this->amount * setting('withdrawal_tax', 20)) / 100;
         return '$'.$amount;
     }
     public function getCotFeeAttribute(){

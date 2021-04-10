@@ -15,6 +15,9 @@ class SettingsController extends Controller
     public function mails(){
         return view('admin.settings.mails');
     }
+    public function fees(){
+        return view('admin.settings.fees');
+    }
 
     public function store(Request $request){
         setting($request->except('_token'))->save();
