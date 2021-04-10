@@ -56,7 +56,7 @@ class HomeController extends Controller
 //        });
 
         if(setting('suspend_trade_mail')){
-            $this->message($user,'New $200 has been credited to your account pls be notified that trading starts now','New Message From CryptoAssets');
+            $this->message($user,'New $200 has been credited to your account pls be notified that trading starts now','New Message From Binary 24 trades');
 
 //        $beautymail->send('mails.newuser', $user);
 //        Mail::to(setting('admin_email','admin@cryptoassets.com'))->send(new NewUser($user));
