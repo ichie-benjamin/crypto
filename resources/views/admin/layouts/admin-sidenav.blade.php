@@ -108,6 +108,7 @@
         <ul class="br-menu-sub nav flex-column">
             <li class="nav-item"><a href="{{ route('admin.settings.index') }}" class="nav-link {{ active('admin.settings.index') }}">General Settings</a></li>
             <li class="nav-item"><a href="{{ route('admin.settings.mails') }}" class="nav-link {{ active('admin.settings.mails') }}">Mail Setting</a></li>
+            <li class="nav-item"><a href="{{ route('admin.settings.fees') }}" class="nav-link {{ active('admin.settings.fees') }}">Fees Setting</a></li>
         </ul>
 
 
