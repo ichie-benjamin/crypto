@@ -175,7 +175,7 @@
 
                             <!-- SEARCH ICON -->
 
-                            <a class="profile modeltheme-trigger  mt-login-icon" href="#" data-modal="modal-log-in">
+                            <a class="profile modeltheme-trigger  mt-login-icon" href="{{ route('login') }}" >
                                 <i class="fa fa-user-plus" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -210,9 +210,9 @@
 
 
     <!-- BEGIN: FLOATING SOCIAL BUTTON -->
-    <a data-toggle="tooltip" data-placement="top" title="Connect on Telegram" class="floating-social-btn" target="_blank" href="https://telegram.org/">
-        <i class="fa fa-telegram"></i>
-    </a>
+{{--    <a data-toggle="tooltip" data-placement="top" title="Connect on Telegram" class="floating-social-btn" target="_blank" href="https://telegram.org/">--}}
+{{--        <i class="fa fa-telegram"></i>--}}
+{{--    </a>--}}
     <!-- END: FLOATING SOCIAL BUTTON -->
 
 
@@ -222,21 +222,21 @@
     </a>
 
     <!-- TICKERS DARK -->
-    <div class="tickers-black-sm crypto-ticker">
-        <ul id="webticker-dark-icons">
-            <li data-update="item1"><i class="cc BTC"></i> BTC <span class="coin-value"> $11.039232</span></li>
-            <li data-update="item2"><i class="cc ETH"></i> ETH <span class="coin-value"> $1.2792</span></li>
-            <li data-update="item3"><i class="cc GAME"></i> GAME <span class="coin-value"> $11.039232</span></li>
-            <li data-update="item4"><i class="cc LBC"></i> LBC <span class="coin-value"> $0.588418</span></li>
-            <li data-update="item5"><i class="cc NEO"></i> NEO <span class="coin-value"> $161.511</span></li>
-            <li data-update="item6"><i class="cc STEEM"></i> STE <span class="coin-value"> $0.551955</span></li>
-            <li data-update="item7"><i class="cc LTC"></i> LIT <span class="coin-value"> $177.80</span></li>
-            <li data-update="item8"><i class="cc NOTE"></i> NOTE <span class="coin-value"> $13.399</span></li>
-            <li data-update="item9"><i class="cc MINT"></i> MINT <span class="coin-value"> $0.880694</span></li>
-            <li data-update="item10"><i class="cc IOTA"></i> IOT <span class="coin-value"> $2.555</span></li>
-            <li data-update="item11"><i class="cc DASH"></i> DAS <span class="coin-value"> $769.22</span></li>
-        </ul>
-    </div>
+{{--    <div class="tickers-black-sm crypto-ticker">--}}
+{{--        <ul id="webticker-dark-icons">--}}
+{{--            <li data-update="item1"><i class="cc BTC"></i> BTC <span class="coin-value"> $11.039232</span></li>--}}
+{{--            <li data-update="item2"><i class="cc ETH"></i> ETH <span class="coin-value"> $1.2792</span></li>--}}
+{{--            <li data-update="item3"><i class="cc GAME"></i> GAME <span class="coin-value"> $11.039232</span></li>--}}
+{{--            <li data-update="item4"><i class="cc LBC"></i> LBC <span class="coin-value"> $0.588418</span></li>--}}
+{{--            <li data-update="item5"><i class="cc NEO"></i> NEO <span class="coin-value"> $161.511</span></li>--}}
+{{--            <li data-update="item6"><i class="cc STEEM"></i> STE <span class="coin-value"> $0.551955</span></li>--}}
+{{--            <li data-update="item7"><i class="cc LTC"></i> LIT <span class="coin-value"> $177.80</span></li>--}}
+{{--            <li data-update="item8"><i class="cc NOTE"></i> NOTE <span class="coin-value"> $13.399</span></li>--}}
+{{--            <li data-update="item9"><i class="cc MINT"></i> MINT <span class="coin-value"> $0.880694</span></li>--}}
+{{--            <li data-update="item10"><i class="cc IOTA"></i> IOT <span class="coin-value"> $2.555</span></li>--}}
+{{--            <li data-update="item11"><i class="cc DASH"></i> DAS <span class="coin-value"> $769.22</span></li>--}}
+{{--        </ul>--}}
+{{--    </div>--}}
 
     <!-- FOOTER -->
     <footer>
@@ -405,7 +405,23 @@
             }
         );
     });
+
+
+
 </script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/60714d00f7ce18270938f291/1f2t99ivh';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 
 </html>
