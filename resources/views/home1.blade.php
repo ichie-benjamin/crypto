@@ -97,7 +97,7 @@
                 <div class="col-12 col-lg-5 col-md-12">
                     <div class="welcome-content">
                         <div class="promo-section">
-                            <h3 class="special-head dark">Crypto Asset</h3>
+                            <h3 class="special-head dark">Binary 24 Trades</h3>
                         </div>
                         <h1 class="fadeInUp" data-wow-delay="0.2s">TRADE FOREX, CFD AND OPTIONS</h1>
                         <p class="w-text fadeInUp" data-wow-delay="0.3s"> INVEST AND EARN UP TO 95% IN 60 SEC
@@ -278,7 +278,7 @@
             <div class="col-12 col-lg-6 offset-lg-0">
                 <div class="who-we-contant">
                     <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <span class="gradient-text ">Crypto Asset</span>
+                        <span class="gradient-text ">Binary 24 Trades</span>
                     </div>
                     <h4 class="fadeInUp" data-wow-delay="0.3s">NO PREVIOUS EXPERIENCE IN TRADING
                         ON FINANCIAL MARKETS?
@@ -309,7 +309,7 @@
         </div>
         <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">We are trusted</h2>
         <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-            Crypto Asset broker provides stable access to deep liquidity market and the best prices with the most popular and reliable trading platform</p>
+            Binary 24 Trades broker provides stable access to deep liquidity market and the best prices with the most popular and reliable trading platform</p>
     </div>
     <div class="container">
         <div class="row">
@@ -521,10 +521,10 @@
                 <div class="who-we-contant">
                     <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" >
                         <span class="gradient-text ">TRADE FOREX
-                    WITH Crypto Asset</span>
+                    WITH Binary 24 Trades</span>
                     </div>
 
-                    <h4 class="fadeInUp" data-wow-delay="0.3s">Trade with Crypto Asset</h4>
+                    <h4 class="fadeInUp" data-wow-delay="0.3s">Trade with Binary 24 Trades</h4>
                     <p class="fadeInUp" data-wow-delay="0.4s">    What is CFD trading? First of all, CFD is highly profitable but risky financial instrument that allows you to get profit in 60 seconds.
                        </p>
                     <p class="fadeInUp" data-wow-delay="0.5s"> It's easy to understand and to trade. No need to learn a lot - you can start trading today.</p>
@@ -1311,9 +1311,9 @@
                         <!-- Copywrite -->
                         <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
                             <div class="footer-logo">
-                                <a href="#"><img src="/img/core-img/logo.png" alt="logo"> Crypto Asset </a>
+                                <a href="#"><img src="/img/core-img/logo.png" alt="logo"> Binary 24 Trades </a>
                             </div>
-                            <p>Trade with Crypto Asset
+                            <p>Trade with Binary 24 Trades
                                 What is CFD trading? First of all, CFD is highly profitable but risky financial instrument that allows you to get profit in 60 seconds.
 
                                 It's easy to understand and to trade. No need to learn a lot - you can start trading today</p>

@@ -7,9 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Crypto Assets" />
+    <meta name="description" content="Binary 24 Trades" />
     <!-- SITE TITLE -->
-    <title>Crypto Assets </title>
+    <title>Binary 24 Trades </title>
     <!-- CSRF Token -->
 
     <!-- favicon -->
@@ -126,7 +126,7 @@
                     </div>
                     <div class="footer_desc">
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            Crypto Assets is one of the leading investment platforms incorporated in Mauritius offering an array of regulated investment programs from real trading processes.
+                            Binary 24 Trades is one of the leading investment platforms incorporated in Mauritius offering an array of regulated investment programs from real trading processes.
                         </p>
                     </div>
                 </div>
@@ -155,8 +155,8 @@
                     <h4 class="footer_title border_title animation" data-animation="fadeInUp" data-animation-delay="0.2s">Contact Us</h4>
                     <ul class="footer_social list_none">
 {{--                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.3s"><a href="#">Phone: .</a></li>--}}
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#">Email: info@cryptoassest.com/</a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><a href="#">Address: Crypto Assets is a product of Investment  Solutions Limited incorporated in Mauritius</a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#">Email: info@binary24trades.com/</a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><a href="#">Address: Binary 24 Trades is a product of Investment  Solutions Limited incorporated in Mauritius</a></li>
                     </ul>
                 </div>
 
@@ -179,7 +179,7 @@
         invested capital. you shouldn't take any chances to invest unless you have a professional trader who can oversee the trade and help manage the trading risk before you decide to invest. you need to
         make sure that you understand the risks associated with trading if you have very low level trading experience we advise that you shouldn't take any chances to invest individually </p>
 
-    <p>Crypto Assets has the best trading experts we can assign to you. our trade experts will help you manage the risk of losing
+    <p>Binary 24 Trades has the best trading experts we can assign to you. our trade experts will help you manage the risk of losing
         and handle all your trades.</p>
 
 

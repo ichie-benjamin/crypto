@@ -27,6 +27,12 @@
     <link rel='stylesheet' type='text/css' media='all' href='../../fonts.googleapis.com/cssdd33.css?family=Open+Sans%3A300%2C400%2C600%2C700%2C800%7CRaleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CDroid+Serif%3A400%2C700%7CMontserrat%7CMontserrat%3Aregular%2C700%2Clatin'/>
 
     <style>
+        .bg-fix {
+            background: url(images/banner1.jpeg) no-repeat fixed 50% 0;
+            background-size: cover;
+            position: relative;
+            transition: all 2s linear;
+        }
         .video-presentation-sect {
             height: 420px;
             width: 100%;
@@ -51,6 +57,8 @@
             padding: 50px;
         }
     </style>
+
+    @yield('style')
 </head>
 
 <body class="page-template-default page page-child footer_row1_off is_header_semitransparent home-ico-consultant">
@@ -332,7 +340,7 @@
             </div>
         </div>
     </footer>
-    <div class="spacer_40"></div>
+{{--    <div class="spacer_40"></div>--}}
 </div><!-- end HEADER -->
 <!-- JS SCRIPTS -->
 <script src='assets/js/jquery.js'></script>

@@ -145,7 +145,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-12">
                         <div class="copyright">
-                            <p>© Copyright {{ date('Y') }} <a href="https://themeforest.net/user/quixlab/portfolio">Crypto Assets</a>
+                            <p>© Copyright {{ date('Y') }} <a href="https://themeforest.net/user/quixlab/portfolio">Binary 24 Trades</a>
                                 All Rights Reserved</p>
                         </div>
                     </div>

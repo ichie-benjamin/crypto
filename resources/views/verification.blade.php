@@ -48,7 +48,7 @@
                                     A valid passport/national ID or a driving license – the front and back sides.
                                     If the deposit is made via credit card - the credit card used, both front and back sides. Please cover the first 12 digits on the front side and the CVV code (3 digits) on the back side.
                                     If the deposit is made via e-Wallet or bank transfer – a screenshot of your e-Wallet account profile page (showing your full name, email and e-Wallet ID) or confirmation of the bank transfer deposit.
-                                    Simply send digital images of these verification documents to docs@cryptoassest.com and you will receive an email notification once the documents are processed (it usually takes up to 3 business days).
+                                    Simply send digital images of these verification documents to docs@binary24trades.com and you will receive an email notification once the documents are processed (it usually takes up to 3 business days).
                                 </div>
                             </div>
                         </div>

@@ -27,7 +27,7 @@
 
             <div class="row small_space">
                 <div class="col-lg-10 col-md-12 offset-lg-1">
-                    Bonuses are one way that you, as a Crypto Assets trader can lock in additional trading value. However, there are many&nbsp;different types of trader bonuses&nbsp;and additional promotional offers that are going to become available to you, not only when you first sign up to a Broker but also on an ongoing basis.
+                    Bonuses are one way that you, as a Binary 24 Trades trader can lock in additional trading value. However, there are many&nbsp;different types of trader bonuses&nbsp;and additional promotional offers that are going to become available to you, not only when you first sign up to a Broker but also on an ongoing basis.
                     <br><br>
                     Whilst you are going to find the bonuses available to you may all appear generous, you will need to make sure you know exactly how each bonus have been structured and that will be done by looking through the terms and conditions attached to each bonus.
                     <br><br>
@@ -41,11 +41,11 @@
                     <br><br>
                     <h1 class="_rhd">What is a No Deposit Bonus?</h1>
 
-                    One type of bonus that can often attract you to&nbsp;sign up to any Crypto Assets Broker&nbsp;who is offering a bonus is a no deposit bonus. There are a few things that you do need to be aware of when taking such a bonus and the first is that you will of course not need to make an initial deposit to claim these types of bonuses.
+                    One type of bonus that can often attract you to&nbsp;sign up to any Binary 24 Trades Broker&nbsp;who is offering a bonus is a no deposit bonus. There are a few things that you do need to be aware of when taking such a bonus and the first is that you will of course not need to make an initial deposit to claim these types of bonuses.
                     <br><br>
                     However, what you will find is that the amount of bonus funds you will be awarded can be quite modest in size and much more importantly you are often required to place a huge volume of trades before you free no deposit credits are turned into real credits.
                     <br><br>
-                    Also some Brokers will often limit the amount of cash you can withdraw from a no deposit required Crypto Assets bonus and as such these types of bonuses whilst free and no risk bonuses do tend to offer only a limited chance of you actually being able to cash anything out with them!
+                    Also some Brokers will often limit the amount of cash you can withdraw from a no deposit required Binary 24 Trades bonus and as such these types of bonuses whilst free and no risk bonuses do tend to offer only a limited chance of you actually being able to cash anything out with them!
                     <br><br>
                     <h1 class="_rhd">Are Deposit Match Bonuses Worth Claiming?</h1>
 
@@ -59,19 +59,19 @@
                     <br><br>
                     <h1 class="_rhd">What are Risk Free Bonuses and Trades?</h1>
 
-                    You will often be rewarded for you loyalty and custom at some Crypto Assets Broker by being given something known as a risk free trade. This will see you then be able to place a trade on any selected trading opportunity and if that trade is a winning one you ill of course be paid out in the normal and standard way.
+                    You will often be rewarded for you loyalty and custom at some Binary 24 Trades Broker by being given something known as a risk free trade. This will see you then be able to place a trade on any selected trading opportunity and if that trade is a winning one you ill of course be paid out in the normal and standard way.
                     <br><br>
                     However, if the trade you have placed is a losing one then the broker will give you back your stakes either a bonus credits or as real money credits. So these bonuses are very generous ones to consider taking.
                     <br><br>
                     <h1 class="_rhd">Can Anyone Claim a Bonus?</h1>
 
-                    As long as you are old enough to sign up to a Crypto Assets Brokers and you live in one of the permitted countries that those Brokers accept new customers from then you are always going to be able to make use of any and all of the bonuses that are advertised.
+                    As long as you are old enough to sign up to a Binary 24 Trades Brokers and you live in one of the permitted countries that those Brokers accept new customers from then you are always going to be able to make use of any and all of the bonuses that are advertised.
                     <br><br>
                     However, do be aware that there are two main types of bonuses, the first are those which are exclusively available to new customers. Plus you will also find a range of ongoing promotional offers that will become available to you once you have made use of the initial new customer sign up bonuses.
                     <br><br>
                     <h1 class="_rhd">Are Mobile Trader Bonuses Available?</h1>
 
-                    You are going to find just as many different types and kinds of trader bonuses are going to be made available to you irrespective of whether you sign up to an online Crypto Assets Brokers or via a downloadable trading app.
+                    You are going to find just as many different types and kinds of trader bonuses are going to be made available to you irrespective of whether you sign up to an online Binary 24 Trades Brokers or via a downloadable trading app.
                     <br><br>
                     However, be aware that you are never usually able to claim a new trader bonus more than once, so for if example you have claimed a mobile trader bonus from one Broker you will not then be able to sign up to their online trading platforms and claim that bonus again!
                     <br><br>

@@ -82,7 +82,7 @@
                                 <ul>
                                     <li>
                                         <i class="mdi mdi-checkbox-blank-circle"></i>
-                                        For security reasons, Crypto Assets process withdrawals by review once a day.
+                                        For security reasons, Binary 24 Trades process withdrawals by review once a day.
                                     </li>
                                     <li>
                                         <i class="mdi mdi-checkbox-blank-circle"></i>

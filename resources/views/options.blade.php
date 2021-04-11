@@ -29,17 +29,17 @@
             <div class="row small_space">
                 <div class="col-lg-10 col-md-12 offset-lg-1">
 
-                    In their simplest form, a Crypto Assets trade will see you simply having to decide whether a commodity for example is going to increase in value over any given time period or will decrease in value over the same time period.
+                    In their simplest form, a Binary 24 Trades trade will see you simply having to decide whether a commodity for example is going to increase in value over any given time period or will decrease in value over the same time period.
                     <br><br>
-                    However, there are now many additional Crypto Assets trades that you are going to be able to place, and as a trader you will need to fully understand how each of those types of trades are structured, as several of them will be of interest to you based on what it is you are thinking of basing your trades around.
+                    However, there are now many additional Binary 24 Trades trades that you are going to be able to place, and as a trader you will need to fully understand how each of those types of trades are structured, as several of them will be of interest to you based on what it is you are thinking of basing your trades around.
                     <br><br>
                     You will find that all of our featured and&nbsp;top rated Brokers&nbsp;are always going to give you a large and very diverse range of different trading options and trade types and as such by signing up and becoming a trader at one of those Broker you are always going to have the maximum number, variety and types of trades available to you.
 
                     <br><br> <h1 class="_rhd">Questions and Answers</h1>
 
-                    In an attempt to allow you to get a fully and deep understanding of the many different types of Crypto Assets trade that you can place at any of our licensed and regulated Brokers below you will find a range of different questions and answers regarding the types of trades you can place.
+                    In an attempt to allow you to get a fully and deep understanding of the many different types of Binary 24 Trades trade that you can place at any of our licensed and regulated Brokers below you will find a range of different questions and answers regarding the types of trades you can place.
                     <br><br>
-                    Please do read through this guide in its entirety as there may come a time when one of the more unique types of Crypto Assets trades available will be the ideal one for you to place.
+                    Please do read through this guide in its entirety as there may come a time when one of the more unique types of Binary 24 Trades trades available will be the ideal one for you to place.
 
                     <br><br> <h1 class="_rhd">Fast Expiry Trades</h1>
 
@@ -47,7 +47,7 @@
 
                     <br><br> <h1 class="_rhd">Long Term Expiry Trades</h1>
 
-                    You will also find that you can place some very long term Crypto Assets trades when you sign up to any of our top rated and fully licensed and regulated Crypto Assets Brokers.
+                    You will also find that you can place some very long term Binary 24 Trades trades when you sign up to any of our top rated and fully licensed and regulated Binary 24 Trades Brokers.
 
                     In fact when you log into any of those brokers trading platforms you will find in the trading menu a range of different trade son offer and alongside each of them you will find the length of time it will take for those trades to expire. You will therefore always be in full control in regards to the type of trade you can place and also the length of time it will take for any chosen trades to expire.
 
@@ -57,11 +57,11 @@
 
                     <br><br> <h1 class="_rhd">One Touch Trades</h1>
 
-                    Another popular type of Crypto Assets trade that you may be interested in placing are those known as&nbsp;one touch trades. When you place this type of trade as soon as the value of the asset you have based the trade on reaches the required price then the trade closes and you have own that trade.
+                    Another popular type of Binary 24 Trades trade that you may be interested in placing are those known as&nbsp;one touch trades. When you place this type of trade as soon as the value of the asset you have based the trade on reaches the required price then the trade closes and you have own that trade.
 
                     <br><br> <h1 class="_rhd">Risk Free Trades</h1>
 
-                    You will also find plenty of Crypto Assets Brokers are going to shower you with additional little extras to reward your loyalty and one of the ways they can do that is by giving you a risk free trade.
+                    You will also find plenty of Binary 24 Trades Brokers are going to shower you with additional little extras to reward your loyalty and one of the ways they can do that is by giving you a risk free trade.
 
                     If you are offered such a trading opportunity then you need to place a trade with your own case funds and if that trade is a losing one you will receive your investment on that trade back either as cash funds or as bonus credits so they are very minimal risk trades which should appeal to most traders.
 
@@ -71,7 +71,7 @@
 
                     <br><br> <h1 class="_rhd">Demo Trades</h1>
 
-                    If you are still new to the world of Crypto Assets trading then all of our featured Brokers are going to allow you to open up something known as a demo trading account.
+                    If you are still new to the world of Binary 24 Trades trading then all of our featured Brokers are going to allow you to open up something known as a demo trading account.
 
                     When you open such an account you will be given often an unlimited supply of demo credits which you can then place on real live trading opportunities, however being demo credits you will not be able to win real money funds with those credits.
 

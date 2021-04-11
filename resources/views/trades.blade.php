@@ -44,7 +44,7 @@
                     <br><br>
                     <h1 class="_rhd">Will Short Term Trades be Profitable?</h1>
 
-                    You are not going to have to wait the entire trading day to find out whether you have locked in and made a profit on many Crypto Assets trades, as you will find many Brokers will offer you something known as 60 second trades.
+                    You are not going to have to wait the entire trading day to find out whether you have locked in and made a profit on many Binary 24 Trades trades, as you will find many Brokers will offer you something known as 60 second trades.
                     <br><br>
                     These trades expiry 60 seconds after you have placed them and they can be ideal trades to place when any breaking news story is having a dramatic effect on any particular commodity or share price value.
                     <br><br>

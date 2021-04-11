@@ -31,7 +31,7 @@
                     <div class="title_default_light title_border">
                         <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Withdrawal Info</h4>
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            Crypto Assets was created in order to provide a better Binary Options service to traders
+                            Binary 24 Trades was created in order to provide a better Binary Options service to traders
                             around the world. Our founders believed that there is a serious need for such a broker
                             because in spite of the fact that BOs are arguably the best online financial trading instrument
                             available on the market, in recent years public and institutional opinions have shifted notably in
@@ -45,7 +45,7 @@
                         It was not regulation, governments or a market crash that ruined these companies.
                             It was because their customers were unhappy with the way they were treated and the quality of
                             service they received in general. And when talking about quality of service,
-                            we at cryptoassest.com are very confident that no one will argue with us when
+                            we at binary24trades.com are very confident that no one will argue with us when
                             we state that withdrawal requests form the biggest share of a trader’s general satisfaction with his/her broker.</p>
 
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.8s">
@@ -96,7 +96,7 @@
                             </div>
                             <div id="collapseOne2" class="collapse " aria-labelledby="headingOne2" data-parent="#accordion">
                                 <div class="card-body">
-                                    It's very easy. Depending on your location, we will  re-direct you to a leading web wallet that will connect to your bank account. You can transact seamlessly between your Crypto Asset live trading account and your web wallet. If you want to move funds into your bank account, you can easily withdraw it from your web wallet. All of the web wallets we work with are leading and respected financial institutions, e-money issuers or payment service providers.
+                                    It's very easy. Depending on your location, we will  re-direct you to a leading web wallet that will connect to your bank account. You can transact seamlessly between your Binary 24 Trades live trading account and your web wallet. If you want to move funds into your bank account, you can easily withdraw it from your web wallet. All of the web wallets we work with are leading and respected financial institutions, e-money issuers or payment service providers.
                                     Hence, you can rest assured that your money is being held by a licensed third party.
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
                             </div>
                             <div id="collapseOne11" class="collapse " aria-labelledby="headingOne11" data-parent="#accordion">
                                 <div class="card-body">
-                                    feel free to contact us on live chat or via email : info@cryptoassest.com
+                                    feel free to contact us on live chat or via email : info@binary24trades.com
                                 </div>
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                 <div class="steps-ul">
                     <ul>
                         <li class="li-1">
-                            <h6 style="color: #fff" class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="{{ route('register') }}" target="_blank">Register</a> with Crypto Assets and then <a href="{{ route('backend.deposits.create') }}" target="_blank">Make A Deposit</a>  If you already have a trading account with Crypto Assets, please, <a href="{{ route('login') }}" target="_blank">Login</a> and make a deposit..</h6>
+                            <h6 style="color: #fff" class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="{{ route('register') }}" target="_blank">Register</a> with Binary 24 Trades and then <a href="{{ route('backend.deposits.create') }}" target="_blank">Make A Deposit</a>  If you already have a trading account with Binary 24 Trades, please, <a href="{{ route('login') }}" target="_blank">Login</a> and make a deposit..</h6>
                         </li>
                     </ul>
                     <div class="img-block">

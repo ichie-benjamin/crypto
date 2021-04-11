@@ -13,7 +13,7 @@
 
 */
 
-/* 1. General setings */ 
+/* 1. General setings */
 .padding_80 {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -80,11 +80,11 @@
 }
 
 /* 2. Home - Main Page */
-.wishlist_table .add_to_cart, 
-a.add_to_wishlist.button.alt { 
-    border-radius: 16px; 
-    -moz-border-radius: 16px; 
-    -webkit-border-radius: 16px; 
+.wishlist_table .add_to_cart,
+a.add_to_wishlist.button.alt {
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
 }
 img.wp-smiley,
 img.emoji {
@@ -150,8 +150,8 @@ a:hover{
 /*------------------------------------------------------------------
     COLOR
 ------------------------------------------------------------------*/
-a, 
-a:hover, 
+a,
+a:hover,
 a:focus,
 .copyright a,
 .copyright a:hover,
@@ -164,14 +164,14 @@ span.amount,
 .widget_archive li a:hover,
 .widget_categories .cat-item:hover,
 .widget_categories li a:hover,
-.pricing-table.recomended .button.solid-button, 
+.pricing-table.recomended .button.solid-button,
 .pricing-table .table-content:hover .button.solid-button,
-.pricing-table.Recommended .button.solid-button, 
-.pricing-table.recommended .button.solid-button, 
+.pricing-table.Recommended .button.solid-button,
+.pricing-table.recommended .button.solid-button,
 #sync2 .owl-item.synced .post_slider_title,
 #sync2 .owl-item:hover .post_slider_title,
 #sync2 .owl-item:active .post_slider_title,
-.pricing-table.recomended .button.solid-button, 
+.pricing-table.recomended .button.solid-button,
 .pricing-table .table-content:hover .button.solid-button,
 .testimonial-author,
 .testimonials-container blockquote::before,
@@ -219,7 +219,7 @@ header.header2 .header-info-group .header_text_title strong,
 .mt_listing--price-day.mt_listing--price .mt_listing_per,
 .error-404.not-found h1,
 .header-info-group i,
-.related.products ul.products li.product .button,         
+.related.products ul.products li.product .button,
 .error-404.not-found h1,
 .header-info-group i,
 body .lms-course-infos i,
@@ -233,16 +233,16 @@ body .lms-course-infos i,
 }
 
 /* NAVIGATION */
-.navstyle-v8.header3 #navbar .menu > .menu-item.current-menu-item > a, 
+.navstyle-v8.header3 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v8.header3 #navbar .menu > .menu-item:hover > a,
 .navstyle-v1.header3 #navbar .menu > .menu-item:hover > a,
 .navstyle-v1.header2 #navbar .menu > .menu-item:hover > a,
 #navbar ul.sub-menu li a:hover,
 .navstyle-v4 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v4 #navbar .menu > .menu-item:hover > a,
-.navstyle-v3 #navbar .menu > .menu-item.current-menu-item > a, 
+.navstyle-v3 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v3 #navbar .menu > .menu-item:hover > a,
-.navstyle-v3 #navbar .menu > .menu-item > a::before, 
+.navstyle-v3 #navbar .menu > .menu-item > a::before,
 .navstyle-v3 #navbar .menu > .menu-item > a::after,
 .navstyle-v2 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v2 #navbar .menu > .menu-item:hover > a,
@@ -259,10 +259,10 @@ body .lms-course-infos i,
 .navstyle-v6 #navbar .menu > .menu-item.current_page_item > a,
 .navstyle-v6 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v6 #navbar .menu > .menu-item:hover > a,
-.navstyle-v5 #navbar .menu > .menu-item.current_page_item > a, 
+.navstyle-v5 #navbar .menu > .menu-item.current_page_item > a,
 .navstyle-v5 #navbar .menu > .menu-item.current-menu-item > a,
 .navstyle-v5 #navbar .menu > .menu-item:hover > a,
-.navstyle-v2 #navbar .menu > .menu-item > a::before, 
+.navstyle-v2 #navbar .menu > .menu-item > a::before,
 .navstyle-v2 #navbar .menu > .menu-item > a::after{
     background: #ffd600;
 }
@@ -279,21 +279,21 @@ footer .footer-top .menu li.menu-item a:hover,
 .wpb_button::after,
 .rotate45,
 .latest-posts .post-date-day,
-.latest-posts h3, 
-.latest-tweets h3, 
+.latest-posts h3,
+.latest-tweets h3,
 .latest-videos h3,
-.button.solid-button, 
+.button.solid-button,
 button.vc_btn,
-.pricing-table.recomended .table-content, 
+.pricing-table.recomended .table-content,
 .pricing-table .table-content:hover,
-.pricing-table.Recommended .table-content, 
-.pricing-table.recommended .table-content, 
-.pricing-table.recomended .table-content, 
+.pricing-table.Recommended .table-content,
+.pricing-table.recommended .table-content,
+.pricing-table.recomended .table-content,
 .pricing-table .table-content:hover,
 .block-triangle,
 .owl-theme .owl-controls .owl-page span,
-body .vc_btn.vc_btn-blue, 
-body a.vc_btn.vc_btn-blue, 
+body .vc_btn.vc_btn-blue,
+body a.vc_btn.vc_btn-blue,
 body button.vc_btn.vc_btn-blue,
 .pagination .page-numbers.current,
 .pagination .page-numbers:hover,
@@ -302,9 +302,9 @@ body button.vc_btn.vc_btn-blue,
 .prev-next-post a:hover .rotate45,
 .masonry_banner.default-skin,
 .form-submit input,
-.member-header::before, 
+.member-header::before,
 .member-header::after,
-.member-footer .social::before, 
+.member-footer .social::before,
 .member-footer .social::after,
 .subscribe > button[type='submit'],
 .no-results input[type='submit'],
@@ -339,45 +339,45 @@ footer .footer-top .menu .menu-item a::before,
 header .top-header,
 .navbar-toggle .icon-bar,
 .back-to-top,
- .woocommerce #respond input#submit, 
-.woocommerce a.button, 
-.woocommerce button.button, 
+ .woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
 .woocommerce input.button,
 table.compare-list .add-to-cart td a,
 body.woocommerce ul.products li.product .onsale,
-.woocommerce #respond input#submit.alt, 
-.woocommerce a.button.alt, 
-.woocommerce button.button.alt, 
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce a.remove:hover,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-.woocommerce nav.woocommerce-pagination ul li a:focus, 
-.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
 .woocommerce nav.woocommerce-pagination ul li span.current,
 .woocommerce.single-product .wishlist-container .yith-wcwl-wishlistaddedbrowse,
-.woocommerce #respond input#submit.alt.disabled, 
-.woocommerce #respond input#submit.alt.disabled:hover, 
-.woocommerce #respond input#submit.alt:disabled, 
-.woocommerce #respond input#submit.alt:disabled:hover, 
-.woocommerce #respond input#submit.alt[disabled]:disabled, 
-.woocommerce #respond input#submit.alt[disabled]:disabled:hover, 
-.woocommerce a.button.alt.disabled, 
-.woocommerce a.button.alt.disabled:hover, 
-.woocommerce a.button.alt:disabled, 
-.woocommerce a.button.alt:disabled:hover, 
-.woocommerce a.button.alt[disabled]:disabled, 
-.woocommerce a.button.alt[disabled]:disabled:hover, 
-.woocommerce button.button.alt.disabled, 
-.woocommerce button.button.alt.disabled:hover, 
-.woocommerce button.button.alt:disabled, 
-.woocommerce button.button.alt:disabled:hover, 
-.woocommerce button.button.alt[disabled]:disabled, 
-.woocommerce button.button.alt[disabled]:disabled:hover, 
-.woocommerce input.button.alt.disabled, 
-.woocommerce input.button.alt.disabled:hover, 
-.woocommerce input.button.alt:disabled, 
-.woocommerce input.button.alt:disabled:hover, 
-.woocommerce input.button.alt[disabled]:disabled, 
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt[disabled]:disabled,
+.woocommerce #respond input#submit.alt[disabled]:disabled:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt[disabled]:disabled,
+.woocommerce a.button.alt[disabled]:disabled:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt[disabled]:disabled,
+.woocommerce button.button.alt[disabled]:disabled:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt[disabled]:disabled,
 .woocommerce input.button.alt[disabled]:disabled:hover,
 .hover-components .component a:hover,
 .related.products span.onsale,
@@ -399,19 +399,19 @@ body .courses-list .shortcode_course_content,
 .single-product.woocommerce span.onsale,
 .header_mini_cart .button.wc-forward,
 .header_mini_cart .button.checkout,
-.woocommerce ul.products li.product .onsale, 
-body .woocommerce ul.products li.product .onsale, 
+.woocommerce ul.products li.product .onsale,
+body .woocommerce ul.products li.product .onsale,
 body .woocommerce ul.products li.product .onsale,
 .blog-posts-shortcode .time-n-date {
         background-color: #ffd600 !important;
 }
-.modeltheme-search.modeltheme-search-open .modeltheme-icon-search, 
+.modeltheme-search.modeltheme-search-open .modeltheme-icon-search,
 .no-js .modeltheme-search .modeltheme-icon-search,
 .modeltheme-icon-search:hover,
 .latest-posts .post-date-month,
 .button.solid-button:hover,
-body .vc_btn.vc_btn-blue:hover, 
-body a.vc_btn.vc_btn-blue:hover, 
+body .vc_btn.vc_btn-blue:hover,
+body a.vc_btn.vc_btn-blue:hover,
 .post-category-date a[rel="tag"]:hover,
 .single-post-tags > a:hover,
 body button.vc_btn.vc_btn-blue:hover,
@@ -438,15 +438,15 @@ ul.ecs-event-list li span:hover,
 .post-password-form input[type="submit"]:hover,
 .navbar-toggle .navbar-toggle:hover .icon-bar,
 .back-to-top:hover,
-.woocommerce #respond input#submit:hover, 
-.woocommerce a.button:hover, 
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
 .widget.widget_product_search button:hover,
-.woocommerce button.button:hover, 
+.woocommerce button.button:hover,
 .woocommerce input.button:hover,
 table.compare-list .add-to-cart td a:hover,
-.woocommerce #respond input#submit.alt:hover, 
-.woocommerce a.button.alt:hover, 
-.woocommerce button.button.alt:hover, 
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover,
 .post-password-form input[type='submit']:hover {
     background: #e5c000;
@@ -456,7 +456,7 @@ table.compare-list .add-to-cart td a:hover,
 }
 
 .hover-components .component a,
-.woocommerce ul.cart_list li a::before, 
+.woocommerce ul.cart_list li a::before,
 .woocommerce ul.product_list_widget li a::before,
 .flickr_badge_image a::after,
 .thumbnail-overlay,
@@ -470,12 +470,12 @@ blockquote::before {
 /*------------------------------------------------------------------
     BORDER-COLOR
 ------------------------------------------------------------------*/
-.comment-form input, 
+.comment-form input,
 .comment-form textarea,
 .author-bio,
 blockquote,
 .widget_popular_recent_tabs .nav-tabs > li.active,
-body .left-border, 
+body .left-border,
 body .right-border,
 body .member-header,
 body .member-footer .social,
@@ -485,16 +485,16 @@ body .button[type='submit'],
 #contact-us .form-control:focus,
 .sale_banner_holder:hover,
 .testimonial-img,
-.wpcf7-form input:focus, 
+.wpcf7-form input:focus,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-.woocommerce .woocommerce-info, 
+.woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message,
-.header_mini_cart .woocommerce .widget_shopping_cart .total, 
+.header_mini_cart .woocommerce .widget_shopping_cart .total,
 .header_mini_cart .woocommerce.widget_shopping_cart .total,
 .header_mini_cart,
 .header_mini_cart.visible_cart,
 .wpcf7-form textarea:focus,
-.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:hover,
 .header_search_form,
 body .course-review-head, body .course-content > h3:first-child, body .course-curriculum-title,
 .list-view .post-details .post-excerpt .more-link:hover{
@@ -606,13 +606,13 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
 }
 .ccpw-widget{
     background-color:#fcfcfc;
-} 
+}
 .ccpw-widget .ccpw_table tr {
     background-color:#fcfcfc;
-}  
+}
 .ccpw_table span.name {
     color:#000;
-}   
+}
 .ccpw_table span.coin_symbol {
     color:#000;
 }
@@ -621,11 +621,11 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
 }
 .ccpw_table span.price {
     color:#000;
-} 
+}
 .ccpw_table .price-value{
     color:#000;
 }
-.mt-icon-list-item:hover i, 
+.mt-icon-list-item:hover i,
 .mt-icon-list-item:hover {
     color:  !important;
 }
@@ -654,10 +654,10 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
     transition: all 250ms ease-in-out;
 }
 .tickercontainer{background-color:#ffd600;}
-.tickercontainer span.name{color:#000;} 
+.tickercontainer span.name{color:#000;}
 .tickercontainer span.coin_symbol{color:#000;}
 
-.tickercontainer span.price{color:#000;} 
+.tickercontainer span.price{color:#000;}
 .tickercontainer .price-value{color:#000;}
 .ccpw-header-ticker-fixedbar{top:33px;}
 
@@ -689,7 +689,7 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
 .cryptic_time_close .btn {
     font-size: 16px;
     padding: 18px 25px;
-    background-color:#252525; 
+    background-color:#252525;
     color:#ffffff;
     border-radius: 5px;
     transition: all 250ms;
@@ -823,7 +823,7 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
     text-align: center;
     font-family:Montserrat;
     font-weight:700;
-    font-style:normal 
+    font-style:normal
 }
 .cryptic_time_close .title-subtile-holder  h1 {
     font-size: 30px;
@@ -841,9 +841,9 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
     font-style:normal;
 }
 .cryptic_customer p span {
-    color: #666666; 
-    font-size: 16px; 
-    line-height: 25px; 
+    color: #666666;
+    font-size: 16px;
+    line-height: 25px;
     font-weight: 400;
 }
 .text-bold {
@@ -883,7 +883,7 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
 .element-box-shadow {
     box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.05) !important;
 }
-.table.table-striped.background-black.pricing-tables-live table, 
+.table.table-striped.background-black.pricing-tables-live table,
 .table.table-striped.background-black.pricing-tables-live table th {
     border: none;
     text-align: right;
@@ -894,9 +894,9 @@ footer .footer h1.widget-title, footer .footer h3.widget-title, footer .footer .
 .table.table-striped.background-black.pricing-tables-live table th {
     font-size: 16px;
 }
-.table.table-striped.background-black.pricing-tables-live table td:nth-child(1), 
-.table.table-striped.background-black.pricing-tables-live table td:nth-child(2), 
-.table.table-striped.background-black.pricing-tables-live table th:nth-child(1), 
+.table.table-striped.background-black.pricing-tables-live table td:nth-child(1),
+.table.table-striped.background-black.pricing-tables-live table td:nth-child(2),
+.table.table-striped.background-black.pricing-tables-live table th:nth-child(1),
 .table.table-striped.background-black.pricing-tables-live table th:nth-child(2) {
     text-align: left;
 }
@@ -952,7 +952,7 @@ body .cryptic_preloader_holder{
     background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
 }
 .back-to-top {
-    
+
     color: #ffffff;
 }
 .appear {
@@ -989,8 +989,8 @@ body.home-ico-landing-page{
 /*------------------------------------------------------------------
     COLOR
 ------------------------------------------------------------------*/
-.home-ico-landing-page a, 
-.home-ico-landing-page a:hover, 
+.home-ico-landing-page a,
+.home-ico-landing-page a:hover,
 .home-ico-landing-page a:focus,
 .home-ico-landing-page .mt_car--tax-type,
 .home-ico-landing-page span.amount,
@@ -1001,14 +1001,14 @@ body.home-ico-landing-page{
 .home-ico-landing-page .widget_archive li a:hover,
 .home-ico-landing-page .widget_categories .cat-item:hover,
 .home-ico-landing-page .widget_categories li a:hover,
-.home-ico-landing-page .pricing-table.recomended .button.solid-button, 
+.home-ico-landing-page .pricing-table.recomended .button.solid-button,
 .home-ico-landing-page .pricing-table .table-content:hover .button.solid-button,
-.home-ico-landing-page .pricing-table.Recommended .button.solid-button, 
-.home-ico-landing-page .pricing-table.recommended .button.solid-button, 
+.home-ico-landing-page .pricing-table.Recommended .button.solid-button,
+.home-ico-landing-page .pricing-table.recommended .button.solid-button,
 .home-ico-landing-page #sync2 .owl-item.synced .post_slider_title,
 .home-ico-landing-page #sync2 .owl-item:hover .post_slider_title,
 .home-ico-landing-page #sync2 .owl-item:active .post_slider_title,
-.home-ico-landing-page .pricing-table.recomended .button.solid-button, 
+.home-ico-landing-page .pricing-table.recomended .button.solid-button,
 .home-ico-landing-page .pricing-table .table-content:hover .button.solid-button,
 .home-ico-landing-page .testimonial-author,
 .home-ico-landing-page .testimonials-container blockquote::before,
@@ -1059,17 +1059,17 @@ body.home-ico-landing-page{
 .home-ico-landing-page .woocommerce form .form-row .required,
 .home-ico-landing-page .woocommerce .woocommerce-info::before,
 .home-ico-landing-page .woocommerce .woocommerce-message::before,
-.home-ico-landing-page .woocommerce div.product p.price, 
+.home-ico-landing-page .woocommerce div.product p.price,
 .home-ico-landing-page .woocommerce div.product span.price,
 .home-ico-landing-page .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-.home-ico-landing-page .related.products ul.products li.product .button,         
+.home-ico-landing-page .related.products ul.products li.product .button,
 .home-ico-landing-page .error-404.not-found h1,
 .home-ico-landing-page .header-info-group i,
 body.home-ico-landing-page .lms-course-infos i,
 .home-ico-landing-page .action-expand::after,
 .home-ico-landing-page .list-view .post-details .post-excerpt .more-link:hover,
 .home-ico-landing-page .header4 header .right-side-social-actions .social-links a:hover i,
-.home-ico-landing-page #navbar .menu-item.selected > a, 
+.home-ico-landing-page #navbar .menu-item.selected > a,
 .home-ico-landing-page #navbar .menu-item:hover > a,
 .home-ico-landing-page .sidebar-content .widget_nav_menu li a:hover,
 .home-ico-landing-page .blog-posts-shortcode-v2 .post-details .post-category,
@@ -1085,16 +1085,16 @@ body.home-ico-landing-page .lms-course-infos i,
 
 
 /* NAVIGATION */
-.home-ico-landing-page .navstyle-v8.header3 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a, 
+.home-ico-landing-page .navstyle-v8.header3 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v8.header3 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
 .home-ico-landing-page .navstyle-v1.header3 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
 .home-ico-landing-page .navstyle-v1.header2 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
 .home-ico-landing-page #navbar.ico-landing-page-navbar ul.sub-menu li a:hover,
 .home-ico-landing-page .navstyle-v4 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v4 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
-.home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a, 
+.home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
-.home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item > a::before, 
+.home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item > a::before,
 .home-ico-landing-page .navstyle-v3 #navbar.ico-landing-page-navbar .menu > .menu-item > a::after,
 .home-ico-landing-page .navstyle-v2 #navbar.ico-landing-page-navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v2 #navbar.ico-landing-page-navbar .menu > .menu-item:hover > a,
@@ -1112,10 +1112,10 @@ body.home-ico-landing-page .lms-course-infos i,
 .home-ico-landing-page .navstyle-v6 #navbar .menu > .menu-item.current_page_item > a,
 .home-ico-landing-page .navstyle-v6 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v6 #navbar .menu > .menu-item:hover > a,
-.home-ico-landing-page .navstyle-v5 #navbar .menu > .menu-item.current_page_item > a, 
+.home-ico-landing-page .navstyle-v5 #navbar .menu > .menu-item.current_page_item > a,
 .home-ico-landing-page .navstyle-v5 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-landing-page .navstyle-v5 #navbar .menu > .menu-item:hover > a,
-.home-ico-landing-page .navstyle-v2 #navbar .menu > .menu-item > a::before, 
+.home-ico-landing-page .navstyle-v2 #navbar .menu > .menu-item > a::before,
 .home-ico-landing-page .navstyle-v2 #navbar .menu > .menu-item > a::after{
     background: #6cd087;
 }
@@ -1135,21 +1135,21 @@ body.home-ico-landing-page .lms-course-infos i,
 .home-ico-landing-page .wpb_button::after,
 .home-ico-landing-page .rotate45,
 .home-ico-landing-page .latest-posts .post-date-day,
-.home-ico-landing-page .latest-posts h3, 
-.home-ico-landing-page .latest-tweets h3, 
+.home-ico-landing-page .latest-posts h3,
+.home-ico-landing-page .latest-tweets h3,
 .home-ico-landing-page .latest-videos h3,
-.home-ico-landing-page .button.solid-button, 
+.home-ico-landing-page .button.solid-button,
 .home-ico-landing-page button.vc_btn,
-.home-ico-landing-page .pricing-table.recomended .table-content, 
+.home-ico-landing-page .pricing-table.recomended .table-content,
 .home-ico-landing-page .pricing-table .table-content:hover,
-.home-ico-landing-page .pricing-table.Recommended .table-content, 
-.home-ico-landing-page .pricing-table.recommended .table-content, 
-.home-ico-landing-page .pricing-table.recomended .table-content, 
+.home-ico-landing-page .pricing-table.Recommended .table-content,
+.home-ico-landing-page .pricing-table.recommended .table-content,
+.home-ico-landing-page .pricing-table.recomended .table-content,
 .home-ico-landing-page .pricing-table .table-content:hover,
 .home-ico-landing-page .block-triangle,
 .home-ico-landing-page .owl-theme .owl-controls .owl-page span,
-body.home-ico-landing-page .vc_btn.vc_btn-blue, 
-body.home-ico-landing-page a.vc_btn.vc_btn-blue, 
+body.home-ico-landing-page .vc_btn.vc_btn-blue,
+body.home-ico-landing-page a.vc_btn.vc_btn-blue,
 body.home-ico-landing-page button.vc_btn.vc_btn-blue,
 .home-ico-landing-page .pagination .page-numbers.current,
 .home-ico-landing-page .pagination .page-numbers:hover,
@@ -1158,9 +1158,9 @@ body.home-ico-landing-page button.vc_btn.vc_btn-blue,
 .home-ico-landing-page .prev-next-post a:hover .rotate45,
 .home-ico-landing-page .masonry_banner.default-skin,
 .home-ico-landing-page .form-submit input,
-.home-ico-landing-page .member-header::before, 
+.home-ico-landing-page .member-header::before,
 .home-ico-landing-page .member-header::after,
-.home-ico-landing-page .member-footer .social::before, 
+.home-ico-landing-page .member-footer .social::before,
 .home-ico-landing-page .member-footer .social::after,
 .home-ico-landing-page .subscribe > button[type='submit'],
 .home-ico-landing-page .no-results input[type='submit'],
@@ -1195,44 +1195,44 @@ body.home-ico-landing-page button.vc_btn.vc_btn-blue,
 .home-ico-landing-page header .top-header,
 .home-ico-landing-page .navbar-toggle .icon-bar,
 .home-ico-landing-page .back-to-top,
-.home-ico-landing-page  .woocommerce #respond input#submit,.woocommerce a.button, 
-.home-ico-landing-page .woocommerce button.button, 
+.home-ico-landing-page  .woocommerce #respond input#submit,.woocommerce a.button,
+.home-ico-landing-page .woocommerce button.button,
 .home-ico-landing-page .woocommerce input.button,
 .home-ico-landing-page table.compare-list .add-to-cart td a,
 body.home-ico-landing-page.woocommerce ul.products li.product .onsale,
-.home-ico-landing-page .woocommerce #respond input#submit.alt, 
-.home-ico-landing-page .woocommerce a.button.alt, 
-.home-ico-landing-page .woocommerce button.button.alt, 
+.home-ico-landing-page .woocommerce #respond input#submit.alt,
+.home-ico-landing-page .woocommerce a.button.alt,
+.home-ico-landing-page .woocommerce button.button.alt,
 .home-ico-landing-page .woocommerce input.button.alt,
 .home-ico-landing-page .woocommerce a.remove:hover,
 .home-ico-landing-page .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-.home-ico-landing-page .woocommerce nav.woocommerce-pagination ul li a:focus, 
-.home-ico-landing-page .woocommerce nav.woocommerce-pagination ul li a:hover, 
+.home-ico-landing-page .woocommerce nav.woocommerce-pagination ul li a:focus,
+.home-ico-landing-page .woocommerce nav.woocommerce-pagination ul li a:hover,
 .home-ico-landing-page .woocommerce nav.woocommerce-pagination ul li span.current,
 .home-ico-landing-page .woocommerce.single-product .wishlist-container .yith-wcwl-wishlistaddedbrowse,
-.home-ico-landing-page .woocommerce #respond input#submit.alt.disabled, 
-.home-ico-landing-page .woocommerce #respond input#submit.alt.disabled:hover, 
-.home-ico-landing-page .woocommerce #respond input#submit.alt:disabled, 
-.home-ico-landing-page .woocommerce #respond input#submit.alt:disabled:hover, 
-.home-ico-landing-page .woocommerce #respond input#submit.alt[disabled]:disabled, 
-.home-ico-landing-page .woocommerce #respond input#submit.alt[disabled]:disabled:hover, 
-.home-ico-landing-page .woocommerce a.button.alt.disabled, 
-.home-ico-landing-page .woocommerce a.button.alt.disabled:hover, 
-.home-ico-landing-page .woocommerce a.button.alt:disabled, 
-.home-ico-landing-page .woocommerce a.button.alt:disabled:hover, 
-.home-ico-landing-page .woocommerce a.button.alt[disabled]:disabled, 
-.home-ico-landing-page .woocommerce a.button.alt[disabled]:disabled:hover, 
-.home-ico-landing-page .woocommerce button.button.alt.disabled, 
-.home-ico-landing-page .woocommerce button.button.alt.disabled:hover, 
-.home-ico-landing-page .woocommerce button.button.alt:disabled, 
-.home-ico-landing-page .woocommerce button.button.alt:disabled:hover, 
-.home-ico-landing-page .woocommerce button.button.alt[disabled]:disabled, 
-.home-ico-landing-page .woocommerce button.button.alt[disabled]:disabled:hover, 
-.home-ico-landing-page .woocommerce input.button.alt.disabled, 
-.home-ico-landing-page .woocommerce input.button.alt.disabled:hover, 
-.home-ico-landing-page .woocommerce input.button.alt:disabled, 
-.home-ico-landing-page .woocommerce input.button.alt:disabled:hover, 
-.home-ico-landing-page .woocommerce input.button.alt[disabled]:disabled, 
+.home-ico-landing-page .woocommerce #respond input#submit.alt.disabled,
+.home-ico-landing-page .woocommerce #respond input#submit.alt.disabled:hover,
+.home-ico-landing-page .woocommerce #respond input#submit.alt:disabled,
+.home-ico-landing-page .woocommerce #respond input#submit.alt:disabled:hover,
+.home-ico-landing-page .woocommerce #respond input#submit.alt[disabled]:disabled,
+.home-ico-landing-page .woocommerce #respond input#submit.alt[disabled]:disabled:hover,
+.home-ico-landing-page .woocommerce a.button.alt.disabled,
+.home-ico-landing-page .woocommerce a.button.alt.disabled:hover,
+.home-ico-landing-page .woocommerce a.button.alt:disabled,
+.home-ico-landing-page .woocommerce a.button.alt:disabled:hover,
+.home-ico-landing-page .woocommerce a.button.alt[disabled]:disabled,
+.home-ico-landing-page .woocommerce a.button.alt[disabled]:disabled:hover,
+.home-ico-landing-page .woocommerce button.button.alt.disabled,
+.home-ico-landing-page .woocommerce button.button.alt.disabled:hover,
+.home-ico-landing-page .woocommerce button.button.alt:disabled,
+.home-ico-landing-page .woocommerce button.button.alt:disabled:hover,
+.home-ico-landing-page .woocommerce button.button.alt[disabled]:disabled,
+.home-ico-landing-page .woocommerce button.button.alt[disabled]:disabled:hover,
+.home-ico-landing-page .woocommerce input.button.alt.disabled,
+.home-ico-landing-page .woocommerce input.button.alt.disabled:hover,
+.home-ico-landing-page .woocommerce input.button.alt:disabled,
+.home-ico-landing-page .woocommerce input.button.alt:disabled:hover,
+.home-ico-landing-page .woocommerce input.button.alt[disabled]:disabled,
 .home-ico-landing-page .woocommerce input.button.alt[disabled]:disabled:hover,
 .home-ico-landing-page .hover-components .component a:hover,
 .home-ico-landing-page .related.products span.onsale,
@@ -1258,19 +1258,19 @@ body.home-ico-landing-page .courses-list .shortcode_course_content,
 .home-ico-landing-page .single-product.woocommerce span.onsale,
 .home-ico-landing-page .header_mini_cart .button.wc-forward,
 .home-ico-landing-page .header_mini_cart .button.checkout,
-.home-ico-landing-page .woocommerce ul.products li.product .onsale, 
-body.home-ico-landing-page .woocommerce ul.products li.product .onsale, 
+.home-ico-landing-page .woocommerce ul.products li.product .onsale,
+body.home-ico-landing-page .woocommerce ul.products li.product .onsale,
 body.home-ico-landing-page .woocommerce ul.products li.product .onsale,
 .home-ico-landing-page .blog-posts-shortcode .time-n-date {
         background-color: #6cd087 !important;
 }
-.home-ico-landing-page .modeltheme-search.modeltheme-search-open .modeltheme-icon-search, 
+.home-ico-landing-page .modeltheme-search.modeltheme-search-open .modeltheme-icon-search,
 .home-ico-landing-page .no-js .modeltheme-search .modeltheme-icon-search,
 .home-ico-landing-page .modeltheme-icon-search:hover,
 .home-ico-landing-page .latest-posts .post-date-month,
 .home-ico-landing-page .button.solid-button:hover,
-body.home-ico-landing-page .vc_btn.vc_btn-blue:hover, 
-body.home-ico-landing-page a.vc_btn.vc_btn-blue:hover, 
+body.home-ico-landing-page .vc_btn.vc_btn-blue:hover,
+body.home-ico-landing-page a.vc_btn.vc_btn-blue:hover,
 .home-ico-landing-page .post-category-date a[rel="tag"]:hover,
 body.home-ico-landing-page .single-post-tags > a:hover,
 .home-ico-landing-page button.vc_btn.vc_btn-blue:hover,
@@ -1297,15 +1297,15 @@ body.home-ico-landing-page .single-post-tags > a:hover,
 .home-ico-landing-page .post-password-form input[type="submit"]:hover,
 .home-ico-landing-page .navbar-toggle .navbar-toggle:hover .icon-bar,
 .home-ico-landing-page .ico-landing-page-navbar .back-to-top:hover,
-.home-ico-landing-page .woocommerce #respond input#submit:hover, 
-.home-ico-landing-page .woocommerce a.button:hover, 
+.home-ico-landing-page .woocommerce #respond input#submit:hover,
+.home-ico-landing-page .woocommerce a.button:hover,
 .home-ico-landing-page .widget.widget_product_search button:hover,
-.home-ico-landing-page .woocommerce button.button:hover, 
+.home-ico-landing-page .woocommerce button.button:hover,
 .home-ico-landing-page .woocommerce input.button:hover,
 .home-ico-landing-page table.compare-list .add-to-cart td a:hover,
-.home-ico-landing-page .woocommerce #respond input#submit.alt:hover, 
-.home-ico-landing-page .woocommerce a.button.alt:hover, 
-.home-ico-landing-page .woocommerce button.button.alt:hover, 
+.home-ico-landing-page .woocommerce #respond input#submit.alt:hover,
+.home-ico-landing-page .woocommerce a.button.alt:hover,
+.home-ico-landing-page .woocommerce button.button.alt:hover,
 .home-ico-landing-page .woocommerce input.button.alt:hover,
 .home-ico-landing-page .post-password-form input[type='submit']:hover {
     background: #6cd087;
@@ -1315,7 +1315,7 @@ body.home-ico-landing-page .single-post-tags > a:hover,
 }
 
 .home-ico-landing-page .hover-components .component a,
-.home-ico-landing-page .woocommerce ul.cart_list li a::before, 
+.home-ico-landing-page .woocommerce ul.cart_list li a::before,
 .home-ico-landing-page .woocommerce ul.product_list_widget li a::before,
 .home-ico-landing-page .flickr_badge_image a::after,
 .home-ico-landing-page .thumbnail-overlay,
@@ -1329,12 +1329,12 @@ body.home-ico-landing-page .single-post-tags > a:hover,
 /*------------------------------------------------------------------
     BORDER-COLOR
 ------------------------------------------------------------------*/
-.home-ico-landing-page .comment-form input, 
+.home-ico-landing-page .comment-form input,
 .home-ico-landing-page .comment-form textarea,
 .home-ico-landing-page .author-bio,
 .home-ico-landing-page blockquote,
 .home-ico-landing-page .widget_popular_recent_tabs .nav-tabs > li.active,
-body.home-ico-landing-page .left-border, 
+body.home-ico-landing-page .left-border,
 body.home-ico-landing-page .right-border,
 body.home-ico-landing-page .member-header,
 body.home-ico-landing-page .member-footer .social,
@@ -1344,19 +1344,19 @@ body.home-ico-landing-page .button[type='submit'],
 .home-ico-landing-page #contact-us .form-control:focus,
 .home-ico-landing-page .sale_banner_holder:hover,
 .home-ico-landing-page .testimonial-img,
-.home-ico-landing-page .wpcf7-form input:focus, 
+.home-ico-landing-page .wpcf7-form input:focus,
 .home-ico-landing-page .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-.home-ico-landing-page .woocommerce .woocommerce-info, 
+.home-ico-landing-page .woocommerce .woocommerce-info,
 .home-ico-landing-page .woocommerce .woocommerce-message,
-.home-ico-landing-page .header_mini_cart .woocommerce .widget_shopping_cart .total, 
+.home-ico-landing-page .header_mini_cart .woocommerce .widget_shopping_cart .total,
 .home-ico-landing-page .header_mini_cart .woocommerce.widget_shopping_cart .total,
 .home-ico-landing-page .header_mini_cart,
 .home-ico-landing-page .header_mini_cart.visible_cart,
 .home-ico-landing-page .wpcf7-form textarea:focus,
-.home-ico-landing-page .navbar-default .navbar-toggle:hover, 
+.home-ico-landing-page .navbar-default .navbar-toggle:hover,
 .home-ico-landing-page .header_search_form,
-body.home-ico-landing-page .course-review-head, 
-body.home-ico-landing-page .course-content > h3:first-child, 
+body.home-ico-landing-page .course-review-head,
+body.home-ico-landing-page .course-content > h3:first-child,
 body.home-ico-landing-page .course-curriculum-title,
 .home-ico-landing-page .list-view .post-details .post-excerpt .more-link:hover{
     border-color: #6cd087;
@@ -1391,11 +1391,11 @@ body.home-ico-landing-page .course-curriculum-title,
     font-style: normal;
 }
 .progress-bar-title h6 {
-    max-width: 600px; 
-    margin: 0 auto; 
-    text-align: center; 
-    font-weight: 800; 
-    color: #fff; 
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 800;
+    color: #fff;
     font-size: 15px;
 }
 .progress-bar-title h6 span{
@@ -1405,10 +1405,10 @@ body.home-ico-landing-page .course-curriculum-title,
     padding-top: 150px;
 }
 .ico-contribution h6{
-    max-width: 600px; 
-    margin: 0 auto; 
-    color: #fff; 
-    font-weight: 800; 
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 800;
     font-size: 15px;
     text-align: left;
 }
@@ -1443,14 +1443,14 @@ body.home-ico-landing-page .course-curriculum-title,
     min-height: 1px;
     padding-left: 0;
     vertical-align: top;
-    
+
     cursor: pointer;
     position: relative;
     vertical-align: middle;
     font-weight: normal;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
     text-align: left;
-    
+
 }
 .nav-pills.nav-pills-ico > li.active > a {
     background: #202020;
@@ -1515,9 +1515,9 @@ body.home-ico-landing-page .course-curriculum-title,
     font-style:normal;
 }
 .about_cryptic_ico_about span {
-    color: rgba(255,255,255, 0.7); 
-    font-size: 15px; 
-    line-height: 25px; 
+    color: rgba(255,255,255, 0.7);
+    font-size: 15px;
+    line-height: 25px;
     font-weight: 400;
 }
 .cryptic_revolution_ico h1 {
@@ -1539,8 +1539,8 @@ body.home-ico-landing-page .course-curriculum-title,
     font-style:normal;
 }
 .cryptic_revolution_ico button.vc_general.vc_btn3 {
-    background-color:#6cd086; 
-    color:#ffffff; 
+    background-color:#6cd086;
+    color:#ffffff;
 }
 .cryptic_revolution_ico button.vc_general.vc_btn3:hover,
 .dark-version .mc4wp-form input[type="submit"]:hover,
@@ -1585,7 +1585,7 @@ body.home-ico-landing-page .course-curriculum-title,
     border-color:rgba(108,208,135,0.7);
 }
 .cryptic_smart_solution_ico_token p i {
-    color: rgba(108,208,135,0.7); 
+    color: rgba(108,208,135,0.7);
     margin-right: 5px;
 }
 .bitcurrency-contact.cryptic-dark {
@@ -1611,7 +1611,7 @@ body.home-ico-landing-page .course-curriculum-title,
     text-align: center;
     font-family:Montserrat;
     font-weight:700;
-    font-style:normal; 
+    font-style:normal;
 }
 .cryptic_revolution_ico h3 {
     font-size: 20px;
@@ -1725,7 +1725,7 @@ body.home-ico-landing-page .course-curriculum-title,
     background:#202020;
     color:#ffffff;
 }
-.panel2.unique1:hover { 
+.panel2.unique1:hover {
     border-top:4px solid #6cd086 !important;
 }
 .panel2.unique2 {
@@ -1758,9 +1758,9 @@ body.home-ico-landing-page .course-curriculum-title,
 
 /* 5. About Us */
 .cryptic_about_us span {
-    color: #666666; 
-    font-size: 15px; 
-    line-height: 25px; 
+    color: #666666;
+    font-size: 15px;
+    line-height: 25px;
     font-weight: 400;
 }
 .cryptic_about_us button,
@@ -1792,7 +1792,7 @@ body.home-ico-landing-page .course-curriculum-title,
     font-style:normal;
 }
 .cryptic_about_us img {
-    padding-top: 2px; 
+    padding-top: 2px;
     margin-right: 35px;
 }
 .cryptic_about_us .cryptic_about_us_info span {
@@ -1818,7 +1818,7 @@ body.home-ico-landing-page .course-curriculum-title,
     -ms-flex-direction: row;
     flex-direction: row;
     margin-bottom: 35px;
-    
+
 }
 .cryptic_separator.cryptic_separator_light {
     border-top: 1px solid rgba(100,100,100,0.7) !important;
@@ -1849,13 +1849,13 @@ body.home-ico-landing-page .course-curriculum-title,
     font-style:normal;
 }
 .cryptic_services  span {
-    color: rgba(37, 37, 37, 0.7); 
-    font-size: 15px; 
-    line-height: 25px; 
+    color: rgba(37, 37, 37, 0.7);
+    font-size: 15px;
+    line-height: 25px;
     font-weight: 400;
 }
 .cryptic_services  img{
-    padding-top: 2px; 
+    padding-top: 2px;
     margin-right: 35px;
     float: left;
 }
@@ -1866,23 +1866,23 @@ body.home-ico-landing-page .course-curriculum-title,
   cursor:pointer;
 }
 .ccpw-footer-ticker-fixedbar{
-position:fixed;    
+position:fixed;
 border-top: 1px solid #ccc;
-bottom: 0px!important; 
-font-family: Arial, Helvetica, sans-serif; 
-width:100%; 
-z-index:99999; 
+bottom: 0px!important;
+font-family: Arial, Helvetica, sans-serif;
+width:100%;
+z-index:99999;
 background: #fff;
 font-weight: bold;
 cursor: pointer;
 }
 
 .ccpw-header-ticker-fixedbar {
-position:fixed;    
+position:fixed;
 border-top: 1px solid #ccc;
-font-family: Arial, Helvetica, sans-serif; 
-width:100%; 
-z-index:99999; 
+font-family: Arial, Helvetica, sans-serif;
+width:100%;
+z-index:99999;
 background: #fff;
 font-weight: bold;
 cursor: pointer;
@@ -1896,10 +1896,10 @@ ul.marquee-content-items li{
 }
 .ccpw-fixedbar {
 border-top: 1px solid #ccc;
-bottom: 0px!important; 
+bottom: 0px!important;
  position:fixed;
-width:100%; 
-z-index:99999; 
+width:100%;
+z-index:99999;
 background: #fff;
 }
 
@@ -1932,7 +1932,7 @@ ul.marquee-content-items li:after{
 }
 .ccpw_table span.coin_symbol{
     font-size:14px;
-    margin-left: 6px; 
+    margin-left: 6px;
 }
 .ccpw-ticker-cont span.name {
     font-size: 14px;
@@ -1998,9 +1998,9 @@ span.changes.down {
     display:none;
 }
 }
-.single .content-car-heading::after, 
-.widget-title::after, 
-h3#reply-title::after, 
+.single .content-car-heading::after,
+.widget-title::after,
+h3#reply-title::after,
 h2.heading-bottom::after {
     content: "";
     display: block;
@@ -2295,11 +2295,11 @@ table.dataTable#DataTable-icondrops-active thead .sorting::after {
     font-style:normal;
 }
 .cryptic_exchange_testimonials p.position-test {
-    text-align: center; 
-    font-size: 16px; 
-    font-weight: 500; 
-    color: #ffd600; 
-    margin: 0 auto; 
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffd600;
+    margin: 0 auto;
     margin-top: 5px;
 }
 .cryptic_exchange_testimonials .section-border.dark_border {
@@ -2360,8 +2360,8 @@ a:hover{
 /*------------------------------------------------------------------
     COLOR
 ------------------------------------------------------------------*/
-.home-ico-consultant a, 
-.home-ico-consultant a:hover, 
+.home-ico-consultant a,
+.home-ico-consultant a:hover,
 .home-ico-consultant a:focus,
 .home-ico-consultant .mt_car--tax-type,
 .home-ico-consultant span.amount,
@@ -2372,14 +2372,14 @@ a:hover{
 .home-ico-consultant .widget_archive li a:hover,
 .home-ico-consultant .widget_categories .cat-item:hover,
 .home-ico-consultant .widget_categories li a:hover,
-.home-ico-consultant .pricing-table.recomended .button.solid-button, 
+.home-ico-consultant .pricing-table.recomended .button.solid-button,
 .home-ico-consultant .pricing-table .table-content:hover .button.solid-button,
-.home-ico-consultant .pricing-table.Recommended .button.solid-button, 
-.home-ico-consultant .pricing-table.recommended .button.solid-button, 
+.home-ico-consultant .pricing-table.Recommended .button.solid-button,
+.home-ico-consultant .pricing-table.recommended .button.solid-button,
 .home-ico-consultant #sync2 .owl-item.synced .post_slider_title,
 .home-ico-consultant #sync2 .owl-item:hover .post_slider_title,
 .home-ico-consultant #sync2 .owl-item:active .post_slider_title,
-.home-ico-consultant .pricing-table.recomended .button.solid-button, 
+.home-ico-consultant .pricing-table.recomended .button.solid-button,
 .home-ico-consultant .pricing-table .table-content:hover .button.solid-button,
 .home-ico-consultant .testimonial-author,
 .home-ico-consultant .testimonials-container blockquote::before,
@@ -2430,10 +2430,10 @@ a:hover{
 .home-ico-consultant .woocommerce form .form-row .required,
 .home-ico-consultant .woocommerce .woocommerce-info::before,
 .home-ico-consultant .woocommerce .woocommerce-message::before,
-.home-ico-consultant .woocommerce div.product p.price, 
+.home-ico-consultant .woocommerce div.product p.price,
 .home-ico-consultant .woocommerce div.product span.price,
 .home-ico-consultant .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-.home-ico-consultant .related.products ul.products li.product .button,         
+.home-ico-consultant .related.products ul.products li.product .button,
 .home-ico-consultant .error-404.not-found h1,
 .home-ico-consultant .header-info-group i,
 body.home-ico-consultant .lms-course-infos i,
@@ -2451,16 +2451,16 @@ body.home-ico-consultant .lms-course-infos i,
 
 
 /* NAVIGATION */
-.home-ico-consultant .navstyle-v8.header3 #navbar .menu > .menu-item.current-menu-item > a, 
+.home-ico-consultant .navstyle-v8.header3 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v8.header3 #navbar .menu > .menu-item:hover > a,
 .home-ico-consultant .navstyle-v1.header3 #navbar .menu > .menu-item:hover > a,
 .home-ico-consultant .navstyle-v1.header2 #navbar .menu > .menu-item:hover > a,
 .home-ico-consultant #navbar ul.sub-menu li a:hover,
 .home-ico-consultant .navstyle-v4 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v4 #navbar .menu > .menu-item:hover > a,
-.home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item.current-menu-item > a, 
+.home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item:hover > a,
-.home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item > a::before, 
+.home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item > a::before,
 .home-ico-consultant .navstyle-v3 #navbar .menu > .menu-item > a::after,
 .home-ico-consultant .navstyle-v2 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v2 #navbar .menu > .menu-item:hover > a,
@@ -2477,10 +2477,10 @@ body.home-ico-consultant .lms-course-infos i,
 .home-ico-consultant .navstyle-v6 #navbar .menu > .menu-item.current_page_item > a,
 .home-ico-consultant .navstyle-v6 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v6 #navbar .menu > .menu-item:hover > a,
-.home-ico-consultant .navstyle-v5 #navbar .menu > .menu-item.current_page_item > a, 
+.home-ico-consultant .navstyle-v5 #navbar .menu > .menu-item.current_page_item > a,
 .home-ico-consultant .navstyle-v5 #navbar .menu > .menu-item.current-menu-item > a,
 .home-ico-consultant .navstyle-v5 #navbar .menu > .menu-item:hover > a,
-.home-ico-consultant .navstyle-v2 #navbar .menu > .menu-item > a::before, 
+.home-ico-consultant .navstyle-v2 #navbar .menu > .menu-item > a::before,
 .home-ico-consultant .navstyle-v2 #navbar .menu > .menu-item > a::after{
     background: #6cd087;
 }
@@ -2500,21 +2500,21 @@ body.home-ico-consultant .lms-course-infos i,
 .home-ico-consultant .wpb_button::after,
 .home-ico-consultant .rotate45,
 .home-ico-consultant .latest-posts .post-date-day,
-.home-ico-consultant .latest-posts h3, 
-.home-ico-consultant .latest-tweets h3, 
+.home-ico-consultant .latest-posts h3,
+.home-ico-consultant .latest-tweets h3,
 .home-ico-consultant .latest-videos h3,
-.home-ico-consultant .button.solid-button, 
+.home-ico-consultant .button.solid-button,
 .home-ico-consultant button.vc_btn,
-.home-ico-consultant .pricing-table.recomended .table-content, 
+.home-ico-consultant .pricing-table.recomended .table-content,
 .home-ico-consultant .pricing-table .table-content:hover,
-.home-ico-consultant .pricing-table.Recommended .table-content, 
-.home-ico-consultant .pricing-table.recommended .table-content, 
-.home-ico-consultant .pricing-table.recomended .table-content, 
+.home-ico-consultant .pricing-table.Recommended .table-content,
+.home-ico-consultant .pricing-table.recommended .table-content,
+.home-ico-consultant .pricing-table.recomended .table-content,
 .home-ico-consultant .pricing-table .table-content:hover,
 .home-ico-consultant .block-triangle,
 .home-ico-consultant .owl-theme .owl-controls .owl-page span,
-body.home-ico-consultant .vc_btn.vc_btn-blue, 
-body.home-ico-consultant a.vc_btn.vc_btn-blue, 
+body.home-ico-consultant .vc_btn.vc_btn-blue,
+body.home-ico-consultant a.vc_btn.vc_btn-blue,
 body.home-ico-consultant button.vc_btn.vc_btn-blue,
 .home-ico-consultant .pagination .page-numbers.current,
 .home-ico-consultant .pagination .page-numbers:hover,
@@ -2523,9 +2523,9 @@ body.home-ico-consultant button.vc_btn.vc_btn-blue,
 .home-ico-consultant .prev-next-post a:hover .rotate45,
 .home-ico-consultant .masonry_banner.default-skin,
 .home-ico-consultant .form-submit input,
-.home-ico-consultant .member-header::before, 
+.home-ico-consultant .member-header::before,
 .home-ico-consultant .member-header::after,
-.home-ico-consultant .member-footer .social::before, 
+.home-ico-consultant .member-footer .social::before,
 .home-ico-consultant .member-footer .social::after,
 .home-ico-consultant .subscribe > button[type='submit'],
 .home-ico-consultant .no-results input[type='submit'],
@@ -2560,45 +2560,45 @@ body.home-ico-consultant button.vc_btn.vc_btn-blue,
 .home-ico-consultant header .top-header,
 .home-ico-consultant .navbar-toggle .icon-bar,
 .home-ico-consultant .back-to-top,
-.home-ico-consultant .woocommerce #respond input#submit, 
-.home-ico-consultant .woocommerce a.button, 
-.home-ico-consultant .woocommerce button.button, 
+.home-ico-consultant .woocommerce #respond input#submit,
+.home-ico-consultant .woocommerce a.button,
+.home-ico-consultant .woocommerce button.button,
 .home-ico-consultant .woocommerce input.button,
 .home-ico-consultant table.compare-list .add-to-cart td a,
 body.woocommerce.home-ico-consultant ul.products li.product .onsale,
-.home-ico-consultant.woocommerce #respond input#submit.alt, 
-.home-ico-consultant.woocommerce a.button.alt, 
-.home-ico-consultant.woocommerce button.button.alt, 
+.home-ico-consultant.woocommerce #respond input#submit.alt,
+.home-ico-consultant.woocommerce a.button.alt,
+.home-ico-consultant.woocommerce button.button.alt,
 .home-ico-consultant.woocommerce input.button.alt,
 .home-ico-consultant.woocommerce a.remove:hover,
 .home-ico-consultant.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-.home-ico-consultant.woocommerce nav.woocommerce-pagination ul li a:focus, 
-.home-ico-consultant.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.home-ico-consultant.woocommerce nav.woocommerce-pagination ul li a:focus,
+.home-ico-consultant.woocommerce nav.woocommerce-pagination ul li a:hover,
 .home-ico-consultant.woocommerce nav.woocommerce-pagination ul li span.current,
 .home-ico-consultant.woocommerce.single-product .wishlist-container .yith-wcwl-wishlistaddedbrowse,
-.home-ico-consultant.woocommerce #respond input#submit.alt.disabled, 
-.home-ico-consultant.woocommerce #respond input#submit.alt.disabled:hover, 
-.home-ico-consultant.woocommerce #respond input#submit.alt:disabled, 
-.home-ico-consultant.woocommerce #respond input#submit.alt:disabled:hover, 
-.home-ico-consultant.woocommerce #respond input#submit.alt[disabled]:disabled, 
-.home-ico-consultant.woocommerce #respond input#submit.alt[disabled]:disabled:hover, 
-.home-ico-consultant.woocommerce a.button.alt.disabled, 
-.home-ico-consultant.woocommerce a.button.alt.disabled:hover, 
-.home-ico-consultant.woocommerce a.button.alt:disabled, 
-.home-ico-consultant.woocommerce a.button.alt:disabled:hover, 
-.home-ico-consultant.woocommerce a.button.alt[disabled]:disabled, 
-.home-ico-consultant.woocommerce a.button.alt[disabled]:disabled:hover, 
-.home-ico-consultant.woocommerce button.button.alt.disabled, 
-.home-ico-consultant.woocommerce button.button.alt.disabled:hover, 
-.home-ico-consultant.woocommerce button.button.alt:disabled, 
-.home-ico-consultant.woocommerce button.button.alt:disabled:hover, 
-.home-ico-consultant.woocommerce button.button.alt[disabled]:disabled, 
-.home-ico-consultant.woocommerce button.button.alt[disabled]:disabled:hover, 
-.home-ico-consultant.woocommerce input.button.alt.disabled, 
-.home-ico-consultant.woocommerce input.button.alt.disabled:hover, 
-.home-ico-consultant.woocommerce input.button.alt:disabled, 
-.home-ico-consultant.woocommerce input.button.alt:disabled:hover, 
-.home-ico-consultant.woocommerce input.button.alt[disabled]:disabled, 
+.home-ico-consultant.woocommerce #respond input#submit.alt.disabled,
+.home-ico-consultant.woocommerce #respond input#submit.alt.disabled:hover,
+.home-ico-consultant.woocommerce #respond input#submit.alt:disabled,
+.home-ico-consultant.woocommerce #respond input#submit.alt:disabled:hover,
+.home-ico-consultant.woocommerce #respond input#submit.alt[disabled]:disabled,
+.home-ico-consultant.woocommerce #respond input#submit.alt[disabled]:disabled:hover,
+.home-ico-consultant.woocommerce a.button.alt.disabled,
+.home-ico-consultant.woocommerce a.button.alt.disabled:hover,
+.home-ico-consultant.woocommerce a.button.alt:disabled,
+.home-ico-consultant.woocommerce a.button.alt:disabled:hover,
+.home-ico-consultant.woocommerce a.button.alt[disabled]:disabled,
+.home-ico-consultant.woocommerce a.button.alt[disabled]:disabled:hover,
+.home-ico-consultant.woocommerce button.button.alt.disabled,
+.home-ico-consultant.woocommerce button.button.alt.disabled:hover,
+.home-ico-consultant.woocommerce button.button.alt:disabled,
+.home-ico-consultant.woocommerce button.button.alt:disabled:hover,
+.home-ico-consultant.woocommerce button.button.alt[disabled]:disabled,
+.home-ico-consultant.woocommerce button.button.alt[disabled]:disabled:hover,
+.home-ico-consultant.woocommerce input.button.alt.disabled,
+.home-ico-consultant.woocommerce input.button.alt.disabled:hover,
+.home-ico-consultant.woocommerce input.button.alt:disabled,
+.home-ico-consultant.woocommerce input.button.alt:disabled:hover,
+.home-ico-consultant.woocommerce input.button.alt[disabled]:disabled,
 .home-ico-consultant.woocommerce input.button.alt[disabled]:disabled:hover,
 .home-ico-consultant .hover-components .component a:hover,
 .home-ico-consultant .related.products span.onsale,
@@ -2613,26 +2613,26 @@ body.woocommerce.home-ico-consultant ul.products li.product .onsale,
 .home-ico-consultant .search-form input[type="submit"],
 .home-ico-consultant .wpb_accordion .wpb_accordion_wrapper .wpb_accordion_header a,
 .home-ico-consultant .post-password-form input[type='submit'] {
-    background: #6cd087;
+    background: #000;
 }
 body.home-ico-consultant .courses-list .featured_image_courses .course_badge i,
 body.home-ico-consultant .courses-list .shortcode_course_content,
 .home-ico-consultant .single-product.woocommerce span.onsale,
 .home-ico-consultant .header_mini_cart .button.wc-forward,
 .home-ico-consultant .header_mini_cart .button.checkout,
-.home-ico-consultant .woocommerce ul.products li.product .onsale, 
-body.home-ico-consultant .woocommerce ul.products li.product .onsale, 
+.home-ico-consultant .woocommerce ul.products li.product .onsale,
+body.home-ico-consultant .woocommerce ul.products li.product .onsale,
 body.home-ico-consultant .woocommerce ul.products li.product .onsale,
 .home-ico-consultant .blog-posts-shortcode .time-n-date {
         background-color: #6cd087 !important;
 }
-.home-ico-consultant .modeltheme-search.modeltheme-search-open .modeltheme-icon-search, 
+.home-ico-consultant .modeltheme-search.modeltheme-search-open .modeltheme-icon-search,
 .home-ico-consultant .no-js .modeltheme-search .modeltheme-icon-search,
 .home-ico-consultant .modeltheme-icon-search:hover,
 .home-ico-consultant .latest-posts .post-date-month,
 .home-ico-consultant .button.solid-button:hover,
-body.home-ico-consultant .vc_btn.vc_btn-blue:hover, 
-body.home-ico-consultant a.vc_btn.vc_btn-blue:hover, 
+body.home-ico-consultant .vc_btn.vc_btn-blue:hover,
+body.home-ico-consultant a.vc_btn.vc_btn-blue:hover,
 .home-ico-consultant .post-category-date a[rel="tag"]:hover,
 .home-ico-consultant .single-post-tags > a:hover,
 body.home-ico-consultant button.vc_btn.vc_btn-blue:hover,
@@ -2659,15 +2659,15 @@ body.home-ico-consultant button.vc_btn.vc_btn-blue:hover,
 .home-ico-consultant .post-password-form input[type="submit"]:hover,
 .home-ico-consultant .navbar-toggle .navbar-toggle:hover .icon-bar,
 .home-ico-consultant .back-to-top:hover,
-.home-ico-consultant .woocommerce #respond input#submit:hover, 
-.home-ico-consultant .woocommerce a.button:hover, 
+.home-ico-consultant .woocommerce #respond input#submit:hover,
+.home-ico-consultant .woocommerce a.button:hover,
 .home-ico-consultant .widget.widget_product_search button:hover,
-.home-ico-consultant .woocommerce button.button:hover, 
+.home-ico-consultant .woocommerce button.button:hover,
 .home-ico-consultant .woocommerce input.button:hover,
 .home-ico-consultant table.compare-list .add-to-cart td a:hover,
-.home-ico-consultant .woocommerce #respond input#submit.alt:hover, 
-.home-ico-consultant .woocommerce a.button.alt:hover, 
-.home-ico-consultant .woocommerce button.button.alt:hover, 
+.home-ico-consultant .woocommerce #respond input#submit.alt:hover,
+.home-ico-consultant .woocommerce a.button.alt:hover,
+.home-ico-consultant .woocommerce button.button.alt:hover,
 .home-ico-consultant .woocommerce input.button.alt:hover,
 .home-ico-consultant .post-password-form input[type='submit']:hover {
     background: #6dd088;
@@ -2677,7 +2677,7 @@ body.home-ico-consultant button.vc_btn.vc_btn-blue:hover,
 }
 
 .home-ico-consultant .hover-components .component a,
-.home-ico-consultant .woocommerce ul.cart_list li a::before, 
+.home-ico-consultant .woocommerce ul.cart_list li a::before,
 .home-ico-consultant .woocommerce ul.product_list_widget li a::before,
 .home-ico-consultant .flickr_badge_image a::after,
 .home-ico-consultant .thumbnail-overlay,
@@ -2691,12 +2691,12 @@ body.home-ico-consultant button.vc_btn.vc_btn-blue:hover,
 /*------------------------------------------------------------------
     BORDER-COLOR
 ------------------------------------------------------------------*/
-.home-ico-consultant .comment-form input, 
+.home-ico-consultant .comment-form input,
 .home-ico-consultant .comment-form textarea,
 .home-ico-consultant .author-bio,
 .home-ico-consultant blockquote,
 .home-ico-consultant .widget_popular_recent_tabs .nav-tabs > li.active,
-body.home-ico-consultant .left-border, 
+body.home-ico-consultant .left-border,
 body.home-ico-consultant .right-border,
 body.home-ico-consultant .member-header,
 body.home-ico-consultant .member-footer .social,
@@ -2706,16 +2706,16 @@ body.home-ico-consultant .button[type='submit'],
 .home-ico-consultant #contact-us .form-control:focus,
 .home-ico-consultant .sale_banner_holder:hover,
 .home-ico-consultant .testimonial-img,
-.home-ico-consultant .wpcf7-form input:focus, 
+.home-ico-consultant .wpcf7-form input:focus,
 .home-ico-consultant .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
-.home-ico-consultant .woocommerce .woocommerce-info, 
+.home-ico-consultant .woocommerce .woocommerce-info,
 .home-ico-consultant .woocommerce .woocommerce-message,
-.home-ico-consultant .header_mini_cart .woocommerce .widget_shopping_cart .total, 
+.home-ico-consultant .header_mini_cart .woocommerce .widget_shopping_cart .total,
 .home-ico-consultant .header_mini_cart .woocommerce.widget_shopping_cart .total,
 .home-ico-consultant .header_mini_cart,
 .home-ico-consultant .header_mini_cart.visible_cart,
 .home-ico-consultant .wpcf7-form textarea:focus,
-.home-ico-consultant .navbar-default .navbar-toggle:hover, 
+.home-ico-consultant .navbar-default .navbar-toggle:hover,
 .home-ico-consultant .header_search_form,
 body.home-ico-consultant .course-review-head, body .course-content > h3:first-child, body .course-curriculum-title,
 .home-ico-consultant .list-view .post-details .post-excerpt .more-link:hover{
@@ -2727,23 +2727,23 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     border: 3px solid #6cd087;
 }
 .cryptic_consultant_offering h1 {
-    z-index: 5; 
-    white-space: nowrap; 
-    font-size: 57px; 
+    z-index: 5;
+    white-space: nowrap;
+    font-size: 57px;
     font-weight: 700;
     font-family:Montserrat;
     color: #fff;
     text-align: left;
 }
 .cryptic_consultant_offering h2 {
-    z-index: 6; 
-    min-width: 578px; 
+    z-index: 6;
+    min-width: 578px;
     max-width: 578px;
-    white-space: normal; 
-    font-size: 23px; 
-    line-height: 33px; 
-    font-weight: 500; 
-    color: #eaeaea; 
+    white-space: normal;
+    font-size: 23px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #eaeaea;
     font-family:Montserrat;
     text-align: left;
 }
@@ -2771,9 +2771,9 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     font-style:normal;
 }
 .cryptic_ico_consultant span {
-    color: rgba(37, 37, 37, 0.7); 
-    font-size: 15px; 
-    line-height: 25px; 
+    color: rgba(37, 37, 37, 0.7);
+    font-size: 15px;
+    line-height: 25px;
     font-weight: 400;
 }
 .cryptic_ico_consultant .section-border.dark_border,
@@ -2850,7 +2850,7 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     color: !important;
     border-color: #6cd087 !important;
     background: #2735b5 !important;
-}                                       
+}
 .cryptic_ico_decentralized .decentralized_platform h1 {
     font-size: 48px;
     color: #ffffff;
@@ -2859,7 +2859,7 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     font-family:Montserrat;
     font-weight:700;
     font-style:normal;
-}                                        
+}
 .cryptic_ico_decentralized .decentralized_platform h3 {
     font-size: 20px;
     color: #ffffff;
@@ -2891,7 +2891,7 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     font-style:normal;
 }
 .buy-coin-decentralized button {
-    background-color:#6cd086; 
+    background-color:#6cd086;
     color:#ffffff;
     width: 100%;
     border-radius: 5px;
@@ -2942,12 +2942,12 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     border-radius: 5px !important;
 }
 .icon-bullseye-decentralized  {
-    margin-right:7px; 
+    margin-right:7px;
     color:#6cd087;
     font-size:13px;
 }
 .fa.fa-caret-right.icon-caret-decentralized {
-    margin-right:10px; 
+    margin-right:10px;
     color:#6cd087;
     font-size:20px;
 }
@@ -2996,7 +2996,7 @@ body.home-ico-consultant .course-review-head, body .course-content > h3:first-ch
     color:rgba(255,255,255,0.7);
 }
 .testimonials02-container.owl-carousel {
-    background-color:#2735b5; 
+    background-color:#2735b5;
 }
 .decentralized-customer h2 {
     font-size: 48px;

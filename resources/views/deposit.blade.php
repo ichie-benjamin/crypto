@@ -4,7 +4,7 @@
 
     <section class="works-social-page">
         <div class="container-fluid">
-            <h1>How Crypto Assets works?</h1>
+            <h1>How Binary 24 Trades works?</h1>
 
         </div>
         <div class="info-social">
@@ -15,7 +15,7 @@
                     <h3>Get a professional trader linked to your account for free</h3>
                     <p>Professional trading service from Trade Assets designed for both beginners and pros.</p>
                     <p>Beginners traders can really totally on our experts to the trading for them.
-                        Our Professionals allows you to copy their trades and share own skills and get additional income. Level up your income with Crypto Assets platform.</p>
+                        Our Professionals allows you to copy their trades and share own skills and get additional income. Level up your income with Binary 24 Trades platform.</p>
                 </div>
             </div>
         </div>
@@ -23,12 +23,12 @@
 {{--            <img src="/images/pro.jpeg">--}}
             <div class="container-fluid">
                 <h4>Share experience, chat with our professional traders around the world, trade and earn together!</h4>
-                <p>Become more confident in making trading decisions and get the most out of your trading with Crypto Assets.</p>
+                <p>Become more confident in making trading decisions and get the most out of your trading with Binary 24 Trades.</p>
 
                 @guest()
                 <div class="group-success">
                     <div class="group">
-                        <h3>Join Crypto Assets</h3>
+                        <h3>Join Binary 24 Trades</h3>
                         <a class="btn-show-right" href="{{ route('login') }}" rel="nofollow" target="blank"><div class="circle"><span class="icon arrow"></span></div><p class="button-text">Login</p></a>                </div>
                 </div>
                 <div class="btn-block mob-only">
@@ -52,7 +52,7 @@
             <div class="container-fluid">
                 <div class="content-block">
                     <h2>Try a trader's role</h2>
-                    <h4>Are you an experienced and successful trader? Your experience can yield you more money.<br>Trade with Crypto Assets and get additional income</h4>
+                    <h4>Are you an experienced and successful trader? Your experience can yield you more money.<br>Trade with Binary 24 Trades and get additional income</h4>
                 </div>
             </div>
             <div class="container-fluid">
@@ -73,7 +73,7 @@
                 <div class="steps-ul">
                     <ul>
                         <li class="li-1">
-                            <p><a href="{{ route('register') }}" target="_blank">Register</a> with Crypto Assets and then <a href="{{ route('backend.deposits.create') }}" target="_blank">Make A Deposit</a>  If you already have a trading account with Crypto Assets, please, <a href="{{ route('login') }}" target="_blank">Login</a> and make a deposit..</p>
+                            <p><a href="{{ route('register') }}" target="_blank">Register</a> with Binary 24 Trades and then <a href="{{ route('backend.deposits.create') }}" target="_blank">Make A Deposit</a>  If you already have a trading account with Binary 24 Trades, please, <a href="{{ route('login') }}" target="_blank">Login</a> and make a deposit..</p>
                         </li>
                     </ul>
                     <div class="img-block">

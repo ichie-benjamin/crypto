@@ -25,7 +25,7 @@
                 trade and help manage the trading risk before you decide to invest. you need to make sure that you understand the risks associated
                 with trading if you have very low level trading experience we advise that you shouldn't take any chances to invest individually</p>
 <br/>
-            <p>Crypto Assets has the best trading experts we can assign to you. our trade experts will help you manage the risk of losing
+            <p>Binary 24 Trades has the best trading experts we can assign to you. our trade experts will help you manage the risk of losing
                 and handle all your trades.</p>
         </div>
         @include('partials.foot')

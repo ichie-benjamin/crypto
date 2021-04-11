@@ -413,7 +413,7 @@
                             </div>
                             <div id="collapseOne5" class="collapse " aria-labelledby="headingOne5" data-parent="#accordion">
                                 <div class="card-body">
-                                    Crypto Assets  is Authorized and regulated by the Mauritius Securities and Exchange Commission with Company registration number C092215 with registered office at Unit 2 Air Mauritius Bldg, Lebrun St, Port Louis,Mauritius
+                                    Binary 24 Trades  is Authorized and regulated by the Mauritius Securities and Exchange Commission with Company registration number C092215 with registered office at Unit 2 Air Mauritius Bldg, Lebrun St, Port Louis,Mauritius
                                 </div>
                             </div>
                         </div>

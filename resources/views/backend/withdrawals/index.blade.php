@@ -32,7 +32,7 @@
 {{--                                        </li>--}}
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>
-                                            Crypto Assets Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
+                                            Binary 24 Trades Markets does not allow third-party transfers, funds will need to be returned to a bank account under the same name as your trading account.
                                         </li>
                                         <li>
                                             <i class="mdi mdi-checkbox-blank-circle"></i>

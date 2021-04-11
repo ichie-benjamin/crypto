@@ -35,7 +35,7 @@
             <div class="row small_space">
                 <div class="col-lg-10 col-md-12 offset-lg-1">
 
-                    This Agreement is entered into by and these Terms &amp; Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between <b>Crypto Assets</b>, with Company No. C092215, and registered at: Crypto Assets is a product of Investment  Solutions Limited incorporated in Mauritius (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://cryptoassest.com (hereinafter referred as the “Website”).
+                    This Agreement is entered into by and these Terms &amp; Conditions (hereinafter referred to as the “Agreement”) shall regulate the relationship between <b>Binary 24 Trades</b>, with Company No. C092215, and registered at: Binary 24 Trades is a product of Investment  Solutions Limited incorporated in Mauritius (hereinafter referred to as the “Company”), and the user (a natural or legal entity) (hereinafter referred to as the “Client”) of https://binary24trades.com (hereinafter referred as the “Website”).
 
                     <br><br>
 
@@ -57,7 +57,7 @@
 
                     <br><br>
 
-                    A client that is a legal entity can register with the Company not through the Website but by sending an email with its request to <b>info@cryptoassest.com</b>. All terms and and conditions contained herein, including without limitation to 1 to 5 above, shall at all times be applicable to the Legal Entity and the latter shall conform with such terms and conditions, obligations and rights at all times.
+                    A client that is a legal entity can register with the Company not through the Website but by sending an email with its request to <b>info@binary24trades.com</b>. All terms and and conditions contained herein, including without limitation to 1 to 5 above, shall at all times be applicable to the Legal Entity and the latter shall conform with such terms and conditions, obligations and rights at all times.
 
 
                 </div>
