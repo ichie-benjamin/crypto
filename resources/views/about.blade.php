@@ -181,7 +181,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="text_md_center">
-                            <img class="animation" data-animation="zoomIn" data-animation-delay="0.2s" src="https://binaryoptionsfx.online/asset/assets/images/about_img2.png" alt="aboutimg2"/>
+                            <img class="animation" data-animation="zoomIn" data-animation-delay="0.2s" src="/images/about_img2.png" alt="aboutimg2"/>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 res_md_mt_30 res_sm_mt_20">
@@ -195,7 +195,7 @@
                                 of Contracts for Difference (CFDs), delivering trading facilities on Binary Options, forex, commodities, cryptocurrencies,
                                 ETFs, and indices, alongside innovative trading technology.</p>
                         </div>
-                        <a href="/login" class="btn btn-default btn-radius video animation" data-animation="fadeInUp" data-animation-delay="1s">Let's Get Started <i class="ion-ios-arrow-thin-right"></i></a>
+                        <a href="/login" class="btn btn-default btn-radius video animation" data-animation="fadeInUp" data-animation-delay="1s">Let's Get Started <i class="fa fa-arrow-right"></i></a>
                     </div>
                     <div class=" col-md-12 col-sm-12 res_md_mt_30 res_sm_mt_20">
 

@@ -50,7 +50,7 @@
         <div class="form-part">
             <div class="cp-header">
                 <div class="logo">
-                    <a href="#"><img class="light" src="/images/logo_1.png" alt="Binary24Trades"></a>
+                    <a href="{{ url('/') }}"><img class="light" src="/images/logo_1.png" alt="Binary24Trades"></a>
                 </div>
             </div>
             <div class="cp-heading">
