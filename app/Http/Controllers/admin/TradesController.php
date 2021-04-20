@@ -22,7 +22,7 @@ class TradesController extends Controller
             $title = 'All Trades';
             $trades = Trade::all();
         }
-        return $trades;
+//        return $trades;
         return view('admin.trades.trades-list', compact('trades','title','user'));
     }
 
