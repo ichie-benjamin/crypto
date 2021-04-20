@@ -10,6 +10,8 @@ class Trade extends Model
 {
     use HasFactory, DefaultOrderBy;
 
+    protected static $orderByColumn = 'created_at';
+
 
     protected $guarded = [];
 
