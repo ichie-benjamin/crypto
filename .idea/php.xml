@@ -116,6 +116,9 @@
       <path value="$PROJECT_DIR$/vendor/yadahan/laravel-authentication-log" />
       <path value="$PROJECT_DIR$/vendor/kkszymanowski/traitor" />
       <path value="$PROJECT_DIR$/vendor/santigarcor/laratrust" />
+      <path value="$PROJECT_DIR$/vendor/pelago/emogrifier" />
+      <path value="$PROJECT_DIR$/vendor/snowfire/beautymail" />
+      <path value="$PROJECT_DIR$/vendor/stephenjude/default-model-sorting" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

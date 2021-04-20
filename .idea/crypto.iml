@@ -121,6 +121,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/watson/active" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yadahan/laravel-authentication-log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/stephenjude/default-model-sorting" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

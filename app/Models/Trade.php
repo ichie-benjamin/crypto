@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Stephenjude\DefaultModelSorting\Traits\DefaultOrderBy;
 
 class Trade extends Model
 {
-    use HasFactory;
+    use HasFactory, DefaultOrderBy;
+
 
     protected $guarded = [];
 
