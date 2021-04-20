@@ -81,7 +81,7 @@
                                                     <label for="remember-me"> Remember</label>
                                                 </fieldset>
                                             </div>
-                                            <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="#" class="card-link">Forgot Password?</a></div>
+                                            <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="{{ route('password.request') }}" class="card-link">Forgot Password?</a></div>
                                         </div>
                                         <button type="submit" class="btn-gradient-primary btn-block my-1">Log In</button>
                                         <p class="text-center"><a href="{{ route('register') }}" class="card-link">Register</a></p>

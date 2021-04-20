@@ -72,8 +72,8 @@
                             <td>
                                 <a href="{{ route('admin.users.show', $user->username) }}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="View User"><em class="fa fa-eye"></em></a>
                                 <a href="{{ route('admin.user.toggle', $user->id) }}" class="btn {{ $user->is_active ? 'btn-danger' : 'btn-success' }}" data-toggle="tooltip" ><em class="fa {{ $user->is_active ? 'fa-times ' : ' fa-check' }} "></em></a>
-                                <a href="{{ route('admin.users.destroy', $user) }}" onclick="destroyUser(event)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>
-                                    <form id="delete-customer-form" action="{{ route('admin.users.destroy', $user) }}" method="POST" class="d-none">
+                                <a href="{{ route('admin.users.destroy', $user) }}" onclick="destroyUser(event, {{ $user->id }})" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>
+                                    <form id="delete-customer-form-{{ $user->id }}" action="{{ route('admin.users.destroy', $user) }}" method="POST" class="d-none">
                                         @csrf
                                         @method('DELETE')
                                     </form>
@@ -92,11 +92,11 @@
 
 @section('js')
     <script>
-        function destroyUser(e) {
+        function destroyUser(e, id) {
             e.preventDefault();
 
             if (confirm('There is no reversal to this!\nAre you sure you want to remove this user entirely from the system? '))
-                document.getElementById('delete-customer-form').submit()
+                document.getElementById('delete-customer-form-'+id).submit()
             else
                 return false;
         }
