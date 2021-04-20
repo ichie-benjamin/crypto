@@ -19,12 +19,12 @@ class UsersController extends Controller
 
     public function index(){
         $title = 'All Users';
-        $users = User::whereRoleIs('user')->lates()->get();
+        $users = User::whereRoleIs('user')->latest()->get();
         return view('admin.users.index', compact('users','title'));
     }
     public function subAdmins(){
         $title = 'sub_admin';
-        $users = User::whereRoleIs('sub_admin')->orWhereRoleIs('moderator')->lates()->get();
+        $users = User::whereRoleIs('sub_admin')->orWhereRoleIs('moderator')->latest()->get();
         return view('admin.users.index', compact('users','title'));
     }
 
