@@ -169,7 +169,7 @@
                                         <div class="bg-menu" style="display: none; height: 0px;"></div>
                                     </li>
                                     <li>
-                                        <a style="cursor: pointer" href="{{ route('fags') }}" rel="nofollow">Fags</a>
+                                        <a style="cursor: pointer" href="{{ route('fags') }}" rel="nofollow">Faqs</a>
                                         <div class="bg-menu"></div>
                                     </li>
                                     <li>
