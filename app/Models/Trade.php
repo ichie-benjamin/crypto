@@ -43,13 +43,13 @@ class Trade extends Model
     public function getOPriceAttribute()
     {
 
-        return '$'.$this->profit / $this->traded_amount * 1.19630;
+        return '$'. $this->traded_amount;
     }
 
     public function getCPriceAttribute()
     {
 
-        return  '$'.$this->traded_amount * 1.19630;
+        return  '$'.($this->traded_amount + $this->payout);
     }
 
 }

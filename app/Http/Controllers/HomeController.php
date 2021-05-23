@@ -11,9 +11,14 @@ use Illuminate\Support\Facades\Mail;
 class HomeController extends Controller
 {
 
+
     public function __construct()
     {
 //        $this->middleware('auth');
+    }
+
+    public function getCoin(){
+        return $this->getCoinRate('BTC');
     }
 
     public function codes(){
