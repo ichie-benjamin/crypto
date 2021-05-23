@@ -1,667 +1,621 @@
-@extends('layouts.master')
+@extends('layouts.front')
 
 @section('content')
-    <div class="no-padding content-area no-sidebar" role="main">
-        <div class="container-fluid">
-            <div class="row entry-content">
-                <!-- Section1 - Cryptic ICO Decentralized-->
-                <div class="clearfix"></div>
-                <div class="cryptic_ico_decentralized padding_80 data_background text-center" data-background="assets/images/cryptic-decentralized-bg11-3.jpg">
-                    <div class="spacer_80"></div>
-                    <div class="container">
-                        <!--  Cryptic Crypto Platform-->
-                        <div class="row">
-                            <div class="entry-content">
-                                <div class="col-sm-6 decentralized_platform">
-                                    <div class="spacer_50"></div>
-                                    <h1 class="fadeIn">Binary 24<br />Trading</h1>
-                                    <h3 class="fadeIn">Trade with an automated bot, reduce risks and save<br />the high level of interest rates..</h3>
-                                    <div class="spacer_20"></div>
-                                    <div class="float-left modeltheme_button wow fadeIn">
-                                        <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
-                                    </div>
 
-                                </div>
-                                <div class="col-sm-6 decentralized_achieved">
-                                    <h1 class="fadeIn">Take it Easy</h1>
-                                    <h3 class="fadeIn">Get passive income from our automated trading bot -</h3>
-                                    <h1 class="fadeIn"> become successful today</h1>
-                                    <div class="spacer_30"></div>
-                                    <div class="buy-coin-decentralized fadeIn">
-                                        <button> Get Started</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  Cryptic Token sale stats-->
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <h1 class="fadeIn no-margin decentralized-h1">Financial uplift</h1>
-                        <div class="spacer_80"></div>
-                        <div class="title-subtile-holder wow fadeIn text_center">
-                            <h1 class="section-title light_title no-margin">STEP BY STEP</h1>
-                            <div class="spacer_10"></div>
-                            <div class="clearfix"></div>
-                            <div class="section-border light_border no-margin"></div>
-                            <div class="spacer_10"></div>
-                            <div class="section-subtitle light_subtitle">Note that if the currency of a savings account differs</div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <div class="row decentralized-total-contribution">
-                            <div class="col-sm-3">
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized"></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">FX/BO & Crypto Trading: </span><br/>
-                                        <span class="value ">50% Profit  </span>
-                                    </p>
-                                </div>
-                                <div class="spacer_10"></div>
+    <!-- start start screen -->
+    <div id="start-screen" class="start-screen--light start-screen--style-6">
+        <div class="start-screen__slider" data-slick='{"autoplay": false, "fade": true, "dots": true, "speed": 1200}'>
 
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">High-tech startup : </span><br/>
-                                        <span class="value ">30.5% - 30.8%</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">E-commerce: </span><br/>
-                                        <span class="value ">30.1% - 30.3%</span>
-                                    </p>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix">
-                                            <i class="fa fa-bullseye icon-bullseye-decentralized "></i>
-                                        </div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white">
-                                        <span class="name">Oil and gas production: </span><br/>
-                                        <span class="value ">29.9% - 42.1%</span>
-                                    </p>
-                                </div>
-                                <div class="spacer_10"></div>
-                            </div>
-                        </div>
-                        <div class="row decentralized-total-contribution">
-                            <div class="col-sm-6 border-right">
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i  class="fa fa-caret-right icon-caret-decentralized "></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Investors</span><span class="value pull-right">127,591</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i  class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Popular Coin</span><span class="value pull-right">Bitcoin</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right  icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Standard</span><span class="value pull-right">ERC20</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Tool</span><span class="value pull-right">Binary24Trader</span></p>
-                                </div>
-
-                            </div>
-                            <div class="col-sm-6 padding_left_50">
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Average Investment</span><span class="value pull-right">$10,000 / Contributor</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Number of Transactions</span><span class="value pull-right">800,100</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Countries Participated</span><span class="value pull-right">84</span></p>
-                                </div>
-                                <div class="spacer_10"></div>
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Total Payouts</span><span class="value pull-right">{{ date('y') + 100 }},{{ date('dm') }},000</span></p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="row decentralized-total-contribution">
-                            <div class="col-sm-3">
-                                <div class="mt-icon-list-item mt-parent-icon-list-item wow fadeIn">
-                                    <div class="mt-icon-list-icon-holder">
-                                        <div class="mt-icon-list-icon-holder-inner clearfix"><i class="fa fa-caret-right icon-caret-decentralized"></i></div>
-                                    </div>
-                                    <p class="mt-icon-list-text text-white"><span class="name float-left">Countries Excluded</span><span class="value "></span></p>
-                                </div>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="fadeIn text-left">
-                                    <p>People&#8217;s Republic of China (except for Hong Kong, Macau and Taiwan), South Korea, Cuba, Iran, North Korea, Syria, Crimea Region, Beijing.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  Cryptic Stay in touch-->
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <div class="title-subtile-holder wow fadeIn text_center">
-                            <h1 class="section-title light_title no-margin">Why Choose Binary 24 Trades</h1>
-                            <div class="spacer_10"></div>
-                            <div class="clearfix"></div>
-                            <div class="section-border light_border no-margin"></div>
-                            <div class="spacer_10"></div>
-                            <div class="section-subtitle light_subtitle">Your No. 1 trading platform <br /> 100% client focus</div>
-                        </div>
-                        <div class="spacer_70"></div>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-facebook text-white">
-{{--                                        <i class="list_icon fa fa-facebook"></i>--}}
-                                        <h3 class="list_title_text">Total Profit</h3>
-                                        <p>Investors, particularly novices, are often advised to adopt a particular</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-twitter text-white">
-{{--                                        <i class="list_icon fa fa-twitter"></i>--}}
-                                        <h3 class="list_title_text">Reliability</h3>
-                                        <p>Binary 24 Trades has been working in the market for 5 years and it has a positive reputation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-github text-white">
-{{--                                        <i class="list_icon fa fa-github"></i>--}}
-                                        <h3 class="list_title_text">High return</h3>
-                                        <p>We offer our investors a much higher return than the banking one and we provide reduced risks.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-bitcoin text-white">
-{{--                                        <i class="list_icon fa fa-bitcoin"></i>--}}
-                                        <h3 class="list_title_text">Stability</h3>
-                                        <p>The project guarantees the implementation of payments in accordance with the terms of the regulation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-medium text-white">
-{{--                                        <i class="list_icon fa fa-medium"></i>--}}
-                                        <h3 class="list_title_text">Passive earnings</h3>
-                                        <p>You do not need to have special knowledge and perform actions - our team of professionals will do all the work.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-2">
-                                <div class="social-icon-box vc_row wow fadeIn">
-                                    <div class="social-icon-box-holder social-icon-telegram text-white">
-{{--                                        <i class="list_icon fa fa-telegram"></i>--}}
-                                        <h3 class="list_title_text">24/7 Support</h3>
-                                        <p>Great Customer Support, Get all your questions attended to within 12hrs</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Section2 - Cryptic ICO - OUR ROADMAP -->
-                <div class="clearfix"></div>
-                <div class="cryptic_ico_our_roadmap padding_80 text-center data_background" data-background="assets/images/home-decentralized-bg3.jpg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="title-subtile-holder wow  ">
-                                    <h1 class="section-title light_title no-margin">OUR ROADMAP</h1>
-                                    <div class="spacer_10"></div>
-                                    <div class="clearfix"></div>
-                                    <div class="section-border light_border no-margin"></div>
-                                    <div class="spacer_10"></div>
-                                    <div class="section-subtitle light_subtitle">Duis aute irure dolor in reprehenderit in voluptate velit esse <br /> cillum dolore eu fugiat nulla pariatur.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="spacer_80"></div>
-                    <div class="clearfix"></div>
-                    <section class="timelinehorizontal horizontal_timeline wow fadeIn">
-                        <ol>
-                            <li>
-                                <div><p class="time text-left">March 21, 2016</p>
-                                    <h3 class="text-left">New York Pre-ICO</h3>
-                                    <p class="text-left">Token Sale<br /> Initial Platform Development<br /> Cryptic (the game) design complete</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">January 14, 2016</p>
-                                    <h3 class="text-left">Distribution &amp; Node</h3>
-                                    <p class="text-left">Cryptic official launch<br /> Cryptic community functionality<br /> Platform and all games localized into 5+ languages</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">April 6, 2016</p>
-                                    <h3 class="text-left">Infinity Platform</h3>
-                                    <p class="text-left">Cryptic wallet launch<br /> Cryptic (the game) official launch<br /> Cryptic platform opens to 3rd party developer</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">November 7, 2016</p>
-                                    <h3 class="text-left"> Listed on Exchange</h3>
-                                    <p class="text-left">10-12 blockchain games launched on platform<br /> Platform and all games localized into 15+ languages</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">January 2, 2017</p>
-                                    <h3 class="text-left">Genesis Block</h3>
-                                    <p class="text-left">Migration to next-generation blockchain<br /> 15-30 blockchain games launched on platform</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">March 7, 2017</p>
-                                    <h3 class="text-left">Integration</h3>
-                                    <p class="text-left">Integration of interoperable unified health records, zero-knowledge storage, and blockchain permissions.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">April 25, 2017</p>
-                                    <h3 class="text-left">Network Expansion</h3>
-                                    <p class="text-left">Cryptic Network system support and adoption of value-added services. Design and execution of crypto certified clinics.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">May 13, 2017</p>
-                                    <h3 class="text-left">Development</h3>
-                                    <p class="text-left">The Cryptic Network was introduced to the public in order to address common downfalls of inoperable medical systems.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">June 12, 2017</p>
-                                    <h3 class="text-left">Banking</h3>
-                                    <p class="text-left">Smart contract based management of assets with enhanced security and new investment opportunities</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">November 21, 2017</p>
-                                    <h3 class="text-left">Payment Service</h3>
-                                    <p class="text-left">For payment service and decentralized exchange, demo of profit distribution mechanism on TestNet</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">December 10, 2017</p>
-                                    <h3 class="text-left">Open Source</h3>
-                                    <p class="text-left">The open-source model is a decentralized software-development model that encourages open collaboration</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">January 12, 2018</p>
-                                    <h3 class="text-left">Sign-Up Opens</h3>
-                                    <p class="text-left">Integrate with more blockchain protocols<br /> Release first version of the Cryptic platform<br />
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div><p class="time text-left">February 17, 2018</p>
-                                    <h3 class="text-left">API gateway</h3>
-                                    <p class="text-left">Implement Cryptic's Identity Management System and Smart Contract Authorization System</p>
-                                </div>
-                            </li>
-                        </ol>
-                        <div class="arrows">
-                            <button class="arrow arrow__prev disabled" disabled><i class="fa fa-chevron-left"></i></button>
-                            <button class="arrow arrow__next"><i class="fa fa-chevron-right"></i></button>
-                        </div>
-                    </section>
-                </div>
-                <!-- Section3 - Cryptic ICO Decentralized - About us -->
-                <div class="clearfix"></div>
-                <div class="cryptic_ico_about_us padding_80 data_background text-center" data-background="assets/images/home-decentralized-bg2-1-1.jpg">
-                    <div class="container">
-                        <!-- Section3.1 - About us -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="spacer_30"></div>
-                                <div class="title-subtile-holder wow fadeIn text_left">
-                                    <h1 class="section-title light_title no-margin">About Binary24 Trades</h1>
-                                    <div class="spacer_10"></div>
-                                    <div class="clearfix"></div>
-                                    <div class="section-border light_border no-margin"></div>
-                                    <div class="spacer_10"></div>
-                                    <div class="section-subtitle light_subtitle">
-                                        Binary 24 Trades is a company that successfully achieves its objectives and
-                                        gives others the opportunity to prosper. We are working in the investment market for several years and continue our progress.
-                                    </div>
-                                </div>
-                                <div class="spacer_40"></div>
-                                <div class="float-left modeltheme_button wow fadeIn">
-                                    <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 vc_col-has-fill">
-                                <div class="video_background">
-                                    <div class="mt_video text-center row">
-                                        <div class="wow bounce">
-                                            <a class="popup-vimeo-youtube" href="https://www.youtube.com/watch?v=QvQrNtmdIgE">
-                                                <img class="buton_image_class" src="assets/images/play-green.png" alt="play-green">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text wpb_fadeIn fadeIn">
-                                <span class="vc_sep_holder vc_sep_holder_l">
-                                    <span class="sep_line"></span>
-                                </span>
-                            <span class="vc_sep_holder vc_sep_holder_r">
-                                    <span class="sep_line"></span>
-                                </span>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <!-- Section3.2 - Network -->
-                        <div class="row">
-                            <div class="col-sm-6 vc_col-has-fill">
-                                <div class="wpb_single_image wpb_content_element vc_align_left wpb_fadeIn fadeIn">
-                                    <figure class="wpb_wrapper vc_figure">
-                                        <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                            <img width="1000" height="590" src="assets/images/2circlefilter.png" class="vc_single_image-img attachment-full" alt="circlefilter"/>
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="title-subtile-holder wow fadeIn text_left">
-                                    <h1 class="section-title light_title no-margin">Binary 24 Trade Network is built as a hybrid platform</h1>
-                                    <div class="spacer_10"></div>
-                                    <div class="clearfix"></div>
-                                    <div class="section-border light_border no-margin"></div>
-                                    <div class="spacer_10"></div>
-                                    <div class="section-subtitle light_subtitle">
-                                        Binary 24 Trade offers its investors the unique opportunity to get passive income from investing
-                                        to the most profitable directions of the present market.</div>
-                                </div>
-                                <div class="spacer_40"></div>
-                                <div class="clearfix"></div>
-                                <div class="float-left modeltheme_button wow fadeIn">
-                                    <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text wpb_fadeIn fadeIn">
-                                <span class="vc_sep_holder vc_sep_holder_l">
-                                    <span class="sep_line"></span>
-                                </span>
-                            <span class="vc_sep_holder vc_sep_holder_r">
-                                    <span class="sep_line"></span>
-                                </span>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <!-- Section3.3 - Smart contract -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="title-subtile-holder wow fadeIn text_left">
-                                    <h1 class="section-title light_title no-margin">Our Affliate Program</h1>
-                                    <div class="spacer_10"></div>
-                                    <div class="clearfix"></div>
-                                    <div class="section-border light_border no-margin"></div>
-                                    <div class="spacer_10"></div>
-                                    <div class="section-subtitle light_subtitle">Binary 24 Trading project is interested in partnership cooperation with its investors and is ready to generously remunerate such cooperation.
-                                        .</div>
-                                </div>
-                                <div class="spacer_40"></div>
-                                <div class="clearfix"></div>
-                                <div class="float-left modeltheme_button wow fadeIn">
-                                    <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 vc_col-has-fill">
-                                <figure class="wpb_wrapper vc_figure">
-                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                        <img width="" height="590" src="/assets/img/affiliates.png" class="vc_single_image-img attachment-full" alt="smartfilter" />
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-
-                        <div class="row">
-                            <div class="col-sm-5">
-                                <div class="title-subtile-holder wow fadeIn text_left">
-                                    <h1 class="section-title light_title no-margin">Enjoy the ultimate platform</h1>
-                                    <div class="spacer_10"></div>
-                                    <div class="clearfix"></div>
-                                    <div class="section-border light_border no-margin"></div>
-                                    <div class="spacer_10"></div>
-                                    <div class="section-subtitle light_subtitle">A multichart layout, technical analysis, historical quotes and beyond. Everything you’re looking for in a platform — on the device of your choice.
-                                        .</div>
-                                </div>
-                                <div class="spacer_40"></div>
-                                <div class="clearfix"></div>
-                                <div class="float-left modeltheme_button wow fadeIn">
-                                    <a href="{{ route('backend.dashboard') }}" class="button-winona btn btn-medium btn_custom_whitepaper">GET STARTED</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-7 vc_col-has-fill">
-                                <figure class="wpb_wrapper vc_figure">
-                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                        <img width="" height="590" src="/images/dash.webp" class="vc_single_image-img attachment-full" alt="smartfilter" />
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-
-
-                        <!-- Section3.4 - Team Board -->
-                        <div class="row">
-                            <div class="title-subtile-holder wow fadeIn text_center">
-                                <h1 class="section-title light_title no-margin">TOP TRADERS</h1>
-                                <div class="spacer_10"></div>
-                                <div class="clearfix"></div>
-                                <div class="section-border light_border no-margin"></div>
-                                <div class="spacer_10"></div>
-                                <div class="section-subtitle light_subtitle">Binary 24 Option <br /> top traders</div>
-                            </div>
-                            <div class="spacer_80"></div>
-                            <div class="row mt_members2 mt_slider_members_team1 wow fadeIn">
-                                @foreach($traders as $item)
-                                    <div class="col-md-12 relative">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <div class="members_img_holder">
-                                                    <div class="memeber02-img-holder">
-
-                                                        <img src="https://ui-avatars.com/api/?size=256&color=fff&name={{urlencode($item['name'])}}" alt="{{ $item['name'] }}" />
-                                                    </div>
-                                                    <div class="member02-content">
-                                                        <div class="member02-content-inside">
-                                                            <h3 class="member02_name text-white">{{ $item['name'] }}</h3>
-                                                            <h5 class="member02_position">{{ $item['pro'] }}</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                            <div class="spacer_80"></div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <!-- Section3.5 - Testimonials -->
-                        <div class="testimonials02-container wow fadeIn">
+            <!-- start slide -->
+            <div class="__slide __slide--1">
+                <div class="start-screen__content" style="background-image: url(img/slider_img/1.jpg)">
+                    <div class="start-screen__content__inner">
+                        <div class="grid grid--container">
                             <div class="row">
-                                <div class="item col-md-12 relative">
-                                    <div class="testimonials_all_holder">
-                                        <div class="testimonial02-text-holder">
-                                            <div class="testimonial02-content">
-                                                <div class="testimonial02_text">
-                                                    <div class="testimonial02_rating_titles col-md-12">
-                                                        <h4 class="testimonial02_title col-md-6 text-white">Thomas Moriz</h4>
-                                                        <div class="testimonial02_stars col-md-6 text-white"></div>
-                                                    </div>
-                                                    <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>I’ve been a full member of Binary 24 Trades for just 2 months and can honestly say it has completely transformed my approach to trading.
-                                                            I’d previously relied heavily on different combinations of indicators on numerous time-frames and never seemed to get anywhere and was close to giving up..</p>
-                                                    </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">Top Trader</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="item col-md-12 relative">
-                                    <div class="testimonials_all_holder">
-                                        <div class="testimonial02-text-holder">
-                                            <div class="testimonial02-content">
-                                                <div class="testimonial02_text">
-                                                    <div class="testimonial02_rating_titles col-md-12">
-                                                        <h4 class="testimonial02_title col-md-6 text-white">David C.</h4>
-                                                        <div class="testimonial02_stars col-md-6 text-white"></div>
-                                                    </div>
-                                                    <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>After a year of Trial and Error, Joy, Pain and £3000 hole in my
-                                                            account fate led me to Binary24 Trades. After only 1 week being a member I feel like a real Trader for the very first time.</p>
-                                                    </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">New Trader</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="item col-md-12 relative">
-                                    <div class="testimonials_all_holder">
-                                        <div class="testimonial02-text-holder">
-                                            <div class="testimonial02-content">
-                                                <div class="testimonial02_text">
-                                                    <div class="testimonial02_rating_titles col-md-12">
-                                                        <h4 class="testimonial02_title col-md-6 text-white">Henry D.</h4>
-                                                        <div class="testimonial02_stars col-md-6 text-white"></div>
-                                                    </div>
-                                                    <div class="testimonial02_text_content col-md-12 text-left">
-                                                        <p>I am PhD student and the first time that I
-                                                            heard about Crypto from my friend, was in May 2013.
-                                                            Since the first day, I found it very close to the ideal job that I wanted to do..</p>
-                                                    </div>
-                                                    <h4 class="testimonial02_position col-md-12 text-white">PHD in View</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="col col--md-9 col--lg-7 col--xl-6">
+                                    <h2 class="h1 __title">Trade with confidence </h2>
+
+                                    <p>Trade CFDs on Forex, Gold, Indices, global Shares and more
+                                    </p>
+
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-2" href="{{ route('backend.dashboard') }}">Get Started</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="spacer_40"></div>
-                        <!-- Section3.6 - Clients -->
-                        <div class="row">
-                            <div class="wow fadeIn mt_clients_slider clients_container_shortcode-5 owl-carousel owl-theme">
-                                <div class="clients_image_holder post">
-                                    <div class="item col-md-12">
-                                        <div class="clients_image_holder_inside post"><img class="client_image" src="/assets/img/perfect.jpg" alt="Perfect Money" /></div>
-                                    </div>
-                                </div>
-                                <div class="clients_image_holder post">
-                                    <div class="item col-md-12">
-                                        <div class="clients_image_holder_inside post"><img class="client_image" src="assets/img/eth.jpg" alt="Eth" /></div>
-                                    </div>
-                                </div>
-                                <div class="clients_image_holder post">
-                                    <div class="item col-md-12">
-                                        <div class="clients_image_holder_inside post"><img class="client_image" src="assets/img/bit.jpg" alt="Bitcoin" /></div>
-                                    </div>
-                                </div>
-                                <div class="clients_image_holder post">
-                                    <div class="item col-md-12">
-                                        <div class="clients_image_holder_inside post"><img class="client_image" src="assets/img/pay.jpg" alt="Payee" /></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="spacer_80"></div>
-                        <div class="clearfix"></div>
-                        <!-- Section3.7 - Know Your Customer -->
-
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!-- end slide -->
 
-    <div class="video-presentation-sect">
-<div class="card site-warning">
-    <h3>RISK WARNING</h3>
-    <p class="text-justify">The Financial Products offered by the company include Contracts for
-        Difference ('CFDs') and other complex financial products. Trading CFDs carries a high level of risk since leverage can
-        work both to your advantage and disadvantage. As a result, CFDs may not be suitable for all investors because it is possible
-        to lose all of your invested capital. You should never invest money that you cannot afford to lose. Before trading in the complex
-        financial products offered, please ensure to understand the risks involved. It's best to use the help of a professional trader for a
-        guaranteed result.</p>
-</div>
+            <!-- start slide -->
+            <div class="__slide __slide--2">
+                <div class="start-screen__content  text--center" style="background-image: url(img/slider_img/2.jpg)">
+                    <div class="start-screen__content__inner">
+                        <div class="grid grid--container">
+                            <div class="row row--xs-middle">
+                                <div class="col col--lg-11">
+                                    <h2 class="h1 __title">Next generation trading platform</h2>
+
+                                    <p>
+                                        {{ env('APP_NAME') }} is an award-winning platform that allows you to trade global financial markets using Bitcoin, USD Tether, USDC and more
+                                    </p><br>
+
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-2" href="{{ route('backend.dashboard') }}">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end slide -->
+
+            <!-- start slide -->
+            <div class="__slide __slide--3">
+                <div class="start-screen__content  text--center" style="background-image: url(img/slider_img/3.jpg)">
+                    <div class="start-screen__content__inner">
+                        <div class="grid grid--container">
+                            <div class="row row--xs-middle">
+                                <div class="col">
+                                    <p><span class="num">Let top traders do the job for you!</span></p>
+
+                                    <p>
+                                        <strong>Covesting allows you to automatically copy top-performing traders and achieve the same returns
+                                            )</strong>
+                                    </p><br>
+
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-2" href="#das">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end slide -->
+
+        </div>
+
+        <span class="scroll-discover hide show--md">scroll down <b></b></span>
+
     </div>
+    <!-- end start screen -->
+
+    <!-- start main -->
+    <main role="main">
+        <!-- start section -->
+{{--        <section class="section section--no-pt">--}}
+{{--            <div class="grid grid--container">--}}
+{{--                <div class="logos">--}}
+{{--                    <div class="__inner">--}}
+{{--                        <div class="row row--xs-center row--xs-around">--}}
+{{--                            <div class="col col--xs-auto">--}}
+{{--                                <img class="lazy" src="img/blank.gif" data-src="img/logos_img/14.png" alt="demo" />--}}
+{{--                            </div>--}}
+
+{{--                            <div class="col col--xs-auto">--}}
+{{--                                <img class="lazy" src="img/blank.gif" data-src="img/logos_img/15.png" alt="demo" />--}}
+{{--                            </div>--}}
+
+{{--                            <div class="col col--xs-auto">--}}
+{{--                                <img class="lazy" src="img/blank.gif" data-src="img/logos_img/16.png" alt="demo" />--}}
+{{--                            </div>--}}
+
+{{--                            <div class="col col--xs-auto">--}}
+{{--                                <img class="lazy" src="img/blank.gif" data-src="img/logos_img/17.png" alt="demo" />--}}
+{{--                            </div>--}}
+
+{{--                            <div class="col col--xs-auto">--}}
+{{--                                <img class="lazy" src="img/blank.gif" data-src="img/logos_img/18.png" alt="demo" />--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </section>--}}
+        <!-- end section -->
+
+        <!-- start section -->
+        <section class="section section--no-pt">
+            <div class="grid">
+                <div class="row row--md-center">
+                    <div class="col col--md-5 col--lg-6 col--no-gutters">
+                        <img class="img-responsive" src="img/img_4.1.jpg" alt="demo" />
+                    </div>
+
+                    <div class="col col--md-7 col--lg-6">
+                        <div class="content-grid" style="margin-right: auto;max-width: 570px;">
+                            <div data-aos="fade-left" data-aos-delay="150">
+                                <div class="section-heading  col-MB-30">
+                                    <h5 class="__subtitle">WHY #name </h5>
+
+                                    <h2 class="__title">Low spreads on more than 170 instruments</h2>
+                                </div>
+
+                                <p class="col-MB-35">
+                                    #name is built on an uncompromising level of service for all its clients, underpinned by some of the best prices and execution speeds in the industry. Trade market-leading spreads with a global FX and CFD broker.
+                                </p>
+
+                                <p>
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-1" href="#das">Get Started</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col hide--md col-MB-40"></div>
+                </div>
+
+                <div class="row row--md-center row--md-reverse">
+                    <div class="col col--md-5 col--lg-6 col--no-gutters">
+                        <img class="img-responsive" src="img/img_4.png" alt="demo" />
+                    </div>
+
+                    <div class="col hide--md col-MB-40"></div>
+
+                    <div class="col col--md-7 col--lg-6">
+                        <div class="content-grid" style="margin-left: auto;max-width: 570px;">
+                            <div data-aos="fade-right" data-aos-delay="150">
+                                <div class="section-heading  col-MB-30">
+                                    <h2 class="__title">Copy leading traders with Covesting</h2>
+                                </div>
+
+
+                                <p class="col-MB-35">
+                                  <strong>New to trading?</strong> <br/>
+                                    Choose among best performing strategies and automatically copy their trading activity to get the same returns!
+                                </p>
+                                <p class="col-MB-35">
+                                    <strong>Experienced trader?</strong> <br />
+                                    Make additional income with Covesting copy-trading platform . Earn up to 20% of all profits earned for your followers!
+                                </p>
+
+                                <p>
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-1" href="#">Discover</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+
+        <!-- start section -->
+        <section class="section section--dark-bg section--custom-01">
+            <style type="text/css">
+                @media only screen and (min-width: 768px)
+                {
+                    .section--custom-01 .img-wrap
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 15px;
+                        right: 0;
+                        bottom: 0;
+                        margin-left: 42%;
+                        overflow: hidden;
+                    }
+                }
+
+                @media only screen and (min-width: 992px)
+                {
+                    .section--custom-01 .__content { margin-bottom: 90px; }
+
+                    .section--custom-01 .img-wrap { margin-left: 45%; }
+                }
+            </style>
+
+            <div class="grid grid--container">
+                <div class="row">
+                    <div class="col col--md-5 col--lg-5">
+                        <div data-aos="fade-up" data-aos-easing="ease-out-cubic">
+                            <div class="__content">
+                                <div class="section-heading section-heading--white  col-MB-30">
+                                    <h5 class="__subtitle">#name Large Customer base</h5>
+
+                                    <h2 class="__title">Why People choose #name</h2>
+                                </div>
+
+                                <p class="col-MB-35">
+                                    We’re by your side for every trade, combining fast execution speeds, raw spreads
+                                    and low commissions with a genuine commitment to helping you achieve your trading goals.
+                                </p>
+
+                                <p class="hide--md">
+                                    <img class="img-responsive" src="img/img_3.jpg" alt="demo" />
+                                </p>
+
+                                <p>
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-2" href="#das">Get Started</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-wrap jarallax  hide show--md" data-speed="0.3">
+                <img class="jarallax-img" src="img/img_3.jpg" alt="demo" />
+            </div>
+        </section>
+        <!-- end section -->
+
+        <!-- start section -->
+        <section class="section section--no-pt section--no-pb section--custom-02">
+            <style type="text/css">
+                @media only screen and (min-width: 992px)
+                {
+                    .section--custom-02 .feature--style-1 { margin-top: -140px; }
+                }
+            </style>
+
+            <!-- start feature -->
+            <div class="feature feature--style-1  text--center text--sm-left">
+                <div class="row row--no-gutters">
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-3 col--sm-flex">
+                        <div class="__item  __item--first" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="0">
+                            <div class="__content">
+{{--                                <i class="__ico">--}}
+{{--                                    <img class="img-responsive lazy" src="img/blank.gif" data-src="images/icon/account-setup.svg" width="34" height="60" alt="demo" />--}}
+{{--                                </i>--}}
+
+                                <h3 class="__title">Trade with the best</h3>
+
+                                <p> #name has received multiple international awards for providing superior online trading services globally</p>
+
+                                <p><a class="__more" href="#"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-3 col--sm-flex">
+                        <div class="__item  __item--second" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="150">
+                            <div class="__content">
+
+                                <h3 class="__title">Find new opportunities</h3>
+
+                                <p>We provide our clients with the most innovative products and access to a wide range of markets</p>
+
+                                <p><a class="__more" href="#das"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-3 col--sm-flex">
+                        <div class="__item  __item--third" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="300">
+                            <div class="__content">
+
+                                <h3 class="__title">Increase profitability</h3>
+
+                                <p>Benefit from low fees, fast order execution, and advanced platform features to increase your profitability.</p>
+
+                                <p><a class="__more" href="#das"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-3 col--sm-flex">
+                        <div class="__item  __item--fourth" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="300">
+                            <div class="__content">
+
+                                <h3 class="__title">Enjoy privacy and security</h3>
+
+                                <p>Our platform is designed to protect funds and personal data better. Your privacy always comes first</p>
+
+                                <p><a class="__more" href="#das"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div>
+            </div>
+            <!-- end feature -->
+
+            <!-- start screenshots -->
+            <div class="screenshots screenshots--slider" data-slick='{"autoplay": true, "arrows": false, "dots": true, "speed": 1200}'>
+                <!-- start item -->
+                <div class="__item">
+                    <img src="img/wallet.jpg" alt="wallet" />
+                </div>
+                <!-- end item -->
+
+                <!-- start item -->
+                <div class="__item">
+                    <img src="img/wallet.jpg" alt="wallet" />
+                </div>
+                <!-- end item -->
+
+                <!-- start item -->
+                <div class="__item">
+                    <img src="img/wallet.jpg" alt="wallet" />
+                </div>
+                <!-- end item -->
+
+                <!-- start item -->
+                <div class="__item">
+                    <img src="img/wallet.jpg" alt="wallet" />
+                </div>
+                <!-- end item -->
+
+                <!-- start item -->
+                <div class="__item">
+                    <img src="img/wallet.jpg" alt="wallet" />
+                </div>
+                <!-- end item -->
+            </div>
+            <!-- end screenshots -->
+        </section>
+        <!-- end section -->
+
+        <!-- start section -->
+        <section class="section">
+            <div class="grid grid--container">
+                <div class="section-heading section-heading--center  col-MB-60">
+                    <h2 class="__title">Award-winning customer support</h2>
+                    <p>Nothing should get in the way of making your best trade. With 24/5 support, a wealth of trading
+                        resources and a seamless account experience, you’re free to focus on what matters.</p>
+                </div>
+
+                <div style="width:100%;position:relative;">
+
+                </div>
+            </div>
+            <!-- start feature -->
+            <div class="feature feature--style-1  text--center text--sm-left">
+                <div class="row row--no-gutters support">
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-4 col--sm-flex ">
+                        <div class="__item  __item--firs" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="0">
+                            <div class="__content">
+
+                                <h3 class="__title">   Multilingual support</h3>
+
+                                <p>Access multilingual support 24/5 across live chat, email and phone.</p>
+                                <p>Contact Us</p>
+
+                                <p><a class="__more" href="{{ route('contact') }}"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-4 col--sm-flex">
+                        <div class="__item  __item--secon" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="150">
+                            <div class="__content">
+
+
+
+                                <h3 class="__title">Apply in minutes</h3>
+
+                                <p>Apply for a trading account with electronic ID verification available in many countries.</p>
+                                <p>Create Account</p>
+
+                                <p><a class="__more" href="#das"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+
+                    <!-- start item -->
+                    <div class="col col--no-gutters col--sm-6 col--lg-4 col--sm-flex">
+                        <div class="__item  __item--thir" data-aos="slide-up" data-aos-offset="-250" data-aos-duration="800" data-aos-delay="300">
+                            <div class="__content">
+
+
+
+
+                                <h3 class="__title">Seamless trading</h3>
+
+                                <p>Multiple funding and withdrawal options are available for your convenience.</p>
+                                <p>View our funding options</p>
+
+                                <p><a class="__more" href="#das"><i class="fontello-right-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end item -->
+
+                </div>
+            </div>
+            <!-- end feature -->
+        </section>
+        <!-- end section -->
+
+
+        <!-- start section -->
+        <section class="section section--light-blue-bg">
+            <div class="grid grid--container">
+                <div class="section-heading section-heading--center  col-MB-60">
+{{--                    <h5 class="__subtitle">Popular Cryptocarrency prices</h5>--}}
+
+                    <h2 class="__title">Cryptocurrency Prices</h2>
+                </div>
+
+                <script>
+                    (function(b,i,t,C,O,I,N) {
+                        window.addEventListener('load',function() {
+                            if(b.getElementById(C))return;
+                            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+                            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+                        },false)
+                    })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+                </script>
+
+                <div class="btcwdgt-chart" bw-theme="light" style="max-width: 100% !important"></div>
+            </div>
+        </section>
+        <!-- end section -->
+
+
+        <!-- start section -->
+        <section class="section">
+            <div class="grid grid--container">
+                <div class="section-heading section-heading--center  col-MB-60">
+                    <h2 class="__title">Open a free account and start trading in minutes!</h2>
+                    <p>
+                        We provide our clients with a wide range of trading tools and features to improve their trading results</p>
+                </div>
+            </div>
+            <div class="grid grid--container">
+                <div class="row row--xs-center">
+                    <div class="col col--lg-5">
+                        <div data-aos="fade-right" data-aos-offset="0">
+                            <p><strong> Best-in-class platform</strong></p>
+                            <p class="col-MB-35">
+                                Become a better trader with advanced trading tools. #name provides an
+                                award-winning platform that is used by traders from around the world.
+                            </p>
+                            <p><strong>Global markets</strong></p>
+                            <p class="col-MB-35">
+                                #name allows its users to access multiple markets from a single account.
+                                Trade Cryptocurrencies, Forex, Commodities, and much more.
+                            </p>
+                            <p><strong>24/7 support</strong></p>
+                            <p class="col-MB-35">
+                            Our customer service team works 24/7 to provide you with an exceptional level of support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col hide--md col-MB-40"></div>
+
+                    <div class="col col--lg-7">
+                        <div data-aos="fade" data-aos-delay="300">
+                            <img class="img-responsive center-block lazy" src="img/blank.gif" data-src="images/bg.jpeg" alt="demo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+
+
+        <!-- start section -->
+        <section class="section section--base-bg">
+            <div class="grid grid--container">
+                <!-- start testimonial slider -->
+                <div class="row">
+                    <div class="col col--md-2  hide show--md">
+                        <i class="testimonial-ico">“</i>
+                    </div>
+
+                    <div class="col col--md-10">
+                        <!-- start testimonial -->
+                        <div class="testimonial testimonial--slider" data-slick='{"autoplay": true, "arrows": false, "dots": true, "speed": 1000}'>
+                            <!-- start item -->
+                            <div class="__item">
+                                <div class="__text">
+                                    <p>
+                                        Oh no way! Can I arks you a question, this heaps good hokey pokey is as stuffed as a snarky misses. Good afterble constanoon. Can't handle the jandle, do you happen to have a bucket or a hose bro?, piece of piss. Mean while, in the marae, Maui and the Armed Offenders Squad were up to no good with a bunch of sweet pavlovas. Chur bro, you're not in Guatemala now.
+                                    </p>
+                                </div>
+
+                                <div class="__author">
+                                    <h5 class="__author--name">Joseph Allan</h5>
+                                    <span class="__author--position">CEO Silver Development</span>
+                                </div>
+                            </div>
+                            <!-- end item -->
+
+                            <!-- start item -->
+                            <div class="__item">
+                                <div class="__text">
+                                    <p>
+                                        Oh no way! Can I arks you a question, this heaps good hokey pokey is as stuffed as a snarky misses. Good afterble constanoon. Can't handle the jandle, do you happen to have a bucket or a hose bro?, piece of piss. Mean while, in the marae, Maui and the Armed Offenders Squad were up to no good with a bunch of sweet pavlovas. Chur bro, you're not in Guatemala now.
+                                    </p>
+
+                                    <p>
+                                        Oh no way! Can I arks you a question, this heaps good hokey pokey is as stuffed as a snarky misses. Good afterble constanoon. Can't handle the jandle, do you happen to have a bucket or a hose bro?, piece of piss. Mean while, in the marae, Maui and the Armed Offenders Squad were up to no good with a bunch of sweet pavlovas. Chur bro, you're not in Guatemala now.
+                                    </p>
+                                </div>
+
+                                <div class="__author">
+                                    <h5 class="__author--name">Joseph Allan</h5>
+                                    <span class="__author--position">CEO Silver Development</span>
+                                </div>
+                            </div>
+                            <!-- end item -->
+
+                            <!-- start item -->
+                            <div class="__item">
+                                <div class="__text">
+                                    <p>
+                                        Oh no way! Can I arks you a question, this heaps good hokey pokey is as stuffed as a snarky misses. Good afterble constanoon. Can't handle the jandle, do you happen to have a bucket or a hose bro?, piece of piss. Mean while, in the marae, Maui and the Armed Offenders Squad were up to no good with a bunch of sweet pavlovas. Chur bro, you're not in Guatemala now.
+                                    </p>
+                                </div>
+
+                                <div class="__author">
+                                    <h5 class="__author--name">Joseph Allan</h5>
+                                    <span class="__author--position">CEO Silver Development</span>
+                                </div>
+                            </div>
+                            <!-- end item -->
+                        </div>
+                        <!-- end testimonial -->
+                    </div>
+                </div>
+                <!-- end testimonial slider -->
+            </div>
+        </section>
+        <!-- end section -->
+
+        <!-- start section -->
+        <section class="section jarallax" data-speed="0.5">
+            <img class="jarallax-img" src="img/bg_.jpg" alt="demo" />
+
+            <div class="pattern" style="background-color: rgba(0, 0, 0, 0.53);"></div>
+
+            <div class="grid grid--container">
+                <div class="section-heading section-heading--center section-heading--white  col-MB-45">
+                    <h2 class="__title">We can Help You</h2>
+                </div>
+
+                <div class="row row--xs-middle">
+                    <div class="col col--xs-10">
+                        <!-- start company contacts -->
+                        <div class="company-contacts  text--center">
+                            <div class="__inner">
+                                <div class="row row--xs-between">
+                                    <!-- start item -->
+                                    <div class="col col--lg-4 col--xl-3">
+                                        <div class="__item">
+                                            <p>{{ env('address') }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- end item -->
+
+                                    <!-- start item -->
+                                    <div class="col col--sm-6 col--lg-4 col--xl-3">
+                                        <div class="__item">
+                                            <p>Call Us: <a href="tel:{{ env('PHONE') }}">{{ env('PHONE') }}</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- end item -->
+
+                                    <!-- start item -->
+                                    <div class="col col--sm-6 col--lg-4 col--xl-3">
+                                        <div class="__item">
+                                            <p>Email: <a href="mailto: {{ env('email') }}">{{ env('email') }}</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- end item -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end company contacts -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+    </main>
+    <!-- end main -->
+
 
 @endsection
