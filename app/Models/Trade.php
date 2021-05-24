@@ -48,8 +48,11 @@ class Trade extends Model
 
     public function getCPriceAttribute()
     {
-
-        return  '$'.($this->traded_amount + $this->payout);
+        if($this->is_win){
+            return  '$'.($this->traded_amount + $this->payout);
+        }else {
+            return  '$'.($this->traded_amount - $this->payout);
+        }
     }
 
 }
