@@ -7604,7 +7604,7 @@ a {
   a:hover, a:focus, a.active {
     text-decoration: none;
     outline: none;
-    color: #5d78ff; }
+    color: #dee2e6; }
 
 b,
 strong,
@@ -7626,10 +7626,8 @@ strong,
     opacity: 1; }
 
 .content-body {
-  margin-left: 65px;
-  margin-top: 18px;
-  margin-right: 6px;
-  margin-bottom: 45px; }
+    margin: 18px 6px 45px 180px;
+}
 
 #preloader {
   position: fixed;
@@ -9845,7 +9843,7 @@ label.error {
     top: 3px; } }
 
 .header.dashboard {
-  padding: 5px 10px;
+  padding: 0 10px;
   box-shadow: 0 10px 30px 0 rgba(82, 63, 105, 0.08); }
   .header.dashboard .navbar {
     padding: 0px; }
@@ -10019,12 +10017,12 @@ label.error {
   position: fixed;
   left: 0;
   height: 100%;
-  width: 60px;
-  top: 0;
+  width: 170px;
   box-shadow: 0 10px 30px 0 rgba(82, 63, 105, 0.08); }
 
 .menu {
-  margin-top: 100px; }
+  margin-top: 100px;
+}
   .menu ul li {
     text-align: center;
     margin-bottom: 15px; }

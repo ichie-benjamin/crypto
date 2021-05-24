@@ -69,9 +69,9 @@
 
             @include('partials.menu-top')
 
-            <div class="row">
-                @include('partials.menu')
-            </div>
+{{--            <div class="row">--}}
+{{--                @include('partials.menu')--}}
+{{--            </div>--}}
 
             <div class="row">
 

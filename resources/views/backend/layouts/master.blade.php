@@ -51,6 +51,28 @@
         #dashboard {
             background-image: url(/assets/images/cryptic-decentralized-bg11-3.jpg);
         }
+        @media only screen and (max-width: 767px) {
+            .sidebar {
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+                padding: 0px;
+                z-index:1;
+            }
+            .menu {
+                margin-top: 1px;
+            }
+            .menu ul li a i {
+                font-size: 30px;
+            }
+            .menu ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
     </style>
 </head>
 
@@ -147,51 +169,58 @@
                 <li>
                     <a href="{{ route('backend.dashboard') }}" data-toggle="tooltip" data-placement="right" title="dashboard">
                         <span><i class="mdi mdi-view-dashboard"></i></span>
+                        <span class="nav-text">Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('backend.account.overview') }}" data-toggle="tooltip" data-placement="right" title="Overview">
                         <span><i class="mdi mdi-bullseye"></i></span>
-                    </a>
-                </li>      <li>
-                    <a href="{{ route('backend.upgrade') }}" data-toggle="tooltip" data-placement="right" title="Upgrade">
-                        <span><i class="mdi mdi-arrow-up"></i></span>
+                        <span class="nav-text">Overview</span>
                     </a>
                 </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('backend.upgrade') }}" data-toggle="tooltip" data-placement="right" title="Upgrade">--}}
+{{--                        <span><i class="mdi mdi-arrow-up"></i></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 <li>
                     <a href="{{ route('deposit.create') }}" data-toggle="tooltip" data-placement="right" title="Deposit">
                         <span><i class="mdi mdi-tumblr-reblog"></i></span>
+                        <span class="nav-text">Deposit</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('backend.profile.edit') }}" data-toggle="tooltip" data-placement="right" title="Edit Account">
-                        <span><i class="mdi mdi-face-profile"></i></span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('backend.profile.edit') }}" data-toggle="tooltip" data-placement="right" title="Edit Account">--}}
+{{--                        <span><i class="mdi mdi-face-profile"></i></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{ route('backend.trades.index') }}" data-toggle="tooltip" data-placement="right" title="Trades">
                         <span><i class="mdi mdi-database"></i></span>
+                        <span class="nav-text">Database</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('backend.withdraw.index') }}" data-toggle="tooltip" data-placement="right" title="Withdrawals">
                         <span><i class="mdi mdi-pentagon"></i></span>
+                        <span class="nav-text">Withdrawals</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('backend.account.security') }}" data-toggle="tooltip" data-placement="right" title="Security Setting">
-                        <span><i class="mdi mdi-settings"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('backend.user.login.logins') }}" data-toggle="tooltip" data-placement="right" title="login login">
-                        <span><i class="mdi mdi-diamond"></i></span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('backend.account.security') }}" data-toggle="tooltip" data-placement="right" title="Security Setting">--}}
+{{--                        <span><i class="mdi mdi-settings"></i></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('backend.user.login.logins') }}" data-toggle="tooltip" data-placement="right" title="login login">--}}
+{{--                        <span><i class="mdi mdi-diamond"></i></span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{ route('backend.transactions') }}" data-toggle="tooltip" data-placement="right" title="Transaction History">
                         <span><i class="mdi mdi-history"></i></span>
+                        <span class="nav-text">Transactions</span>
                     </a>
                 </li>
             </ul>
@@ -314,17 +343,17 @@
 
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6065c68c067c2605c0be6bed/1f26ov6ja';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-    })();
-</script>
+{{--<script type="text/javascript">--}}
+{{--    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();--}}
+{{--    (function(){--}}
+{{--        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];--}}
+{{--        s1.async=true;--}}
+{{--        s1.src='https://embed.tawk.to/6065c68c067c2605c0be6bed/1f26ov6ja';--}}
+{{--        s1.charset='UTF-8';--}}
+{{--        s1.setAttribute('crossorigin','*');--}}
+{{--        s0.parentNode.insertBefore(s1,s0);--}}
+{{--    })();--}}
+{{--</script>--}}
 <!--End of Tawk.to Script-->
 
 </body>
