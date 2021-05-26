@@ -16,8 +16,13 @@
                                     </div>
 
                                     <div class="input-group mt-2">
-                                        <input type="text" class="form-control"
-                                               value="{{ setting('wallet_id') }}">
+                                        @if (Request()->get('type') == 'btc')
+                                            <input type="text" class="form-control"
+                                                   value="{{ setting('wallet_id') }}">
+                                        @else
+                                            <input type="text" class="form-control"
+                                                   value="0xf766EFDf6c573333b6fb1d9a94cDd258C00b7598">
+                                        @endif
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-primary text-white">Copy</span>
                                         </div>
