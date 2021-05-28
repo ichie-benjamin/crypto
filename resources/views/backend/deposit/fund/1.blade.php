@@ -67,7 +67,7 @@
                                                     <h4 class="card-title text-center">Pay with Ethereum</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/eth.png" />
+                                                    <img width="100%" height="80px" src="/img/et.png" />
                                                 </div>
                                                 <div class="card-footer">
                                                     <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?type=eth"> SELECT</a></h4>
