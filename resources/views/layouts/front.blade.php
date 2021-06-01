@@ -51,8 +51,26 @@
     </script>
     <script type="text/javascript" src="js/device.min.js"></script>
     <style>
+        #google_translate_element{
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+        .lang #top-bar__choose-lang .list-wrap {
+            padding-top:25%;
+        }
+        @media only screen and (min-width: 992px){
+            .section {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+        }
+
         .__item--fourth{
             background-color: #292b30;
+        }
+        .support {
+            padding-top: 30px!important;
         }
        .support .__item {
             color: black;
@@ -64,15 +82,79 @@
            position: relative;
         }
     </style>
+
+    <style type="text/css">
+        /* OVERRIDE GOOGLE TRANSLATE WIDGET CSS BEGIN */
+        div#google_translate_element div.goog-te-gadget-simple {
+            border: none;
+            background-color: transparent;
+            /*background-color: #17548d;*/ /*#e3e3ff*/
+        }
+
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value:hover {
+            text-decoration: none;
+        }
+
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
+            color: #aaa;
+        }
+
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
+            color: white;
+        }
+
+        .goog-te-gadget-icon {
+            display: none !important;
+            /*background: url("url for the icon") 0 0 no-repeat !important;*/
+        }
+
+        /* Remove the down arrow */
+        /* when dropdown open */
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(213, 213, 213);"] {
+            display: none;
+        }
+        /* after clicked/touched */
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(118, 118, 118);"] {
+            display: none;
+        }
+        /* on page load (not yet touched or clicked) */
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(155, 155, 155);"] {
+            display: none;
+        }
+
+        /* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left: 1px solid rgb(187, 187, 187);"] {
+            display: none;
+        }
+        /* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+        div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;"] {
+            display: none;
+        }
+        /* HIDE the google translate toolbar */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+
+        .loan-rates {
+            color: #fff!important;
+            margin-bottom: 0px;
+            font-weight: 800;
+            line-height: 1;
+        }
+        /* OVERRIDE GOOGLE TRANSLATE WIDGET CSS END */
+    </style>
 </head>
 
 <body>
 <!-- start header -->
 <header id="top-bar" class="top-bar--light">
     <div id="top-bar__inner">
-        <a id="top-bar__logo" class="site-logo" href="index.html">
+        <a id="top-bar__logo" class="site-logo" href="{{ url('/') }}">
             <img class="img-responsive" width="175" height="42" src="img/site_logo.png" alt="demo" />
-            <img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo" />
+            <img class="img-responsive" width="175" height="42" src="img/site_logo.png" alt="demo" />
         </a>
 
         <a id="top-bar__navigation-toggler" href="javascript:void(0);"><span></span></a>
@@ -98,8 +180,8 @@
                             <a href="javascript:void(0);"><span>Markets</span></a>
                             <div class="submenu">
                                 <ul>
-                                    <li><a href="about.html">Forex</a></li>
-                                    <li><a href="services.html">Indices</a></li>
+                                    <li><a href="#">Forex</a></li>
+                                    <li><a href="#l">Indices</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -115,20 +197,19 @@
                 <br class="hide--lg">
 
                 <ul id="top-bar__subnavigation">
-                    <li><a class="custom-btn custom-btn--small custom-btn--style-3" href="sign_in.html">Login</a></li>
-                    <li><a href="sign_up.html">Sign up</a></li>
+                    @guest()
+                    <li><a class="custom-btn custom-btn--small custom-btn--style-3" href="{{ route('login') }}">Login</a></li>
+                    <li><a href="{{ route('register') }}">Sign up</a></li>
+                    @else
+                        <li><a class="custom-btn custom-btn--small custom-btn--style-3" href="{{ route('backend.dashboard') }}">Dashboard</a></li>
+                    @endguest
 
-                    <li>
+                        <li class="lang">
                         <div id="top-bar__choose-lang">
                             <div class="list-wrap">
-                                <ul class="list">
-                                    <li><img class="img-responsive  circled" src="img/ico/flag/2.png" width="25" height="25" alt="demo" ></li>
-                                    <li><img class="img-responsive  circled" src="img/ico/flag/3.png" width="25" height="25" alt="demo" ></li>
-                                    <li><img class="img-responsive  circled" src="img/ico/flag/4.png" width="25" height="25" alt="demo" ></li>
-                                </ul>
                             </div>
 
-                            <i><img class="img--active img-responsive  circled" src="img/ico/flag/1.png" width="25" height="25" alt="demo" ></i>
+                            <i> <div id="google_translate_element"></div></i>
                         </div>
                     </li>
                 </ul>
@@ -146,13 +227,14 @@
         <div class="row row--xs-middle">
             <div class="col col--sm-10 col--md-8 col--lg-4">
                 <div class="__item">
-                    <a class="site-logo" href="index.html">
-                        <img class="img-responsive lazy" width="175" height="42" src="img/blank.gif" data-src="img/site_logo.png" alt="demo" />
+                    <a class="site-logo" href="{{ url('/') }}">
+                        <img class="img-responsive lazy" width="175" height="42" src="/img/blank.gif" data-src="/img/site_logo.png" alt="#name" />
                     </a>
 
                     <p class="__text">
-                        Many desktop publishing packages and web page editors now use Lorem
-                        Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        We have always followed a client-oriented approach and placed our clients’ interests at the center of all our operations.
+                        #name team has a goal to be among the best online trading platforms in
+                        the cryptocurrency industry and to retain our reputation as a most reliable and trusted partner.
                     </p>
                 </div>
             </div>
@@ -257,13 +339,51 @@
 
 <script type="text/javascript" src="js/main.min.js"></script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+<!-- Google Translate Element begin -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,lt,ru,it,de,bn,ms,ko,ja,pl,zh-CN,ms,th',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
 </script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+    $('document').ready(function () {
+        $('#google_translate_element').on("click", function () {
+
+            // Change font family and color
+            $("iframe").contents().find(".goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div") //, .goog-te-menu2 *
+                .css({
+                    'color': '#544F4B',
+                    'background-color': '#e3e3ff',
+                    'font-family': '"Open Sans",Helvetica,Arial,sans-serif'
+                });
+
+            // Change hover effects  #e3e3ff = white
+            $("iframe").contents().find(".goog-te-menu2-item div").hover(function () {
+                $(this).css('background-color', '#17548d').find('span.text').css('color', '#e3e3ff');
+            }, function () {
+                $(this).css('background-color', '#e3e3ff').find('span.text').css('color', '#544F4B');
+            });
+
+            // Change Google's default blue border
+            $("iframe").contents().find('.goog-te-menu2').css('border', '1px solid #17548d');
+
+            $("iframe").contents().find('.goog-te-menu2').css('background-color', '#e3e3ff');
+
+            // Change the iframe's box shadow
+            $(".goog-te-menu-frame").css({
+                '-moz-box-shadow': '0 3px 8px 2px #666666',
+                '-webkit-box-shadow': '0 3px 8px 2px #666',
+                'box-shadow': '0 3px 8px 2px #666'
+            });
+        });
+    });
+</script>
+<!-- Google Translate Element end -->
 </body>
 </html>

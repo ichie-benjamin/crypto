@@ -38,20 +38,27 @@
             margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 13px 0 rgba(82, 63, 105, 0.05);
-            background: #f8f1f1
+            /*background: #f8f1f1*/
+        }
+        .payment-methods .card .card-body {
+            border-radius: 0;
         }
         .payment-methods .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #363C4E;
-            background: #673AB7;
+            background: #99999973;
+            border-radius: 0!important;
             padding: 15px 20px;
         }
         #dashboard {
-            background-image: url(/assets/images/cryptic-decentralized-bg11-3.jpg);
+            background-color: #3a3c4e;
         }
         @media only screen and (max-width: 767px) {
+            .content-body {
+                margin: 18px 6px 45px 5px;
+            }
             .sidebar {
                 top: auto;
                 bottom: 0;
@@ -66,6 +73,13 @@
             .menu ul li a i {
                 font-size: 30px;
             }
+            .menu ul li {
+                text-align: center;
+            }
+            .menu ul li a {
+                padding: 2px 0;
+                font-size: 0px;
+            }
             .menu ul {
                 display: flex;
                 justify-content: space-around;
@@ -73,27 +87,38 @@
             }
         }
 
+        .card {
+            background-color: #3a3c4e;
+        }
+        .card .card-body {
+            margin-bottom: 5px;
+        }
+
+        .card-header:first-child {
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
     </style>
 </head>
 
 <body id="dashboard">
 
-<div id="preloader">
-    <div class="sk-three-bounce">
-        <div class="sk-child sk-bounce1"></div>
-        <div class="sk-child sk-bounce2"></div>
-        <div class="sk-child sk-bounce3"></div>
-    </div>
-</div>
+{{--<div id="preloader">--}}
+{{--    <div class="sk-three-bounce">--}}
+{{--        <div class="sk-child sk-bounce1"></div>--}}
+{{--        <div class="sk-child sk-bounce2"></div>--}}
+{{--        <div class="sk-child sk-bounce3"></div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
-<div id="main-wrapper">
-
+<div id="main-wrapper" class="show">
     <div class="header dashboard">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-12">
                     <nav class="navbar navbar-expand-lg navbar-light px-0 justify-content-between">
-                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img style="height: 50px" src="/images/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="{{ route('backend.dashboard') }}"><img style="height: 40px" src="/images/logo.png" alt=""></a>
 
                         <div class="header-right d-flex my-2 align-items-center">
                             <div class="language">
@@ -198,7 +223,7 @@
                 <li>
                     <a href="{{ route('backend.trades.index') }}" data-toggle="tooltip" data-placement="right" title="Trades">
                         <span><i class="mdi mdi-database"></i></span>
-                        <span class="nav-text">Database</span>
+                        <span class="nav-text">Trades</span>
                     </a>
                 </li>
                 <li>

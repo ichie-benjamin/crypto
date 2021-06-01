@@ -4,7 +4,7 @@
 
     <!-- start start screen -->
     <div id="start-screen" class="start-screen--light start-screen--style-6">
-        <div class="start-screen__slider" data-slick='{"autoplay": false, "fade": true, "dots": true, "speed": 1200}'>
+        <div class="start-screen__slider" data-slick='{"autoplay": true, "fade": true, "dots": true, "speed": 1200}'>
 
             <!-- start slide -->
             <div class="__slide __slide--1">
@@ -146,7 +146,7 @@
 
                 <div class="row row--md-center row--md-reverse">
                     <div class="col col--md-5 col--lg-6 col--no-gutters">
-                        <img class="img-responsive" src="img/img_4.png" alt="demo" />
+                        <img class="img-responsive" src="/img/2021/screen1.png" alt="demo" />
                     </div>
 
                     <div class="col hide--md col-MB-40"></div>
@@ -240,7 +240,7 @@
         <!-- end section -->
 
         <!-- start section -->
-        <section class="section section--no-pt section--no-pb section--custom-02">
+        <section class="section  section--no-pb section--custom-02">
             <style type="text/css">
                 @media only screen and (min-width: 992px)
                 {
@@ -320,31 +320,31 @@
             <div class="screenshots screenshots--slider" data-slick='{"autoplay": true, "arrows": false, "dots": true, "speed": 1200}'>
                 <!-- start item -->
                 <div class="__item">
-                    <img src="img/wallet.jpg" alt="wallet" />
+                    <img src="/img/2021/screen11.png" alt="wallet" />
                 </div>
                 <!-- end item -->
 
                 <!-- start item -->
                 <div class="__item">
-                    <img src="img/wallet.jpg" alt="wallet" />
+                    <img src="/img/2021/screen2.png" alt="wallet" />
                 </div>
                 <!-- end item -->
 
                 <!-- start item -->
                 <div class="__item">
-                    <img src="img/wallet.jpg" alt="wallet" />
+                    <img src="/img/2021/screen3.png" alt="wallet" />
                 </div>
                 <!-- end item -->
 
                 <!-- start item -->
                 <div class="__item">
-                    <img src="img/wallet.jpg" alt="wallet" />
+                    <img src="/img/2021/screen4.png" alt="wallet" />
                 </div>
                 <!-- end item -->
 
                 <!-- start item -->
                 <div class="__item">
-                    <img src="img/wallet.jpg" alt="wallet" />
+                    <img src="/img/2021/screen11.png" alt="wallet" />
                 </div>
                 <!-- end item -->
             </div>

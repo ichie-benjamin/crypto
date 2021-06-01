@@ -7,8 +7,8 @@
         <div class="grid grid--container">
             <div class="row row--xs-middle">
                 <div class="col col--lg-6 text--center">
-                    <h1 class="__title">About Crypterium</h1>
-                    <p>Crypterium is the world’s most popular way to buy and sell bitcoin, ethereum, and litecoin</p>
+                    <h2 class="__title">About #name</h2>
+                    <p>#name is the world’s most popular way to buy and sell bitcoin, ethereum,  litecoin and other crypto currencies</p>
                 </div>
             </div>
         </div>
@@ -19,21 +19,26 @@
     <main role="main">
         <!-- start section -->
         <section class="section">
-            <div class="grid grid--container">
+            <div class="grid ">
                 <div class="section-heading section-heading--center  col-MB-60">
-                    <h5 class="__subtitle">Our mission</h5>
+                    <h5 class="__subtitle">Why #name?</h5>
 
-                    <h2 class="__title">Crypterium is the Best Ceowdsale Service!</h2>
+                    <h2 class="__title">Why choose us!</h2>
                 </div>
 
                 <div class="row row--xs-middle">
                     <div class="col col--lg-10 col--xl-8">
                         <p>
-                            Steelhead trumpeter, zingel saury <a href="#">grouper swallower</a> threadfin pencilsmelt pufferfish hoki. Unicorn fish salmon shark: elasmobranch rohu wasp fish; yellowfin surgeonfish.
+                            We’re by your side for every trade, combining fast execution speeds,
+                            raw spreads and low commissions with a genuine commitment to helping you achieve your trading goals.
                         </p>
 
+                        <h2 class="__title">Our Company</h2>
                         <p>
-                            Halfbeak, "tiger shark long-finned char gar yellowfin tuna blue whiting, cavefish Redfish murray cod." Squirrelfish lungfish gudgeon Sevan trout luminous hake bleak bocaccio glassfish gulf menhaden. Chum salmon mooneye pleco bango blue-redstripe danio. Driftwood catfish lemon shark arowana; wormfish sailfish sand dab! Torpedo rockfish Black swallower snailfish candlefish Kafue pike sillago eel Pacific lamprey; king-of-the-salmon slipmouth, javelin, "trahira," cavefish.
+                           #name was founded in 2018 and from the very first day, we have grown exponentially and currently
+                            serve clients in more than 150 countries. We provide our clients with access to top-tier liquidity and wide range
+                            of trading tools, while maintaining security,
+                            liquidity, enabling a safe and efficient trading environment for everyone.
                         </p>
                     </div>
                 </div>
@@ -54,29 +59,29 @@
 
             <div class="grid grid--container">
                 <div class="row row--md-middle">
-                    <div class="col col--lg-10 col--xl-8">
+                    <div class="col col--lg-12 col--xl-12">
                         <!-- start feature -->
                         <div class="facts facts--dark-color  text--center text--sm-left">
                             <div class="__inner">
                                 <div class="row row--md-between">
                                     <div class="col col--sm-6 col--md-3">
-                                        <div class="__item">
-                                            <span class="num js-count" data-from="0" data-to="20" data-decimals="1" data-before="$" data-after="M"></span><br>
-                                            The amount of finance in the system
+                                        <div class="__item text--center">
+                                            <img src="/img/2021/time.svg" /><br />
+                                            Ultra-fast order execution. < 7.12 ms on average
                                         </div>
                                     </div>
 
                                     <div class="col col--sm-6 col--md-3">
-                                        <div class="__item">
-                                            <span class="num js-count" data-from="0" data-to="25" data-decimals="3"></span><br>
-                                            Active users
+                                        <div class="__item text--center">
+                                            <img src="/img/2021/execution.svg" /><br />
+                                            Industry-leading trade engine with real-time risk management
                                         </div>
                                     </div>
 
                                     <div class="col col--sm-6 col--md-3">
-                                        <div class="__item">
-                                            <span class="num js-count" data-from="0" data-to="32"></span><br>
-                                            Supported countries
+                                        <div class="__item text--center">
+                                            <img src="/img/2021/latency.svg" /><br />
+                                            Secure and powerful infrastructure powered by Amazon AWS
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +100,7 @@
                 <div class="row">
                     <div class="col col--md-6">
                         <div data-aos="zoom-in">
-                            <img class="img-responsive lazy" src="img/blank.gif" data-src="img/img_5.png" alt="demo" />
+                            <img class="img-responsive lazy" src="img/blank.gif" data-src="/img/img_4.png" alt="demo" />
                         </div>
                     </div>
 
@@ -104,17 +109,21 @@
                     <div class="col col--md-6">
                         <div data-aos="fade-left">
                             <div class="section-heading  col-MB-30">
-                                <h5 class="__subtitle">Benefits</h5>
+{{--                                <h5 class="__subtitle">Benefits</h5>--}}
 
-                                <h2 class="__title">Crypterium Multylanguage Service for you</h2>
+                                <h2 class="__title">Technology</h2>
                             </div>
 
                             <p class="col-MB-35">
-                                JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications.
+                                #name offers a robust trading system for both beginners and professional traders that demand highly reliable
+                                market data and performance. Entire infrastructure is designed to facilitate high number of orders per second and extreme loads,
+                                while offering ultra-fast order execution and low latency. Our traders of all experience levels can easily design and customize
+                                layouts and widgets to best fit their trading style. We are proud to offer such innovative products and professional trading
+                                conditions to all our customers.
                             </p>
 
                             <p>
-                                <a class="custom-btn custom-btn--medium custom-btn--style-1" href="#">Discover</a>
+                                <a class="custom-btn custom-btn--medium custom-btn--style-1" href="{{ route('backend.dashboard') }}">Get Started</a>
                             </p>
                         </div>
                     </div>
@@ -136,247 +145,19 @@
 
             <div class="grid grid--container">
                 <div class="section-heading section-heading--center  col-MB-60">
-                    <h5 class="__subtitle">Our brain</h5>
+                    <h5 class="__subtitle">Behind the scene</h5>
 
-                    <h2 class="__title">Awesome Team</h2>
+                    <h2 class="__title">How we execute your trades</h2>
                 </div>
 
+                <p>All trades on #name trading platform are executed at one of our servers in London and Frankfurt. We are connected with multiple liquidity providers to ensure low latency and smooth pricing on all available assets.</p>
+            </div>
                 <!-- start team -->
                 <div class="team team--style-2 team--dark-color">
-                    <div class="__inner">
-                        <div class="row">
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="50">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/1.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-linkedin  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">David Drake</h5>
-                                        <span class="__subtitle">UI Designer</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="100">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/2.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-linkedin  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Allan Bellor</h5>
-                                        <span class="__subtitle">Analitics</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="150">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/3.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Joe Doe</h5>
-                                        <span class="__subtitle">Tech Operation</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="200">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/4.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-gplus  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Sam Tolder</h5>
-                                        <span class="__subtitle">CEO</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="250">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/5.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Henry Polar</h5>
-                                        <span class="__subtitle">SEO Specialist</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="300">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/6.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Sandra Pen</h5>
-                                        <span class="__subtitle">Humar Resources</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="350">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/7.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Den Miller</h5>
-                                        <span class="__subtitle">Economist</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="400">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/8.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Brawn Lee</h5>
-                                        <span class="__subtitle">Journalist</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="450">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/9.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-gplus  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Linda Gampton</h5>
-                                        <span class="__subtitle">UX Team Lead</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="500">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/10.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">John Smith</h5>
-                                        <span class="__subtitle">General Director</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="550">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/11.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-linkedin  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Sam Oldrich</h5>
-                                        <span class="__subtitle">Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
-                                <div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="600">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/12.png" width="110" height="110" alt="demo" />
-
-                                        <div class="social-btns">
-                                            <a class="fontello-facebook  circled" href="#"></a>
-                                        </div>
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Denis Portlen</h5>
-                                        <span class="__subtitle">Programmer</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-                        </div>
+                    <div class="__inner" style="background-image: url(/img/2021/execution-bg.png); height: 500px; margin-top: 30px; margin-bottom: 30px">
                     </div>
                 </div>
                 <!-- end team -->
-            </div>
         </section>
         <!-- end section -->
 
@@ -448,6 +229,18 @@
             </div>
         </section>
         <!-- end section -->
+
+        <section class="section">
+            <div class="grid grid--container">
+                <div class="section-heading section-heading--center  col-MB-60">
+                    <h5 class="__subtitle">Support</h5>
+
+                    <h2 class="__title">Contact us</h2>
+                </div>
+
+                <p>The #name team is committed to providing 24/7 customer service. For all questions, security issues, product related inquiries and business proposals please reach us at support@#name.com
+            </div>
+        </section>
 
         <!-- start section -->
         <section class="section">

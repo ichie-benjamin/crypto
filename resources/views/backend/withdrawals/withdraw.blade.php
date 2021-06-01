@@ -8,12 +8,12 @@
 
                 @include('partials.menu')
 
-                <div class="col-md-12">
-                    <div style="width: 100%" class="alert alert-success">
+                <div class="col-md-12 card">
+                    <div style="width: 100%" class="alert card-body">
 
-                            <p>Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
-                            <p> Account Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
-                            <p> Bonus Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->bonus() }}</strong></p>
+                            <p>Available Balance : <strong style=" font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
+                            <p> Account Balance : <strong style="font-weight: bold; font-size: 1.4em">{{ auth()->user()->balance() }}</strong></p>
+                            <p> Bonus Balance : <strong style="font-weight: bold; font-size: 1.4em">{{ auth()->user()->bonus() }}</strong></p>
 
                     </div>
                 </div>

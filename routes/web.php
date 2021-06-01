@@ -11,6 +11,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/test/mail', [HomeController::class, 'testMail']);
 
+Route::get('/get/coin', [HomeController::class, 'getCoin']);
+
 
 
 Route::get('/faqs', [HomeController::class, 'fags'])->name('faqs');

@@ -6881,7 +6881,7 @@ label {
 }
 @media only screen and (min-width: 992px) {
     #intro {
-        min-height: 630px;
+        min-height: 430px;
         padding-top: 100px;
     }
     #intro .grid {

@@ -22,6 +22,7 @@ class TradesController extends Controller
             $title = 'All Trades';
             $trades = Trade::all();
         }
+//        return $trades;
         return view('admin.trades.trades-list', compact('trades','title','user'));
     }
 
@@ -84,9 +85,9 @@ class TradesController extends Controller
             'duration' => 'nullable',
             'is_win' => 'nullable',
             'traded_amount' => 'nullable',
-    
+
             'profit' => 'nullable',
-    
+
         ];
 
         $data = $request->validate($rules);

@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
     Route::get('deposits/delete/{id}', [PackagesController::class,'destroyDeposit'])->name('deposit.destroy');
 
     Route::get('/settings/mails', [SettingsController::class,'mails'])->name('settings.mails');
+    Route::get('/settings/fees', [SettingsController::class,'fees'])->name('settings.fees');
     Route::get('/user/sendmail/{id}', [UsersController::class,'sendMessage'])->name('user.sendmail');
     Route::post('/user/send_msg', [UsersController::class,'sendMsg'])->name('user.send_msg');
 

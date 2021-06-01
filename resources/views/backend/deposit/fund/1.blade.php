@@ -57,7 +57,20 @@
                                                     <img width="100%" height="80px" src="/images/gateway/bitpay.png" />
                                                 </div>
                                                 <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}"> SELECT</a></h4>
+                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?type=btc"> SELECT</a></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3">
+                                            <div class="card">
+                                                <div class="card-header text-center">
+                                                    <h4 class="card-title text-center">Pay with Ethereum</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <img width="100%" height="80px" src="/img/et.png" />
+                                                </div>
+                                                <div class="card-footer">
+                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?type=eth"> SELECT</a></h4>
                                                 </div>
                                             </div>
                                         </div>
