@@ -7,8 +7,8 @@
         <div class="grid grid--container">
             <div class="row row--xs-middle">
                 <div class="col col--lg-6 text--center">
-                    <h2 class="__title">About #name</h2>
-                    <p>#name is the world’s most popular way to buy and sell bitcoin, ethereum,  litecoin and other crypto currencies</p>
+                    <h2 class="__title">About {{ setting('site_name') }}</h2>
+                    <p>{{ setting('site_name') }} is the world’s most popular way to buy and sell bitcoin, ethereum,  litecoin and other crypto currencies</p>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <section class="section">
             <div class="grid ">
                 <div class="section-heading section-heading--center  col-MB-60">
-                    <h5 class="__subtitle">Why #name?</h5>
+                    <h5 class="__subtitle">Why {{ setting('site_name') }}?</h5>
 
                     <h2 class="__title">Why choose us!</h2>
                 </div>
@@ -35,7 +35,7 @@
 
                         <h2 class="__title">Our Company</h2>
                         <p>
-                           #name was founded in 2018 and from the very first day, we have grown exponentially and currently
+                           {{ setting('site_name') }} was founded in 2018 and from the very first day, we have grown exponentially and currently
                             serve clients in more than 150 countries. We provide our clients with access to top-tier liquidity and wide range
                             of trading tools, while maintaining security,
                             liquidity, enabling a safe and efficient trading environment for everyone.
@@ -115,7 +115,7 @@
                             </div>
 
                             <p class="col-MB-35">
-                                #name offers a robust trading system for both beginners and professional traders that demand highly reliable
+                                {{ setting('site_name') }} offers a robust trading system for both beginners and professional traders that demand highly reliable
                                 market data and performance. Entire infrastructure is designed to facilitate high number of orders per second and extreme loads,
                                 while offering ultra-fast order execution and low latency. Our traders of all experience levels can easily design and customize
                                 layouts and widgets to best fit their trading style. We are proud to offer such innovative products and professional trading
@@ -150,7 +150,7 @@
                     <h2 class="__title">How we execute your trades</h2>
                 </div>
 
-                <p>All trades on #name trading platform are executed at one of our servers in London and Frankfurt. We are connected with multiple liquidity providers to ensure low latency and smooth pricing on all available assets.</p>
+                <p>All trades on {{ setting('site_name') }} trading platform are executed at one of our servers in London and Frankfurt. We are connected with multiple liquidity providers to ensure low latency and smooth pricing on all available assets.</p>
             </div>
                 <!-- start team -->
                 <div class="team team--style-2 team--dark-color">
@@ -238,7 +238,7 @@
                     <h2 class="__title">Contact us</h2>
                 </div>
 
-                <p>The #name team is committed to providing 24/7 customer service. For all questions, security issues, product related inquiries and business proposals please reach us at support@#name.com
+                <p>The {{ setting('site_name') }} team is committed to providing 24/7 customer service. For all questions, security issues, product related inquiries and business proposals please reach us at support@{{ setting('site_name') }}.com
             </div>
         </section>
 

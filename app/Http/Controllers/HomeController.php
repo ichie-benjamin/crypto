@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewUser;
+use App\Models\Faq;
 use App\Models\Identity;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -111,9 +112,16 @@ class HomeController extends Controller
         return view('deposit');
     }
 
-       public function fags()
+       public function fags(Request $request)
     {
-        return view('pages.faq');
+        if($request->has('search')){
+            $search = trim($request->search);
+            $faqs = Faq::where('title', 'LIKE', "%$search%")
+                ->orWhere('details', 'LIKE', "%$search%")->get();
+        }else{
+            $faqs = Faq::all();
+        }
+        return view('pages.faq', compact('faqs'));
     }
        public function verification()
     {
@@ -141,7 +149,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        return view('pages.contact');
     }
     public function privacy()
     {

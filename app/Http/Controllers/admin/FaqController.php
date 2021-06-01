@@ -25,9 +25,15 @@ class FaqController extends Controller
     public function edit($id)
     {
         $faq = Faq::findOrFail($id);
-        return view('admin.faqs.index', compact('faq'));
+        return view('admin.faqs.edit', compact('faq'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $currencies = Faq::findOrFail($id);
+        $currencies->update($this->getData($request));
+        return redirect()->route('admin.faqs.index');
+    }
     protected function getData(Request $request)
     {
         $rules = [

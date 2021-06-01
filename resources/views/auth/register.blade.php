@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Crypto Asset | Sign Up</title>
+    <title>{{ setting('site_name') }} | Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/auth/css/extra.css">
     <style>
         .home-bg {
-            background: url(/app-assets/images/backgrounds/bg-2.jpg) center center no-repeat fixed;
+            background: url(/img/bg_11.jpg) center center no-repeat fixed;
             -webkit-background-size: cover;
             background-size: cover;
         }

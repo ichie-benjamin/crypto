@@ -125,13 +125,13 @@
                         <div class="content-grid" style="margin-right: auto;max-width: 570px;">
                             <div data-aos="fade-left" data-aos-delay="150">
                                 <div class="section-heading  col-MB-30">
-                                    <h5 class="__subtitle">WHY #name </h5>
+                                    <h5 class="__subtitle">WHY {{ setting('site_name') }} </h5>
 
                                     <h2 class="__title">Low spreads on more than 170 instruments</h2>
                                 </div>
 
                                 <p class="col-MB-35">
-                                    #name is built on an uncompromising level of service for all its clients, underpinned by some of the best prices and execution speeds in the industry. Trade market-leading spreads with a global FX and CFD broker.
+                                    {{ setting('site_name') }} is built on an uncompromising level of service for all its clients, underpinned by some of the best prices and execution speeds in the industry. Trade market-leading spreads with a global FX and CFD broker.
                                 </p>
 
                                 <p>
@@ -210,9 +210,9 @@
                         <div data-aos="fade-up" data-aos-easing="ease-out-cubic">
                             <div class="__content">
                                 <div class="section-heading section-heading--white  col-MB-30">
-                                    <h5 class="__subtitle">#name Large Customer base</h5>
+                                    <h5 class="__subtitle">{{ setting('site_name') }} Large Customer base</h5>
 
-                                    <h2 class="__title">Why People choose #name</h2>
+                                    <h2 class="__title">Why People choose {{ setting('site_name') }}</h2>
                                 </div>
 
                                 <p class="col-MB-35">
@@ -261,7 +261,7 @@
 
                                 <h3 class="__title">Trade with the best</h3>
 
-                                <p> #name has received multiple international awards for providing superior online trading services globally</p>
+                                <p> {{ setting('site_name') }} has received multiple international awards for providing superior online trading services globally</p>
 
                                 <p><a class="__more" href="#"><i class="fontello-right-1"></i></a></p>
                             </div>
@@ -468,12 +468,12 @@
                         <div data-aos="fade-right" data-aos-offset="0">
                             <p><strong> Best-in-class platform</strong></p>
                             <p class="col-MB-35">
-                                Become a better trader with advanced trading tools. #name provides an
+                                Become a better trader with advanced trading tools. {{ setting('site_name') }} provides an
                                 award-winning platform that is used by traders from around the world.
                             </p>
                             <p><strong>Global markets</strong></p>
                             <p class="col-MB-35">
-                                #name allows its users to access multiple markets from a single account.
+                                {{ setting('site_name') }} allows its users to access multiple markets from a single account.
                                 Trade Cryptocurrencies, Forex, Commodities, and much more.
                             </p>
                             <p><strong>24/7 support</strong></p>

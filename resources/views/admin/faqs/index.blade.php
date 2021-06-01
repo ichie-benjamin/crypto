@@ -62,14 +62,14 @@
             <div class="br-section-wrapper">
                 <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10"> Faqs List</h6>
 
-                <div class="table-wrapper">
-                    <table id="datatable1" class="table table-bordered table-condensed display responsive nowrap">
+                <div class="table-wrapper table-responsive">
+                    <table id="datatable1" class="table table-bordered table-condensed ">
                         <thead>
                         <tr>
-                            <th class="wd-15p">S.No</th>
-                            <th class="wd-55p">Title</th>
-                            <th class="wd-15p">Image</th>
-                            <th></th>
+                            <th class="wd-5p">S.No</th>
+                            <th class="wd-15p">Title</th>
+                            <th class="wd-70p">Details</th>
+                            <td></td>
                         </tr>
                         </thead>
                         <tbody>
@@ -78,6 +78,24 @@
                             <td>{{ $faq->id }}</td>
                             <td>{{ $faq->title }}</td>
                             <td>{{ $faq->details }}</td>
+                            <td class="text-center">
+                                <form method="POST" action="{!! route('admin.faqs.destroy', $faq->id) !!}" accept-charset="UTF-8">
+                                    <input name="_method" value="DELETE" type="hidden">
+                                    {{ csrf_field() }}
+
+                                    <div class="btn-group justify-center" role="group">
+                                        <a href="{{ route('admin.faqs.edit', $faq->id ) }}" class="btn btn-primary" title="Edit Faq">
+                                            <span class="fa fa-edit" aria-hidden="true"></span>
+                                        </a>
+
+                                        <button type="submit" class="btn btn-danger" title="Delete Faq" onclick="return confirm(&quot;Click Ok to delete Record.&quot;)">
+                                            <span class="fa fa-trash" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+
+                                </form>
+
+                            </td>
                         </tr>
                         @endforeach
 

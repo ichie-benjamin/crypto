@@ -119,6 +119,12 @@
                 <span class="menu-item-label">National IDs</span>
             </div><!-- menu-item -->
         </a><!-- br-menu-link -->
+        <a href="{{ route('admin.faqs.index') }}" class="br-menu-link {{ active('admin.faqs.*') }}">
+            <div class="br-menu-item">
+                <i class="menu-item-fa fa fa-question tx-22"></i>
+                <span class="menu-item-label">Faqs</span>
+            </div><!-- menu-item -->
+        </a><!-- br-menu-link -->
 
 
 

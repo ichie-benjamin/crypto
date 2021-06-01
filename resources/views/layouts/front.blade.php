@@ -171,7 +171,7 @@
                             <a href="javascript:void(0);"><span>Company</span></a>
                             <div class="submenu">
                                 <ul>
-                                    <li><a href="{{ route('about') }}">Why #name</a></li>
+                                    <li><a href="{{ route('about') }}">Why {{ setting('site_name') }}</a></li>
                                     <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                 </ul>
                             </div>
@@ -228,12 +228,12 @@
             <div class="col col--sm-10 col--md-8 col--lg-4">
                 <div class="__item">
                     <a class="site-logo" href="{{ url('/') }}">
-                        <img class="img-responsive lazy" width="175" height="42" src="/img/blank.gif" data-src="/img/site_logo.png" alt="#name" />
+                        <img class="img-responsive lazy" width="175" height="42" src="/img/blank.gif" data-src="/img/site_logo.png" alt="{{ setting('site_name') }}" />
                     </a>
 
                     <p class="__text">
                         We have always followed a client-oriented approach and placed our clients’ interests at the center of all our operations.
-                        #name team has a goal to be among the best online trading platforms in
+                        {{ setting('site_name') }} team has a goal to be among the best online trading platforms in
                         the cryptocurrency industry and to retain our reputation as a most reliable and trusted partner.
                     </p>
                 </div>
@@ -247,19 +247,18 @@
                         <div class="row row--xs-middle">
                             <div class="col col--xs-auto col--lg-6">
                                 <ul class="__menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Contacts</a></li>
-                                    <li><a href="#">News</a></li>
+                                    <li><a href="{{ url('/') }}">Home</a></li>
+                                    <li><a href="{{ route('about') }}">About us</a></li>
+                                    <li><a href="{{ route('contact') }}">Contacts</a></li>
                                 </ul>
                             </div>
 
                             <div class="col col--xs-auto col--lg-6">
                                 <ul class="__menu">
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Wallet</a></li>
-                                    <li><a href="#">FAQ’s</a></li>
-                                    <li><a href="#">Support</a></li>
+                                    <li><a href="{{ route('backend.dashboard') }}">Dashboard</a></li>
+                                    <li><a href="{{ route('backend.dashboard') }}">Wallet</a></li>
+                                    <li><a href="{{ route('faqs') }}">FAQ’s</a></li>
+                                    <li><a href="{{ route('contact') }}">Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -303,7 +302,7 @@
 
             <div class="col col--sm-10 col--md-8 col--lg-6  text--lg-right">
                 <div class="__item">
-                    <span class="__copy"><a class="__dev" href="#">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a></span>
+                    <span class="__copy"><a class="__dev" href="{{ route('about') }}">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a></span>
                 </div>
             </div>
         </div>
@@ -317,13 +316,13 @@
                     Please read our RDN and other legal documents and ensure you fully understand the risks before you make any trading decisions.
                     We encourage you to seek independent advice. </p>
 
-                <p>#name Markets Kenya Limited 2nd Floor, The Oval, Ring Road Parklands, PO Box 2905-00606 Nairobi, Kenya and
+                <p>{{ setting('site_name') }}  Limited 2nd Floor, The Oval, Ring Road Parklands, PO Box 2905-00606 Nairobi, Kenya and
                     is licensed and regulated by the Capital Markets Authority. </p>
 
                 <p>The information on this site and the products and services offered are not intended for distribution to any person in any country
                     or jurisdiction where such distribution or use would be contrary to local law or regulation. </p>
 
-                <p>© {{ date('Y') }} #name Markets Kenya Limited | Company No.PVT-PJU7Q8K | CMA Licence No.128</p>
+                <p>© {{ date('Y') }} {{ setting('site_name') }}  Limited | Company No.PVT-PJU7Q8K | CMA Licence No.128</p>
             </div>
         </div>
     </div>
