@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Binary 24 Option</title>
+    <title>{{ setting('site_name') }}</title>
     <!-- Favicon icon -->
 {{--    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/favicon.png">--}}
 
@@ -53,7 +53,7 @@
 
 <body id="dashboard">
 
-<div id="main-wrapper">
+<div id="main-wrapper" class="show">
 
     <div class="header dashboard">
         <div class="container-fluid">
