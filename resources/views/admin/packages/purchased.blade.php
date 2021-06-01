@@ -97,7 +97,7 @@
                                             <div class="modal-body pd-25">
                                             <div class="form-group mg-b-10-force">
                                                 <label class="form-control-label">Amount In USD : <span class="tx-danger">*</span></label>
-                                                <input class="form-control" required type="number" step="any" name="amount" placeholder="opening price">
+                                                <input class="form-control" required type="number" step="any" name="amount" placeholder="Amount to add to bal">
                                                 <input type="hidden" name="user_id" value="{{ $item->user_id }}">
                                                 <input type="hidden" name="id" value="{{ $item->id }}">
                                             </div>

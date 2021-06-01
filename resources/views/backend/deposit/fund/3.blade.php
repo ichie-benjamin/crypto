@@ -22,7 +22,7 @@
                                     <label class="mr-sm-2">Enter Amount Deposited in USD</label>
                                     <div class="">
                                         {{--                                        <input id="thumbnail" type="file" class="file-upload-field">--}}
-                                        <input required name="amount" placeholder="amount deposited" class="form-control" type="text">
+                                        <input required name="amount" placeholder="amount deposited" class="form-control" type="number">
 
                                     </div>
 
