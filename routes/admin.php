@@ -4,6 +4,7 @@
 use App\Http\Controllers\admin\AdminDashboardController;
 use App\Http\Controllers\admin\CurrenciesController;
 use App\Http\Controllers\admin\CurrencyPairController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\admin\PackagesController;
 use App\Http\Controllers\admin\SettingsController;
 use App\Http\Controllers\admin\TradesController;
@@ -58,5 +59,6 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
         'currences' => CurrenciesController::class,
         'currencies' => CurrencyPairController::class,
         'trades' => TradesController::class,
+        'faqs' => FaqController::class,
     ]);
 });

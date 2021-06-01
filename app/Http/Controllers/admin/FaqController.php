@@ -3,32 +3,37 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
     public function index()
     {
-        $currencies = Faq::all();
-        return view('admin.currencies.currencies-list', compact('currencies'));
+        $faqs = Faq::all();
+        return view('admin.faqs.index', compact('faqs'));
     }
-    
+
 
     public function store(Request $request)
     {
         $data = $this->getData($request);
-        Currency::create($data);
-        return redirect()->route('admin.currencies.index')->with('success', 'Currency was successfully added.');
-    }
-
-    public function show($id)
-    {
-        //
+        Faq::create($data);
+        return redirect()->route('admin.faqs.index')->with('success', 'Faq was successfully added.');
     }
 
     public function edit($id)
     {
-        $currency = Currency::findOrFail($id);
-        return view('admin.currencies.currencies-edit', compact('currency'));
+        $faq = Faq::findOrFail($id);
+        return view('admin.faqs.index', compact('faq'));
+    }
+
+    protected function getData(Request $request)
+    {
+        $rules = [
+            'title' => 'string|min:1|max:255|required',
+            'details' => 'string|min:1|required',
+        ];
+        return $request->validate($rules);
     }
 }
