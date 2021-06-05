@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Account;
+use App\Models\cryptoPayment;
 use App\Models\Currency;
 use App\Models\Deposit;
 use App\Models\Package;
@@ -51,9 +52,11 @@ class DepositsController extends Controller
         return view('backend.deposit.fund.3');
     }
 
-    public function depositFundUpload()
+    public function depositFundUpload(Request $request)
     {
-        return view('backend.deposit.fund.2');
+        $id = $request->coin;
+        $coin = cryptoPayment::findOrFail($id);
+        return view('backend.deposit.fund.2', compact('coin'));
     }
 
 

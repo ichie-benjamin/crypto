@@ -21,11 +21,6 @@ class CurrencyPairController extends Controller
         return redirect()->route('admin.currencies.index')->with('success', 'CurrencyPair was successfully added.');
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $currency_pair = CurrencyPair::findOrFail($id);
@@ -45,8 +40,6 @@ class CurrencyPairController extends Controller
         $currency_pairs->delete();
         return redirect()->back();
     }
-
-
 
     protected function getData(Request $request)
     {

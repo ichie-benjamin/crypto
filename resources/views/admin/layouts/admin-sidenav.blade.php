@@ -98,7 +98,7 @@
         </a><!-- br-menu-link -->
 
 
-        <a href="#" class="br-menu-link {{ active(['admin.settings.*'], 'active show-sub') }}">
+        <a href="#" class="br-menu-link {{ active(['admin.settings.*','admin.p_methods.*'], 'active show-sub') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-cogs tx-18"></i>
                 <span class="menu-item-label"> Settings</span>
@@ -109,6 +109,7 @@
             <li class="nav-item"><a href="{{ route('admin.settings.index') }}" class="nav-link {{ active('admin.settings.index') }}">General Settings</a></li>
             <li class="nav-item"><a href="{{ route('admin.settings.mails') }}" class="nav-link {{ active('admin.settings.mails') }}">Mail Setting</a></li>
             <li class="nav-item"><a href="{{ route('admin.settings.fees') }}" class="nav-link {{ active('admin.settings.fees') }}">Fees Setting</a></li>
+            <li class="nav-item"><a href="{{ route('admin.p_methods.index') }}" class="nav-link {{ active('admin.p_methods.*') }}">Crypto Payment Methods</a></li>
         </ul>
 
 

@@ -1,9 +1,8 @@
 @extends('admin.layouts.admin-app')
 
 @section('style')
-    <link href="{{ asset('lib/highlightjs/github.css')}}" rel="stylesheet">
     <link href="{{ asset('lib/datatables/jquery.dataTables.css')}}" rel="stylesheet">
-    <link href="{{ asset('lib/select2/css/select2.min.css') }}" rel="stylesheet">
+
 @endsection
 
 @section('content')
@@ -166,38 +165,38 @@
 </div><!-- br-mainpanel -->
 <!-- ########## END: MAIN PANEL ########## -->
 
-        @section('js')
-            <script src="{{ asset('lib/jquery-ui/jquery-ui.js') }}"></script>
-            <script src="{{ asset('lib/jquery-switchbutton/jquery.switchButton.js') }}"></script>
-            <script src="{{ asset('lib/peity/jquery.peity.js') }}"></script>
-            <script src="{{ asset('lib/datatables/jquery.dataTables.js') }}"></script>
-            <script src="{{ asset('lib/datatables-responsive/dataTables.responsive.js') }}"></script>
-            <script src="{{ asset('lib/select2/js/select2.min.js') }}"></script>
-            <script src="{{ asset('lib/highlightjs/highlight.pack.js') }}"></script>
-            <script>
-                $(function(){
-                    'use strict';
 
-                    $('#datatable1').DataTable({
-                        responsive: true,
-                        language: {
-                            searchPlaceholder: 'Search...',
-                            sSearch: '',
-                            lengthMenu: '_MENU_ items/page',
-                        }
-                    });
+@endsection
+    @section('js')
+        <script src="{{ asset('lib/jquery-ui/jquery-ui.js') }}"></script>
+        <script src="{{ asset('lib/jquery-switchbutton/jquery.switchButton.js') }}"></script>
+        <script src="{{ asset('lib/peity/jquery.peity.js') }}"></script>
+        <script src="{{ asset('lib/datatables/jquery.dataTables.js') }}"></script>
+        <script src="{{ asset('lib/datatables-responsive/dataTables.responsive.js') }}"></script>
+        <script src="{{ asset('lib/select2/js/select2.min.js') }}"></script>
+        <script src="{{ asset('lib/highlightjs/highlight.pack.js') }}"></script>
+        <script>
+            $(function(){
+                'use strict';
 
-                    $('#datatable2').DataTable({
-                        bLengthChange: false,
-                        searching: false,
-                        responsive: true
-                    });
-
-                    // Select2
-                    $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
-
+                $('#datatable1').DataTable({
+                    responsive: true,
+                    language: {
+                        searchPlaceholder: 'Search...',
+                        sSearch: '',
+                        lengthMenu: '_MENU_ items/page',
+                    }
                 });
-            </script>
-       @endsection
 
+                $('#datatable2').DataTable({
+                    bLengthChange: false,
+                    searching: false,
+                    responsive: true
+                });
+
+                // Select2
+                $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+            });
+        </script>
 @endsection

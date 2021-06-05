@@ -48,107 +48,110 @@
                                 <div class="tab-pane fade active show" id="tab1">
                                     <div class="row payment-methods">
 
+                                        @foreach(\App\Models\cryptoPayment::all() as $item)
                                         <div class="col-xl-3 col-lg-3 col-md-3">
                                             <div class="card">
                                                 <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Pay with Bitcoin</h4>
+                                                    <h4 class="card-title text-center">Pay with {{ $item->name }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/bitpay.png" />
+                                                    <img width="100%" height="80px" src="{{ $item->logo }}" />
                                                 </div>
                                                 <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}"> SELECT</a></h4>
+                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?coin={{ $item->id }}"> SELECT</a></h4>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Fasa Pay</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>
+                                        @endforeach
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Western Union</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/3.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Fasa Pay</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Money Gram</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/1.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Western Union</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/3.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Visa & MasterCard</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/visa.jpg" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Money Gram</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/1.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Visa & MasterCard</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/visa.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Neteller</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/net.jpg" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Neteller</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/net.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Skrill</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/skril.png" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Skrill</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/skril.png" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>--}}
+
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
 
                                     </div>
