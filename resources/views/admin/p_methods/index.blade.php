@@ -102,9 +102,9 @@
                                     {{ csrf_field() }}
 
                                     <div class="btn-group justify-center" role="group">
-                                        <a href="{{ route('admin.p_methods.edit', $item->id ) }}" class="btn btn-primary" title="Edit Payment method">
-                                            <span class="fa fa-edit" aria-hidden="true"></span>
-                                        </a>
+{{--                                        <a href="{{ route('admin.p_methods.edit', $item->id ) }}" class="btn btn-primary" title="Edit Payment method">--}}
+{{--                                            <span class="fa fa-edit" aria-hidden="true"></span>--}}
+{{--                                        </a>--}}
 
                                         <button type="submit" class="btn btn-danger" title="Delete Method" onclick="return confirm(&quot;Click Ok to delete Record.&quot;)">
                                             <span class="fa fa-trash" aria-hidden="true"></span>
