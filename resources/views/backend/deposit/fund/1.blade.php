@@ -48,120 +48,110 @@
                                 <div class="tab-pane fade active show" id="tab1">
                                     <div class="row payment-methods">
 
+                                        @foreach(\App\Models\cryptoPayment::all() as $item)
                                         <div class="col-xl-3 col-lg-3 col-md-3">
                                             <div class="card">
                                                 <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Pay with Bitcoin</h4>
+                                                    <h4 class="card-title text-center">Pay with {{ $item->name }}</h4>
                                                 </div>
                                                 <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/bitpay.png" />
+                                                    <img width="100%" height="80px" src="{{ $item->logo }}" />
                                                 </div>
                                                 <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?type=btc"> SELECT</a></h4>
+                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?coin={{ $item->id }}"> SELECT</a></h4>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Pay with Ethereum</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/img/et.png" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.deposit.fund.upload') }}?type=eth"> SELECT</a></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Fasa Pay</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>
+                                        @endforeach
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Western Union</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/3.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Fasa Pay</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/fasapay.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Fasa Pay Gateway') }}"> SELECT</a></h4>--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Money Gram</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/1.jpg" />
-                                                </div>
-                                                <div class="card-footer">
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Western Union</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/3.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Western Union payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Visa & MasterCard</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/visa.jpg" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Money Gram</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/1.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Money Gram Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Visa & MasterCard</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/visa.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Neteller</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/net.jpg" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Visa & MasterCard Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Neteller</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/net.jpg" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Neteller Payment gateway') }}"> SELECT</a></h4>--}}
 
-                                        <div class="col-xl-3 col-lg-3 col-md-3">
-                                            <div class="card">
-                                                <div class="card-header text-center">
-                                                    <h4 class="card-title text-center">Skrill</h4>
-                                                </div>
-                                                <div class="card-body">
-                                                    <img width="100%" height="80px" src="/images/gateway/skril.png" />
-                                                </div>
-                                                <div class="card-footer">
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
-                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>
+{{--                                        <div class="col-xl-3 col-lg-3 col-md-3">--}}
+{{--                                            <div class="card">--}}
+{{--                                                <div class="card-header text-center">--}}
+{{--                                                    <h4 class="card-title text-center">Skrill</h4>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-body">--}}
+{{--                                                    <img width="100%" height="80px" src="/images/gateway/skril.png" />--}}
+{{--                                                </div>--}}
+{{--                                                <div class="card-footer">--}}
 
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                                    <h4 class="card-title text-center"><a href="{{ route('backend.gateway','Skrill Payment gateway') }}"> SELECT</a></h4>--}}
+
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
 
                                     </div>
@@ -174,21 +164,21 @@
                                         <li>
 
                                             <h4>Security of Funds</h4>
-                                            When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Crypto Asset Trade.
+                                            When funding your trading account client money is held in Segregated Client Trust Accounts, your funds are kept in AA rated banks. Electronic payments are processed using SSL (Secure Socket Layer) technology and are encrypted to ensure security. All payment information is confidential and used only for the purpose of funding your trading account with Binary 24 Trades Trade.
                                         </li>
                                         <li>
 
                                             <h4>Bank Fees</h4>
-                                            <p>Crypto Asset Trade does not charge any additional fees for deposits. You should however be aware that you
+                                            <p>Binary 24 Trades Trade does not charge any additional fees for deposits. You should however be aware that you
                                                 may incur fees on payments to and from some international banking institutions crypto exchanger such as
-                                                coinbase.com, crypto.com. Crypto Asset Trade accepts no responsibility for any such bank or crypto
+                                                coinbase.com, crypto.com. Binary 24 Trades Trade accepts no responsibility for any such bank or crypto
                                                 exchanger fees.</p>
 
 
                                         </li>
                                         <li>
                                             <h4>Third Party Payments</h4>
-                                            <p>Crypto Asset Trade does not accept payments from third parties.
+                                            <p>Binary 24 Trades Trade does not accept payments from third parties.
                                                 Please ensure that all deposits into your trading account come from a bank account in your name.
                                                 Payments from Joint Bank Accounts / Credit Cards are accepted if the trading account holder is one
                                                 of the parties on the Bank Account / Credit Card.</p>

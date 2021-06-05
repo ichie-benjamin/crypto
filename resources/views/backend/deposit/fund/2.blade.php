@@ -16,6 +16,7 @@
                                     </div>
 
                                     <div class="input-group mt-2">
+<<<<<<< HEAD
                                         @if (Request()->get('type') == 'btc')
                                             <input type="text" class="form-control"
                                                    value="{{ setting('wallet_id') }}">
@@ -23,6 +24,10 @@
                                             <input type="text" class="form-control"
                                                    value="0xf766EFDf6c573333b6fb1d9a94cDd258C00b7598">
                                         @endif
+=======
+                                        <input type="text" class="form-control"
+                                               value="{{ $coin->wallet }}">
+>>>>>>> e8f2d8b (crypto_payments)
                                         <div class="input-group-append">
                                             <span class="input-group-text bg-primary text-white">Copy</span>
                                         </div>

@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\admin\CryptoPaymentControllers;
 use App\Http\Controllers\admin\CurrenciesController;
 use App\Http\Controllers\admin\CurrencyPairController;
 use App\Http\Controllers\admin\PackagesController;
@@ -57,6 +58,7 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
         'packages' => PackagesController::class,
         'currences' => CurrenciesController::class,
         'currencies' => CurrencyPairController::class,
+        'p_methods' => CryptoPaymentControllers::class,
         'trades' => TradesController::class,
     ]);
 });
