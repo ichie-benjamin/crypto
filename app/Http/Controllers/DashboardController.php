@@ -7,6 +7,7 @@ use App\Models\Identity;
 use App\Models\Trade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class DashboardController extends Controller
 {
@@ -29,10 +30,29 @@ class DashboardController extends Controller
             Identity::create(['user_id' => auth()->id()]);
         }
 
-        $trades = Trade::whereUserId(auth()->id())->get();
+//        $trades = Trade::whereUserId(auth()->id())->get();
+        $trades = [];
         $deposits = Deposit::whereUserId(auth()->id())->get();
 
-        return view('backend.dashboard',compact('trades','deposits'));
+       $theme = $this->theme();
+
+        return view('backend.dashboard',compact('trades','deposits','theme'));
+    }
+    private function theme(){
+        if (isset($_COOKIE['themecolor'])) {
+            $newTheme = $_COOKIE['themecolor'];
+            if($newTheme == 'dark-alt'){
+                return 'dark';
+            }else if($newTheme == 'dark'){
+                return 'dark';
+            }else if($newTheme == 'semi-dark'){
+                return 'light';
+            }else if($newTheme == 'semi-dark-alt'){
+                return 'dark';
+            }
+        }else {
+            return 'dark';
+        }
     }
     public function overview(){
         if(!auth()->user()->btc){

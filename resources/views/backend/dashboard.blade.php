@@ -1,305 +1,257 @@
-@extends('backend.layouts.master')
+@extends('backend.layouts.backend')
 
 @section('content')
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        {{--        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>--}}
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-            {
-                "symbols": [
-                {
-                    "proName": "FOREXCOM:SPXUSD",
-                    "title": "S&P 500"
-                },
-                {
-                    "proName": "FOREXCOM:NSXUSD",
-                    "title": "Nasdaq 100"
-                },
-                {
-                    "proName": "FX_IDC:EURUSD",
-                    "title": "EUR/USD"
-                },
-                {
-                    "proName": "BITSTAMP:BTCUSD",
-                    "title": "BTC/USD"
-                },
-                {
-                    "proName": "BITSTAMP:ETHUSD",
-                    "title": "ETH/USD"
-                }
-            ],
-                "showSymbolLogo": false,
-                "colorTheme": "dark",
-                "isTransparent": true,
-                "displayMode": "adaptive",
-                "locale": "en"
-            }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
 
+    <div class="container-fluid">
+        <!-- START: Breadcrumbs-->
+        <div class="row">
+            <div class="col-12  align-self-center">
+                <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
+                    <div class="w-sm-100 mr-auto"><h4 class="mb-0">Dashboard</h4> <b class=" text-capitalize">Welcome {{ auth()->user()->name }}</b></div>
 
-    <div class="content-body">
-        <div class="container-fluid">
-
-
-            @if (!auth()->user()->can_trade)
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-danger">
-                            <h3>Trading is Suspended</h3>
-                            All Trading activities on this Account has been Suspended
-                        </div>
-                    </div>
+                    <ol class="breadcrumb bg-transparent align-self-center m-0 p-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
                 </div>
-            @endif
-
-
-                @if (auth()->user()->code)
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="alert alert-danger">
-                                <h3>Connection Code :</h3>
-                                Send <strong>{{ auth()->user()->code }}</strong> to admin for account connection
-                            </div>
-                        </div>
-                    </div>
-                @endif
-
-            @include('partials.menu-top')
-
-{{--            <div class="row">--}}
-{{--                @include('partials.menu')--}}
-{{--            </div>--}}
-
-            <div class="row">
-
-                <div class="col-xl-8 col-md-8 col-sm-12">
-
-                    <div style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
-
-
-
-                    <!-- TradingView Widget BEGIN -->
-                    <div class="tradingview-widget-container card" style="margin-top: 20px">
-                        <div id="tradingview_e8053"></div>
-                    </div>
-                    <!-- TradingView Widget END -->
-                </div>
-
-
-                <div class="col-xl-4 col-md-4  col-sm-6">
-                    <div style="height:669px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:649px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #FFFFFF; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
-                    <div style="margin-top: 10px" class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Transactions History</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="transaction-table">
-                                <div class="table-responsive">
-                                    @if (count($deposits) > 0)
-                                        <table class="table table-striped mb-0 table-responsive-sm">
-                                            <thead>
-                                            <tr>
-                                                <th>Amount</th>
-                                                <th>Plan</th>
-                                                <th> Status</th>
-                                                <th>Date </th>
-                                                <th>View </th>
-
-
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-
-
-                                            @foreach($deposits as $item)
-                                                <tr>
-                                                    <td>{{ $item->amount }} USD</td>
-                                                    <td>{{ optional($item->plan)->name }}</td>
-                                                    <td>
-                                                        @if($item->status)
-                                                            <p class="badge badge-success">Active</p>
-                                                        @else
-                                                            <p class="badge badge-warning">Pending</p>
-                                                        @endif
-                                                    </td>
-                                                    <td>{{ $item->created_at->format('Y-m-d') }}</td>
-                                                    <td><a class="btn btn-sm btn-success" href="{{ route('backend.deposit.view', $item->id) }}">details</a></td>
-                                                    {{--<td>{{ $item-> }}</td>--}}
-
-                                                    {{--<td>{{ $item-> }}</td>--}}
-                                                    {{--<td>{{ $item-> }}</td>--}}
-                                                    {{--<td>{{ $item->}}</td>--}}
-
-                                                </tr>
-                                            @endforeach
-
-                                            </tbody>
-                                        </table>
-                                    @endif
-
-
-                                    @if (count($deposits) < 1)
-                                        <div class="text-center">
-                                            <h3 class="text-center">No Trades, make a deposit to start trading</h3>
-
-                                            <a class="btn text-center btn-success mt-4" href="{{ route('deposit.create') }}">Make Deposit</a>
-                                        </div>
-
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                    @section('hide')
-                <div class="col-xl-2 col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Order Book</h4>
-                        </div>
-                        <div class="card-body order-book">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Price (USD)</th>
-                                    <th scope="col">Price (BTC)</th>
-                                    <th scope="col">Total</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="text-danger">10393.50</td>
-                                    <td>0.010</td>
-                                    <td>14.109</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-danger">10393.50</td>
-                                    <td>0.010</td>
-                                    <td>14.109</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-danger">10393.50</td>
-                                    <td>0.010</td>
-                                    <td>14.109</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-danger">10393.50</td>
-                                    <td>0.010</td>
-                                    <td>14.109</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-danger">10393.50</td>
-                                    <td>0.010</td>
-                                    <td>14.109</td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-4 col-md-6 col-xxl-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Trade History</h4>
-                                </div>
-                                <div class="card-body trade-history">
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">Price</th>
-                                                <th scope="col">Size</th>
-                                                <th scope="col">Time</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-danger">10393.50</td>
-                                                <td>0.010</td>
-                                                <td>14.109</td>
-                                            </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="col-lg-7 col-sm-12 col-md-7">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Depth Chart</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="chartdiv"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                @endsection
-
-
-
-
             </div>
         </div>
+        <!-- END: Breadcrumbs-->
 
+        <!-- START: Card Data-->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-xl-3 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/dist/images/wallet.png" alt="account balance" class="float-right" />
+                        <h6 class="card-title font-weight-bold">ACCOUNT BALANCE</h6>
+{{--                        <h6 class="card-subtitle mb-2 text-muted">Today</h6>--}}
+                        <h2>${{ Auth()->user()->total() }}</h2>
+                        <span class="text-success"><i class="ion ion-android-arrow-dropup"></i> ${{ Auth()->user()->withdrawable }} Withdrawable</span> balance
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/dist/21/bonus1.png" alt="cart" class="float-right" />
+                        <h6 class="card-title font-weight-bold">BONUS BALANCE</h6>
+                        <h2>${{ Auth()->user()->bonus }}</h2>
+                        <span class="text-success"><i class="ion ion-android-arrow-dropdown"></i> 100% Withdrawable</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/dist/images/money.png" alt="money" class="float-right" />
+                        <h6 class="card-title font-weight-bold">ACCOUNT PLAN</h6>
+                        <h2>{{ auth()->user()->plan }}</h2>
+                        <span class="text-success"><i class="ion ion-android-arrow-dropup"></i> Current active</span> plan
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="/dist/21/verified.png" alt="wallet" class="float-right" />
+                        <h6 class="card-title font-weight-bold">ACCOUNT STATUS</h6>
+                        @if (auth()->user()->is_active)
+                            <h2 class="text-success">Verified </h2>
+                            <span class="text-success"><i class="ion ion-android-arrow-dropdown"></i>Your account is verified and active</span>
+                        @else
+                            <h2 class="text-danger">Unverified </h2>
+                            <span class="text-danger"><i class="ion ion-android-arrow-dropdown"></i>Unverified account has limited features</span>
+                        @endif
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-8 col-xl-8 mt-3">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container" style="min-height: 620px">
+                    <div id="tradingview_3c684"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BITBAY" rel="noopener" target="_blank"><span class="blue-text">BTCUSD Chart</span></a> by TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget(
+                            {
+                                "autosize" : true,
+                                "symbol": "BITBAY:BTCUSD",
+                                "interval": "1",
+                                "timezone": "Etc/UTC",
+                                "theme": "{{ $theme }}",
+                                "style": "0",
+                                "locale": "en",
+                                "toolbar_bg": "#f1f3f6",
+                                "enable_publishing": false,
+                                "withdateranges": true,
+                                "allow_symbol_change": true,
+                                "watchlist": [
+                                    "BITBAY:BTCUSD",
+                                    "COINBASE:ETHUSD",
+                                    "BINANCE:BNBUSD",
+                                    "BITTREX:DOGEUSD",
+                                    "BINANCE:TROYUSD",
+                                    "KRAKEN:USDTUSD",
+                                    "COINBASE:MATICUSD"
+                                ],
+                                "details": true,
+                                "hotlist": true,
+                                "container_id": "tradingview_3c684"
+                            }
+                        );
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div class="col-12  col-md-4 mt-3">
+                <div style="height:620px; background-color: #FFFFFF; overflow:hidden; box-sizing: border-box; border: 1px solid #56667F; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #56667F; padding: 0px; margin: 0px; width: 100%;"><div style="height:620px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme={{ $theme }}&cnt=10&pref_coin_id=1505&graph=yes" width="100%" height="645px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div><div style="color: #FFFFFF; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"></div></div>
+
+
+
+
+
+                @section('hide')
+                    <div class="twitter-gradient p-5 text-center">
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <!-- The slideshow -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item py-3 active">
+                                    <i class="icon-social-twitter p-3 border-white border rounded-circle h1 mb-4 mx-auto d-table"></i>
+                                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                    <br/><small>24 January, 2018</small><br/><br/>
+                                    <div class="love px-2 py-1 d-inline-block"><i class="ion ion-heart"></i> 200   <i class="ml-3 ion ion-chatboxes"></i> 192</div>
+                                </div>
+                                <div class="carousel-item py-3">
+                                    <i class="icon-social-twitter p-3 border-white border rounded-circle h1 mb-4 mx-auto d-table"></i>
+                                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                    <br/><small>24 January, 2018</small><br/><br/>
+                                    <div class="love px-2 py-1 d-inline-block"><i class="ion ion-heart"></i> 200   <i class="ml-3 ion ion-chatboxes"></i> 192</div>
+                                </div>
+                                <div class="carousel-item py-3">
+                                    <i class="icon-social-twitter p-3 border-white border rounded-circle h1 mb-4 mx-auto d-table"></i>
+                                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                                    <br/><small>24 January, 2018</small><br/><br/>
+                                    <div class="love px-2 py-1 d-inline-block"><i class="ion ion-heart"></i> 200   <i class="ml-3 ion ion-chatboxes"></i> 192</div>
+                                </div>
+
+                            </div>
+                            <!-- Indicators -->
+                            <ul class="carousel-indicators position-relative mb-0">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                        </div>
+                    </div>
+                @endsection
+
+            </div>
+
+            <div class="col-12 col-md-7 col-xl-7 mt-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h4 class="card-title">Trade History</h4>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table mb-0 text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>@lang('Opened at')</th>
+                                        <th>@lang('Crypto Currency')</th>
+                                        <th>@lang('Closed at')</th>
+                                        <th>@lang('Amount')</th>
+                                        <th>@lang('Qty')</th>
+                                        <th>@lang('Closed Value')</th>
+                                        <th>@lang('Direction')</th>
+                                        <th>@lang('P/L')</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @forelse($trades as $item)
+                                        <tr>
+                                            <td>{{  $item->new_date }}</td>
+                                            <td>{{  optional($item->crypto)->symbol }}/USD</td>
+                                            <td>{{  $item->in_time }}</td>
+                                            <td data-label="@lang("Amount")">{{ $item->amount }}</td>
+                                            <td data-label="@lang("coin")">{{  $item->coin_value }} {{  optional($item->crypto)->symbol }}</td>
+                                            <td data-label="@lang("closed_value")">{{  $item->coin_closed_at }} {{  optional($item->crypto)->symbol }}</td>
+                                            <td data-label="@lang("High/Low")">
+                                                @if ($item->hilow === 1)
+                                                    <span class="badge badge-success">@lang('BUY')</span>
+                                                @else
+                                                    <span class="badge badge-danger">@lang('SELL')</span>
+                                                @endif
+                                            </td>
+
+                                            <td>{{ $item->pl }} USD</td>
+                                            {{--                                        <td data-label="@lang("Date")">{{showDateTime($practice->created_at, 'd M, Y h:i:s')}}</td>--}}
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="100%"> @lang('No results found')!</td>
+                                        </tr>
+                                    @endforelse
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12  col-lg-5 mt-3">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="card-title">Recent Activities</h4>
+
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul class="activities mt-4 mb-2">
+                                        <li class="activity py-2 px-2 border-left">
+                                            <label class="bg-primary"></label>
+                                            <span>11:30 PM</span><br/>
+                                            <p class="mt-3"> <b>Add New User</b><br/>Orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh. Donec sodales
+                                                sagittis magna sed consequat leo eget bibendum sodales, augue.</p>
+                                        </li>
+                                        <li class="activity py-2 px-2 border-left">
+                                            <label class="bg-success"></label>
+                                            <span>12:15 PM</span><br/>
+                                            <p class="mt-3"> <b>Write Comment</b><br/>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                                        </li>
+                                        <li class="activity py-2 px-2 border-left">
+                                            <label class="bg-danger"></label>
+                                            <span>13:30 PM</span><br/>
+                                            <p class="mt-3"> <b>Add New User</b><br/>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla
+                                                mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+                                        </li>
+                                        <li class="activity py-2 px-2 border-left">
+                                            <label class="bg-warning"></label>
+                                            <span>14:30 PM</span><br/>
+                                            <p class="mt-3"> <b>Write Comment</b><br/>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                                nascetur ridiculus mus. Nulla consequat massa quis enim.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- END: Card DATA-->
     </div>
 @endsection
 
