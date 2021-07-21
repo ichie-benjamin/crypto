@@ -29,5 +29,5 @@ Vue.component('deposit', require('./components/Deposit.vue').default);
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app_secret',
 });

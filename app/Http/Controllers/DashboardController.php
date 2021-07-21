@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AutoTrader;
 use App\Models\Deposit;
 use App\Models\Identity;
+use App\Models\Setting;
 use App\Models\Trade;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
@@ -13,14 +16,15 @@ class DashboardController extends Controller
 {
     public function gateway($gateway)
     {
-
         return redirect()->back()->with('failure', "$gateway is not active for your account, contact admin to use this payment method");
-
     }
         public function dashboard(){
 //        if(!auth()->user()->btc){
 //            return redirect()->route('backend.profile.edit')->with('failure','Complete your profile to continue');
 //        }
+           if(setting('autotrader') && !auth()->user()->manager_id){
+               return  redirect()->route('backend.autotraders')->with('error','Connect your account with Auto Trader');
+           }
 
         if(auth()->user()->identity){
             if(!auth()->user()->identity->front){
@@ -62,6 +66,28 @@ class DashboardController extends Controller
         $trades = Trade::whereUserId(auth()->id())->get();
         return view('backend.overview', compact('trades','deposits'));
     }
+    public function autotraders(){
+        $traders = AutoTrader::all();
+        return view('backend.autotraders', compact('traders'));
+    }
+
+    public function connectAutoTraders($id){
+        $trader = AutoTrader::findOrFail($id);
+        if($trader->fee > auth()->user()->balance){
+            return redirect()->back()->with('fund','Insufficient balance, pls fund account wallet to continue');
+        }
+        if(auth()->user()->manager_id != $id){
+            $user = auth()->user();
+            $user->balance = $user->balance - (int)$trader->fee;
+            $user->manager_id = $id;
+            $user->save();
+            Transaction::create(['user_id' => $user->id, 'amount' => (int)$trader->fee, 'type' => 'debit', 'account_type' => 'balance','note' => 'Account manager payment']);
+            return  redirect()->route('backend.dashboard')->with('success', 'Account successfully connected to Auto Trader');
+        }else{
+            return redirect()->back()->with('error','You are already connected to this Auto trader');
+        }
+
+    }
 
     public function loginLogs(){
         $details = Auth::user()->authentications;
@@ -97,6 +123,10 @@ class DashboardController extends Controller
     public function myTrades()
     {
         $trades = Trade::whereUserId(auth()->id())->get();
+
+        $trades = [
+            [],[],[]
+        ];
 
         return view('backend.trades.index', compact('trades'));
     }

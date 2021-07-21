@@ -1899,6 +1899,201 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Deposit.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Deposit.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DepositItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DepositItem */ "./resources/js/components/DepositItem.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Deposit',
+  components: {
+    DepositItem: _DepositItem__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DepositItem.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DepositItem.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'DepositItem',
+  props: ['coin'],
+  data: function data() {
+    return {
+      amount: 200,
+      step: 1,
+      amounts: [200, 500, 1000, 1500, 2000]
+    };
+  },
+  methods: {
+    next: function next() {
+      this.step = 2;
+    },
+    pre: function pre() {
+      this.step = 1;
+    },
+    setAmount: function setAmount(amt) {
+      console.log('clikdedd');
+      this.amount = amt;
+    }
+  },
+  mounted: function mounted() {// console.log('Component mounted.')
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -1908,6 +2103,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -19580,7 +19776,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card" }, [
+  return _c("div", { staticClass: "car" }, [
     _c("div", { staticClass: "card-body" }, [
       _vm._m(0),
       _vm._v(" "),
@@ -19588,13 +19784,37 @@ var render = function() {
         _c(
           "div",
           { staticClass: "tab-pane fade active show", attrs: { id: "tab1" } },
-          [_c("DepositItem")],
+          [_c("DepositItem", { attrs: { coin: "BTC" } })],
           1
         ),
         _vm._v(" "),
-        _vm._m(1),
+        _c(
+          "div",
+          { staticClass: "tab-pane fade", attrs: { id: "tab2" } },
+          [_c("DepositItem", { attrs: { coin: "ETH" } })],
+          1
+        ),
         _vm._v(" "),
-        _vm._m(2)
+        _c(
+          "div",
+          { staticClass: "tab-pane fade", attrs: { id: "tab3" } },
+          [_c("DepositItem", { attrs: { coin: "BNB" } })],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "tab-pane fade", attrs: { id: "tab4" } },
+          [_c("DepositItem", { attrs: { coin: "USDT" } })],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "tab-pane fade", attrs: { id: "tab4" } },
+          [_c("DepositItem", { attrs: { coin: "COV" } })],
+          1
+        )
       ])
     ])
   ])
@@ -19688,7 +19908,7 @@ var staticRenderFns = [
                     _c(
                       "h6",
                       { staticClass: "mb-0 text-uppercase font-weight-bold" },
-                      [_vm._v("ETH")]
+                      [_vm._v("USDT")]
                     )
                   ])
                 ])
@@ -19719,82 +19939,213 @@ var staticRenderFns = [
         ]
       )
     ])
-  },
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-md-7 col-sm-12" }, [
+      _vm.step === 1
+        ? _c(
+            "div",
+            [
+              _c(
+                "h6",
+                { staticClass: "mb-0 text-uppercase font-weight-bold" },
+                [_vm._v("Enter Amount")]
+              ),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "Please Specify the amount you would like to deposit into your account through " +
+                    _vm._s(_vm.coin)
+                )
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.amounts, function(i) {
+                return _c(
+                  "button",
+                  {
+                    key: i,
+                    staticClass: "btn btn-secondary btn-md mr-1 mb-1",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.setAmount(i)
+                      }
+                    }
+                  },
+                  [_vm._v("$ " + _vm._s(i))]
+                )
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mt-3 mb-3" }, [
+                _c("div", { staticClass: "col-md-4 col-12 mt-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.amount,
+                        expression: "amount"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    domProps: { value: _vm.amount },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.amount = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-8 col-12 mt-2" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      on: {
+                        click: function($event) {
+                          return _vm.next()
+                        }
+                      }
+                    },
+                    [_vm._v("Continue -->")]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-2" }, [
+                _c(
+                  "h6",
+                  { staticClass: "mb-0 text-uppercase font-weight-bold" },
+                  [_vm._v("Send " + _vm._s(_vm.coin) + " to Address")]
+                ),
+                _vm._v(" "),
+                _c("div", [
+                  _c("p", [
+                    _vm._v(
+                      "Send only " +
+                        _vm._s(_vm.coin) +
+                        " to this deposit address."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("p", [
+                      _c("span", { staticClass: "text-danger" }, [
+                        _vm._v(
+                          "\n                                                      Sending coins or tokens other than " +
+                            _vm._s(_vm.coin) +
+                            " to this address may result in the loss of your deposit;\n                                                  "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        '\n                        Coins will be deposited after 6-10 (It depends on the cryptocurrency) network confirmations;\n                        All incoming deposits will be credited to the "Wallet" balance.\n                    '
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.step === 2
+        ? _c("div", [
+            _c("h6", { staticClass: "mb-0 text-uppercase font-weight-bold" }, [
+              _vm._v("Confirm Transfer")
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Please confirm that you have transferred $" +
+                  _vm._s(_vm.amount) +
+                  " worth of " +
+                  _vm._s(_vm.coin) +
+                  " to the specified " +
+                  _vm._s(_vm.coin) +
+                  " wallet address"
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-8" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: {
+                      click: function($event) {
+                        return _vm.pre()
+                      }
+                    }
+                  },
+                  [_vm._v("Previous Page ")]
+                )
+              ])
+            ])
+          ])
+        : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tab-pane fade", attrs: { id: "tab2" } }, [
-      _c("div", { staticClass: "form" }, [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { staticClass: " " }, [_vm._v("Password")]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control bg-transparent",
-            attrs: { type: "password", placeholder: "" }
-          }),
-          _vm._v(" "),
-          _c("small", { staticClass: "form-text" }, [
-            _vm._v("6-character minimum; case sensitive.")
+    return _c(
+      "div",
+      { staticClass: "col-md-5 col-sm-12 text-center deposit-item-first" },
+      [
+        _c("div", { staticClass: "text-center mr-auto mb-3" }, [
+          _c("img", { attrs: { src: "/img/2021/btc.png" } })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-3" }, [
+          _c("div", { staticClass: "form-group" }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { value: "XXXXX XXXXX XXXXX XXXXXXX" }
+            })
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { staticClass: " " }, [_vm._v("Confirm Password")]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control bg-transparent",
-            attrs: { type: "password", placeholder: "" }
-          }),
-          _vm._v(" "),
-          _c("small", { staticClass: "form-text" }, [
-            _vm._v("6-character minimum; case sensitive.")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-flex" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary prevtab",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Previous")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary nexttab ml-auto",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Next")]
-          )
+        _c("span", { staticClass: "mt-2" }, [
+          _vm._v("Make a deposit to this Wallet Address")
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tab-pane fade", attrs: { id: "tab3" } }, [
-      _c("div", { staticClass: "form p-5 text-center" }, [
-        _c("h3", [_vm._v("Thank you !")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet."
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary prevtab", attrs: { type: "button" } },
-          [_vm._v("Previous")]
-        )
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -32046,7 +32397,7 @@ Vue.component('deposit', __webpack_require__(/*! ./components/Deposit.vue */ "./
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app_secret'
 });
 
 /***/ }),
@@ -32064,18 +32415,18 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
  */
+// try {
+//     // window.Popper = require('popper.js').default;
+//     // window.$ = window.jQuery = require('jquery');
+//     //
+//     // require('bootstrap');
+// } catch (e) {}
 
-try {// window.Popper = require('popper.js').default;
-  // window.$ = window.jQuery = require('jquery');
-  //
-  // require('bootstrap');
-} catch (e) {}
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -32105,15 +32456,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Deposit_vue_vue_type_template_id_70f87dfa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Deposit.vue?vue&type=template&id=70f87dfa& */ "./resources/js/components/Deposit.vue?vue&type=template&id=70f87dfa&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Deposit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Deposit.vue?vue&type=script&lang=js& */ "./resources/js/components/Deposit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Deposit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Deposit_vue_vue_type_template_id_70f87dfa___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Deposit_vue_vue_type_template_id_70f87dfa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -32130,6 +32483,20 @@ component.options.__file = "resources/js/components/Deposit.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/Deposit.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Deposit.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Deposit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Deposit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Deposit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Deposit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Deposit.vue?vue&type=template&id=70f87dfa&":
 /*!****************************************************************************!*\
   !*** ./resources/js/components/Deposit.vue?vue&type=template&id=70f87dfa& ***!
@@ -32143,6 +32510,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Deposit_vue_vue_type_template_id_70f87dfa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Deposit_vue_vue_type_template_id_70f87dfa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/DepositItem.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/DepositItem.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DepositItem.vue?vue&type=template&id=5e12b136& */ "./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136&");
+/* harmony import */ var _DepositItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DepositItem.vue?vue&type=script&lang=js& */ "./resources/js/components/DepositItem.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DepositItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DepositItem.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DepositItem.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/DepositItem.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DepositItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DepositItem.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DepositItem.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DepositItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DepositItem.vue?vue&type=template&id=5e12b136& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DepositItem.vue?vue&type=template&id=5e12b136&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DepositItem_vue_vue_type_template_id_5e12b136___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

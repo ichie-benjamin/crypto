@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Session;
+
 
 class LoginController extends Controller
 {
@@ -32,6 +35,10 @@ class LoginController extends Controller
     {
         if (auth()->user()->hasRole('admin')) {
             return '/admin/dashboard';
+        }
+        if(auth()->user()->deposits()->count() < 1){
+            Session::flash('no_deposit', 'no deposit yet');
+            return '/dashboard';
         }
         return '/dashboard';
     }

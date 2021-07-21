@@ -38,7 +38,8 @@ class User extends Authenticatable
         'withdrawable',
         'can_withdraw',
         'can_upgrade',
-        'bonus',
+        'balance',
+        'manager_id',
         'can_trade','plan_id',
         'country', 'address', 'permanent_address', 'postal', 'dob','first_name','last_name','account_officer'
     ];
@@ -57,6 +58,10 @@ class User extends Authenticatable
     ];
 
 
+
+    public function deposits(){
+        return $this->hasMany(Deposit::class,'user_id');
+    }
 
     public function identity(){
 

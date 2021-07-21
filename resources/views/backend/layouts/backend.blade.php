@@ -6,7 +6,11 @@
     <link rel="shortcut icon" href="/dist/images/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+{{--    <link href="/dist/vendors/bootstrap-tour/css/bootstrap-tour-standalone.min.css" rel="stylesheet">--}}
+
+
     <!-- START: Template CSS-->
+
     <link rel="stylesheet" href="/dist/vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/dist/vendors/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="/dist/vendors/jquery-ui/jquery-ui.theme.min.css">
@@ -16,14 +20,12 @@
     <!-- END Template CSS-->
 
     <!-- START: Page CSS-->
-    <link rel="stylesheet" href="/dist/vendors/morris/morris.css">
-    <link rel="stylesheet" href="/dist/vendors/weather-icons/css/pe-icon-set-weather.min.css">
-    <link rel="stylesheet" href="/dist/vendors/chartjs/Chart.min.css">
-    <link rel="stylesheet" href="/dist/vendors/starrr/starrr.css">
-    <link href="/dist/vendors/bootstrap-tour/css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+
+{{--    <link rel="stylesheet" href="/dist/vendors/starrr/starrr.css">--}}
     <link rel="stylesheet" href="/dist/vendors/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/dist/vendors/ionicons/css/ionicons.min.css">
     <!-- END: Page CSS-->
+
 
     <!-- START: Custom CSS-->
     <link rel="stylesheet" href="/dist/css/main.css">
@@ -31,6 +33,12 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" integrity="sha512-8vr9VoQNQkkCCHGX4BSjg63nI5CI4B+nZ8SF2xy4FMOIyH/2MT0r55V276ypsBFAgmLIGXKtRhbbJueVyYZXjA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/dist/vendors/toastr/toastr.min.css"/>
+
+    <link rel="stylesheet" href="/dist/vendors/sweetalert/sweetalert.css">
+
+    @yield('style')
 
     <style>
         .deposit-item-first {
@@ -54,6 +62,8 @@
 
 <!-- START: Body-->
 <body id="main-container" class="default">
+
+
 <!-- START: Pre Loader-->
 <div class="se-pre-con">
     <img src="/dist/images/logo.png" alt="logo" width="23" class="img-fluid"/>
@@ -70,21 +80,10 @@
             <a href="#" class="sidebarCollapse ml-2" id="collapse"><i class="icon-menu body-color"></i></a>
         </div>
         <div class="d-inline-block position-relative">
-            <button  data-izimodal-open="#deposit" data-izimodal-transitionin="fadeInDown" class="btn btn-primary p-2  mx-3 h6 mb-0 line-height-1 d-none d-lg-block">
+            <button  data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-primary p-2  mx-3 h6 mb-0 line-height-1 d-none d-lg-block">
                 <span class="text-white font-weight-bold h6">+ DEPOSIT</span></button>
         </div>
 
-        <div id="app">
-            <div id="deposit"   data-iziModal-title="Fund Your Wallet"  data-iziModal-subtitle="Make a deposit"  data-iziModal-icon="icon-refund" >
-                <!-- Modal content -->
-                <div class="row">
-
-                    <div class="col-12">
-                        <deposit></deposit>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <form class="float-left d-none d-lg-block search-form">
@@ -159,6 +158,7 @@
 </div>
 <!-- END: Header-->
 
+
 <!-- START: Main Menu-->
 <div class="sidebar">
     <a href="#" class="sidebarCollapse float-right h6 dropdown-menu-right mr-2 mt-2 position-absolute d-block d-lg-none">
@@ -173,10 +173,10 @@
 
     <!-- START: Menu-->
     <ul id="side-menu" class="sidebar-menu">
-        <li class="active"><a href="#"><i class="icon-speedometer"></i>Dashboard</a></li>
+        <li class="active"><a href="{{ route('backend.dashboard') }}"><i class="icon-speedometer"></i>Dashboard</a></li>
         <li class=""><a href="#"><i class="icon-grid"></i>Board</a></li>
         <li class=""><a href="#"><i class="icon-film"></i>Market</a></li>
-        <li class=""><a href="#"><i class="icon-chart"></i>Trades</a></li>
+        <li class=""><a href="{{ route('backend.trades.index') }}"><i class="icon-chart"></i>Trades</a></li>
         <li class=""><a href="#"><i class="icon-support"></i>News</a></li>
         <li class=""><a href="#"><i class="icon-envelope"></i>Notifications</a></li>
 
@@ -199,45 +199,108 @@
 
 <!-- START: Main Content-->
 <main>
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        {{--        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>--}}
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-            {
-                "symbols": [
-                {
-                    "proName": "FOREXCOM:SPXUSD",
-                    "title": "S&P 500"
-                },
-                {
-                    "proName": "FOREXCOM:NSXUSD",
-                    "title": "Nasdaq 100"
-                },
-                {
-                    "proName": "FX_IDC:EURUSD",
-                    "title": "EUR/USD"
-                },
-                {
-                    "proName": "BITSTAMP:BTCUSD",
-                    "title": "BTC/USD"
-                },
-                {
-                    "proName": "BITSTAMP:ETHUSD",
-                    "title": "ETH/USD"
-                }
-            ],
-                "showSymbolLogo": false,
-                "colorTheme": "dark",
-                "isTransparent": true,
-                "displayMode": "adaptive",
-                "locale": "en"
-            }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
+{{--    <!-- TradingView Widget BEGIN -->--}}
+{{--    <div class="tradingview-widget-container">--}}
+{{--        <div class="tradingview-widget-container__widget"></div>--}}
+{{--        --}}{{--        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>--}}
+{{--        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>--}}
+{{--            {--}}
+{{--                "symbols": [--}}
+{{--                {--}}
+{{--                    "proName": "FOREXCOM:SPXUSD",--}}
+{{--                    "title": "S&P 500"--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "proName": "FOREXCOM:NSXUSD",--}}
+{{--                    "title": "Nasdaq 100"--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "proName": "FX_IDC:EURUSD",--}}
+{{--                    "title": "EUR/USD"--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "proName": "BITSTAMP:BTCUSD",--}}
+{{--                    "title": "BTC/USD"--}}
+{{--                },--}}
+{{--                {--}}
+{{--                    "proName": "BITSTAMP:ETHUSD",--}}
+{{--                    "title": "ETH/USD"--}}
+{{--                }--}}
+{{--            ],--}}
+{{--                "showSymbolLogo": false,--}}
+{{--                "colorTheme": "dark",--}}
+{{--                "isTransparent": true,--}}
+{{--                "displayMode": "adaptive",--}}
+{{--                "locale": "en"--}}
+{{--            }--}}
+{{--        </script>--}}
+{{--    </div>--}}
+{{--    <!-- TradingView Widget END -->--}}
 
-    @yield('content')
+    <div id="app_secret">
+        @yield('content')
+
+
+
+
+
+        <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Make Deposit</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <deposit></deposit>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="makeDeposit" tabindex="-1" role="dialog" aria-labelledby="makeDepositTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Make Deposit</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 justify-content-center text-center">
+                                        <h3>Make a deposit and start trading!</h3>
+                                        <div class="p-4">
+                                            <img src="/img/2021/img.png">
+                                        </div>
+                                        <div class="m-4">
+                                            <p>To start trading  and access all of the platform's features,
+                                                you will first need to make a deposit to your personal Wallet.</p>
+                                            <p>
+                                                Simply click the Deposit button to bring up your Wallet address and QR code
+                                                It’s quick, safe and easy!</p>
+                                        </div>
+                                        <div class="text-center justify-content-center mr-auto">
+                                            <button id="openDeposit" class="btn btn-primary p-2  mx-3 h6 mb-0 line-height-1">
+                                                <span class="text-white font-weight-bold h6">+ DEPOSIT</span></button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
 
 
@@ -245,8 +308,16 @@
 </main>
 <!-- END: Content-->
 
+
+{{--<div id="app">--}}
+
+
+
+
 <!-- START: Footer-->
-<footer class="site-footer">© 2017 - {{ date('Y') }} {{ env('APP_NAME') }}.</footer>
+
+{{--<footer class="site-footer">© 2017 - {{ date('Y') }} {{ env('APP_NAME') }}.</footer>--}}
+
 <!-- END: Footer-->
 
 <!-- START: Back to top-->
@@ -254,7 +325,6 @@
     <i class="icon-arrow-up"></i>
 </a>
 <!-- END: Back to top-->
-
 
 <!-- START: Template JS-->
 <script src="/dist/vendors/jquery/jquery-3.3.1.min.js"></script>
@@ -288,60 +358,38 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha512-8aOKv+WECF2OZvOoJWZQMx7+VYNxqokDKTGJqkEYlqpsSuKXoocijXQNip3oT4OEkFfafyluI6Bm6oWZjFXR0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- START: Page JS-->
 <script src="/dist/js/home.script.js"></script>
+
+<script src="/dist/vendors/sweetalert/sweetalert.min.js"></script>
+<script src="/dist/vendors/toastr/toastr.min.js"></script>
+
+
+
 <script src="/js/app.js"></script>
+
 <!-- END: Page JS-->
+<!-- START: Page JS-->
 
-<script>
-    jQuery(document).ready( function() {
-        // $("#modal").iziModal();
-        $("#deposit").iziModal({
-            title: '',
-            subtitle: '',
-            headerColor: '#000000',
-            width: 700,
-            top: null,
-            bottom: null,
-            // borderBottom: true,
-            padding: 0,
-            radius: 5,
-            iframeURL: null,
-            focusInput: true,
-            group: '',
-            loop: false,
-            arrowKeys: true,
-            navigateCaption: true,
-            navigateArrows: true, // Boolean, 'closeToModal', 'closeScreenEdge'
-            history: false,
-            restoreDefaultContent: false,
-            autoOpen: 0, // Boolean, Number
-            fullscreen: false,
-            openFullscreen: false,
-            closeOnEscape: true,
-            closeButton: true,
-            appendTo: 'body', // or false
-            appendToOverlay: 'body', // or false
-            overlay: true,
-            overlayClose: true,
-            overlayColor: 'rgba(10,8,8,0.4)',
-            pauseOnHover: false,
-            timeoutProgressbarColor: 'rgba(255,255,255,0.5)',
-            transitionIn: 'comingIn',
-            transitionOut: 'comingOut',
-            transitionInOverlay: 'fadeIn',
-            transitionOutOverlay: 'fadeOut',
-            onFullscreen: function(){},
-            onResize: function(){},
-            onOpening: function(){},
-            onOpened: function(){},
-            onClosing: function(){},
-            onClosed: function(){},
-            afterRender: function(){}
+@include('partials.alerts')
+
+@if (session('no_deposit'))
+    <script>
+        $(window).on('load', function() {
+            $('#makeDeposit').modal('show');
         });
-
-    })
+    </script>
+@endif
+<script>
+    $(window).on('load', function() {
+        $("#openDeposit").button().click(function(){
+            $('#makeDeposit').modal('hide');
+            $('.bd-example-modal-lg').modal('show');
+        });
+    });
 </script>
+
+@yield('js')
+
 </body>
 <!-- END: Body-->
 

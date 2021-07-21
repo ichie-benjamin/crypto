@@ -58,12 +58,23 @@
                     <div class="card-body">
                         <img src="/dist/21/verified.png" alt="wallet" class="float-right" />
                         <h6 class="card-title font-weight-bold">ACCOUNT STATUS</h6>
-                        @if (auth()->user()->is_active)
+                        @if (setting('autotrader'))
+                            @if (auth()->user()->manager_id)
+                                <h2 class="text-success">Connected </h2>
+                                <span class="text-success"><i class="ion ion-android-arrow-dropdown"></i>Your account is connected</span>
+                            @else
+                                <h2 class="text-danger">Not connected </h2>
+                                <span class="text-danger"><i class="ion ion-android-arrow-dropdown"></i>Account not connected</span>
+                            @endif
+                        @endif
+                        @if (!setting('autotrader'))
+                            @if (auth()->user()->is_active)
                             <h2 class="text-success">Verified </h2>
                             <span class="text-success"><i class="ion ion-android-arrow-dropdown"></i>Your account is verified and active</span>
                         @else
                             <h2 class="text-danger">Unverified </h2>
                             <span class="text-danger"><i class="ion ion-android-arrow-dropdown"></i>Unverified account has limited features</span>
+                            @endif
                         @endif
 
 

@@ -1,1400 +1,1020 @@
-<!DOCTYPE html>
-<html lang="zxx">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+<!-- START: Head-->
+
+<!-- Mirrored from html.designstream.co.in/pollo/ltr/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Jun 2021 22:32:32 GMT -->
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pollo Admin</title>
+    <link rel="shortcut icon" href="dist/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- Title -->
-    <title>Crypto Assest</title>
+    <!-- START: Template CSS-->
+    <link rel="stylesheet" href="dist/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/vendors/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="dist/vendors/jquery-ui/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="dist/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="dist/vendors/flags-icon/css/flag-icon.min.css">
+    <link rel="stylesheet" href="dist/vendors/flag-select/css/flags.css">
+    <!-- END Template CSS-->
 
-    <!-- Favicon -->
-    <link rel="icon" href="/img/core-img/favicon.ico">
+    <!-- START: Page CSS-->
+    <link rel="stylesheet" href="dist/vendors/datatable/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="dist/vendors/datatable/buttons/css/buttons.bootstrap4.min.css"/>
+    <!-- END: Page CSS-->
 
-    <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Responsive Stylesheet -->
-    <link rel="stylesheet" href="/css/responsive.css">
-
+    <!-- START: Custom CSS-->
+    <link rel="stylesheet" href="dist/css/main.css">
+    <!-- END: Custom CSS-->
 </head>
+<!-- END Head-->
 
-<body class="darker">
-<!-- Preloader -->
-<div id="preloader">
-    <div class="preload-content">
-        <div id="dream-load"></div>
-    </div>
+<!-- START: Body-->
+<body id="main-container" class="default">
+<!-- START: Pre Loader-->
+<div class="se-pre-con">
+    <img src="dist/images/logo.png" alt="logo" width="23" class="img-fluid"/>
 </div>
+<!-- END: Pre Loader-->
 
-<!-- ##### Header Area Start ##### -->
-<nav class="navbar navbar-expand-lg navbar-white fixed-top" id="banner">
-    <div class="container">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#"><span><img src="/img/core-img/logo.png" alt="logo"></span> Crypto Assest</a>
+<!-- START: Header-->
+<div id="header-fix" class="header fixed-top">
+    <nav class="navbar navbar-expand-lg  p-0">
+        <div class="navbar-header h4 mb-0 align-self-center d-flex">
+            <a href="index-2.html" class="horizontal-logo align-self-center d-flex d-lg-none">
+                <img src="dist/images/logo.png" alt="logo" width="23" class="img-fluid"/> <span class="h5 align-self-center mb-0 ">POLLO</span>
+            </a>
+            <a href="#" class="sidebarCollapse ml-2" id="collapse"><i class="icon-menu body-color"></i></a>
+        </div>
+        <div class="d-inline-block position-relative">
+            <button data-toggle="dropdown" aria-expanded="false" class="btn btn-primary p-2 rounded mx-3 h4 mb-0 line-height-1 d-none d-lg-block">
+                <span class="text-white font-weight-bold h4">+</span></button>
+            <div class="dropdown-menu left p-0">
+                <a href="#" class="dropdown-item px-2">Create Page</a>
+                <a href="#" class="dropdown-item px-2">Add New User</a>
+                <a href="#" class="dropdown-item px-2">New Campain</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item px-2 text-danger">Generate Reports</a>
+            </div>
+        </div>
 
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <form class="float-left d-none d-lg-block search-form">
+            <div class="form-group mb-0 position-relative">
+                <input type="text" class="form-control border-0 rounded bg-search pl-5" placeholder="Search anything...">
+                <div class="btn-search position-absolute top-0">
+                    <a href="#"><i class="h5 icon-magnifier body-color"></i></a>
+                </div>
+                <a href="#" class="position-absolute close-button mobilesearch d-lg-none" data-toggle="dropdown" aria-expanded="false"><i class="icon-close h5"></i>
+                </a>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('home') }}" id="navbardrop" data-toggle="dropdown">Home</a>
+            </div>
+        </form>
+        <div class="navbar-right ml-auto">
+            <ul class="ml-auto p-0 m-0 list-unstyled d-flex">
+                <li class="mr-1 d-inline-block my-auto d-block d-lg-none">
+                    <a href="#" class="nav-link px-2 mobilesearch" data-toggle="dropdown" aria-expanded="false"><i class="icon-magnifier h4"></i>
+                    </a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#about">About Us</a>--}}
-{{--                </li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                <li class="mr-1 d-inline-block my-auto">
+                    <div id="options" data-input-name="country2"  data-selected-country="US"></div>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#faq">FAQ</a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#roadmap">Roadmap</a>--}}
-{{--                </li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                <li class="dropdown align-self-center mr-1">
+                    <a href="#" class="nav-link px-2" data-toggle="dropdown" aria-expanded="false"><i class="icon-reload h4"></i>
+                        <span class="badge badge-default"> <span class="ring">
+                                    </span><span class="ring-point">
+                                    </span> </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border  py-0">
+                        <li>
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle">
+                                    <div class="media-body">
+                                        <h6 class="mb-0">john</h6>
+                                        <span class="text-warning">New user registered.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author2.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle">
+                                    <div class="media-body">
+                                        <h6 class="mb-0">Peter</h6>
+                                        <span class="text-success">Server #12 overloaded.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author3.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle">
+                                    <div class="media-body">
+                                        <h6 class="mb-0">Bill</h6>
+                                        <span class="text-danger">Application error.</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li><a class="dropdown-item text-center py-2" href="#"> <strong>See All Tasks <i class="icon-arrow-right pl-2 small"></i></strong></a></li>
+                    </ul>
+
                 </li>
-                @guest()
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                <li class="dropdown align-self-center mr-1 d-inline-block">
+                    <a href="#" class="nav-link px-2" data-toggle="dropdown" aria-expanded="false"><i class="icon-bell h4"></i>
+                        <span class="badge badge-default"> <span class="ring">
+                                    </span><span class="ring-point">
+                                    </span> </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right border   py-0">
+                        <li>
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle w-50">
+                                    <div class="media-body">
+                                        <h6 class="mb-0 text-success">john send a message</h6>
+                                        12 min ago
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author2.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle">
+                                    <div class="media-body">
+                                        <h6 class="mb-0 text-danger">Peter send a message</h6>
+                                        15 min ago
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="dropdown-item px-2 py-2 border border-top-0 border-left-0 border-right-0" href="#">
+                                <div class="media">
+                                    <img src="dist/images/author3.jpg" alt="" class="d-flex mr-3 img-fluid rounded-circle">
+                                    <div class="media-body">
+                                        <h6 class="mb-0 text-warning">Bill send a message</h6>
+                                        5 min ago
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li><a class="dropdown-item text-center py-2" href="#"> <strong>Read All Message <i class="icon-arrow-right pl-2 small"></i></strong></a></li>
+                    </ul>
                 </li>
-                <li class="lh-55px"><a href="{{ route('register') }}" class="btn login-btn ml-50">Register</a></li>
-          @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"
-                        >Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </li>
-                    <li class="lh-55px"><a href="{{ route('home') }}" class="btn login-btn ml-50">Dashboard</a></li>
-                @endguest
+                <li class="dropdown user-profile d-inline-block py-1 mr-2">
+                    <a href="#" class="nav-link px-2 py-0" data-toggle="dropdown" aria-expanded="false">
+                        <div class="media">
+                            <div class="media-body align-self-center d-none d-sm-block mr-2">
+                                <p class="mb-0 text-uppercase line-height-1"><b>John Deo</b><br/><span> Admin </span></p>
+
+                            </div>
+                            <img src="dist/images/author.jpg" alt="" class="d-flex img-fluid rounded-circle" width="45">
+
+                        </div>
+                    </a>
+
+                    <div class="dropdown-menu  dropdown-menu-right p-0">
+                        <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                            <span class="icon-pencil mr-2 h6 mb-0"></span> Edit Profile</a>
+                        <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                            <span class="icon-user mr-2 h6 mb-0"></span> View Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                            <span class="icon-support mr-2 h6  mb-0"></span> Help Center</a>
+                        <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                            <span class="icon-globe mr-2 h6 mb-0"></span> Forum</a>
+                        <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                            <span class="icon-settings mr-2 h6 mb-0"></span> Account Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item px-2 text-danger align-self-center d-flex">
+                            <span class="icon-logout mr-2 h6  mb-0"></span> Sign Out</a>
+                    </div>
+
+                </li>
+
             </ul>
         </div>
-    </div>
-</nav>
-<!-- ##### Header Area End ##### -->
-
-<!-- ##### Welcome Area Start ##### -->
-<section class="hero-section moving section-padding" id="home">
-    <div class="moving-bg"></div>
-    <!-- Hero Content -->
-    <div class="hero-section-content">
-
-        <div class="container ">
-            <div class="row align-items-center">
-                <!-- Welcome Content -->
-                <div class="col-12 col-lg-5 col-md-12">
-                    <div class="welcome-content">
-                        <div class="promo-section">
-                            <h3 class="special-head dark">Crypto Asset</h3>
-                        </div>
-                        <h1 class="fadeInUp" data-wow-delay="0.2s">TRADE FOREX, CFD AND OPTIONS</h1>
-                        <p class="w-text fadeInUp" data-wow-delay="0.3s"> INVEST AND EARN UP TO 95% IN 60 SEC
-                        <br>Accounts from $250<br/>
-                            Trades from 10 cents!
-                        </p>
-                        <div class="dream-btn-group fadeInUp" data-wow-delay="0.4s">
-{{--                            <a href="#" class="btn more-btn mr-3">Whitepaper</a>--}}
-                            <a href="{{ route('register') }}" class="btn more-btn">Trade Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="dotted mt-30 fadeInUp" style="" data-wow-delay="0.5s">
-                        <img src="/img/core-img/platform1.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ##### Welcome Area End ##### -->
-
-<div class="clearfix"></div>
-
-<!-- ##### About Us Area Start ##### -->
-<section class="about-us-area section-padding-100 clearfix">
-
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6 offset-lg-0 col-md-12 no-padding-left">
-                <div class="welcome-meter fadeInUp" data-wow-delay="0.7s">
-                    <img src="/img/core-img/about-1.png"  alt="">
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 offset-lg-0">
-                <div class="who-we-contant mt-s">
-                    <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" >
-                        <span class="gradient-text ">Decentralized Trading Platform</span>
-                    </div>
-
-                    <h4 class="fadeInUp" data-wow-delay="0.3s">Connect blockchain to the real world and start crypto tading.</h4>
-                    <p class="fadeInUp" data-wow-delay="0.4s">BEST TRADING CONDITIONS</p>
-                    <p class="fadeInUp" data-wow-delay="0.5s">IN FOREX AND CFD INDUSTRY</p>
-                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="{{ route('register') }}">Get Started</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- ##### About Us Area End ##### -->
-
-<!-- ##### Our Services Area Start ##### -->
-<section class="join-us section-padding-0-100 clearfix" id="services">
-    <div class="container">
-
-        <div class="section-heading text-center hidden-lg">
-            <!-- Dream Dots -->
-            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                <span>Our Advantages</span>
-            </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s">What Makes Us Stand out</h2>
-{{--            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>--}}
-        </div>
-
-
-        <div class="row dark-row pt-60">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="contribution-c-wapper has-arrow-right-lg has-arrow-top-md has-arrow-right-md has-arrow-down-sm">
-                    <!-- Content -->
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.2s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t orange">1</span>
-                        </div>
-                        <h6>Withdrawals</h6>
-                        <p>Guaranteed withdrawals
-                            processing within 1 hour</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-sm-30">
-                <div class="contribution-c-wapper has-arrow-right-lg has-arrow-bottom-md has-arrow-down-sm">
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.3s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t pink">2</span>
-                        </div>
-                        <h6>Non-stop Trading</h6>
-                        <p>Non-stop trading,
-                            even over weekends</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-s">
-                <div class="contribution-c-wapper has-arrow-top-md has-arrow-down-sm">
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.4s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t blue">3</span>
-                        </div>
-                        <h6>Wide Range Methods</h6>
-                        <p>Wide range of deposit and
-                            withdrawal methods.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
-                <img src="/img/svg/join-bottom.svg" class="arrow-img rotated" alt="">
-            </div>
-            <div class="col-lg-4 text-center hidden-md hidden-sm hidden-xs">
-                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                    <span>Join us</span>
-                </div>
-                <h2 class="fadeInUp" data-wow-delay="0.3s">Our Advantages</h2>
-            </div>
-            <div class="col-lg-4 hidden-md hidden-sm hidden-xs">
-                <img src="/img/svg/join-bottom.svg" class="arrow-img" alt="">
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4 mt-30">
-                <div class="contribution-c-wapper has-arrow-left-lg has-arrow-bottom-md has-arrow-down-sm">
-                    <!-- Content -->
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.2s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t green">6</span>
-                        </div>
-                        <h6>24/7 Customer</h6>
-                        <p>24/7 customer
-                            multilingual support</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-30">
-                <div class="contribution-c-wapper has-arrow-left-lg has-arrow-left-md has-arrow-down-sm">
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.3s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t green">5</span>
-                        </div>
-                        <h6>100% Secured Trading</h6>
-                        <p>100% secured trading
-                            with full data protection</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-30">
-                <div class="contribution-c-wapper ">
-                    <div class="service_single_content text-center mb-30 fadeInUp" data-wow-delay="0.4s">
-                        <!-- Icon -->
-                        <div class="cycle_icon">
-                            <span class="gradient-t pink">4</span>
-                        </div>
-                        <h6>Trader Guidance</h6>
-                        <p>Possibility to trade under
-                            experienced trader guidance
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ##### About Us Area Start ##### -->
-<section class="about-us-area section-padding-0-100 clearfix">
-
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-12 col-lg-6 offset-lg-0">
-                <div class="who-we-contant">
-                    <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <span class="gradient-text ">Crypto Asset</span>
-                    </div>
-                    <h4 class="fadeInUp" data-wow-delay="0.3s">NO PREVIOUS EXPERIENCE IN TRADING
-                        ON FINANCIAL MARKETS?
-                        Just Copy most Successeful Traders!</h4>
-                    <p class="fadeInUp" data-wow-delay="0.4s">Pass free registration
-                        <br>This process takes 30 sec.</p>
-                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="{{ route('register') }}">Get Started</a>
-                </div>
-            </div>
-
-            <img class="supportImg" src="/img/svg/trading-strokes.svg" alt="image">
-            <div class="col-12 col-lg-6 offset-lg-0 col-md-12 mt-30 no-padding-left">
-                <div class="welcome-meter floating-anim fadeInUp" data-wow-delay="0.7s">
-                    <img src="/img/core-img/computer.png"  alt="">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- ##### About Us Area End ##### -->
-
-<div class="trust-section section-padding-0-70">
-    <div class="section-heading text-center">
-        <!-- Dream Dots -->
-        <div class="dream-dots justify-content-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            <span>ICO Rating</span>
-        </div>
-        <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">We are trusted</h2>
-        <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-            Crypto Asset broker provides stable access to deep liquidity market and the best prices with the most popular and reliable trading platform</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/1.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <!-- <div class="value">8.9</div> -->
-                        <div class="check-icon"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/2.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <div class="value">8.9</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/3.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <!-- <div class="value">8.9</div> -->
-                        <div class="check-icon"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/4.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <!-- <div class="value">8.9</div> -->
-                        <div class="check-icon"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/5.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <div class="value">7.4</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-3 col-lg-2">
-                <!-- Single Cool Fact -->
-                <div class="trust-item text-center wow fadeInUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-                    <div class="ico-platform-logo">
-                        <img src="/img/ico-platforms/6.png" alt="">
-                    </div>
-                    <!-- Single Cool Detail -->
-                    <div class="check">
-                        <!-- <div class="value">8.9</div> -->
-                        <div class="check-icon"></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    </nav>
 </div>
+<!-- END: Header-->
 
-<!-- ##### Our Services Area Start ##### -->
-<section class="our_services_area section-padding-0-0 clearfix" id="services">
-    <div class="container">
+<!-- START: Main Menu-->
+<div class="sidebar">
+    <a href="#" class="sidebarCollapse float-right h6 dropdown-menu-right mr-2 mt-2 position-absolute d-block d-lg-none">
+        <i class="icon-close"></i>
+    </a>
+    <!-- START: Logo-->
+    <a href="index-2.html" class="sidebar-logo d-flex">
+        <img src="dist/images/logo.png" alt="logo" width="25" class="img-fluid mr-2"/>
+        <span class="h5 align-self-center mb-0">POLLO</span>
+    </a>
+    <!-- END: Logo-->
 
-        <div class="section-heading text-center">
-            <!-- Dream Dots -->
-{{--            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">--}}
-{{--                <span>Why choose us</span>--}}
-{{--            </div>--}}
-            <h2 class="fadeInUp" data-wow-delay="0.3s">Top Crypto broker for great success!</h2>
-{{--            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>--}}
-        </div>
+    <!-- START: Menu-->
+    <ul id="side-menu" class="sidebar-menu">
+        <li class="dropdown"><a href="#"><i class="icon-speedometer"></i>Dashboard</a>
+            <div>
+                <ul>
+                    <li><a href="index-2.html"><i class="icon-rocket"></i> eCommerce</a></li>
+                    <li><a href="index-cryptocurrency.html"><i class="icon-shuffle"></i> Cryptocurrency</a></li>
+                    <li><a href="index-analytic.html"><i class="icon-chart"></i> Analytic</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown"><a href="#" class="text-danger"><i class="icon-cursor-move"></i>New<span class="ml-2 badge badge-danger">New</span></a>
+            <div>
+                <ul>
+                    <li><a href="app-timeline.html"><i class="icon-calendar"></i> Time LIne</a></li>
+                    <li><a href="app-task-board.html"><i class="icon-speech"></i> Todo</a></li>
+                    <li><a href="app-tickets.html"><i class="icon-support"></i> Tickets</a></li>
+                    <li><a href="app-multi-input.html"><i class="icon-support"></i> Multi Input</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-support"></i>Apps</a>
+            <div>
+                <ul>
+                    <li><a href="app-calendar.html"><i class="icon-calendar"></i> Calendar</a></li>
+                    <li><a href="app-chat.html"><i class="icon-speech"></i> Chats</a></li>
+                    <li><a href="app-to-do.html"><i class="icon-support"></i> Todo</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-chart"></i>Charts</a>
+            <div>
+                <ul>
+                    <li class="dropdown"><a href="#" class="d-flex align-items-center"><i class="icon-chart"></i> amCharts Charts <small class="float-right ml-auto d-block icon-arrow-right"></small></a>
+                        <div>
+                            <ul>
+                                <li><a href="amcharts-bar.html"><i class="icon-energy"></i> Column & Bar</a></li>
+                                <li><a href="amcharts-line.html"><i class="icon-disc"></i> Line & Area</a></li>
+                                <li><a href="amcharts-pie.html"><i class="icon-frame"></i> Pie & Donut</a></li>
+                                <li><a href="amcharts-xy-bubble.html"><i class="icon-fire"></i> XY & Bubble</a></li>
+                                <li><a href="amcharts-stock.html"><i class="icon-shuffle"></i> Stock</a></li>
+                                <li><a href="amcharts-timeline.html"><i class="icon-graph"></i> TimeLine</a></li>
+                                <li><a href="amcharts-radar.html"><i class="icon-pie-chart"></i> Radar & Polar</a></li>
+                                <li><a href="amcharts-treemap.html"><i class="icon-drawer"></i> Treemap</a></li>
+                                <li><a href="amcharts-funnel.html"><i class="icon-energy"></i> Funnel & Pyramid</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="chart-morris.html"><i class="icon-energy"></i> Morris Chart</a></li>
+                    <li><a href="chart-chartist.html"><i class="icon-disc"></i> Chartist js</a></li>
+                    <li><a href="chart-echart.html"><i class="icon-frame"></i> eCharts</a></li>
+                    <li><a href="chart-flot.html"><i class="icon-fire"></i> Flot Chart</a></li>
+                    <li><a href="chart-knob.html"><i class="icon-shuffle"></i> Knob Chart</a></li>
+                    <li class="dropdown"><a href="#" class="d-flex align-items-center"><i class="icon-control-pause"></i> Charts js <small class="float-right ml-auto d-block icon-arrow-right"></small></a>
+                        <div>
+                            <ul>
+                                <li><a href="chartjs-bar.html"><i class="icon-energy"></i> Bar charts</a></li>
+                                <li><a href="chartjs-line.html"><i class="icon-disc"></i> Line charts</a></li>
+                                <li><a href="chartjs-area.html"><i class="icon-frame"></i> Area charts</a></li>
+                                <li><a href="chartjs-other.html"><i class="icon-fire"></i> Doughnut, Pie, Polar charts</a></li>
+                                <li><a href="chartjs-linear.html"><i class="icon-shuffle"></i> Linear scale</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="chart-sparkline.html"><i class="icon-graph"></i> Sparkline Chart</a></li>
+                    <li><a href="chart-peity.html"><i class="icon-pie-chart"></i> Peity Chart</a></li>
+                    <li><a href="chart-google.html"><i class="icon-drawer"></i> Google Charts</a></li>
+                    <li><a href="chart-apex.html"><i class="icon-magnet"></i> Apex Charts</a></li>
+                    <li><a href="chart-c3.html"><i class="icon-hourglass"></i> C3 Charts</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-envelope"></i>Mailbox</a>
+            <div>
+                <ul>
+                    <li><a href="app-mail.html"><i class="icon-envelope"></i> Inbox</a></li>
+                    <li><a href="app-view-email.html"><i class="icon-eye"></i> View Email</a></li>
+                    <li><a href="app-mail-compose.html"><i class="icon-compass"></i> Compose Email</a></li>
+                </ul>
+            </div>
+
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="icon-film"></i>Form</a>
+            <div>
+                <ul>
+                    <li><a href="form-basic.html"><i class="icon-disc"></i> Basic Form</a></li>
+                    <li><a href="form-layout.html"><i class="icon-cursor-move"></i> Form Layout</a></li>
+                    <li><a href="form-validation.html"><i class="icon-star"></i> Form Validation</a></li>
+                    <li class="dropdown"><a href="#" class="d-flex align-items-center"><i class="icon-film"></i> Form Elements <small class="float-right ml-auto d-block icon-arrow-right"></small></a>
+                        <div>
+                            <ul>
+                                <li><a href="form-elements-switch.html"><i class="icon-energy"></i> Switch</a></li>
+                                <li><a href="form-elements-checkbox.html"><i class="icon-disc"></i> Checkbox</a></li>
+                                <li><a href="form-elements-radiobutton.html"><i class="icon-frame"></i> Radio</a></li>
+                                <li><a href="form-elements-input.html"><i class="icon-fire"></i> Input</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="form-float-input.html"><i class="icon-symbol-male"></i> Float Input</a></li>
+                    <li><a href="form-wizard.html"><i class="icon-loop"></i> Form Wizards</a></li>
+                    <li><a href="form-upload.html"><i class="icon-pin"></i> Form Uploads</a></li>
+                    <li><a href="form-mask.html"><i class="icon-check"></i> Form Mask</a></li>
+                    <li><a href="form-dropzone.html"><i class="icon-present"></i> Form Dropzone</a></li>
+                    <li><a href="form-icheck.html"><i class="icon-briefcase"></i> Icheck Controls</a></li>
+                    <li><a href="form-cropper.html"><i class="icon-hourglass"></i> Image Cropper</a></li>
+                    <li><a href="form-htmleditor.html"><i class="icon-graduation"></i> HTML5 Editor</a></li>
+                    <li><a href="form-typehead.html"><i class="icon-puzzle"></i> Form Typehead</a></li>
+                    <li><a href="form-xeditable.html"><i class="icon-cloud-upload"></i> Xeditable</a></li>
+                    <li><a href="form-summernote.html"><i class="icon-ghost"></i> Summernote</a></li>
+                </ul>
+            </div>
+
+        </li>
+        <li class="dropdown active"><a href="#"><i class="icon-menu"></i>Tables</a>
+            <div>
+                <ul>
+                    <li><a href="table-basic.html"><i class="icon-grid"></i> Table Basic</a></li>
+                    <li><a href="table-layout.html"><i class="icon-layers"></i> Table Layout</a></li>
+                    <li class="active"><a href="table-datatable.html"><i class="icon-docs"></i> Datatable</a></li>
+                    <li><a href="table-footable.html"><i class="icon-wallet"></i> Footable</a></li>
+                    <li><a href="table-jsgrid.html"><i class="icon-folder"></i> Jsgrid</a></li>
+                    <li><a href="table-responsive.html"><i class="icon-control-pause"></i> Table Responsive</a></li>
+                    <li><a href="table-editable.html"><i class="icon-pencil"></i> Editable Table</a></li>
+                </ul>
+            </div>
+
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-screen-desktop"></i>UI</a>
+            <div>
+                <ul>
+                    <li><a href="ui-alert.html"><i class="icon-bell"></i> Alerts</a></li>
+                    <li><a href="ui-badges.html"><i class="icon-badge"></i> Badges</a></li>
+                    <li><a href="ui-buttons.html"><i class="icon-control-play"></i> Buttons</a></li>
+                    <li><a href="ui-cards.html"><i class="icon-layers"></i> Cards</a></li>
+                    <li><a href="ui-carousel.html"><i class="icon-picture"></i> Carousel</a></li>
+                    <li><a href="ui-collapse.html"><i class="icon-arrow-up"></i> Collapse</a></li>
+                    <li><a href="ui-dropdowns.html"><i class="icon-arrow-down"></i> Dropdowns</a></li>
+                    <li><a href="ui-jumbotron.html"><i class="icon-screen-desktop"></i> Jumbotron</a></li>
+                    <li><a href="ui-modals.html"><i class="icon-frame"></i> Modal</a></li>
+                    <li><a href="ui-pagination.html"><i class="icon-docs"></i> Pagination</a></li>
+                    <li><a href="ui-popoverandtooltip.html"><i class="icon-pin"></i> Popover &amp; Tooltip</a></li>
+                    <li><a href="ui-progress.html"><i class="icon-graph"></i> Progress</a></li>
+                    <li><a href="ui-scrollspy.html"><i class="icon-shuffle"></i> Scrollspy</a></li>
+                    <li><a href="ui-select2.html"><i class="icon-wallet"></i> Select2</a></li>
+                    <li><a href="ui-sweetalert.html"><i class="icon-fire"></i> Sweet Alert</a></li>
+                    <li><a href="ui-timeline.html"><i class="icon-graduation"></i> Timeline</a></li>
+                    <li><a href="ui-toastr.html"><i class="icon-layers"></i> Toastr</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-book-open"></i>Pages</a>
+            <div>
+                <ul>
+                    <li><a href="page-lockscreen.html"><i class="icon-lock"></i> Lockscreen</a></li>
+                    <li><a href="page-login.html"><i class="icon-login"></i> login</a></li>
+                    <li><a href="page-register.html"><i class="icon-direction"></i> Register</a></li>
+                    <li><a href="page-404.html"><i class="icon-crop"></i> 404 Page</a></li>
+                    <li><a href="page-404-menu.html"><i class="icon-layers"></i> 404 Page With Menu</a></li>
+                    <li><a href="page-blank.html"><i class="icon-frame"></i> Blank Page</a></li>
+                    <li><a href="page-gallery.html"><i class="icon-layers"></i> Gallery</a></li>
+                    <li><a href="page-pricing.html"><i class="icon-wallet"></i> Pricing</a></li>
+                    <li><a href="page-contact-us.html"><i class="icon-wrench"></i> Contact us</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="icon-badge"></i>Icons</a>
+            <div>
+                <ul>
+                    <li><a href="icon-materialdesign.html"><i class="icon-star"></i> Material Icon</a></li>
+                    <li><a href="icon-font-awesome.html"><i class="icon-screen-tablet"></i> Font-awesome</a></li>
+                    <li><a href="icon-themify.html"><i class="icon-plane"></i> Themify Icon</a></li>
+                    <li><a href="icon-weather.html"><i class="icon-drawer"></i> Weather Icon</a></li>
+                    <li><a href="icon-simple-line.html"><i class="icon-map"></i> Simple Line Icon</a></li>
+                    <li><a href="icon-flag.html"><i class="icon-flag"></i> Flag Icon</a></li>
+                    <li><a href="icon-ionicons.html"><i class="icon-rocket"></i> Ionicons Icon</a></li>
+                    <li><a href="icon-icofont.html"><i class="icon-fire"></i> Icofont Icon</a></li>
+                    <li><a href="icon-linearicons.html"><i class="icon-list"></i> Linear</a></li>
+                    <li><a href="icon-crypto.html"><i class="icon-diamond"></i> Crypto</a></li>
+                </ul>
+            </div>
+
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-user"></i>Profile</a>
+            <div>
+                <ul>
+                    <li><a href="user-contact-list.html"><i class="icon-people"></i> Contact List</a></li>
+                    <li><a href="user-contact-grid.html"><i class="icon-cursor-move"></i> Contact Grid</a></li>
+                    <li><a href="user-profile.html"><i class="icon-user"></i> User Profile</a></li>
+
+                </ul>
+            </div>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="icon-map"></i>Map</a>
+            <div>
+                <ul>
+                    <li><a href="map-google.html"><i class="icon-map"></i> Google Map</a></li>
+                    <li><a href="map-vector.html"><i class="icon-vector"></i> Vector Map</a></li>
+
+                </ul>
+            </div>
+        </li>
+
+        <li class="dropdown"><a href="#"><i class="icon-pencil"></i>Blog</a>
+            <div>
+                <ul>
+                    <li><a href="blog-list.html"><i class="icon-plus"></i> Blog List</a></li>
+                    <li><a href="blog-single.html"><i class="icon-tag"></i> Blog Post</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li><a href="calendar.html"><i class="icon-calendar"></i>Calendar</a>
+
+        </li>
+        <li class="dropdown"><a href="#"><i class="icon-bag"></i>Ecommerce</a>
+            <div>
+                <ul>
+                    <li><a href="ecommerce-product-list.html"><i class="icon-grid"></i> Products List</a></li>
+                    <li><a href="ecommerce-product-detail.html"><i class="icon-plus"></i> Product Detail</a></li>
+                    <li><a href="ecommerce-cart.html"><i class="icon-badge"></i> Cart</a></li>
+                    <li><a href="ecommerce-checkout.html"><i class="icon-plus"></i> Checkout</a></li>
+                    <li><a href="ecommerce-orders.html"><i class="icon-basket"></i> Orders</a></li>
+                    <li><a href="ecommerce-order-view.html"><i class="icon-equalizer"></i> Order View</a></li>
+                    <li><a href="ecommerce-order-invoice.html"><i class="icon-notebook"></i> Invoice</a></li>
+                </ul>
+            </div>
+        </li>
 
 
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.2s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-1.svg" alt="">
-                    </div>
-                    <h6>Scalping, automated trading, news trading and arbitrage allowed</h6>
-                    <p>The company allows using such trading strategies as scalping, automated EA trading, news trading,
-                        and arbitrage. Our clients enjoy complete freedom and convenience when trading, regardless of their strategies.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.3s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-2.svg" alt="">
-                    </div>
-                    <h6>Rapid execution with no re-quotes</h6>
-                    <p>Our clients know for sure that their work in the Forex market will be smooth and uninterrupted since there are no re-quotes when executing orders at Tifia. The opportunity to close or open a trade immediately
-                        enables our clients to react to market fluctuations as fast as possible, which is an essential condition for success in the Forex market.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.4s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-3.svg" alt="">
-                    </div>
-                    <h6>Hedging (partial or fully locked positions) is allowed</h6>
-                    <p>Our clients may hedge positions partially or in full. Hedging allows them to reduce the risk of losing money in unprofitable trades, and thus insures their deposits.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.5s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-4.svg" alt="">
-                    </div>
-                    <h6>24/5 Professional team working in the best interests of the Client</h6>
-                    <p>Our client support team strives to provide an individual approach to every client. You may receive prompt and competent advice at any time, as our professional team acts in the best interests of the clients..</p>
-                </div>
-            </div>
-            @section('hide')
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.6s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-5.svg" alt="">
-                    </div>
-                    <h6>Connect free</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam, maxi ut accumsan ut, posuere sit Lorem ipsu.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.7s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-6.svg" alt="">
-                    </div>
-                    <h6>AI matching</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam, maxi ut accumsan ut, posuere sit Lorem ipsu.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.7s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="/img/features/feature-7.svg" alt="">
-                    </div>
-                    <h6>Low cost</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam, maxi ut accumsan ut, posuere sit Lorem ipsu.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.7s">
-                    <!-- Icon -->
-                    <div class="service_icon">
-                        <img src="img/features/feature-8.svg" alt="">
-                    </div>
-                    <h6>Digital personas</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam, maxi ut accumsan ut, posuere sit Lorem ipsu.</p>
-                </div>
-            </div>
-            @endsection
-        </div>
-    </div>
-</section>
+    </ul>
+    <!-- END: Menu-->
+</div>
+<!-- END: Main Menu-->
 
-<!-- ##### About Us Area Start ##### -->
-<section class="smart-contract section-padding-0-70 clearfix">
-
-    <div class="container">
+<!-- START: Main Content-->
+<main>
+    <div class="container-fluid">
+        <!-- START: Breadcrumbs-->
         <div class="row ">
+            <div class="col-12  align-self-center">
+                <div class="sub-header mt-3 py-3 px-3 align-self-center d-sm-flex w-100 rounded">
+                    <div class="w-sm-100 mr-auto"><h4 class="mb-0">Datatable</h4></div>
 
-
-            <div class="col-12 col-lg-6 offset-lg-0">
-                <div class="who-we-contant">
-                    <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" >
-                        <span class="gradient-text ">TRADE FOREX
-                    WITH Crypto Asset</span>
-                    </div>
-
-                    <h4 class="fadeInUp" data-wow-delay="0.3s">Trade with Crypto Asset</h4>
-                    <p class="fadeInUp" data-wow-delay="0.4s">    What is CFD trading? First of all, CFD is highly profitable but risky financial instrument that allows you to get profit in 60 seconds.
-                       </p>
-                    <p class="fadeInUp" data-wow-delay="0.5s"> It's easy to understand and to trade. No need to learn a lot - you can start trading today.</p>
-                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="{{ route('register') }}">Get Started</a>
-
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 offset-lg-0 mt-s">
-                <div class="services-block-four v3">
-                    <div class="inner-box">
-                        <div class="icon-img-box">
-                            <img src="img/features/s1.svg" alt="">
-                        </div>
-                        <h3><a href="#">Registration</a></h3>
-                        <div class="text">Pass free registration</div>
-                    </div>
-                </div>
-                <div class="services-block-four v3">
-                    <div class="inner-box">
-                        <div class="icon-img-box">
-                            <img src="img/features/s2.svg" alt="">
-                        </div>
-                        <h3><a href="#">Activate trading account</a></h3>
-                        <div class="text">Fund your trading account by initial deposit to start with.</div>
-                    </div>
-                </div>
-{{--                <div class="services-block-four v3">--}}
-{{--                    <div class="inner-box">--}}
-{{--                        <div class="icon-img-box">--}}
-{{--                            <img src="img/features/s3.svg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <h3><a href="#">Software development kit (SDK)</a></h3>--}}
-{{--                        <div class="text">Lorem ipsum dolor sit amet, conse ctetur dolor adipisicing elit.</div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                <div class="services-block-four v3">
-                    <div class="inner-box">
-                        <div class="icon-img-box">
-                            <img src="img/features/s4.svg" alt="">
-                        </div>
-                        <h3><a href="#">Start copy trading</a></h3>
-                        <div class="text">Choose one or more successful traders, start copying and follow the results!</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<!-- ##### About Us Area End ##### -->
-
-
-<section class="features section-padding-0-100 ">
-
-    <div class="container">
-        <div class="section-heading text-center">
-            <!-- Dream Dots -->
-            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                <span>Try our Platform</span>
-            </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Our Trading Platform</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Copy profitable trades of Forex pros and level up your income!</p>
-        </div>
-        <div class="row align-items-center">
-
-            <div class="service-img-wrapper col-lg-5 col-md-12 col-sm-12 no-padding-right">
-                <div class="features-list">
-                    <div class="who-we-contant">
-
-                        <h4 class="w-text fadeInUp" data-wow-delay="0.3s">Powerful platform.</h4>
-                        <p class="w-text fadeInUp" data-wow-delay="0.4s">We are dedicated to providing professional service with the highest degree of honesty and integrity, and strive to add value to our tax and consulting services.</p>
-                    </div>
-                    <ul class="list-marked">
-                        <li class="text-white"><i class="fa fa-check"></i>Competent Professionals</li>
-                        <li class="text-white"><i class="fa fa-check"></i>24/7 Customer Support</li>
-                        <li class="text-white"><i class="fa fa-check"></i>High Successful Recovery</li>
-{{--                        <li class="text-white"><i class="fa fa-check"></i>Creative Layout</li>--}}
-                    </ul>
-                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="{{ route('register') }}">Get Started</a>
-                </div>
-            </div>
-
-            <div class="service-img-wrapper col-lg-7 col-md-12 col-sm-12 mt-s">
-                <div class="image-box">
-                    <img src="/img/core-img/platform.png" class="center-block img-responsive phone-img" alt="">
-                    <img src="/img/core-img/rings.png" class="center-block img-responsive rings " alt="">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="features section-padding-0-70 ">
-
-    <div class="container">
-        <div class="section-heading text-center">
-            <!-- Dream Dots -->
-            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                <span>Token Prices</span>
-            </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Our Packages</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">For your convenience we have combined the most demanded services into packages.
-                Their accessibility depends from the amount of first trading deposit. By investing more, you get more bonuses and advantages!</p>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="pricing-item ">
-                    <h4>Round 1</h4>
-                    <h3><strong class="xzc-1-month">0.96$</strong></h3>
-                    <span>1 ETH = 500 Token</span>
-                    <div class="pricing">15,000,000 Token</div>
-                    <label><strong>42% bonus</strong></label>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="pricing-item ">
-                    <h4>Round 2</h4>
-                    <h3><strong class="xzc-1-month">1.25$</strong></h3>
-                    <span>1 ETH = 500 Token</span>
-                    <div class="pricing">15,000,000 Token</div>
-                    <label><strong>35% bonus</strong></label>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="pricing-item ">
-                    <h4>Round 3</h4>
-                    <h3><strong class="xzc-1-month">1.50$</strong></h3>
-                    <span>1 ETH = 500 Token</span>
-                    <div class="pricing">15,000,000 Token</div>
-                    <label><strong>25% bonus</strong></label>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="pricing-item ">
-                    <h4>Round 4</h4>
-                    <h3><strong class="xzc-1-month">1.96$</strong></h3>
-                    <span>1 ETH = 500 Token</span>
-                    <div class="pricing">15,000,000 Token</div>
-                    <label><strong>15% bonus</strong></label>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</section>
-
-<div class="clearfix"></div>
-
-
-<!-- ##### Our Trial Area End ##### -->
-@section('hide')
-<section class="spread-map download" >
-    <div class="container">
-        <div class="row align-items-center">
-
-            <div class="col-lg-6 col-xs-12">
-                <div class="welcome-meter fadeInUp" data-wow-delay="0.7s">
-                    <img src="img/core-img/whitepaper.png" class="center-block" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 col-xs-12 mt-s">
-                <div class="who-we-contant">
-                    <div class="dream-dots text-left fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                        <img src="img/svg/section-icon-11.svg" alt="">
-                    </div>
-                    <h4 class="text-white fadeInUp" data-wow-delay="0.3s">Downoad Our Whitepaper</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore qui iste asperiores harum maiores praesentium facere ullam blanditiis, odio dolorum. Officia quisquam eaque suscipit facere ducimus, sit quaerat. Numquam, corrupti?</p>
-                    <a class="btn dream-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="#">
-                        Get Whitepaper
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-@endsection
-
-
-@section('hide')
-
-    <section class="token-distribution section-padding-100-85">
-        <div class="container">
-
-            <div class="section-heading text-center">
-                <!-- Dream Dots -->
-                <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                    <span>ICO Distribution</span>
-                </div>
-                <h2 class="fadeInUp" data-wow-delay="0.3s">Our ICO Distribution</h2>
-                <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-sm-12">
-                    <div class=" ">
-                        <h2 class="text-center mb-30 fadeInUp" data-wow-delay="0.3s">Funds Allocation</h2>
-                        <img src="img/core-img/distribution.png" class="center-block" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12 mt-s">
-                    <h2 class="text-center mb-30 fadeInUp" data-wow-delay="0.3s">Token Distribution</h2>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="">
-                                <img src="img/core-img/graph-11.png" class="center-block" alt="">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="token-info">
-                                <div class="info-wrapper one">
-                                    <div class="token-icon">12</div>
-                                    <div class="token-descr">Overhead Token Distribution</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper two">
-                                    <div class="token-icon">23</div>
-                                    <div class="token-descr">Supporting Blockchain </div>
-                                </div>
-                            </div>
-
-                            <div class="token-info">
-                                <div class="info-wrapper four">
-                                    <div class="token-icon">08</div>
-                                    <div class="token-descr">Engineers and R&D</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper five">
-                                    <div class="token-icon">07</div>
-                                    <div class="token-descr"> Paltform Operations</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper three">
-                                    <div class="token-icon">05</div>
-                                    <div class="token-descr">Network Growth Marketing</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper six">
-                                    <div class="token-icon">08</div>
-                                    <div class="token-descr">Oracle Network Developers</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper seven">
-                                    <div class="token-icon">05</div>
-                                    <div class="token-descr">Engineers and R&D</div>
-                                </div>
-                            </div>
-                            <div class="token-info">
-                                <div class="info-wrapper eight">
-                                    <div class="token-icon">27</div>
-                                    <div class="token-descr"> Paltform Operations</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ol class="breadcrumb bg-transparent align-self-center m-0 p-0">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">Table</li>
+                        <li class="breadcrumb-item active"><a href="#">Datatable</a></li>
+                    </ol>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- END: Breadcrumbs-->
 
-    <section class="roadmap section-padding-0-0" id="roadmap">
-        <div class="section-heading text-center">
-            <!-- Dream Dots -->
-            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                <span>ICO Roadmap</span>
-            </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s">Our ICO Roadmap</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="main-timeline">
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer"> <span class="date"> <span class="month">22 Sept</span> <span class="year">2018</span> </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <h5 class="title">Listing to the major exchanges</h5>
-                                <p class="description text-light-gray"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.</p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer"> <span class="date"> <span class="month">27 Nov</span> <span class="year">2018</span> </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <h5 class="title">Platform integration to marketplaces</h5>
-                                <p class="description text-light-gray"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.</p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer"> <span class="date"> <span class="month">19 Dec</span> <span class="year">2018</span> </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <h5 class="title">Crypto Wallet version release</h5>
-                                <p class="description text-light-gray"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.</p>
-                            </div>
-                        </div>
-                        <div class="timeline">
-                            <div class="icon"></div>
-                            <div class="date-content">
-                                <div class="date-outer"> <span class="date"> <span class="month">25 Jan</span> <span class="year">2019</span> </span>
-                                </div>
-                            </div>
-                            <div class="timeline-content">
-                                <h5 class="title">Platform ealier version development</h5>
-                                <p class="description text-light-gray"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ##### Token Info Start ##### -->
-<div class="features2 section-padding-100-70" >
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <div class="col-12 col-lg-5 offset-lg-0 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-                <div class="ico-counter mb-30">
-                    <div class="counter-down">
-
-                        <div class="content">
-                            <div class="conuter-header">
-                                <h3 class="w-text text-center">TOKEN SALE ENDS IN</h3>
-                            </div>
-                            <div class="counterdown-content">
-
-                                <!-- Countdown  -->
-                                <div class="count-down titled circled text-center">
-                                    <div class="simple_timer"></div>
-                                </div>
-                                <div class="ico-progress">
-                                    <ul class="list-unstyled list-inline clearfix mb-10">
-                                        <li class="title">33m</li>
-                                        <li class="strength">75m</li>
-                                    </ul>
-                                    <!-- skill strength -->
-                                    <div class="current-progress">
-                                        <div class="progress-bar has-gradient" style="width: 75%"></div>
-                                    </div>
-                                    <span class="pull-left">Softcap in 103 days</span>
-                                    <span class="pull-right">Token Hardcap</span>
-                                </div>
-                                <div class="text-center">
-                                    <a class="btn dream-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="#">Buy More tokens</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-7 col-sm-12">
-                <div class="col-lg-6 col-md-6 col-sm-12 mt-md-30">
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f1.svg" alt="">
-                            </div>
-                            <h3><a href="#">Delivery Reports</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f2.svg" alt="">
-                            </div>
-                            <h3><a href="#">Branded Sender</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f3.svg" alt="">
-                            </div>
-                            <h3><a href="#">SMS Messaging</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 mt-md-30 mt-smy-0">
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f4.svg" alt="">
-                            </div>
-                            <h3><a href="#">Marketing Plans</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f5.svg" alt="">
-                            </div>
-                            <h3><a href="#">Seed Routing</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                    <div class="services-block-four v2">
-                        <div class="inner-box">
-                            <div class="icon-img-box">
-                                <img src="img/features/f6.svg" alt="">
-                            </div>
-                            <h3><a href="#">Traking API</a></h3>
-                            <div class="text">Lorem ipsum dolor sit amet, conse ctetur.</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- ##### FAQ & Timeline Area Start ##### -->
-<div class="faq-timeline-area section-padding-0-85" id="faq">
-    <div class="container">
-        <div class="section-heading text-center">
-            <!-- Dream Dots -->
-            <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                <span>Token FAQ</span>
-            </div>
-            <h2 class="fadeInUp" data-wow-delay="0.3s">  Frequently Questions</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6 offset-lg-0 col-md-8 offset-md-2 col-sm-12">
-                <img src="img/svg/faq.svg" alt="" class="center-block img-responsive">
-            </div>
-            <div class="col-12 col-lg-6 col-md-12">
-                <div class="dream-faq-area mt-s ">
-                    <dl style="margin-bottom:0">
-                        <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp" data-wow-delay="0.2s">What are the objectives of this Token?</dt>
-                        <dd class="fadeInUp" data-wow-delay="0.3s">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore omnis quaerat nostrum, pariatur ipsam sunt accusamus enim necessitatibus est fugiat, assumenda dolorem, deleniti corrupti cupiditate ipsum, dolorum voluptatum esse error?</p>
-                        </dd>
-                        <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp" data-wow-delay="0.3s">What is the best features and services we deiver?</dt>
-                        <dd>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore omnis quaerat nostrum, pariatur ipsam sunt accusamus enim necessitatibus est fugiat, assumenda dolorem, deleniti corrupti cupiditate ipsum, dolorum voluptatum esse error?</p>
-                        </dd>
-                        <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp" data-wow-delay="0.4s">Why this ICO important to me?</dt>
-                        <dd>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore omnis quaerat nostrum, pariatur ipsam sunt accusamus enim necessitatibus est fugiat, assumenda dolorem, deleniti corrupti cupiditate ipsum, dolorum voluptatum esse error?</p>
-                        </dd>
-                        <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp" data-wow-delay="0.5s">how may I take part in and purchase this Token?</dt>
-                        <dd>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore omnis quaerat nostrum, pariatur ipsam sunt accusamus enim necessitatibus est fugiat, assumenda dolorem, deleniti corrupti cupiditate ipsum, dolorum voluptatum esse error?</p>
-                        </dd>
-                    </dl>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- ##### FAQ & Timeline Area End ##### -->
-
-<!-- ##### Team Area Start ##### -->
-<section class="our_team_area section-padding-100-0 clearfix" id="team">
-    <div class="container">
+        <!-- START: Card Data-->
         <div class="row">
-            <div class="col-12">
-                <div class="section-heading text-center">
-                    <!-- Dream Dots -->
-                    <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                        <span>Our Team</span>
+            <div class="col-12 mt-3">
+                <div class="card">
+                    <div class="card-header  justify-content-between align-items-center">
+                        <h4 class="card-title">Data Tabel</h4>
                     </div>
-                    <h2 class="fadeInUp" data-wow-delay="0.3s">Awesome Team</h2>
-                    <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo. </p>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="display table dataTable table-striped table-bordered" >
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td>$320,800</td>
+                                </tr>
+                                <tr>
+                                    <td>Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011/07/25</td>
+                                    <td>$170,750</td>
+                                </tr>
+                                <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009/01/12</td>
+                                    <td>$86,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2012/03/29</td>
+                                    <td>$433,060</td>
+                                </tr>
+                                <tr>
+                                    <td>Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008/11/28</td>
+                                    <td>$162,700</td>
+                                </tr>
+                                <tr>
+                                    <td>Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2012/12/02</td>
+                                    <td>$372,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>2012/08/06</td>
+                                    <td>$137,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>2010/10/14</td>
+                                    <td>$327,900</td>
+                                </tr>
+                                <tr>
+                                    <td>Colleen Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>2009/09/15</td>
+                                    <td>$205,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Sonya Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>2008/12/13</td>
+                                    <td>$103,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>30</td>
+                                    <td>2008/12/19</td>
+                                    <td>$90,560</td>
+                                </tr>
+                                <tr>
+                                    <td>Quinn Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2013/03/03</td>
+                                    <td>$342,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Charde Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td>36</td>
+                                    <td>2008/10/16</td>
+                                    <td>$470,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Haley Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>43</td>
+                                    <td>2012/12/18</td>
+                                    <td>$313,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Tatyana Fitzpatrick</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>19</td>
+                                    <td>2010/03/17</td>
+                                    <td>$385,750</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Silva</td>
+                                    <td>Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>66</td>
+                                    <td>2012/11/27</td>
+                                    <td>$198,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Paul Byrd</td>
+                                    <td>Chief Financial Officer (CFO)</td>
+                                    <td>New York</td>
+                                    <td>64</td>
+                                    <td>2010/06/09</td>
+                                    <td>$725,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Gloria Little</td>
+                                    <td>Systems Administrator</td>
+                                    <td>New York</td>
+                                    <td>59</td>
+                                    <td>2009/04/10</td>
+                                    <td>$237,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>2012/10/13</td>
+                                    <td>$132,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>35</td>
+                                    <td>2012/09/26</td>
+                                    <td>$217,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Jenette Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td>30</td>
+                                    <td>2011/09/03</td>
+                                    <td>$345,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Yuri Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td>40</td>
+                                    <td>2009/06/25</td>
+                                    <td>$675,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>21</td>
+                                    <td>2011/12/12</td>
+                                    <td>$106,450</td>
+                                </tr>
+                                <tr>
+                                    <td>Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sydney</td>
+                                    <td>23</td>
+                                    <td>2010/09/20</td>
+                                    <td>$85,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2009/10/09</td>
+                                    <td>$1,200,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Gavin Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>42</td>
+                                    <td>2010/12/22</td>
+                                    <td>$92,575</td>
+                                </tr>
+                                <tr>
+                                    <td>Jennifer Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td>28</td>
+                                    <td>2010/11/14</td>
+                                    <td>$357,650</td>
+                                </tr>
+                                <tr>
+                                    <td>Brenden Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>28</td>
+                                    <td>2011/06/07</td>
+                                    <td>$206,850</td>
+                                </tr>
+                                <tr>
+                                    <td>Fiona Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td>48</td>
+                                    <td>2010/03/11</td>
+                                    <td>$850,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Shou Itou</td>
+                                    <td>Regional Marketing</td>
+                                    <td>Tokyo</td>
+                                    <td>20</td>
+                                    <td>2011/08/14</td>
+                                    <td>$163,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Michelle House</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Sydney</td>
+                                    <td>37</td>
+                                    <td>2011/06/02</td>
+                                    <td>$95,400</td>
+                                </tr>
+                                <tr>
+                                    <td>Suki Burks</td>
+                                    <td>Developer</td>
+                                    <td>London</td>
+                                    <td>53</td>
+                                    <td>2009/10/22</td>
+                                    <td>$114,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Prescott Bartlett</td>
+                                    <td>Technical Author</td>
+                                    <td>London</td>
+                                    <td>27</td>
+                                    <td>2011/05/07</td>
+                                    <td>$145,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Gavin Cortez</td>
+                                    <td>Team Leader</td>
+                                    <td>San Francisco</td>
+                                    <td>22</td>
+                                    <td>2008/10/26</td>
+                                    <td>$235,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Martena Mccray</td>
+                                    <td>Post-Sales support</td>
+                                    <td>Edinburgh</td>
+                                    <td>46</td>
+                                    <td>2011/03/09</td>
+                                    <td>$324,050</td>
+                                </tr>
+                                <tr>
+                                    <td>Unity Butler</td>
+                                    <td>Marketing Designer</td>
+                                    <td>San Francisco</td>
+                                    <td>47</td>
+                                    <td>2009/12/09</td>
+                                    <td>$85,675</td>
+                                </tr>
+                                <tr>
+                                    <td>Howard Hatfield</td>
+                                    <td>Office Manager</td>
+                                    <td>San Francisco</td>
+                                    <td>51</td>
+                                    <td>2008/12/16</td>
+                                    <td>$164,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Hope Fuentes</td>
+                                    <td>Secretary</td>
+                                    <td>San Francisco</td>
+                                    <td>41</td>
+                                    <td>2010/02/12</td>
+                                    <td>$109,850</td>
+                                </tr>
+                                <tr>
+                                    <td>Vivian Harrell</td>
+                                    <td>Financial Controller</td>
+                                    <td>San Francisco</td>
+                                    <td>62</td>
+                                    <td>2009/02/14</td>
+                                    <td>$452,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Timothy Mooney</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>37</td>
+                                    <td>2008/12/11</td>
+                                    <td>$136,200</td>
+                                </tr>
+                                <tr>
+                                    <td>Jackson Bradshaw</td>
+                                    <td>Director</td>
+                                    <td>New York</td>
+                                    <td>65</td>
+                                    <td>2008/09/26</td>
+                                    <td>$645,750</td>
+                                </tr>
+                                <tr>
+                                    <td>Olivia Liang</td>
+                                    <td>Support Engineer</td>
+                                    <td>Singapore</td>
+                                    <td>64</td>
+                                    <td>2011/02/03</td>
+                                    <td>$234,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Bruno Nash</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>38</td>
+                                    <td>2011/05/03</td>
+                                    <td>$163,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Sakura Yamamoto</td>
+                                    <td>Support Engineer</td>
+                                    <td>Tokyo</td>
+                                    <td>37</td>
+                                    <td>2009/08/19</td>
+                                    <td>$139,575</td>
+                                </tr>
+                                <tr>
+                                    <td>Thor Walton</td>
+                                    <td>Developer</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2013/08/11</td>
+                                    <td>$98,540</td>
+                                </tr>
+                                <tr>
+                                    <td>Finn Camacho</td>
+                                    <td>Support Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>47</td>
+                                    <td>2009/07/07</td>
+                                    <td>$87,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Serge Baldwin</td>
+                                    <td>Data Coordinator</td>
+                                    <td>Singapore</td>
+                                    <td>64</td>
+                                    <td>2012/04/09</td>
+                                    <td>$138,575</td>
+                                </tr>
+                                <tr>
+                                    <td>Zenaida Frank</td>
+                                    <td>Software Engineer</td>
+                                    <td>New York</td>
+                                    <td>63</td>
+                                    <td>2010/01/04</td>
+                                    <td>$125,250</td>
+                                </tr>
+                                <tr>
+                                    <td>Zorita Serrano</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>56</td>
+                                    <td>2012/06/01</td>
+                                    <td>$115,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Jennifer Acosta</td>
+                                    <td>Junior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>43</td>
+                                    <td>2013/02/01</td>
+                                    <td>$75,650</td>
+                                </tr>
+                                <tr>
+                                    <td>Cara Stevens</td>
+                                    <td>Sales Assistant</td>
+                                    <td>New York</td>
+                                    <td>46</td>
+                                    <td>2011/12/06</td>
+                                    <td>$145,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Hermione Butler</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2011/03/21</td>
+                                    <td>$356,250</td>
+                                </tr>
+                                <tr>
+                                    <td>Lael Greer</td>
+                                    <td>Systems Administrator</td>
+                                    <td>London</td>
+                                    <td>21</td>
+                                    <td>2009/02/27</td>
+                                    <td>$103,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonas Alexander</td>
+                                    <td>Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>30</td>
+                                    <td>2010/07/14</td>
+                                    <td>$86,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Shad Decker</td>
+                                    <td>Regional Director</td>
+                                    <td>Edinburgh</td>
+                                    <td>51</td>
+                                    <td>2008/11/13</td>
+                                    <td>$183,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Bruce</td>
+                                    <td>Javascript Developer</td>
+                                    <td>Singapore</td>
+                                    <td>29</td>
+                                    <td>2011/06/27</td>
+                                    <td>$183,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Donna Snider</td>
+                                    <td>Customer Support</td>
+                                    <td>New York</td>
+                                    <td>27</td>
+                                    <td>2011/01/25</td>
+                                    <td>$112,000</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-
-        <div class="row">
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member fadeInUp" data-wow-delay="0.2s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/team-img/1.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <h5 class="w-text">Joman Helal</h5>
-                        <p class="g-text">Executive Officer</p>
-                    </div>
-                    <!-- Social Icon -->
-                    <div class="team-social-icon">
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member fadeInUp" data-wow-delay="0.3s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/team-img/2.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <h5 class="w-text">Slans Alons</h5>
-                        <p class="g-text">Business Development</p>
-                    </div>
-                    <!-- Social Icon -->
-                    <div class="team-social-icon">
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member fadeInUp" data-wow-delay="0.4s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/team-img/3.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <h5 class="w-text">Josha Michal</h5>
-                        <p class="g-text">UX/UI Designer</p>
-                    </div>
-                    <!-- Social Icon -->
-                    <div class="team-social-icon">
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Team Member -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-team-member fadeInUp" data-wow-delay="0.5s">
-                    <!-- Image -->
-                    <div class="team-member-thumb">
-                        <img src="img/team-img/4.png" class="center-block" alt="">
-                    </div>
-                    <!-- Team Info -->
-                    <div class="team-info">
-                        <h5 class="w-text">Johan Wright</h5>
-                        <p class="g-text">Head of Marketing</p>
-                    </div>
-                    <!-- Icon -->
-                    <div class="team-social-icon">
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <!-- END: Card DATA-->
     </div>
-</section>
-<!-- ##### Team Area End ##### -->
+</main>
+<!-- END: Content-->
 
+<!-- START: Footer-->
+<footer class="site-footer">© 2020 Pollo.</footer>
+<!-- END: Footer-->
 
-<section class="container" >
-    <div class="subscribe section-padding-0-0">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="subscribe-wrapper">
-                    <div class="section-heading text-center">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Don’t Miss ICO News And Updates!</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>
-                    </div>
-                    <div class="service-text text-center">
+<!-- START: Back to top-->
+<a href="#" class="scrollup text-center">
+    <i class="icon-arrow-up"></i>
+</a>
+<!-- END: Back to top-->
 
-                        <div class="subscribe-section has-shadow">
-                            <div class="input-wrapper">
-                                <i class="fa fa-home"></i>
-                                <input type="email" placeholder="Enter your Email">
-                            </div>
-                            <button class="btn more-btn">Subscribe</button>
-                        </div>
+<!-- START: Template JS-->
+<script src="dist/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="dist/vendors/jquery-ui/jquery-ui.min.js"></script>
+<script src="dist/vendors/moment/moment.js"></script>
+<script src="dist/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="dist/vendors/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="dist/vendors/flag-select/js/jquery.flagstrap.min.js"></script>
+<!-- END: Template JS-->
 
-                    </div>
-                </div>
-            </div>
+<!-- START: APP JS-->
+<script src="dist/js/app.js"></script>
+<!-- END: APP JS-->
 
-        </div>
-    </div>
-</section>
+<!-- START: Page Vendor JS-->
+<script src="dist/vendors/datatable/js/jquery.dataTables.min.js"></script>
+<script src="dist/vendors/datatable/js/dataTables.bootstrap4.min.js"></script>
+<script src="dist/vendors/datatable/jszip/jszip.min.js"></script>
+<script src="dist/vendors/datatable/pdfmake/pdfmake.min.js"></script>
+<script src="dist/vendors/datatable/pdfmake/vfs_fonts.js"></script>
+<script src="dist/vendors/datatable/buttons/js/dataTables.buttons.min.js"></script>
+<script src="dist/vendors/datatable/buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="dist/vendors/datatable/buttons/js/buttons.colVis.min.js"></script>
+<script src="dist/vendors/datatable/buttons/js/buttons.flash.min.js"></script>
+<script src="dist/vendors/datatable/buttons/js/buttons.html5.min.js"></script>
+<script src="dist/vendors/datatable/buttons/js/buttons.print.min.js"></script>
+<!-- END: Page Vendor JS-->
 
-
-<!-- ##### Blog Area Start ##### -->
-<section class="our_blog_area clearfix section-padding-100-0" id="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-heading text-center">
-                    <!-- Dream Dots -->
-                    <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                        <span>Blog Posts</span>
-                    </div>
-                    <h2 class="fadeInUp" data-wow-delay="0.3s">Latest News</h2>
-                    <p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo. </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-
-            <!-- Single Blog Post -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area fadeInUp" data-wow-delay="0.2s">
-                    <!-- Post Thumbnail -->
-                    <div class="blog_thumbnail">
-                        <img src="img/blog-img/1.jpg" alt="">
-                    </div>
-                    <!-- Post Content -->
-                    <div class="blog-content">
-                        <!-- Dream Dots -->
-
-                        <div class="post-meta mt-20">
-                            <p>By <a href="#" class="post-author">ADMIN</a> <a href="#">Apr 10, 2018</a> <a href="#" class="post-comments">7 comments</a></p>
-                        </div>
-                        <a href="#" class="post-title">
-                            <h4>What is this Token for?.</h4>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugiat at vitae, ratione sapiente repellat.</p>
-                        <a href="#" class="btn more-btn mt-15">Read Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Blog Post -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area fadeInUp" data-wow-delay="0.3s">
-                    <!-- Post Thumbnail -->
-                    <div class="blog_thumbnail">
-                        <img src="img/blog-img/2.jpg" alt="">
-                    </div>
-                    <!-- Post Content -->
-                    <div class="blog-content">
-                        <!-- Dream Dots -->
-
-                        <div class="post-meta mt-20">
-                            <p>By <a href="#" class="post-author">ADMIN</a> <a href="#">Apr 10, 2018</a> <a href="#" class="post-comments">7 comments</a></p>
-                        </div>
-                        <a href="#" class="post-title">
-                            <h4>The most powerful Token</h4>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugiat at vitae, ratione sapiente repellat.</p>
-                        <a href="#" class="btn more-btn mt-15">Read Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Blog Post -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-area fadeInUp" data-wow-delay="0.4s">
-                    <!-- Post Thumbnail -->
-                    <div class="blog_thumbnail">
-                        <img src="img/blog-img/3.jpg" alt="">
-                    </div>
-                    <!-- Post Content -->
-                    <div class="blog-content">
-                        <!-- Dream Dots -->
-
-                        <div class="post-meta mt-20">
-                            <p>By <a href="#" class="post-author">ADMIN</a> <a href="#">Apr 10, 2018</a> <a href="#" class="post-comments">7 comments</a></p>
-                        </div>
-                        <a href="#" class="post-title">
-                            <h4>How to get trial version</h4>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugiat at vitae, ratione sapiente repellat.</p>
-                        <a href="#" class="btn more-btn mt-15">Read Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ##### Blog Area End ##### -->
-@endsection
-
-
-
-<!-- ##### Footer Area Start ##### -->
-<footer class="footer-area bg-img" style="background-image: url(img/core-img/pattern.png);">
-
-    <!-- ##### Contact Area Start ##### -->
-    <div class="contact_us_area section-padding-0-0" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <!-- Dream Dots -->
-                        <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
-                            <span class="gradient-text">Contact us</span>
-                        </div>
-                        <h2 class="fadeInUp" data-wow-delay="0.3s">Contact With Us</h2>
-                        <p class="fadeInUp" data-wow-delay="0.4s">Please fill up the form and our support team will get in contact with you</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                    <div class="contact_form">
-                        <form action="#" method="post" id="main_contact_form" novalidate>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div id="success_fail_info"></div>
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <div class="group fadeInUp" data-wow-delay="0.2s">
-                                        <input type="text" name="name" id="name" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="group fadeInUp" data-wow-delay="0.3s">
-                                        <input type="text" name="email" id="email" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group fadeInUp" data-wow-delay="0.4s">
-                                        <input type="text" name="subject" id="subject" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="group fadeInUp" data-wow-delay="0.5s">
-                                        <textarea name="message" id="message" required></textarea>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center fadeInUp" data-wow-delay="0.6s">
-                                    <button type="submit" class="btn more-btn">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Contact Area End ##### -->
-
-    <div class="footer-content-area ">
-        <div class="container">
-            <div class="row ">
-                <div class="col-12 col-lg-4 col-md-6">
-                    <div class="footer-copywrite-info">
-                        <!-- Copywrite -->
-                        <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
-                            <div class="footer-logo">
-                                <a href="#"><img src="/img/core-img/logo.png" alt="logo"> Crypto Asset </a>
-                            </div>
-                            <p>Trade with Crypto Asset
-                                What is CFD trading? First of all, CFD is highly profitable but risky financial instrument that allows you to get profit in 60 seconds.
-
-                                It's easy to understand and to trade. No need to learn a lot - you can start trading today</p>
-                        </div>
-                        <!-- Social Icon -->
-{{--                        <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">--}}
-{{--                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>--}}
-{{--                            <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>--}}
-{{--                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>--}}
-{{--                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>--}}
-{{--                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>--}}
-{{--                        </div>--}}
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-3 col-md-6">
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
-{{--                        <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">--}}
-{{--                            <h5>PRIVACY & TOS</h5>--}}
-{{--                            <a href="#"><p>Advertiser Agreement</p></a>--}}
-{{--                            <a href="#"><p>Acceptable Use Policy</p></a>--}}
-{{--                            <a href="#"><p>Privacy Policy</p></a>--}}
-{{--                            <a href="#"><p>Technology Privacy</p></a>--}}
-{{--                            <a href="#"><p>Developer Agreement</p></a>--}}
-{{--                        </div>--}}
-                        <div class="image-box">
-                            <img src="/img/core-img/platform.png" class="center-block img-responsive phone-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-2 col-md-6 ">
-                    <!-- Content Info -->
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
-                            <h5>NAVIGATE</h5>
-                            <a href="#"><p>Home</p></a>
-                            <a href="#services"><p>Services</p></a>
-                            <a href="#contact"><p>Contact Us</p></a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-12 col-lg-3 col-md-6 ">
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
-                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
-                            <h5>CONTACT US</h5>
-                            <p>Mailing Address:xx00 E. Union Ave</p>
-                            <p>Suite 1100. Denver, CO 80237</p>
-                            <p>+999 90932 627</p>
-                            <p>support@yourdomain.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</footer>
-<!-- ##### Footer Area End ##### -->
-
-<!-- ########## All JS ########## -->
-<!-- jQuery js -->
-<script src="js/jquery.min.js"></script>
-<!-- Popper js -->
-<script src="js/popper.min.js"></script>
-<!-- Bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
-<!-- All Plugins js -->
-<script src="js/plugins.js"></script>
-<!-- Parallax js -->
-<script src="js/dzsparallaxer.js"></script>
-
-<script src="js/jquery.syotimer.min.js"></script>
-
-<!-- script js -->
-<script src="js/script.js"></script>
-
+<!-- START: Page Script JS-->
+<script src="dist/js/datatable.script.js"></script>
+<!-- END: Page Script JS-->
 </body>
+<!-- END: Body-->
 
+<!-- Mirrored from html.designstream.co.in/pollo/ltr/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Jun 2021 22:33:20 GMT -->
 </html>

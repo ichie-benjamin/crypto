@@ -8,7 +8,10 @@ var editor;
                 ],
      responsive: true
  });
- 
-  
+  $('#datatable').DataTable({
+     responsive: true
+ });
+
+
 
 })(jQuery);

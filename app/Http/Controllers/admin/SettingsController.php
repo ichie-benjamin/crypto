@@ -20,6 +20,7 @@ class SettingsController extends Controller
     }
 
     public function store(Request $request){
+        return $request;
         setting($request->except('_token'))->save();
         return redirect()->back()->with('success', 'Settings updated successfully');
     }

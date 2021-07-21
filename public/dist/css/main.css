@@ -98,7 +98,7 @@ File: Main Style
     --sidebarbg: #fff;
     --sidebarcolor: #292b3a;
     --sidebarbordercolor: rgba(0, 0, 0, 0.1);
-    --primarycolor: #7367f0;
+    --primarycolor: #3e8ef7;
     --bodycolor: #292b3a;
     --bodybackground: #eff0f5;
     --bordercolor: rgba(0, 0, 0, 0.1);
@@ -116,7 +116,7 @@ File: Main Style
     --sidebarbg: #10163a;
     --sidebarcolor: #fff;
     --sidebarbordercolor: rgba(255, 255, 255, 0.1);
-    --primarycolor: #7367f0;
+    --primarycolor: #3e8ef7;
     --bodycolor: #292b3a;
     --bodybackground: #eff0f5;
     --bordercolor: rgba(0, 0, 0, 0.1);
@@ -127,7 +127,7 @@ File: Main Style
     --sidebarbg: #2b2e39;
     --sidebarcolor: #a5abb1;
     --sidebarbordercolor: rgba(255, 255, 255, 0.1);
-    --primarycolor: #7367f0;
+    --primarycolor: #3e8ef7;
     --bodycolor: #a5abb1;
     --bodybackground: #3c4452;
     --bordercolor: rgba(255, 255, 255, 0.1);
@@ -138,7 +138,7 @@ File: Main Style
     --sidebarbg: #101329;
     --sidebarcolor: #a5abb1;
     --sidebarbordercolor: rgba(255, 255, 255, 0.1);
-    --primarycolor: #7367f0;
+    --primarycolor: #3e8ef7;
     --bodycolor: #8283a0;
     --bodybackground: #1c1c38;
     --bordercolor: rgba(255, 255, 255, 0.1);
@@ -149,7 +149,7 @@ File: Main Style
     --sidebarbg: #fff;
     --sidebarcolor: #292b3a;
     --sidebarbordercolor: rgba(0, 0, 0, 0.1);
-    --primarycolor: #7367f0;
+    --primarycolor: #3e8ef7;
     --bodycolor: #8283a0;
     --bodybackground: #1c1c38;
     --bordercolor: rgba(255, 255, 255, 0.1);
@@ -648,8 +648,8 @@ a:hover {
 }
 
 .btn-primary:hover {
-    -webkit-box-shadow: 0 8px 25px -8px #7367f0;
-    box-shadow: 0 8px 25px -8px #7367f0;
+    -webkit-box-shadow: 0 8px 25px -8px #3e8ef7;
+    box-shadow: 0 8px 25px -8px #3e8ef7;
 }
 
 /* List Group */
@@ -1242,7 +1242,7 @@ footer.site-footer {
 }
 
 #settings .color-box.color1 {
-    background: #7367f0;
+    background: #3e8ef7;
 }
 
 #settings .color-box.color2 {

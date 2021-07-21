@@ -71,5 +71,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
 
     Route::get('/upgrade', [DepositsController::class, 'upgrade'])->name('upgrade');
 
+    //AUTOTRADERS
+    Route::get('/autotraders', [DashboardController::class, 'autoTraders'])->name('autotraders');
+    Route::get('/connect/{id}', [DashboardController::class, 'connectAutoTraders'])->name('account.connect');
+
 });
 
