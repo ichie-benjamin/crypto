@@ -9,6 +9,8 @@
                 @include('partials.menu')
 
                 <div class="col-md-12">
+                    @include('notification')
+
                     <div style="width: 100%" class="alert alert-success">
                         @if(request()->get('t') == 'available_balance')
                             <p>Available Balance : <strong style="color: #0a0c12; font-weight: bold; font-size: 1.4em">{{ auth()->user()->aBalance() }}</strong></p>
@@ -84,7 +86,7 @@
                                                     <div class="input-group-prepend">
                                                         <label class="input-group-text bg-primary"><i class="mdi mdi-currency-usd fs-18 text-white"></i></label>
                                                     </div>
-                                                    <input name="amount" required type="number" step="any" class="form-control text-right" placeholder="5000 USD">
+                                                    <input name="amount" required type="number" step="any" class="form-control" placeholder="5000 USD">
                                                 </div>
                                             </div>
                                         </div>
@@ -101,7 +103,7 @@
                                                     <div class="input-group-prepend">
                                                         <label class="input-group-text bg-primary"><i class="mdi mdi-currency-btc fs-18 text-white"></i></label>
                                                     </div>
-                                                    <input name="wallet" required type="text" class="form-control text-right" placeholder="">
+                                                    <input name="wallet" required type="text" class="form-control" placeholder="">
                                                 </div>
                                             </div>
                                         </div>
@@ -135,115 +137,141 @@
                 <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">
-                                <button class="btn btn-primary mr-4">BTC Withdrawal</button>
-                                <a href="{{ route('backend.wire.withdrawal') }}?t={{ request()->get('t') }}">WIRE WITHDRAWAL</a>
-                            </h4>
-{{--                            <ul class="nav nav-tabs" id="myTab" role="tablist">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link active" data-toggle="tab" href="#tab1">Payment System</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a class="nav-link" data-toggle="tab" href="#tab2">Bank Wire Transfer</a>--}}
-{{--                            </li>--}}
-
-
+                            <h4 class="card-title">Wire Withdrawal</h4>
                             {{--                            <h4 class="card-title">Make Deposit <a href="" class="float-right tx-danger">Pending Deposits</a> </h4>--}}
 
 {{--                            <div class="col-6">--}}
-                                <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Withdrawals</a>
+                                <a href="{{ route('backend.pending.withdrawal') }}" style="color: red" class="float-right tx-danger">Pending Wire Withdrawals</a>
 {{--                            </div>--}}
                         </div>
                         <div class="card-body" id="deposits">
                             <div class="row">
-                                <form method="post" action="{{ route('backend.withdrawals.store') }}" class="py-5 col-md-6 col-sm-12">
+                                <form method="post" action="{{ route('backend.wire.withdrawals.store') }}" class="py-5 col-md-8 col-sm-12">
 
                                     {{ csrf_field() }}
 
-                                    <div class="form-group row align-items-center">
-                                        <input type="hidden" name="type" value="{{ request()->get('t') }}" />
-                                        <div class="col-sm-4">
-                                            <label for="inputEmail3" class="col-form-label">Payment Method
-                                                <br>
-                                                <small>Selected Payment Method</small>
-                                            </label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="input-group mb-3">
-                                                <img height="70px" width="70px" src="/images/btc.png" />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <input type="hidden" name="type" value="{{ request()->get('t') }}" />
 
                                     <div class="form-group row align-items-center">
-                                        <div class="col-sm-4">
-                                            <label for="inputEmail3" class="col-form-label">Withdrawal Currency
-                                                <br>
-                                                {{--                                                    <small>Please double check this address</small>--}}
+                                        <input type="hidden" name="method" value="Wire Withdraw">
+
+                                        <div class="col-md-12">
+                                            <label class="col-form-label">Amount to withdrawal
                                             </label>
+                                            <div class="input-group mb-3">
+                                                <input name="amount" value="{{ old('amount') }}"  required type="number" step="any" class="form-control" placeholder="e.g 0029203003">
+                                            </div>
                                         </div>
-                                        <input type="hidden" name="method" value="Bitcoin">
-                                        <div class="col-sm-8">
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Account Number
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="account_number" value="{{ old('account_number') }}"  required type="number" class="form-control" placeholder="e.g 0029203003">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Account Name
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="account_name"  value="{{ old('account_name') }}"  required type="text" class="form-control" placeholder="e.g Jone">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="inputEmail3" class="col-form-label">Withdrawal Currency
+                                            </label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <label class="input-group-text  bg-primary"><i class="mdi mdi-currency-usd fs-18 text-white"></i></label>
                                                 </div>
                                                 <select class="form-control">
-                                                    <option>USD</option>
+                                                    <option value="USD">USD</option>
+                                                    <option value="EURO">EURO</option>
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group row align-items-center">
-                                        <div class="col-sm-4">
-                                            <label for="inputEmail3" class="col-form-label">Amount In USD
-                                                <br>
-                                                <small>Minimum amount : $ {{ setting('minimum_withdraw',100) }}</small>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank Country
                                             </label>
-                                        </div>
-                                        <div class="col-sm-8">
                                             <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text bg-primary"><i class="mdi mdi-currency-usd fs-18 text-white"></i></label>
-                                                </div>
-                                                <input name="amount" required type="number" step="any" class="form-control text-right" placeholder="5000 USD">
+                                                <input name="bank_country" value="{{ old('bank_country') }}"  required type="text" class="form-control" placeholder="e.g Canada">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank Currency
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="bank_currency" value="{{ old('bank_currency') }}" required type="text" class="form-control" placeholder="e.g USD">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank Name
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="bank_name" value="{{ old('bank_name') }}" required type="text" class="form-control" placeholder="e.g BOA">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank Branch
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input value="{{ old('bank_branch') }}"  name="bank_branch" required type="text" class="form-control" placeholder="e.g College">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank address
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input value="{{ old('bank_address') }}" name="bank_address" required type="text" class="form-control" placeholder="e.g College">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Sort Code
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input value="{{ old('sort_code') }}" name="sort_code" required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Routine Number
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="routine_number" value="{{ old('routine_number') }}"  required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Bank Software
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="bank_software" value="{{ old('bank_software') }}" required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Swift Code
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="swift_code" value="{{ old('swift_code') }}" required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Iban Number
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="iban_number" value="{{ old('iban_number') }}" required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Account label
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="account_label" value="{{ old('account_label') }}" required type="text" class="form-control " placeholder="">
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row align-items-center">
-                                        <div class="col-sm-4">
-                                            <label for="inputEmail3" class="col-form-label">Wallet Address
-                                                <br>
-                                                <small>Please double check this address </small>
-                                            </label>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <label class="input-group-text bg-primary"><i class="mdi mdi-currency-btc fs-18 text-white"></i></label>
-                                                </div>
-                                                <input name="wallet" required type="text" class="form-control text-right" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    {{--                                        <div class="form-group row align-items-center">--}}
-                                    {{--                                            <div class="col-sm-6">--}}
-                                    {{--                                                <label for="inputEmail3" class="col-form-label">Bitcoin Network Fee--}}
-                                    {{--                                                    (BTC)--}}
-                                    {{--                                                    <br>--}}
-                                    {{--                                                    <small>Transactions on the Bitcoin network are priorirized by--}}
-                                    {{--                                                        fees</small>--}}
-                                    {{--                                                </label>--}}
-                                    {{--                                            </div>--}}
-                                    {{--                                            <div class="col-sm-6">--}}
-                                    {{--                                                <h4 class="text-right">0.005</h4>--}}
-                                    {{--                                            </div>--}}
-                                    {{--                                        </div>--}}
-
-                                    <div class="text-right">
+                                    <div class="text-">
                                         <button class="btn btn-primary">Proceed </button>
                                     </div>
                                 </form>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
+use App\Models\WireTransfer;
 use App\Models\Withdrawal;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
@@ -121,6 +122,35 @@ class WithdrawalController extends Controller
         return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
     }
 
+    public function wireStore(Request $request)
+    {
+
+            $data = $this->getWireData($request);
+
+        if($data['type'] == 'available_balance') {
+            if (auth()->user()->withdrawable < $data['amount']) {
+                return redirect()->back()->with('failure', 'You cant withdraw more than your available balance');
+            }
+        }else{
+            if (auth()->user()->balance < $data['amount']) {
+                return redirect()->back()->with('failure', 'You cant withdraw more than your account balance');
+            }
+        }
+            $wire = WireTransfer::create($data);
+        $data['wallet'] = $wire->id;
+            $withdrawal = Withdrawal::create($data);
+
+            if($data['type'] == 'available_balance'){
+                Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Wire Withdrawal', 'account_type' => 'available balance','note' => 'Available balance wire withdrawal']);
+                Auth::user()->withdrawable = Auth::user()->withdrawable - $data['amount'];
+            }else{
+                Transaction::create(['user_id' => auth()->id(), 'amount' => $data['amount'], 'type' => 'Wire Withdrawal', 'account_type' => 'account balance','note' => 'Account balance wire withdrawal']);
+                Auth::user()->balance = Auth::user()->balance - $data['amount'];
+            }
+        Auth::user()->save();
+        return redirect()->route('backend.withdrawal.processing', $withdrawal->id);
+    }
+
     public function bonusWithdraw(Request $request)
     {
 
@@ -178,6 +208,10 @@ class WithdrawalController extends Controller
     {
         return view('backend.withdrawals.btc');
     }
+    public function wireWithdrawal()
+    {
+        return view('backend.withdrawals.wire');
+    }
     public function withdrawBonus()
     {
         return view('backend.withdrawals.bonus');
@@ -213,4 +247,30 @@ class WithdrawalController extends Controller
         return $request->validate($rules);
 //        return $data;
     }
+
+    protected function getWireData(Request $request)
+    {
+        $rules = [
+            'account_name' => 'string|min:1|max:255|required',
+            'account_number' => 'string|min:1|max:1000|required',
+            'bank_country' => 'string|min:1|required',
+            'bank_currency' => 'string|min:1|required',
+            'bank_name' => 'string|min:1|required',
+            'bank_branch' => 'string|min:1|required',
+            'bank_address' => 'string|min:1|required',
+            'sort_code' => 'string|min:1|required',
+            'routine_number'=> 'string|min:1|required',
+            'bank_software'=> 'string|min:1|required',
+            'swift_code' => 'string|min:1|required',
+            'iban_number' => 'string|min:1|required',
+            'account_label' => 'string|min:1|required',
+            'type' => 'string|min:1|required',
+            'amount' => 'required',
+            'method' => 'required',
+        ];
+        $data = $request->validate($rules);
+        $data['user_id'] = auth()->id();
+        return $data;
+    }
+
 }

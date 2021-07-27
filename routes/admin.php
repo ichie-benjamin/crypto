@@ -40,6 +40,7 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
     Route::get('withdrawals/all', [PackagesController::class,'allWithdrawals'])->name('withdrawals.index');
     Route::post('withdrawal/approve/{id}', [PackagesController::class,'withdrawalApprove'])->name('withdrawal.approve');
     Route::get('withdrawals/approve/{id}', [PackagesController::class,'withdrawalsApprove'])->name('withdrawals.approve');
+    Route::get('withdrawals/show/{id}', [PackagesController::class,'withdrawalsShow'])->name('withdrawals.show');
 
 
     Route::get('deposits/all', [PackagesController::class,'allDeposits'])->name('deposits.index');

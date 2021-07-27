@@ -7,6 +7,7 @@ use App\Models\Deposit;
 use App\Models\Package;
 use App\Models\Transaction;
 use App\Models\User;
+use App\Models\WireTransfer;
 use App\Models\Withdrawal;
 use Illuminate\Http\Request;
 
@@ -56,6 +57,14 @@ class PackagesController extends Controller
         }
 
         return view('admin.withdrawals', compact('withdrawals','title'));
+    }
+
+    public function withdrawalsShow($id){
+        $title = "Wire Transfer Details";
+        $fields =  ['user_id', 'account_name', 'account_number', 'bank_country', 'bank_currency', 'bank_name', 'bank_branch', 'bank_address', 'sort_code', 'routine_number', 'bank_software', 'swift_code', 'iban_number', 'account_label',
+        ];
+        $wire = WireTransfer::findOrFail($id);
+        return view('admin.wireview', compact('wire','title','fields'));
     }
 
 

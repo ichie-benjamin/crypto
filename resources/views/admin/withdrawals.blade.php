@@ -33,7 +33,8 @@
                             <th class="wd-15p">User</th>
                             <th class="wd-15p">Requested Amount</th>
                             <th class="wd-30p">Type</th>
-                            <th class="wd-30p">Wallet ID</th>
+                            <th class="wd-30p">Method</th>
+                            <th class="wd-30p">Wallet ID / Wire ID</th>
                             <th class="wd-15p">Status</th>
                             <th class="wd-15p">Proof</th>
                             <th class="wd-10p">Action</th>
@@ -52,7 +53,16 @@
                                 <td><a href="{{ route('admin.users.show',$item->user ? $item->user->username : 1) }}" >{{ optional($item->user)->name }}</a></td>
                                 <td>${{ $item->amount }}</td>
                                 <td>{{ $item->type }}</td>
-                                <td>{{ $item->wallet }}</td>
+                                <td>
+                                    {{ $item->method }}
+                                </td>
+                                <td>
+                                    @if ($item->method == 'btc')
+                                        {{ $item->wallet }}
+                                    @else
+                                        <a href="{{ route('admin.withdrawals.show', $item->wallet) }}">View Wire Info</a>
+                                    @endif
+                                </td>
                                 <td>{{ $item->status  }}</td>
                                 <td>
                                     @if ($item->type == 'account_balance')

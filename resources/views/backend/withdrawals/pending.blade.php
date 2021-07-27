@@ -37,10 +37,14 @@
                                                 <span class="badge {{ $item->approved ? 'badge-success' : 'badge-danger' }} p-2">{{ $item->approved ? 'Approved' : 'Pending' }}</span>
                                             </td>
                                             <td>
-                                                <i class="cc BTC"></i> {{ $item->method }}
+                                                @if ($item->method == 'btc')
+                                                    <i class="cc BTC"></i> {{ $item->method }}
+                                                @else
+                                                    {{ $item->method }}
+                                                @endif
                                             </td>
                                                 <td>
-                                                <i class="cc BTC"></i> {{ $item->type }}
+                                                <i class="cc USD"></i> {{ $item->type }}
                                             </td>
 
                                             <td class="{{ $item->status ? 'text-danger' : 'text-success' }}">{{ $item->amount }} USD</td>
