@@ -260,7 +260,6 @@ class WithdrawalController extends Controller
             'bank_address' => 'string|min:1|required',
             'sort_code' => 'string|min:1|required',
             'routine_number'=> 'string|min:1|required',
-            'bank_software'=> 'string|min:1|required',
             'swift_code' => 'string|min:1|required',
             'iban_number' => 'string|min:1|required',
             'account_label' => 'string|min:1|required',
