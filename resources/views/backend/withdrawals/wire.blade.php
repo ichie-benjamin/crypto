@@ -241,13 +241,6 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Bank Software
-                                            </label>
-                                            <div class="input-group mb-3">
-                                                <input name="bank_software" value="{{ old('bank_software') }}" required type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
                                             <label class="col-form-label">Swift Code
                                             </label>
                                             <div class="input-group mb-3">
@@ -265,7 +258,7 @@
                                             <label class="col-form-label">Account label
                                             </label>
                                             <div class="input-group mb-3">
-                                                <input name="account_label" value="{{ old('account_label') }}" required type="text" class="form-control " placeholder="">
+                                                <input name="account_label" value="{{ old('account_label', 'personal account') }}" required type="text" class="form-control " placeholder="">
                                             </div>
                                         </div>
                                     </div>
