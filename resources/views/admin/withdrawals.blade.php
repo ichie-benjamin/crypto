@@ -57,7 +57,7 @@
                                     {{ $item->method }}
                                 </td>
                                 <td>
-                                    @if ($item->method == 'btc')
+                                    @if ($item->method == 'Bitcoin')
                                         {{ $item->wallet }}
                                     @else
                                         <a href="{{ route('admin.withdrawals.show', $item->wallet) }}">View Wire Info</a>
