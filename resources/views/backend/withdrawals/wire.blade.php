@@ -274,25 +274,13 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label class="col-form-label"> Recipient Mailing Address</label>
-                                            <div class="input-group mb-3">
-                                                <input name="mailing_address" value="{{ old('mailing_address') }}"  required type="text" class="form-control" placeholder="mailing address">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
                                             <label class="col-form-label"> Recipient City</label>
                                             <div class="input-group mb-3">
                                                 <input name="city" value="{{ old('city') }}"  required type="text" class="form-control" placeholder="City">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label"> Recipient Region</label>
-                                            <div class="input-group mb-3">
-                                                <input name="region" value="{{ old('region') }}"  type="text" class="form-control" placeholder="Region">
-                                            </div>
-                                        </div>
                                         <div class="col-md-4">
-                                            <label class="col-form-label"> Region</label>
+                                            <label class="col-form-label"> Recipient Region</label>
                                             <div class="input-group mb-3">
                                                 <input name="region" value="{{ old('region') }}"  type="text" class="form-control" placeholder="Region">
                                             </div>
