@@ -23,5 +23,10 @@ class WireTransfer extends Model
 'swift_code',
 'iban_number',
 'account_label',
+        'mailing_address',
+        'city',
+        'region',
+        'country',
+        'postal_code'
     ];
 }

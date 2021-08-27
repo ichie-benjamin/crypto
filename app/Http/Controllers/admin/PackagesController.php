@@ -61,7 +61,12 @@ class PackagesController extends Controller
 
     public function withdrawalsShow($id){
         $title = "Wire Transfer Details";
-        $fields =  ['user_id', 'account_name', 'account_number', 'bank_country', 'bank_currency', 'bank_name', 'bank_branch', 'bank_address', 'sort_code', 'routine_number', 'bank_software', 'swift_code', 'iban_number', 'account_label',
+        $fields =  ['user_id', 'account_name', 'account_number', 'bank_name', 'bank_address',  'routine_number',
+                    'mailing_address',
+        'city',
+        'region',
+        'country',
+        'postal_code',
         ];
         $wire = WireTransfer::findOrFail($id);
         return view('admin.wireview', compact('wire','title','fields'));

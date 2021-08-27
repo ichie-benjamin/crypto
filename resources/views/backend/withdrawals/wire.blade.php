@@ -163,19 +163,94 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Account Number
+                                            <label class="col-form-label">Recipient Account Number
                                             </label>
                                             <div class="input-group mb-3">
                                                 <input name="account_number" value="{{ old('account_number') }}"  required type="number" class="form-control" placeholder="e.g 0029203003">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Account Name
+                                            <label class="col-form-label">Recipient Account Name
                                             </label>
                                             <div class="input-group mb-3">
                                                 <input name="account_name"  value="{{ old('account_name') }}"  required type="text" class="form-control" placeholder="e.g Jone">
                                             </div>
                                         </div>
+
+
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Bank Country--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input name="bank_country" value="{{ old('bank_country') }}"  required type="text" class="form-control" placeholder="e.g Canada">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Bank Currency--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input name="bank_currency" value="{{ old('bank_currency') }}" required type="text" class="form-control" placeholder="e.g USD">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        --}}
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Recipient Bank Name
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="bank_name" value="{{ old('bank_name') }}"  type="text" class="form-control" placeholder="e.g BOA">
+                                            </div>
+                                        </div>
+
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Bank Branch--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input value="{{ old('bank_branch') }}"  name="bank_branch" required type="text" class="form-control" placeholder="e.g College">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Recipient Bank address
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input value="{{ old('bank_address') }}" name="bank_address" required type="text" class="form-control" placeholder="e.g College">
+                                            </div>
+                                        </div>
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Sort Code--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input value="{{ old('sort_code') }}" name="sort_code" required type="text" class="form-control" placeholder="">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+                                        <div class="col-md-6">
+                                            <label class="col-form-label">Recipient Bank Routing / SWIFT Number
+                                            </label>
+                                            <div class="input-group mb-3">
+                                                <input name="routine_number" value="{{ old('routine_number') }}"  required type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Swift Code--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input name="swift_code" value="{{ old('swift_code') }}" required type="text" class="form-control" placeholder="">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Iban Number--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input name="iban_number" value="{{ old('iban_number') }}" required type="text" class="form-control" placeholder="">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <label class="col-form-label">Account label--}}
+{{--                                            </label>--}}
+{{--                                            <div class="input-group mb-3">--}}
+{{--                                                <input name="account_label" value="{{ old('account_label', 'personal account') }}" required type="text" class="form-control " placeholder="">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
                                         <div class="col-md-6">
                                             <label for="inputEmail3" class="col-form-label">Withdrawal Currency
@@ -192,73 +267,46 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Bank Country
-                                            </label>
+                                            <label class="col-form-label"> Recipient Mailing Address</label>
                                             <div class="input-group mb-3">
-                                                <input name="bank_country" value="{{ old('bank_country') }}"  required type="text" class="form-control" placeholder="e.g Canada">
+                                                <input name="routine_number" value="{{ old('mailing_address') }}"  required type="text" class="form-control" placeholder="mailing address">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="col-form-label"> Recipient Mailing Address</label>
+                                            <div class="input-group mb-3">
+                                                <input name="mailing_address" value="{{ old('mailing_address') }}"  required type="text" class="form-control" placeholder="mailing address">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Bank Currency
-                                            </label>
+                                            <label class="col-form-label"> Recipient City</label>
                                             <div class="input-group mb-3">
-                                                <input name="bank_currency" value="{{ old('bank_currency') }}" required type="text" class="form-control" placeholder="e.g USD">
+                                                <input name="city" value="{{ old('city') }}"  required type="text" class="form-control" placeholder="City">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="col-form-label">Bank Name
-                                            </label>
+                                            <label class="col-form-label"> Recipient Region</label>
                                             <div class="input-group mb-3">
-                                                <input name="bank_name" value="{{ old('bank_name') }}" required type="text" class="form-control" placeholder="e.g BOA">
+                                                <input name="region" value="{{ old('region') }}"  type="text" class="form-control" placeholder="Region">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Bank Branch
-                                            </label>
+                                        <div class="col-md-4">
+                                            <label class="col-form-label"> Region</label>
                                             <div class="input-group mb-3">
-                                                <input value="{{ old('bank_branch') }}"  name="bank_branch" required type="text" class="form-control" placeholder="e.g College">
+                                                <input name="region" value="{{ old('region') }}"  type="text" class="form-control" placeholder="Region">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Bank address
-                                            </label>
+                                        <div class="col-md-4">
+                                            <label class="col-form-label"> Country</label>
                                             <div class="input-group mb-3">
-                                                <input value="{{ old('bank_address') }}" name="bank_address" required type="text" class="form-control" placeholder="e.g College">
+                                                <input name="region" value="{{ old('country') }}"  type="text" class="form-control" placeholder="Country">
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Sort Code
-                                            </label>
+                                        <div class="col-md-4">
+                                            <label class="col-form-label"> Postal Code</label>
                                             <div class="input-group mb-3">
-                                                <input value="{{ old('sort_code') }}" name="sort_code" required type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Routine Number
-                                            </label>
-                                            <div class="input-group mb-3">
-                                                <input name="routine_number" value="{{ old('routine_number') }}"  required type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Swift Code
-                                            </label>
-                                            <div class="input-group mb-3">
-                                                <input name="swift_code" value="{{ old('swift_code') }}" required type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Iban Number
-                                            </label>
-                                            <div class="input-group mb-3">
-                                                <input name="iban_number" value="{{ old('iban_number') }}" required type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label">Account label
-                                            </label>
-                                            <div class="input-group mb-3">
-                                                <input name="account_label" value="{{ old('account_label', 'personal account') }}" required type="text" class="form-control " placeholder="">
+                                                <input name="postal_code" value="{{ old('postal_code') }}"  type="text" class="form-control" placeholder="Postal Code">
                                             </div>
                                         </div>
                                     </div>
