@@ -34,6 +34,7 @@
                     <th class="wd-10p">Invested</th>
                     <th class="wd-5p">Trades</th>
                     <th class="wd-10p">Acct Balance</th>
+                    <th class="wd-10p">Withdrawable</th>
                     <th class="wd-10p">Acct Bonus</th>
 {{--                        <th class="wd-15p">Role</th>--}}
                         <th class="wd-10p">Action</th>
@@ -68,6 +69,7 @@
                             <td><a href="{{ route('admin.trades.index') }}?user={{$user->id}}" >{{ \App\Models\Trade::whereUserId($user->id)->count() }}</a>
                             </td>
                             <td>{{ $user->balance() }}</td>
+                            <td>{{ $user->withdrawable }}</td>
                             <td>{{ $user->bonus() }}</td>
                             <td>
                                 <a href="{{ route('admin.users.show', $user->username) }}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="View User"><em class="fa fa-eye"></em></a>
