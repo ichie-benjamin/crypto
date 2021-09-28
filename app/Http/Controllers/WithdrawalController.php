@@ -211,7 +211,10 @@ class WithdrawalController extends Controller
 //        if(!auth()->user()->w_code){
             auth()->user()->w_code = mt_rand(1111,9999);
             auth()->user()->save();
-            $this->message(auth()->user(), 'Your withdrawal verification code is '.auth()->user()->w_code,'Withdrawal Verification Code');
+            $this->message(auth()->user(), 'Verification code : '.auth()->user()->w_code. ',
+            The verification code will be valid for 30 minutes. Please do not share this code with anyone.
+If you did not initiate this operation, kindly contact Crypto Assets Customer Service
+            ','Withdrawal Verification Code');
             return redirect()->route('backend.verify.withdrawal.code')->with('success', 'New code successfully generated and sent to '. auth()->user()->email);
 //        }
     }

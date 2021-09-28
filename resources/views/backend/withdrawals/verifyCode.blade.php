@@ -14,9 +14,9 @@
                                 {{ csrf_field() }}
                                 <div class="identity-content">
                                     <h4><strong>Verification Required</strong></h4>
-                                    <span>Kindly enter the verification code sent to {{ auth()->user()->email }} </span>
+                                    <span>Input verification code sent to your email  {{ auth()->user()->email }} </span>
 
-                                    <p>This will be used to verify your account and prevent authorized withdrawal</p>
+                                    <p>This code will be used to authenticate your identity and prevent unauthorized withdrawals from your account.</p>
                                 </div>
 
                                 <div class="form-group mb-3">
