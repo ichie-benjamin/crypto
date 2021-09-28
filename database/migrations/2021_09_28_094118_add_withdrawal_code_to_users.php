@@ -28,7 +28,7 @@ class AddWithdrawalCodeToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('w_code','w_approved');
+            $table->dropColumn('w_code','w_approved','enable_w_code');
         });
     }
 }
