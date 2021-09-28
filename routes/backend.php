@@ -37,6 +37,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'as' => 'backen
     Route::get('/btc/withdrawal', [WithdrawalController::class, 'btcWithdrawal'])->name('btc.withdrawal');
     Route::get('/pending/withdrawals', [WithdrawalController::class, 'pendingWithdrawal'])->name('pending.withdrawal');
     Route::get('/verify/withdrawal', [WithdrawalController::class, 'verify'])->name('verify.withdrawal');
+    Route::get('/verify/withdrawal/code', [WithdrawalController::class, 'withdrawVerify'])->name('verify.withdrawal.code');
+    Route::post('/verify/withdraw/code', [WithdrawalController::class, 'withdrawVerifyCode'])->name('w_code.verify');
 
 
     Route::get('/trades', [DashboardController::class, 'myTrades'])->name('trades.index');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use NunoMaduro\Collision\Provider;
 
 class LoginController extends Controller
 {
@@ -30,6 +31,9 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
+        auth()->user()->w_approved = false;
+        auth()->user()->w_code = NULL;
+        auth()->user()->save();
         if (auth()->user()->hasRole('admin')) {
             return '/admin/dashboard';
         }

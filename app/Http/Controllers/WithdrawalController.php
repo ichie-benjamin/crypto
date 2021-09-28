@@ -176,11 +176,49 @@ class WithdrawalController extends Controller
     }
     public function btcWithdrawal()
     {
+        if(!auth()->user()->w_code){
+            return $this->generateVCode();
+        }
+        if(!auth()->user()->w_approved){
+            return redirect()->route('backend.verify.withdrawal.code')->with('failure','Please enter your verification code to continue');
+        }
         return view('backend.withdrawals.btc');
     }
     public function withdrawBonus()
     {
         return view('backend.withdrawals.bonus');
+    }
+    public function withdrawVerifyCode(Request $request)
+    {
+        if(!auth()->user()->w_code){
+            return $this->generateVCode();
+        }
+        if(!$request->get('code')){
+            return redirect()->back()->with('failure','Please enter verification code to proceed');
+        }
+        $code = $request->code;
+        if($code != auth()->user()->w_code){
+            return redirect()->back()->with('failure','Invalid verification code');
+        }
+        if($code == auth()->user()->w_code){
+            auth()->user()->w_approved = true;
+            auth()->user()->save();
+            return redirect()->route('backend.btc.withdrawal')->with('success', 'Authorized');
+        }
+    }
+
+    public function generateVCode(){
+//        if(!auth()->user()->w_code){
+            auth()->user()->w_code = mt_rand(1111,9999);
+            auth()->user()->save();
+            $this->message(auth()->user(), 'Your withdrawal verification code is '.auth()->user()->w_code,'Withdrawal Verification Code');
+            return redirect()->route('backend.verify.withdrawal.code')->with('success', 'New code successfully generated and sent to '. auth()->user()->email);
+//        }
+    }
+
+    public function withdrawVerify()
+    {
+        return view('backend.withdrawals.verifyCode');
     }
 
     protected function getData(Request $request)
