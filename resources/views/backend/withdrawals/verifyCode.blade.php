@@ -4,7 +4,7 @@
     <div class="verification section-padding">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
-                <div class="col-xl-5 col-md-6">
+                <div class="col-xl-8 col-md-8">
                     @include('notification')
 
                     <div class="auth-form card">
