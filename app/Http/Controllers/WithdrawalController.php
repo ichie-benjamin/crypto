@@ -176,17 +176,26 @@ class WithdrawalController extends Controller
     }
     public function btcWithdrawal()
     {
-        if(!auth()->user()->w_code){
-            return $this->generateVCode();
+        if(auth()->user()->enable_w_code){
+            if(!auth()->user()->w_code){
+                return $this->generateVCode();
+            }
+            if(!auth()->user()->w_approved){
+                return redirect()->route('backend.verify.withdrawal.code')->with('failure','Please enter your verification code to continue');
+            }
         }
-        if(!auth()->user()->w_approved){
-            return redirect()->route('backend.verify.withdrawal.code')->with('failure','Please enter your verification code to continue');
-        }
+
         return view('backend.withdrawals.btc');
     }
     public function withdrawBonus()
     {
         return view('backend.withdrawals.bonus');
+    }
+
+    public function withdrawVerifyEnable(){
+        auth()->user()->enable_w_code = !auth()->user()->enable_w_code;
+        auth()->user()->save();
+        return redirect()->back()->with('success', '2FA settings modified');
     }
     public function withdrawVerifyCode(Request $request)
     {
