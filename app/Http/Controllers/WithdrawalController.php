@@ -199,16 +199,19 @@ class WithdrawalController extends Controller
     }
     public function withdrawVerifyCode(Request $request)
     {
+
         if(!auth()->user()->w_code){
             return $this->generateVCode();
         }
-        if(!$request->get('code')){
+        if(!$request->get('code_1') || !$request->get('code_2') || !$request->get('code_3') || !$request->get('code_4')){
             return redirect()->back()->with('failure','Please enter verification code to proceed');
         }
-        $code = $request->code;
+        $code = $request->code_1 . $request->code_2 . $request->code_3 . $request->code_4;
+
         if($code != auth()->user()->w_code){
             return redirect()->back()->with('failure','Invalid verification code');
         }
+
         if($code == auth()->user()->w_code){
             auth()->user()->w_approved = true;
             auth()->user()->save();
@@ -228,8 +231,11 @@ If you did not initiate this operation, kindly contact Crypto Assets Customer Se
 //        }
     }
 
-    public function withdrawVerify()
+    public function withdrawVerify(Request $request)
     {
+       if($request->has('resend_email')){
+           return $this->generateVCode();
+       }
         return view('backend.withdrawals.verifyCode');
     }
 

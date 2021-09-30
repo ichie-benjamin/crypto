@@ -1,6 +1,6 @@
 @extends('backend.layouts.master-min')
 
-@section('content')
+@section('contents')
     <div class="verification section-padding">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -87,6 +87,32 @@
 
 @endsection
 
+@section('content')
+    <div id="wrapper">
+        <div id="dialog">
+            <button class="close"> <a href="{{ route('backend.dashboard') }}" class="">×</a></button>
+            <h4>Please enter the 4-digit verification code  sent to {{ auth()->user()->email }}:</h4>
+            <span>(we want to make sure it's you before we continue your withdrawal)</span>
+            <form method="post" action="{{ route('backend.w_code.verify') }}" >
+
+                {{ csrf_field() }}
+            <div id="form">
+                <input required type="text" name="code_1" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input required type="text" name="code_2"  maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input required name="code_3"  type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input required name="code_4"  type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <button type="submit" class="btn btn-primary btn-embossed">Verify</button>
+            </div>
+            </form>
+
+            <div>
+                Didn't receive the code?<br /><br/>
+                <a href="{{ request()->url() }}?resend_email">Resend Verification code</a><br />
+{{--                <a href="#">Change phone number</a>--}}
+            </div>
+{{--            <img src="http://jira.moovooz.com/secure/attachment/10424/VmVyaWZpY2F0aW9uLnN2Zw==" alt="test" />--}}
+        </div>
+    </div>
+@endsection
+
 @section('js')
     <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 
@@ -105,4 +131,94 @@
             image.src = URL.createObjectURL(event.target.files[0]);
         };
     </script>
+@endsection
+
+
+@section('styles')
+<style>
+    #wrapper {
+        font-family: Lato;
+        font-size: 1.5rem;
+        text-align: center;
+        box-sizing: border-box;
+        color: #333;
+    }
+    #wrapper #dialog {
+        border: solid 1px #ccc;
+        margin: 10px auto;
+        padding: 20px 30px;
+        display: inline-block;
+        box-shadow: 0 0 4px #ccc;
+        background-color: #faf8f8;
+        overflow: hidden;
+        position: relative;
+        max-width: 450px;
+    }
+    #wrapper #dialog h4 {
+        margin: 0 0 10px;
+        padding: 0;
+        line-height: 1.25;
+        color: black;
+    }
+    #wrapper #dialog h3 {
+        margin: 0 0 10px;
+        padding: 0;
+        line-height: 1.25;
+        color: black;
+    }
+    #wrapper #dialog span {
+        font-size: 90%;
+    }
+    #wrapper #dialog #form {
+        max-width: 240px;
+        margin: 25px auto 0;
+    }
+    #wrapper #dialog #form input {
+        margin: 0 5px;
+        text-align: center;
+        line-height: 80px;
+        font-size: 50px;
+        border: solid 1px #ccc;
+        box-shadow: 0 0 5px #ccc inset;
+        outline: none;
+        width: 20%;
+        transition: all 0.2s ease-in-out;
+        border-radius: 3px;
+    }
+    #wrapper #dialog #form input:focus {
+        border-color: purple;
+        box-shadow: 0 0 5px purple inset;
+    }
+    #wrapper #dialog #form input::selection {
+        background: transparent;
+    }
+    #wrapper #dialog #form button {
+        margin: 30px 0 50px;
+        width: 100%;
+        padding: 6px;
+        background-color: #b85fc6;
+        border: none;
+        text-transform: uppercase;
+    }
+    #wrapper #dialog button.close {
+        border: solid 2px;
+        border-radius: 30px;
+        line-height: 19px;
+        font-size: 120%;
+        width: 22px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+    #wrapper #dialog div {
+        position: relative;
+        z-index: 1;
+    }
+    #wrapper #dialog img {
+        position: absolute;
+        bottom: -70px;
+        right: -63px;
+    }
+
+</style>
 @endsection
