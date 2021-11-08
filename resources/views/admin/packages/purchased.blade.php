@@ -67,7 +67,7 @@
                                 @if (!$item->status)
                                 <td>
 {{--                                    <a href="{{ route('admin.deposit.approve', $item->id) }}" class="{{ $item->status ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->status ? 'Un Approve': 'Approve' }}</a>--}}
-                                    <a data-toggle="modal" data-target="#modaldemo1" href="" class="{{ $item->status ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->status ? 'Un Approve': 'Approve' }}</a>
+                                    <a data-toggle="modal" data-target="#modaldemo{{ $item->id }}" href="" class="{{ $item->status ? 'btn-danger' : 'btn-success' }} btn " data-toggle="tooltip" data-placement="top">{{ $item->status ? 'Un Approve': 'Approve' }}</a>
                                     <a href="{{ route('admin.deposit.destroy', $item) }}" onclick="return confirm(&quot;Click Ok to delete Deposit.&quot;)" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Delete"><em class="fa fa-trash"></em>
                                     </a>
                                 </td>
@@ -82,7 +82,7 @@
 
 
 
-                            <div id="modaldemo1" class="modal fade">
+                            <div id="modaldemo{{ $item->id }}" class="modal fade">
                                 <div class="modal-dialog modal-dialog-vertical-center" role="document">
                                     <div class="modal-content bd-0 tx-14">
                                         <div class="modal-header pd-y-20 pd-x-25">
