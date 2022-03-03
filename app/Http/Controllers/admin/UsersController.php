@@ -29,7 +29,7 @@ class UsersController extends Controller
     }
     public function approvedUsers(){
         $title = 'Approved Users';
-        $users = User::whereRoleIs('users')->where('is_active', true)->latest()->get();
+        $users = User::whereRoleIs('users')->where('is_active', 1)->latest()->get();
         return view('admin.users.index', compact('users','title'));
     }
 
