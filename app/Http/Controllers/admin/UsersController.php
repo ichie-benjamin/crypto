@@ -27,6 +27,11 @@ class UsersController extends Controller
         $users = User::whereRoleIs('sub_admin')->orWhereRoleIs('moderator')->latest()->get();
         return view('admin.users.index', compact('users','title'));
     }
+    public function approvedUsers(){
+        $title = 'Approved Users';
+        $users = User::whereRoleIs('users')->where('is_active', true)->latest()->get();
+        return view('admin.users.index', compact('users','title'));
+    }
 
     public function connectAccount($id){
         $user = User::findOrFail($id);

@@ -14,6 +14,7 @@ Route::group(['middleware' => ['auth','role:admin|super_admin'], 'prefix' => 'ad
     Route::get('dashboard', [AdminDashboardController::class,'index'])->name('dashboard');
 
     Route::get('user/{id}/login/logs', [UsersController::class,'loginLogs'])->name('user.logins');
+    Route::get('user/approved', [UsersController::class,'approvedUsers'])->name('users.approved');
 
     Route::get('user/login/logs', [UsersController::class,'myLoginLogs'])->name('user.logins.logs');
 

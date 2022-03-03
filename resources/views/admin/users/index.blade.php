@@ -20,7 +20,10 @@
 
                 @include('notification')
 
-                <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10" style="padding-bottom: 50px">{{ $title }} User List <a href="{{ route('admin.users.create') }}?r={{ $title }}"><button class="btn btn-success" style="float: right"> Add New</button></a></h6>
+                <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10" style="padding-bottom: 50px">{{ $title }} User List <a href="{{ route('admin.users.create') }}?r={{ $title }}">
+                        <button class="btn btn-success" style="float: right"> Add New</button>
+                    </a>
+                </h6>
 
             <div class="table-wrapper">
                 <table id="datatable1" class="table table-bordered display responsive nowrap">
