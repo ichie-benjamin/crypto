@@ -97,6 +97,8 @@ class WithdrawalController extends Controller
     public function store(Request $request)
     {
 
+
+
             $data = $this->getData($request);
 
         if($data['type'] == 'available_balance') {
@@ -203,7 +205,8 @@ class WithdrawalController extends Controller
         if(!auth()->user()->w_code){
             return $this->generateVCode();
         }
-        if(!$request->get('code_1') || !$request->get('code_2') || !$request->get('code_3') || !$request->get('code_4')){
+
+        if(!$request->has('code_1') || !$request->has('code_2') || !$request->has('code_3') || !$request->has('code_4')){
             return redirect()->back()->with('failure','Please enter verification code to proceed');
         }
         $code = $request->code_1 . $request->code_2 . $request->code_3 . $request->code_4;
