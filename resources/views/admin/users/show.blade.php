@@ -55,7 +55,7 @@
                 {{--                               <div class="col-md-6">--}}
                 <a href="" class="btn btn-primary mr- col-md-2">Edit Profile</a>
                 <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-warning col-md-2">Login Logins</a>
-                <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-danger col-md-2">Send Message</a>
+                <a href="#" data-toggle="modal" data-target="#sendMsg"  class="btn btn-danger col-md-2">Send Message</a>
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
             </div>
@@ -342,6 +342,7 @@
     </div><!-- br-mainpanel -->
 
 
+
     <div id="fundWithdrawable" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content tx-size-sm">
@@ -380,6 +381,7 @@
             </div>
         </div><!-- modal-dialog -->
     </div><!-- modal -->
+
     <div id="fundBalance" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content tx-size-sm">
@@ -434,6 +436,7 @@
             </div>
         </div><!-- modal-dialog -->
     </div><!-- modal -->
+
     <div id="fundBonus" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content tx-size-sm">
@@ -481,6 +484,51 @@
                  </div><!-- modal-body -->
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary tx-size-xs">Submit</button>
+                    <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>
+                </div>
+                </form>
+
+            </div>
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <div id="sendMsg" class="modal fade">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content tx-size-sm">
+                <div class="modal-header pd-x-20">
+                    <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Send Message To {{ $user->name }}</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{{ route('admin.user.send_msg') }}" method="POST">
+
+                <div class="modal-body pd-20">
+
+                     @csrf
+                        <div class="form-layout form-layout-1">
+                            <div class="row mg-b-25">
+
+                                <input name="user_id" type="hidden" value="{{ $user->id }}">
+
+                                <div class="col-md-12">
+                                    <div class="form-group mg-b-10-force">
+                                        <label class="form-control-label"> Subject: <span class="tx-danger">*</span></label>
+                                        <input class="form-control" required type="text" name="subject" placeholder="Message Subject">
+                                    </div>
+                                </div><!-- col-8 -->
+                                <div class="col-md-12">
+                                    <div class="form-group mg-b-10-force">
+                                        <label class="form-control-label"> Message : <span class="tx-danger">*</span></label>
+                                        <textarea class="form-control" type="text" name="message"></textarea>
+                                    </div>
+                                </div><!-- col-8 -->
+                            </div>
+                        </div>
+
+                 </div><!-- modal-body -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary tx-size-xs">Send</button>
                     <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>
                 </div>
                 </form>
