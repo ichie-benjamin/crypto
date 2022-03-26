@@ -97,8 +97,7 @@ class HomeController extends Controller
         return view('home', compact('traders','all_plans'));
     }
 
-    public function about()
-    {
+    public function about(){
         return view('about1');
     }
     public function withdrawal()
