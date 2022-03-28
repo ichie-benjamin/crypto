@@ -27,4 +27,13 @@ class Controller extends BaseController
                 ->subject($sub);
         });
     }
+
+    function getCoinRate($coinId)
+    {
+        $url = 'https://min-api.cryptocompare.com/data/price?fsym=' . $coinId . '&tsyms=USD';
+        $crypto = file_get_contents($url);
+        $usd = json_decode($crypto, true);
+        $cryptoRate = $usd['USD'];
+        return $cryptoRate;
+    }
 }

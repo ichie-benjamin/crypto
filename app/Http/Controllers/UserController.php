@@ -48,6 +48,10 @@ class UserController extends Controller
     }
 
     public function storeId(Request $request){
+        $request->validate([
+            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
         $data = $this->getIdData($request);
         $id = Identity::whereUserId(auth()->id())->first();
 
@@ -55,18 +59,18 @@ class UserController extends Controller
         $back = $request->file('back');
 
         // Make a image name based on user name and current timestamp
-        $f_name = Str::slug(auth()->user()->username.'_f_'.time());
-        $b_name = Str::slug(auth()->user()->username.'_b_'.time());
-
-        // Define folder path
-        $folder = '/uploads/ids/';
+//        $f_name = Str::slug(auth()->user()->username.'_f_'.time());
+//        $b_name = Str::slug(auth()->user()->username.'_b_'.time());
+//
+//        // Define folder path
+//        $folder = '/uploads/ids/';
         // Make a file path where image will be stored [ folder path + file name + file extension]
-        $f_filePath = $folder . $f_name. '.' . $front->getClientOriginalExtension();
-        $b_filePath = $folder . $b_name. '.' . $back->getClientOriginalExtension();
+        $f_filePath = $this->uploadOne($front);
+        $b_filePath = $this->uploadOne($back);
 
         // Upload image
-        $this->uploadOne($front, $folder, 'public', $f_name);
-        $this->uploadOne($back, $folder, 'public', $b_name);
+//        $this->uploadOne($front, $folder, 'public', $f_name);
+//        $this->uploadOne($back, $folder, 'public', $b_name);
 
         // Set user profile image path in database to filePath
         $data['front'] = $f_filePath;
@@ -94,10 +98,11 @@ class UserController extends Controller
     protected function getIdData(Request $request)
     {
         $rules = [
-            'front' => 'required',
-            'back' => 'required',
+            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'type' => 'nullable',
         ];
+
         $data = $request->validate($rules);
         $data['user_id'] = auth()->id();
         $data['status'] = 0;
@@ -109,7 +114,7 @@ class UserController extends Controller
         $rules = [
             'btc' => 'required',
             'phone'  => 'required',
-            'avatar'  => 'nullable',
+            'avatar'  => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'city'  => 'required',
             'country'  => 'required',
             'address'  => 'required',

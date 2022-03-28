@@ -152,6 +152,7 @@ class PackagesController extends Controller
             }
         }
         $deposit->status = true;
+        $deposit->amount = $data['amount'];
 
         $user->save();
 

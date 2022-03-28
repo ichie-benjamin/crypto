@@ -63,6 +63,13 @@
         /*.br-menu-item .svg-inline--fa{*/
         /*    width: 1.05em!important;*/
         /*}*/
+
+        @media (min-width: 992px){
+            .br-section-wrapper {
+                padding: 10px;
+            }
+        }
+
     </style>
 
 

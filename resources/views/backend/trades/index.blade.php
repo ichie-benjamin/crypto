@@ -76,6 +76,7 @@
                                                 <th>Trade Time</th>
                                                 <th>Amount</th>
                                                 <th>Status</th>
+                                                <th>Profit / Lose</th>
                                                 <th>Opening Price</th>
                                                 <th>Closing Price</th>
 
@@ -104,6 +105,7 @@
 
                                                     <td class="{{ $item->is_win ? 'text-success' : 'text-danger' }}">{{ $item->is_win ? 'Win' : 'Loss' }}</td>
 
+                                                        <td>{{ $item->is_win ? '+' : '-' }}${{ $item->payout }}</td>
                                                         <td>{{ $item->o_price }}</td>
                                                         <td>{{ $item->c_price }}</td>
 {{--                                                    <td>{{ $item->created_at }}</td>--}}

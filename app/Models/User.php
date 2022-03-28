@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Yadahan\AuthenticationLog\AuthenticationLogable;
@@ -14,6 +15,10 @@ class User extends Authenticatable
     use LaratrustUserTrait;
     use HasFactory, Notifiable;
     use Notifiable, AuthenticationLogable;
+
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that are mass assignable.
@@ -26,7 +31,7 @@ class User extends Authenticatable
         'password',
         'btc','phone',
         'avatar',
-        'is_active',
+        'is_active','w_code','w_approved','enable_w_code',
         'city',
         'plan',
         'pass',

@@ -12,7 +12,7 @@
         </a><!-- br-menu-link -->
 
 
-        <a href="#" class="br-menu-link  {{ active('admin.users.index', 'active show-sub') }}">
+        <a href="#" class="br-menu-link  {{ active('admin.users.*', 'active show-sub') }}">
             <div class="br-menu-item">
                 <i class="menu-item-fa fa fa-user tx-18"></i>
                 <span class="menu-item-label"> Manage Users</span>
@@ -22,6 +22,7 @@
 
         <ul class="br-menu-sub nav flex-column">
             <li class="nav-item"><a href="{{ route('admin.users.index') }}" class="nav-link {{ active('admin.users.index') }}">Users</a></li>
+            <li class="nav-item"><a href="{{ route('admin.users.approved') }}" class="nav-link {{ active('admin.users.approved') }}">Approved Users</a></li>
 {{--            <li class="nav-item"><a href="" class="nav-link">Banned Accounts</a></li>--}}
         </ul>
 

@@ -4,10 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Stephenjude\DefaultModelSorting\Traits\DefaultOrderBy;
 
 class Trade extends Model
 {
-    use HasFactory;
+    use HasFactory, DefaultOrderBy;
+
+    protected static $orderByColumn = 'created_at';
+
 
     protected $guarded = [];
 
@@ -39,13 +43,16 @@ class Trade extends Model
     public function getOPriceAttribute()
     {
 
-        return '$'.$this->profit / $this->traded_amount * 1.19630;
+        return '$'. $this->traded_amount;
     }
 
     public function getCPriceAttribute()
     {
-
-        return  '$'.$this->traded_amount * 1.19630;
+        if($this->is_win){
+            return  '$'.($this->traded_amount + $this->payout);
+        }else {
+            return  '$'.($this->traded_amount - $this->payout);
+        }
     }
 
 }

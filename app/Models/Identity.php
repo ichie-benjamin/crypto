@@ -25,16 +25,18 @@ class Identity extends Model
     }
     public function getFrontAttribute($value)
     {
-        if($value){
-            return asset('storage/'.$value);
-        }
-        return null;
+//        if($value){
+//            return asset('storage/'.$value);
+//        }
+//        return null;
+        return $value;
     }
     public function getBackAttribute($value)
     {
-        if($value){
-            return asset('storage/'.$value);
-        }
-        return null;
+//        if($value){
+//            return asset('storage/'.$value);
+//        }
+//        return null;
+        return $value;
     }
 }

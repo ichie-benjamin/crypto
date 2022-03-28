@@ -80,23 +80,26 @@ class DepositsController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'proof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
             $data = $this->getData($request);
 //            $package = Package::findOrFail($data['plan_id']);
 
         $proof = $request->file('proof');
 
         // Make a image name based on user name and current timestamp
-        $name = Str::slug(auth()->user()->username.'_proof_'.time());
+//        $name = Str::slug(auth()->user()->username.'_proof_'.time());
 
         // Define folder path
-        $folder = '/uploads/proofs/';
+//        $folder = '/uploads/proofs/';
         // Make a file path where image will be stored [ folder path + file name + file extension]
-        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
+//        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
 
         // Upload image
-        $this->uploadOne($proof, $folder, 'public', $name);
 
-        $data['proof'] = $f_filePath;
+        $data['proof'] = $this->uploadOne($proof);
 
             $deposit = Deposit::create($data);
 
@@ -162,17 +165,15 @@ $accounts = Account::pluck('id','id')->all();
             $proof = $request->file('proof');
 
         // Make a image name based on user name and current timestamp
-        $name = Str::slug(auth()->user()->username.'_proof_'.time());
+//        $name = Str::slug(auth()->user()->username.'_proof_'.time());
 
         // Define folder path
-        $folder = '/uploads/proofs/';
+//        $folder = '/uploads/proofs/';
         // Make a file path where image will be stored [ folder path + file name + file extension]
-        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
+//        $f_filePath = $folder . $name. '.' . $proof->getClientOriginalExtension();
 
         // Upload image
-        $this->uploadOne($proof, $folder, 'public', $name);
-
-        $data['proof'] = $f_filePath;
+        $data['proof'] = $this->uploadOne($proof);
 
         $deposit->update($data);
 

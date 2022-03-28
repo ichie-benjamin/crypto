@@ -24,7 +24,12 @@ class UsersController extends Controller
     }
     public function subAdmins(){
         $title = 'sub_admin';
-        $users = User::whereRoleIs('sub_admin')->orWhereRoleIs('moderator')->get();
+        $users = User::whereRoleIs('sub_admin')->orWhereRoleIs('moderator')->latest()->get();
+        return view('admin.users.index', compact('users','title'));
+    }
+    public function approvedUsers(){
+        $title = 'Approved Users';
+        $users = User::whereRoleIs('user')->where('is_active', 1)->latest()->get();
         return view('admin.users.index', compact('users','title'));
     }
 

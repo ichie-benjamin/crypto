@@ -68,10 +68,11 @@ class Deposit extends Model
 
     public function getProofAttribute($value)
     {
-        if($value){
-            return asset('storage/'.$value);
-        }
-        return null;
+//        if($value){
+//            return asset('storage/'.$value);
+//        }
+//        return null;
+        return $value;
     }
 
 }

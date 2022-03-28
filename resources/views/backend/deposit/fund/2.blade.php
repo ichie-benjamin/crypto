@@ -16,6 +16,7 @@
                                     </div>
 
                                     <div class="input-group mt-2">
+
                                         <input type="text" class="form-control"
                                                value="{{ $coin->wallet }}">
                                         <div class="input-group-append">

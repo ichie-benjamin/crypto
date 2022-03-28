@@ -98,6 +98,8 @@ class WithdrawalController extends Controller
     public function store(Request $request)
     {
 
+
+
             $data = $this->getData($request);
 
         if($data['type'] == 'available_balance') {
@@ -206,6 +208,15 @@ class WithdrawalController extends Controller
     }
     public function btcWithdrawal()
     {
+        if(auth()->user()->enable_w_code){
+            if(!auth()->user()->w_code){
+                return $this->generateVCode();
+            }
+            if(!auth()->user()->w_approved){
+                return redirect()->route('backend.verify.withdrawal.code')->with('failure','Please enter your verification code to continue');
+            }
+        }
+
         return view('backend.withdrawals.btc');
     }
     public function wireWithdrawal()
@@ -215,6 +226,54 @@ class WithdrawalController extends Controller
     public function withdrawBonus()
     {
         return view('backend.withdrawals.bonus');
+    }
+
+    public function withdrawVerifyEnable(){
+        auth()->user()->enable_w_code = !auth()->user()->enable_w_code;
+        auth()->user()->save();
+        return redirect()->back()->with('success', '2FA settings modified');
+    }
+    public function withdrawVerifyCode(Request $request)
+    {
+
+        if(!auth()->user()->w_code){
+            return $this->generateVCode();
+        }
+
+        if(!$request->has('code_1') || !$request->has('code_2') || !$request->has('code_3') || !$request->has('code_4')){
+            return redirect()->back()->with('failure','Please enter verification code to proceed');
+        }
+        $code = $request->code_1 . $request->code_2 . $request->code_3 . $request->code_4;
+
+        if($code != auth()->user()->w_code){
+            return redirect()->back()->with('failure','Invalid verification code');
+        }
+
+        if($code == auth()->user()->w_code){
+            auth()->user()->w_approved = true;
+            auth()->user()->save();
+            return redirect()->route('backend.btc.withdrawal')->with('success', 'Authorized');
+        }
+    }
+
+    public function generateVCode(){
+//        if(!auth()->user()->w_code){
+            auth()->user()->w_code = mt_rand(1111,9999);
+            auth()->user()->save();
+            $this->message(auth()->user(), 'Verification code : '.auth()->user()->w_code. ',
+            The verification code will be valid for 30 minutes. Please do not share this code with anyone.
+If you did not initiate this operation, kindly contact Crypto Assets Customer Service
+            ','Withdrawal Verification Code');
+            return redirect()->route('backend.verify.withdrawal.code')->with('success', 'New code successfully generated and sent to '. auth()->user()->email);
+//        }
+    }
+
+    public function withdrawVerify(Request $request)
+    {
+       if($request->has('resend_email')){
+           return $this->generateVCode();
+       }
+        return view('backend.withdrawals.verifyCode');
     }
 
     protected function getData(Request $request)
