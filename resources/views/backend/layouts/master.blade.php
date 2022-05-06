@@ -83,17 +83,22 @@
                             <div class="dashboard_log">
                                 <div class="profile_log dropdown">
                                     <div class="user" data-toggle="dropdown">
-                                        <span class="thumb"><i class="mdi mdi-account"></i></span>
+                                        <span class="thumb">
+                                        <img style="height: 35px; margin-top: -5px; margin-left: -3px" src="{{ auth()->user()->avatar }}" />
+</span>
                                         <span class="arrow"><i class="la la-angle-down"></i></span>
                                     </div>
 
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <div class="user-email">
                                             <div class="user">
-                                                <span class="thumb"><i class="mdi mdi-account"></i></span>
+                                                <span class="thumb">
+                                                                                            <img style="height: 35px; margin-top: -5px; margin-left: -3px" src="{{ auth()->user()->avatar }}" />
+
+                                              </span>
                                                 <div class="user-info">
                                                     <h6>{{ auth()->user()->name }}</h6>
-                                                    <span>{{ auth()->user()->name }}</span>
+                                                    <span>{{ auth()->user()->email }}</span>
                                                 </div>
                                             </div>
                                         </div>

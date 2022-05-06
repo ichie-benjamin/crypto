@@ -14,7 +14,19 @@ class UserController extends Controller
 {
     use UploadTrait;
     public function updateProfile(Request $request){
+
         $data = $this->getData($request);
+        if($request->hasFile('avatar')){
+
+
+            $request->validate([
+                'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+
+            $data['avatar'] = $this->uploadOne($request->file('avatar'));
+
+        }
         auth()->user()->update($data);
         return redirect()->back()->with('success','Profile Successfully updated');
     }
@@ -114,7 +126,7 @@ class UserController extends Controller
         $rules = [
             'btc' => 'required',
             'phone'  => 'required',
-            'avatar'  => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
             'city'  => 'required',
             'country'  => 'required',
             'address'  => 'required',
