@@ -43,7 +43,7 @@
 
                                                 <div class="" style="padding-top: 4px!important;">
                                                     <p><input type="file"  accept="image/*" name="avatar" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-                                                    <label class="btn btn-primary"  for="file" style="cursor: pointer;">Upload Front ID</label>
+                                                    <label class="btn btn-primary"  for="file" style="cursor: pointer;">Upload Profile Picture</label>
                                                     <span class="float-right">Maximum file size is 2mb</span>
                                                     <p><img id="output" width="100" /></p>
                                                 </div>

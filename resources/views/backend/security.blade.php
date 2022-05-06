@@ -24,7 +24,7 @@
                                         <h4>{{ auth()->user()->name }}</h4>
                                         <p class="mb-1 mt-3">@ {{ auth()->user()->email }} </p>
                                         <p class="mb-1">Status: <span class="font-weight-bold">{{ auth()->user()->identity->status }}</span></p>
-                                        <a href="{{ route('backend.account.upload.id') }}" class="btn btn-success mt-3">Re upload ID</a>
+{{--                                        <a href="{{ route('backend.account.upload.id') }}" class="btn btn-success mt-3">Re upload ID</a>--}}
                                     </div>
                                 </div>
                             </div>
