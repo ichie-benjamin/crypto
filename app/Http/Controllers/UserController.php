@@ -61,8 +61,8 @@ class UserController extends Controller
 
     public function storeId(Request $request){
         $request->validate([
-            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10048',
+            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10048',
         ]);
         $data = $this->getIdData($request);
         $id = Identity::whereUserId(auth()->id())->first();
