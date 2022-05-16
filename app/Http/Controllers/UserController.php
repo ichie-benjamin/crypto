@@ -110,8 +110,8 @@ class UserController extends Controller
     protected function getIdData(Request $request)
     {
         $rules = [
-            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'front' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10048',
+            'back' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10048',
             'type' => 'nullable',
         ];
 
