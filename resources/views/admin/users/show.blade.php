@@ -2,6 +2,13 @@
 
 @section('style')
     @include('admin.partials.dt-css')
+
+    <style>
+        .ck-content {
+            min-height: 400px!important;
+        }
+    </style>
+
 @endsection
 
 @section('js')
@@ -42,6 +49,7 @@
         <div class="ht-70 bg-gray-100 pd-x-20 d-flex align-items-center justify-content-center shadow-base">
             <ul class="nav nav-outline active-info align-items-center flex-row" role="tablist">
                 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#posts" role="tab">Deposits</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#mail_user" role="tab">Send Message</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#trans" role="tab">Transactions</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#photos" role="tab">Trades</a></li>
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#withdrawals" role="tab">Withdrawal Requests</a></li>
@@ -55,7 +63,7 @@
                 {{--                               <div class="col-md-6">--}}
                 <a href="" class="btn btn-primary mr- col-md-2">Edit Profile</a>
                 <a href="{{ route('admin.user.logins',$user->id) }}" class="btn btn-warning col-md-2">Login Logins</a>
-                <a href="#" data-toggle="modal" data-target="#sendMsg"  class="btn btn-danger col-md-2">Send Message</a>
+{{--                <a href="#" data-toggle="modal" data-target="#sendMsg"  class="btn btn-danger col-md-2">Send Message</a>--}}
                 <a href="" data-toggle="modal" data-target="#fundBalance" class="btn btn-success col-md-3">Add / Substract Balance</a>
                 <a href="" data-toggle="modal" data-target="#fundBonus" class="btn btn-primary col-md-3">Add / Substract Bonus</a>
             </div>
@@ -336,7 +344,52 @@
                     </div><!-- table-wrapper -->
 
                 </div><!-- row -->
-            </div><!-- tab-pane -->
+            </div>
+            <div class="tab-pane fade" id="mail_user">
+                <div class="col-md-12">
+                    <form action="{{ route('admin.user.send_msg') }}" method="POST">
+
+                        <div class="modal-body pd-20">
+
+                            @csrf
+                            <div class="form-layout form-layout-1">
+                                <div class="row mg-b-25">
+
+                                    <input name="user_id" type="hidden" value="{{ $user->id }}">
+
+                                    <div class="col-md-12">
+                                        <div class="form-group mg-b-10-force">
+                                            <label class="form-control-label"> Subject: <span class="tx-danger">*</span></label>
+                                            <input class="form-control" required type="text" name="subject" placeholder="Message Subject">
+                                        </div>
+                                    </div><!-- col-8 -->
+                                    <div class="col-md-12">
+                                        <div class="form-group mg-b-10-force">
+                                            <label class="form-control-label"> Message : <span class="tx-danger">*</span></label>
+                                                                                    <textarea rows="12" id="editor" class="form-control" type="text" name="message"></textarea>
+{{--                                            <div id="editor">--}}
+{{--                                                <p>This is some sample content.</p>--}}
+{{--                                            </div>--}}
+
+                                        </div>
+                                    </div><!-- col-8 -->
+                                </div>
+                            </div>
+
+                        </div><!-- modal-body -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary tx-size-xs">Send</button>
+                            <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+
+                </div><!-- row -->
+            </div>
+
+
+
+
+
         </div><!-- br-pagebody -->
 
     </div><!-- br-mainpanel -->
@@ -493,7 +546,7 @@
     </div><!-- modal -->
 
     <div id="sendMsg" class="modal fade">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-xl" role="document" style="min-width:90%!important;">
             <div class="modal-content tx-size-sm">
                 <div class="modal-header pd-x-20">
                     <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Send Message To {{ $user->name }}</h6>
@@ -501,40 +554,56 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route('admin.user.send_msg') }}" method="POST">
+{{--                <form action="{{ route('admin.user.send_msg') }}" method="POST">--}}
 
-                <div class="modal-body pd-20">
+{{--                <div class="modal-body pd-20">--}}
 
-                     @csrf
-                        <div class="form-layout form-layout-1">
-                            <div class="row mg-b-25">
+{{--                     @csrf--}}
+{{--                        <div class="form-layout form-layout-1">--}}
+{{--                            <div class="row mg-b-25">--}}
 
-                                <input name="user_id" type="hidden" value="{{ $user->id }}">
+{{--                                <input name="user_id" type="hidden" value="{{ $user->id }}">--}}
 
-                                <div class="col-md-12">
-                                    <div class="form-group mg-b-10-force">
-                                        <label class="form-control-label"> Subject: <span class="tx-danger">*</span></label>
-                                        <input class="form-control" required type="text" name="subject" placeholder="Message Subject">
-                                    </div>
-                                </div><!-- col-8 -->
-                                <div class="col-md-12">
-                                    <div class="form-group mg-b-10-force">
-                                        <label class="form-control-label"> Message : <span class="tx-danger">*</span></label>
-                                        <textarea class="form-control" type="text" name="message"></textarea>
-                                    </div>
-                                </div><!-- col-8 -->
-                            </div>
-                        </div>
+{{--                                <div class="col-md-12">--}}
+{{--                                    <div class="form-group mg-b-10-force">--}}
+{{--                                        <label class="form-control-label"> Subject: <span class="tx-danger">*</span></label>--}}
+{{--                                        <input class="form-control" required type="text" name="subject" placeholder="Message Subject">--}}
+{{--                                    </div>--}}
+{{--                                </div><!-- col-8 -->--}}
+{{--                                <div class="col-md-12">--}}
+{{--                                    <div class="form-group mg-b-10-force">--}}
+{{--                                        <label class="form-control-label"> Message : <span class="tx-danger">*</span></label>--}}
+{{--                                        <textarea rows="12" class="form-control" type="text" name="message"></textarea>--}}
+{{--                                        <div id="editor">--}}
+{{--                                            <p>This is some sample content.</p>--}}
+{{--                                        </div>--}}
 
-                 </div><!-- modal-body -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary tx-size-xs">Send</button>
-                    <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>
-                </div>
-                </form>
+{{--                                    </div>--}}
+{{--                                </div><!-- col-8 -->--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                 </div><!-- modal-body -->--}}
+{{--                <div class="modal-footer">--}}
+{{--                    <button type="submit" class="btn btn-primary tx-size-xs">Send</button>--}}
+{{--                    <button type="button" class="btn btn-secondary tx-size-xs" data-dismiss="modal">Close</button>--}}
+{{--                </div>--}}
+{{--                </form>--}}
 
             </div>
         </div><!-- modal-dialog -->
     </div><!-- modal -->
 
+@endsection
+
+@section('scripts')
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+
+    <script>
+        ClassicEditor.create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 @endsection

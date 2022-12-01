@@ -113,5 +113,7 @@
 
     @yield('js')
 
+@yield('scripts')
+
 </body>
 </html>

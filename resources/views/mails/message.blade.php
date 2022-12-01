@@ -9,7 +9,7 @@
 
     @include('beautymail::templates.sunny.contentStart')
 
-    <p> {{ $data['message'] }}</p>
+    <p> {!! $data['message'] !!}  </p>
 
     @include('beautymail::templates.sunny.contentEnd')
 
