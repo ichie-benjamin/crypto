@@ -79,10 +79,11 @@ class UsersController extends Controller
             'phone' => ['nullable'],
             'username' => ['required', 'string', 'max:50', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed',  'min:6',             // must be at least 10 characters in length
-                'regex:/[a-z]/',      // must contain at least one lowercase letter
-                'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                'regex:/[0-9]/',      // must contain at least one digit
-                'regex:/[@$!%*#?&]/'],
+//                'regex:/[a-z]/',      // must contain at least one lowercase letter
+//                'regex:/[A-Z]/',      // must contain at least one uppercase letter
+//                'regex:/[0-9]/',      // must contain at least one digit
+//                'regex:/[@$!%*#?&]/'
+            ],
         ]);
 
         $data = $request->all();
@@ -101,7 +102,9 @@ class UsersController extends Controller
             $user->attachRole($data['role']);
 
             // send email verification link to user
-            event(new \Illuminate\Auth\Events\Registered($user));
+
+//            event(new \Illuminate\Auth\Events\Registered($user));
+
             DB::commit();
 
             $email = $data['email'];
