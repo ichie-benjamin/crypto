@@ -476,6 +476,13 @@
                                         <textarea class="form-control" type="text" name="note"></textarea>
                                     </div>
                                 </div><!-- col-8 -->
+
+                                <div class="col-md-12">
+                                    <div class="form-group mg-b-10-force">
+                                        <label class="form-control-label"> Date : <span class="tx-danger">*</span></label>
+                                        <input class="form-control" type="date" name="created_at" />
+                                    </div>
+                                </div><!-- col-8 -->
                             </div>
                         </div>
 

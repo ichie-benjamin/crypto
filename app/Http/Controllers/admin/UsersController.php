@@ -9,6 +9,7 @@ use App\Models\Role;
 use App\Models\Trade;
 use App\Models\Transaction;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -138,7 +139,10 @@ class UsersController extends Controller
             $user->balance = (int)$user->balance - (int)$data['amount'];
         }
         $user->save();
-        Transaction::create(['user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
+        if(!$request->get('created_at')){
+            $data['created_at'] = Carbon::now();
+        }
+        Transaction::create(['created_at' => $data['created_at'],'user_id' => $data['user_id'], 'amount' => $data['amount'], 'type' => $data['type'], 'account_type' => $data['account_type'],'note' => $data['note']]);
         return redirect()->back()->with('success', 'Successful, balance modified');
     }
     public function updateWithdrawable(Request $request){
