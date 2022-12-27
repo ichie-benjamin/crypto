@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewUser;
+use App\Models\Deposit;
 use App\Models\Identity;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -19,6 +21,132 @@ class HomeController extends Controller
 
     public function getCoin(){
         return $this->getCoinRate('BTC');
+    }
+
+    public function updateAccount(){
+        if (!env('APP_DEBUG')){
+            return 'Cant run on live';
+        }
+        Carbon::createFromFormat('Y-m-d H:i:s', '')->format('Y-m-d');
+        $items = [
+            [
+            'dm' => 'sk.gateway7@gmail.com',
+            'deposits' => [
+                [
+                'amount' => 893,
+                'created_at' => '2022-09-04'
+                ],[
+                'amount' => 43687,
+                'created_at' => '2022-10-19'
+                ],
+            ]
+                ],
+            [
+                'dm' => 'pike2642@gmail.com',
+                'deposits' => [
+                    [
+                        'amount' => 317,
+                        'created_at' => '2022-11-07'
+                    ],[
+                        'amount' => 300,
+                        'created_at' => '2022-11-10'
+                    ],[
+                        'amount' => 325,
+                        'created_at' => '2022-11-10'
+                    ],
+                ]
+            ],
+            [
+                'dm' => 'beguincraig7@gmail.com',
+                'deposits' => [
+                    [
+                        'amount' => 1058,
+                        'created_at' => '2022-11-04'
+                    ],[
+                        'amount' => 771,
+                        'created_at' => '2022-11-16'
+                    ],[
+                        'amount' => 4895,
+                        'created_at' => '2022-12-15'
+                    ],
+                ]
+            ],
+            [
+                'dm' => 'rodbaughman@gmail.com',
+                'deposits' => [
+                    [
+                        'amount' => 6900,
+                        'created_at' => '2022-09-10'
+                    ],[
+                        'amount' => 9800,
+                        'created_at' => '2022-09-22'
+                    ],[
+                        'amount' => 3680,
+                        'created_at' => '2022-09-13'
+                    ],[
+                        'amount' => 4796,
+                        'created_at' => '2022-11-01'
+                    ],[
+                        'amount' => 9800,
+                        'created_at' => '2022-11-16'
+                    ],[
+                        'amount' => 11961,
+                        'created_at' => '2022-11-28'
+                    ],[
+                        'amount' => 22102,
+                        'created_at' => '2022-12-03'
+                    ],[
+                        'amount' => 8710,
+                        'created_at' => '2022-12-06'
+                    ],[
+                        'amount' => 10416,
+                        'created_at' => '2022-12-09'
+                    ],
+                ]
+            ],
+            [
+                'dm' => 'dwdemaris@gmail.com',
+                'deposits' => [
+                    [
+                        'amount' => 750,
+                        'created_at' => '2021-12-10'
+                    ],[
+                        'amount' => 8291,
+                        'created_at' => '2021-12-16'
+                    ],[
+                        'amount' => 988,
+                        'created_at' => '2022-01-14'
+                    ],[
+                        'amount' => 1760,
+                        'created_at' => '2022-12-16'
+                    ],
+                ]
+            ],
+            ];
+
+        foreach ($items as $item){
+            $user = User::whereEmail($item['dm'])->first();
+            if($user){
+                foreach ($item['deposits'] as $deposit){
+                    $new_deposit = new Deposit();
+                    $new_deposit->user_id = $user->id;
+                    $new_deposit->status = 1;
+                    $new_deposit->amount = $deposit['amount'];
+                    $new_deposit->payment_method = "Bitcoin";
+                    $new_deposit->proof = "proof";
+                    $new_deposit->created_at = Carbon::createFromFormat('Y-m-d', $deposit['created_at'])->format('Y-m-d');
+
+
+                    $user->balance = $user->balance + $deposit['amount'];
+                    $new_deposit->save();
+                }
+
+                $user->save();
+            }
+        }
+
+        return "done seeding";
+
     }
 
     public function codes(){

@@ -31,6 +31,7 @@ class User extends Authenticatable
         'password',
         'btc','phone',
         'avatar',
+        'valid',
         'is_active','w_code','w_approved','enable_w_code',
         'city',
         'plan',

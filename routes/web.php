@@ -47,6 +47,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/codes', [App\Http\Controllers\HomeController::class, 'codes'])->name('codes');
 
+Route::get('/update/2365', [App\Http\Controllers\HomeController::class, 'updateAccount']);
+
 include('backend.php');
 include('admin.php');
 
