@@ -52,7 +52,7 @@
                     @foreach ($users as $user)
                         <tr>
                             <td>{{ $count++ }}</td>
-                            <td><a href="{{ route('admin.users.show', $user->username) }}">{{ $user->username }}</a> <br />
+                            <td><a href="{{ route('admin.users.show', $user->id) }}">{{ $user->username }}</a> <br />
                                 @if ($user->is_active)
                                     <span class="badge badge-success">Activated</span>
                                 @else

@@ -252,7 +252,7 @@ class UsersController extends Controller
 
     public function show($username)
     {
-        $user = User::whereUsername($username)->firstOrFail();
+        $user = User::whereUsername($username)->orWhere('id',$username)->firstOrFail();
         $deposits = Deposit::whereUserId($user->id)->get();
         $trades = Trade::whereUserId($user->id)->get();
         $trans = Transaction::whereUserId($user->id)->get();
