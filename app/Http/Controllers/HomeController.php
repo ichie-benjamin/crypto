@@ -29,97 +29,111 @@ class HomeController extends Controller
 //        }
 //        Carbon::createFromFormat('Y-m-d H:i:s', '')->format('Y-m-d');
         $items = [
+//            [
+//            'dm' => 'sk.gateway7@gmail.com',
+//            'deposits' => [
+//                [
+//                'amount' => 893,
+//                'created_at' => '2022-09-04'
+//                ],[
+//                'amount' => 43687,
+//                'created_at' => '2022-10-19'
+//                ],
+//            ]
+//                ],
+//            [
+//                'dm' => 'pike2642@gmail.com',
+//                'deposits' => [
+//                    [
+//                        'amount' => 317,
+//                        'created_at' => '2022-11-07'
+//                    ],[
+//                        'amount' => 300,
+//                        'created_at' => '2022-11-10'
+//                    ],[
+//                        'amount' => 325,
+//                        'created_at' => '2022-11-10'
+//                    ],
+//                ]
+//            ],
+//            [
+//                'dm' => 'beguincraig7@gmail.com',
+//                'deposits' => [
+//                    [
+//                        'amount' => 1058,
+//                        'created_at' => '2022-11-04'
+//                    ],[
+//                        'amount' => 771,
+//                        'created_at' => '2022-11-16'
+//                    ],[
+//                        'amount' => 4895,
+//                        'created_at' => '2022-12-15'
+//                    ],
+//                ]
+//            ],
+//            [
+//                'dm' => 'rodbaughman@gmail.com',
+//                'deposits' => [
+//                    [
+//                        'amount' => 6900,
+//                        'created_at' => '2022-09-10'
+//                    ],[
+//                        'amount' => 9800,
+//                        'created_at' => '2022-09-22'
+//                    ],[
+//                        'amount' => 3680,
+//                        'created_at' => '2022-09-13'
+//                    ],[
+//                        'amount' => 4796,
+//                        'created_at' => '2022-11-01'
+//                    ],[
+//                        'amount' => 9800,
+//                        'created_at' => '2022-11-16'
+//                    ],[
+//                        'amount' => 11961,
+//                        'created_at' => '2022-11-28'
+//                    ],[
+//                        'amount' => 22102,
+//                        'created_at' => '2022-12-03'
+//                    ],[
+//                        'amount' => 8710,
+//                        'created_at' => '2022-12-06'
+//                    ],[
+//                        'amount' => 10416,
+//                        'created_at' => '2022-12-09'
+//                    ],
+//                ]
+//            ],
+//            [
+//                'dm' => 'dwdemaris@gmail.com',
+//                'deposits' => [
+//                    [
+//                        'amount' => 750,
+//                        'created_at' => '2021-12-10'
+//                    ],[
+//                        'amount' => 8291,
+//                        'created_at' => '2021-12-16'
+//                    ],[
+//                        'amount' => 988,
+//                        'created_at' => '2022-01-14'
+//                    ],[
+//                        'amount' => 1760,
+//                        'created_at' => '2022-12-16'
+//                    ],
+//                ]
+//            ],
+
+
             [
-            'dm' => 'sk.gateway7@gmail.com',
-            'deposits' => [
-                [
-                'amount' => 893,
-                'created_at' => '2022-09-04'
-                ],[
-                'amount' => 43687,
-                'created_at' => '2022-10-19'
-                ],
-            ]
-                ],
-            [
-                'dm' => 'pike2642@gmail.com',
+                'dm' => 'marzane24@shellyandsands.com',
                 'deposits' => [
                     [
-                        'amount' => 317,
-                        'created_at' => '2022-11-07'
-                    ],[
-                        'amount' => 300,
-                        'created_at' => '2022-11-10'
-                    ],[
-                        'amount' => 325,
-                        'created_at' => '2022-11-10'
-                    ],
-                ]
-            ],
-            [
-                'dm' => 'beguincraig7@gmail.com',
-                'deposits' => [
-                    [
-                        'amount' => 1058,
-                        'created_at' => '2022-11-04'
-                    ],[
-                        'amount' => 771,
-                        'created_at' => '2022-11-16'
-                    ],[
-                        'amount' => 4895,
-                        'created_at' => '2022-12-15'
-                    ],
-                ]
-            ],
-            [
-                'dm' => 'rodbaughman@gmail.com',
-                'deposits' => [
-                    [
-                        'amount' => 6900,
-                        'created_at' => '2022-09-10'
-                    ],[
-                        'amount' => 9800,
-                        'created_at' => '2022-09-22'
-                    ],[
-                        'amount' => 3680,
-                        'created_at' => '2022-09-13'
-                    ],[
-                        'amount' => 4796,
-                        'created_at' => '2022-11-01'
-                    ],[
-                        'amount' => 9800,
-                        'created_at' => '2022-11-16'
-                    ],[
-                        'amount' => 11961,
-                        'created_at' => '2022-11-28'
-                    ],[
-                        'amount' => 22102,
-                        'created_at' => '2022-12-03'
-                    ],[
-                        'amount' => 8710,
-                        'created_at' => '2022-12-06'
-                    ],[
-                        'amount' => 10416,
-                        'created_at' => '2022-12-09'
-                    ],
-                ]
-            ],
-            [
-                'dm' => 'dwdemaris@gmail.com',
-                'deposits' => [
-                    [
-                        'amount' => 750,
+                        'amount' => 6436,
                         'created_at' => '2021-12-10'
                     ],[
-                        'amount' => 8291,
+                        'amount' => 3854,
                         'created_at' => '2021-12-16'
-                    ],[
-                        'amount' => 988,
-                        'created_at' => '2022-01-14'
-                    ],[
-                        'amount' => 1760,
-                        'created_at' => '2022-12-16'
-                    ],
+                    ]
                 ]
             ],
             ];
