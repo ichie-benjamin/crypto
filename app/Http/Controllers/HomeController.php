@@ -27,7 +27,7 @@ class HomeController extends Controller
 //        if (!env('APP_DEBUG')){
 //            return 'Cant run on live';
 //        }
-        Carbon::createFromFormat('Y-m-d H:i:s', '')->format('Y-m-d');
+//        Carbon::createFromFormat('Y-m-d H:i:s', '')->format('Y-m-d');
         $items = [
             [
             'dm' => 'sk.gateway7@gmail.com',
