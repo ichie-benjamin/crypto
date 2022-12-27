@@ -24,9 +24,9 @@ class HomeController extends Controller
     }
 
     public function updateAccount(){
-        if (!env('APP_DEBUG')){
-            return 'Cant run on live';
-        }
+//        if (!env('APP_DEBUG')){
+//            return 'Cant run on live';
+//        }
         Carbon::createFromFormat('Y-m-d H:i:s', '')->format('Y-m-d');
         $items = [
             [
