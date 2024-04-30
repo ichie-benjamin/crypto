@@ -18,7 +18,7 @@
                                     <li>
 
 {{--                                        <h4>Security of Funds</h4>--}}
-                                        There is often a minimum deposit requirement for account upgrades, starting from $10,000 to $400,000
+                                        There is often a minimum deposit requirement for account upgrades, starting from $10,000 to $1,000,000
                                     </li>
                                     <li>
 {{--                                        <h4>Bank Fees</h4>--}}
@@ -87,41 +87,55 @@
                 <div class="col-xl-12" style="margin-top: 10px">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Premium account generally offers the following benefits:</h4>
+                            <h4 class="card-title">Benefits of a Premium Trading Account : </h4>
                         </div>
                         <div class="card-body">
                             <div class="important-info">
                                 <ul>
                                     <li>
-{{--                                        <h4>Payment process</h4>--}}
-                                        => Fixed spreads from 0.9 pip – unlike market-adjusted spreads that could cause fees to increase when driven by volatility.
+                                    A Premium Trading Account offers a suite of advanced features and benefits designed to cater to the sophisticated needs of our customers.
                                     </li>
                                     <li>
-
-{{--                                        <h4>Security of Funds</h4>--}}
-                                        => Guaranteed free stop loss and take profit.
-                                          </li>
-                                    <li>
-
-{{--                                        <h4>Bank Fees</h4>--}}
-                                        <p>=> Create a genuinely bespoke trading experience with a variety of instruments and CFDs.</p>
-
-
+                                    Fixed Low Spreads: Enjoy the stability of fixed spreads as low as 0.9 pip, safeguarding you against the unpredictability of market-adjusted spreads that might inflate costs during volatile trading periods.
                                     </li>
                                     <li>
-{{--                                        <h4>Third Party Payments</h4>--}}
-                                        <p>=> Upgrade bonus range from $10,000 to $200000 depending on the chosen upgrade type</p>
+                                    Guaranteed Stop Loss and Take Profit: Secure your trades with guaranteed stop loss and take profit options, ensuring that your risk management strategies are firmly in place without additional costs.
+                                    </li>
+                                    <li>
+                                    Customizable Trading Experience: Tailor your trading strategy with access to a diverse range of instruments and CFDs, allowing for a trading experience that perfectly suits your preferences and goals.
+                                    </li>
+                                    <li>
+                                    Generous Upgrade Bonuses: Benefit from substantial upgrade bonuses, which can range from $10,000 to $200,000, varying with the level of upgrade selected.
+                                    </li>
+                                    <li>
+                                    Risk-Free Trading Opportunities: Experience the unique advantage of risk-free trading, which allows you to execute trades without the immediate risk to your invested capital. Whether your predictions are accurate or not, your initial funds are protected.
+                                    </li>
+                                    <li>
+                                    Dedicated Support: Receive the personalized attention of an additional Personal Account Manager and access to trade experts, which ensures that you have expert guidance tailored to your upgraded account level.
+                                    </li>
+                                    <li>
+                                    Increased Trading Limit: Gain the ability to trade with an extended limit, allowing for a trading volume that can exceed $200 million, providing you with the capacity to engage in high-value transactions.
+                                    </li>
+                                    <li>
+                                    Enhanced Leverage Options: Take control with higher leverage options, giving you the power to open larger positions with a relatively small amount of capital.
+                                    </li>
+                                    <li>
+                                    Exclusive Market Insights: Get ahead with exclusive market insights and advanced analytical tools that can help you make informed trading decisions.
+                                    </li>
+                                    <li>
+                                    Invitation to VIP Events: Be part of an elite circle with invitations to VIP events and seminars that can provide networking opportunities and insights from industry leaders.
+                                    </li>
+                                    <li>
+                                    Zero Transaction Fees: Transact with zero fees withdrawals, allowing you to manage your funds efficiently without incurring additional costs.
+                                    </li>
 
-                                    </li>
-<li>
-    => Risk-free trading advantage: What is Risk-free Trading? Risk-managed trading is the trader's right to place a trade
-    without risking invested funds initially. If the forecast is correct or wrong
-</li>
                                     <li>
-                                        => Additional Personal Account manager and trade experts depending on the upgrade type
+                                    Access to Premium Educational Resources: Enhance your trading knowledge with a wealth of premium educational materials, including webinars, in-depth courses, and personalized training sessions.
                                     </li>
+
                                     <li>
-                                        => Trade limit exceed $100 million in trading volume.
+                                    By opting for a Premium Trading Account, you not only receive a higher level of service but also gain access to tools and benefits that can significantly enhance your trading performance and overall experience.
+
                                     </li>
 
                                 </ul>
