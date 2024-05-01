@@ -88,52 +88,79 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Benefits of a Premium Trading Account : </h4>
+                            <p>
+
+                                A Premium Trading Account offers a suite of advanced features and benefits designed to cater to the sophisticated needs of our customers.
+
+                            </p>
                         </div>
                         <div class="card-body">
                             <div class="important-info">
                                 <ul>
+
                                     <li>
-                                    A Premium Trading Account offers a suite of advanced features and benefits designed to cater to the sophisticated needs of our customers.
+                                        <strong>Fixed Low Spreads:</strong> <br>
+                                        Enjoy the stability of fixed spreads as low as 0.9 pip, safeguarding you against the unpredictability of market-adjusted spreads that might inflate costs during volatile trading periods.
                                     </li>
                                     <li>
-                                    Fixed Low Spreads: Enjoy the stability of fixed spreads as low as 0.9 pip, safeguarding you against the unpredictability of market-adjusted spreads that might inflate costs during volatile trading periods.
+                                        <strong>
+                                            Guaranteed Stop Loss and Take Profit: </strong><br/>
+                                        Secure your trades with guaranteed stop loss and take profit options, ensuring that your risk management strategies are firmly in place without additional costs.
                                     </li>
                                     <li>
-                                    Guaranteed Stop Loss and Take Profit: Secure your trades with guaranteed stop loss and take profit options, ensuring that your risk management strategies are firmly in place without additional costs.
+                                        <strong>
+                                            Customizable Trading Experience: </strong> <br/>
+                                        Tailor your trading strategy with access to a diverse range of instruments and CFDs, allowing for a trading experience that perfectly suits your preferences and goals.
                                     </li>
                                     <li>
-                                    Customizable Trading Experience: Tailor your trading strategy with access to a diverse range of instruments and CFDs, allowing for a trading experience that perfectly suits your preferences and goals.
+                                        <strong>
+                                            Generous Upgrade Bonuses: </strong> <br/>
+                                        Benefit from substantial upgrade bonuses, which can range from $10,000 to $200,000, varying with the level of upgrade selected.
                                     </li>
                                     <li>
-                                    Generous Upgrade Bonuses: Benefit from substantial upgrade bonuses, which can range from $10,000 to $200,000, varying with the level of upgrade selected.
+                                        <strong>
+                                            Risk-Free Trading Opportunities:</strong><br/>
+                                            Experience the unique advantage of risk-free trading, which allows you to execute trades without the immediate risk to your invested capital. Whether your predictions are accurate or not, your initial funds are protected.
                                     </li>
                                     <li>
-                                    Risk-Free Trading Opportunities: Experience the unique advantage of risk-free trading, which allows you to execute trades without the immediate risk to your invested capital. Whether your predictions are accurate or not, your initial funds are protected.
+                                        <strong>
+                                            Dedicated Support:</strong><br/>
+                                            Receive the personalized attention of an additional Personal Account Manager and access to trade experts, which ensures that you have expert guidance tailored to your upgraded account level.
                                     </li>
                                     <li>
-                                    Dedicated Support: Receive the personalized attention of an additional Personal Account Manager and access to trade experts, which ensures that you have expert guidance tailored to your upgraded account level.
+                                        <strong>
+                                            Increased Trading Limit:</strong><br/>
+                                            Gain the ability to trade with an extended limit, allowing for a trading volume that can exceed $200 million, providing you with the capacity to engage in high-value transactions.
                                     </li>
                                     <li>
-                                    Increased Trading Limit: Gain the ability to trade with an extended limit, allowing for a trading volume that can exceed $200 million, providing you with the capacity to engage in high-value transactions.
+                                        <strong>
+                                            Enhanced Leverage Options: </strong><br/>
+                                            Take control with higher leverage options, giving you the power to open larger positions with a relatively small amount of capital.
                                     </li>
                                     <li>
-                                    Enhanced Leverage Options: Take control with higher leverage options, giving you the power to open larger positions with a relatively small amount of capital.
+                                        <strong>
+                                            Exclusive Market Insights:</strong><br/>
+                                        Get ahead with exclusive market insights and advanced analytical tools that can help you make informed trading decisions.
                                     </li>
                                     <li>
-                                    Exclusive Market Insights: Get ahead with exclusive market insights and advanced analytical tools that can help you make informed trading decisions.
+                                        <strong>
+                                            Invitation to VIP Events:</strong><br/>
+                                            Be part of an elite circle with invitations to VIP events and seminars that can provide networking opportunities and insights from industry leaders.
                                     </li>
                                     <li>
-                                    Invitation to VIP Events: Be part of an elite circle with invitations to VIP events and seminars that can provide networking opportunities and insights from industry leaders.
-                                    </li>
-                                    <li>
-                                    Zero Transaction Fees: Transact with zero fees withdrawals, allowing you to manage your funds efficiently without incurring additional costs.
+                                        <strong>
+                                            Zero Transaction Fees: </strong><br/>
+                                            Transact with zero fees withdrawals, allowing you to manage your funds efficiently without incurring additional costs.
                                     </li>
 
                                     <li>
-                                    Access to Premium Educational Resources: Enhance your trading knowledge with a wealth of premium educational materials, including webinars, in-depth courses, and personalized training sessions.
+                                        <strong>
+                                            Access to Premium Educational Resources:</strong><br/>
+                                            Enhance your trading knowledge with a wealth of premium educational materials, including webinars, in-depth courses, and personalized training sessions.
                                     </li>
 
                                     <li>
+
                                     By opting for a Premium Trading Account, you not only receive a higher level of service but also gain access to tools and benefits that can significantly enhance your trading performance and overall experience.
 
                                     </li>
