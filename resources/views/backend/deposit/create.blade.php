@@ -162,10 +162,10 @@
                                             Enhance your trading knowledge with a wealth of premium educational materials, including webinars, in-depth courses, and personalized training sessions.
                                     </li>
 
-                                    <li>
-
+                                    <li class="mt-2">
+                                        <strong>
                                     By opting for a Premium Trading Account, you not only receive a higher level of service but also gain access to tools and benefits that can significantly enhance your trading performance and overall experience.
-
+                                        </strong>
                                     </li>
 
                                 </ul>
