@@ -87,12 +87,15 @@
                 <div class="col-xl-12" style="margin-top: 10px">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Benefits of a Premium Trading Account : </h4>
-                            <p>
+                            <div>
+                                <h4 class="card-title">Benefits of a Premium Trading Account : </h4>
+                                <p>
 
-                                A Premium Trading Account offers a suite of advanced features and benefits designed to cater to the sophisticated needs of our customers.
+                                    A Premium Trading Account offers a suite of advanced features and benefits designed to cater to the sophisticated needs of our customers.
 
-                            </p>
+                                </p>
+                            </div>
+
                         </div>
                         <div class="card-body">
                             <div class="important-info">
